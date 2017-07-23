@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<div xmlns="http://www.w3.org/1999/xhtml" component="$model/UI2/system/components/justep/window/window" design="device:m;" xid="window" class="window cn2U73u" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="cn2U73u" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/titleBar/titleBar,$model/UI2/system/components/justep/panel/child,$model/UI2/system/components/justep/windowDialog/windowDialog,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/panel/panel,">
+<div xmlns="http://www.w3.org/1999/xhtml" component="$model/UI2/system/components/justep/window/window" design="device:m;" xid="window" class="window cmiUvAj" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="cmiUvAj" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/titleBar/titleBar,$model/UI2/system/components/justep/panel/child,$model/UI2/system/components/justep/windowDialog/windowDialog,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/panel/panel,">
   <xhtml:style xmlns:xhtml="http://www.w3.org/1999/xhtml">null</xhtml:style>  
-  <div component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" data-events="onModelConstructDone:modelModelConstructDone;onActive:modelActive;onunLoad:modelUnLoad;onModelConstruct:modelModelConstruct;onInactive:modelInactive;onLoad:modelLoad;onParamsReceive:modelParamsReceive" __cid="cn2U73u" class="cn2U73u"></div>  
-  <span component="$model/UI2/system/components/justep/windowDialog/windowDialog" xid="windowDialog1" data-bind="component:{name:'$model/UI2/system/components/justep/windowDialog/windowDialog'}" data-config="{&quot;src&quot;:&quot;$model/UI2/demo/page/core/jsModule/dialog.w&quot;}" __cid="cn2U73u" class="cn2U73u">
-    <xhtml:div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-dialog-overlay cn2U73u" __cid="cn2U73u"/>
-    <xhtml:div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-dialog cn2U73u" style="display:none;" __cid="cn2U73u">
-      <xhtml:div class="x-dialog-title cn2U73u" __cid="cn2U73u">
-        <xhtml:button class="close cn2U73u" __cid="cn2U73u">
-          <xhtml:span __cid="cn2U73u" class="cn2U73u">×</xhtml:span>
+  <div component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" data-events="onModelConstructDone:modelModelConstructDone;onActive:modelActive;onunLoad:modelUnLoad;onModelConstruct:modelModelConstruct;onInactive:modelInactive;onLoad:modelLoad;onParamsReceive:modelParamsReceive" __cid="cmiUvAj" class="cmiUvAj"></div>  
+  <span component="$model/UI2/system/components/justep/windowDialog/windowDialog" xid="windowDialog1" data-bind="component:{name:'$model/UI2/system/components/justep/windowDialog/windowDialog'}" data-config="{&quot;src&quot;:&quot;$model/UI2/demo/page/core/jsModule/dialog.w&quot;}" __cid="cmiUvAj" class="cmiUvAj">
+    <xhtml:div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-dialog-overlay cmiUvAj" __cid="cmiUvAj"/>
+    <xhtml:div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-dialog cmiUvAj" style="display:none;" __cid="cmiUvAj">
+      <xhtml:div class="x-dialog-title cmiUvAj" __cid="cmiUvAj">
+        <xhtml:button class="close cmiUvAj" __cid="cmiUvAj">
+          <xhtml:span __cid="cmiUvAj" class="cmiUvAj">×</xhtml:span>
         </xhtml:button>
-        <xhtml:div class="x-dialog-title-text cn2U73u" __cid="cn2U73u"/>
+        <xhtml:div class="x-dialog-title-text cmiUvAj" __cid="cmiUvAj"/>
       </xhtml:div>
-      <xhtml:div class="x-dialog-body cn2U73u" __cid="cn2U73u"/>
+      <xhtml:div class="x-dialog-body cmiUvAj" __cid="cmiUvAj"/>
     </xhtml:div>
   </span>
-  <div component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full pcqqEZJn-iosstatusbar cn2U73u" xid="panel1" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}" __cid="cn2U73u"> 
-    <div class="x-panel-top cn2U73u" xid="top1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cn2U73u"> 
-      <div component="$model/UI2/system/components/justep/titleBar/titleBar" class="x-titlebar cn2U73u" data-bind="component:{name:'$model/UI2/system/components/justep/titleBar/titleBar'}" data-config="{&quot;title&quot;:&quot;WeX5页面结构与生命周期&quot;}" __cid="cn2U73u"> 
-        <div class="x-titlebar-left cn2U73u" __cid="cn2U73u"> 
-          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon cn2U73u" xid="backBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{operation:'window.close'}" data-config="{&quot;icon&quot;:&quot;icon-chevron-left&quot;,&quot;label&quot;:&quot;&quot;}" __cid="cn2U73u"> 
-            <i class="icon-chevron-left cn2U73u" __cid="cn2U73u"/>  
-            <span __cid="cn2U73u" class="cn2U73u"/> 
+  <div component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full pcrMZBnm-iosstatusbar cmiUvAj" xid="panel1" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}" __cid="cmiUvAj"> 
+    <div class="x-panel-top cmiUvAj" xid="top1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cmiUvAj"> 
+      <div component="$model/UI2/system/components/justep/titleBar/titleBar" class="x-titlebar cmiUvAj" data-bind="component:{name:'$model/UI2/system/components/justep/titleBar/titleBar'}" data-config="{&quot;title&quot;:&quot;WeX5页面结构与生命周期&quot;}" __cid="cmiUvAj"> 
+        <div class="x-titlebar-left cmiUvAj" __cid="cmiUvAj"> 
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon cmiUvAj" xid="backBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{operation:'window.close'}" data-config="{&quot;icon&quot;:&quot;icon-chevron-left&quot;,&quot;label&quot;:&quot;&quot;}" __cid="cmiUvAj"> 
+            <i class="icon-chevron-left cmiUvAj" __cid="cmiUvAj"/>  
+            <span __cid="cmiUvAj" class="cmiUvAj"/> 
           </a> 
         </div>  
-        <div class="x-titlebar-title cn2U73u" __cid="cn2U73u">WeX5页面结构与生命周期</div>  
-        <div class="x-titlebar-right  cn2U73u" __cid="cn2U73u">
-          <div class="empty cn2U73u" __cid="cn2U73u"/>
+        <div class="x-titlebar-title cmiUvAj" __cid="cmiUvAj">WeX5页面结构与生命周期</div>  
+        <div class="x-titlebar-right  cmiUvAj" __cid="cmiUvAj">
+          <div class="empty cmiUvAj" __cid="cmiUvAj"/>
         </div> 
       </div> 
     </div>  
-    <div class="x-panel-content container cn2U73u" xid="content1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cn2U73u">
-      <div xid="container" __cid="cn2U73u" class="cn2U73u"/>
+    <div class="x-panel-content container cmiUvAj" xid="content1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cmiUvAj">
+      <div xid="container" __cid="cmiUvAj" class="cmiUvAj"/>
     </div>  
-    <style __cid="cn2U73u" class="cn2U73u">.x-panel.pcqqEZJn-iosstatusbar &gt;.x-panel-top {height: 48px;}.x-panel.pcqqEZJn-iosstatusbar &gt;.x-panel-content { top: 48px;bottom: nullpx;}.x-panel.pcqqEZJn-iosstatusbar &gt;.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.pcqqEZJn-iosstatusbar &gt;.x-panel-top,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pcqqEZJn-iosstatusbar &gt;.x-panel-top {height: 68px;}.iosstatusbar .x-panel.pcqqEZJn-iosstatusbar &gt;.x-panel-content,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pcqqEZJn-iosstatusbar &gt;.x-panel-content { top: 68px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pcqqEZJn-iosstatusbar &gt;.x-panel-top {height: 48px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pcqqEZJn-iosstatusbar &gt;.x-panel-content {top: 48px;}</style>
+    <style __cid="cmiUvAj" class="cmiUvAj">.x-panel.pcrMZBnm-iosstatusbar &gt;.x-panel-top {height: 48px;}.x-panel.pcrMZBnm-iosstatusbar &gt;.x-panel-content { top: 48px;bottom: nullpx;}.x-panel.pcrMZBnm-iosstatusbar &gt;.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.pcrMZBnm-iosstatusbar &gt;.x-panel-top,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pcrMZBnm-iosstatusbar &gt;.x-panel-top {height: 68px;}.iosstatusbar .x-panel.pcrMZBnm-iosstatusbar &gt;.x-panel-content,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pcrMZBnm-iosstatusbar &gt;.x-panel-content { top: 68px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pcrMZBnm-iosstatusbar &gt;.x-panel-top {height: 48px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pcrMZBnm-iosstatusbar &gt;.x-panel-content {top: 48px;}</style>
   </div> 
 </div>
