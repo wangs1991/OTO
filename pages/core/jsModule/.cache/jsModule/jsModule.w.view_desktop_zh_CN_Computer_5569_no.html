@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div xmlns="http://www.w3.org/1999/xhtml" component="$model/UI2/system/components/justep/window/window" design="device:m;" xid="window" class="window crMrq2y" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="crMrq2y" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/titleBar/titleBar,$model/UI2/system/components/justep/panel/child,$model/UI2/system/components/justep/windowDialog/windowDialog,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/panel/panel,">  
+  <style xmlns="" xmlns:xhtml="http://www.w3.org/1999/xhtml">null</style>  
+  <div xmlns="" component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" __cid="crMrq2y" class="crMrq2y"/>  
+  <span xmlns="" component="$model/UI2/system/components/justep/windowDialog/windowDialog" xid="windowDialog1" data-bind="component:{name:'$model/UI2/system/components/justep/windowDialog/windowDialog'}" data-config="{&quot;src&quot;:&quot;$model/UI2/demo/page/core/jsModule/dialog.w&quot;}" __cid="crMrq2y" class="crMrq2y"> 
+    <div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-dialog-overlay crMrq2y" __cid="crMrq2y"></div>  
+    <div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-dialog crMrq2y" style="display:none;" __cid="crMrq2y">  
+      <div class="x-dialog-title crMrq2y" __cid="crMrq2y"> 
+        <button class="close crMrq2y" __cid="crMrq2y"> 
+          <span __cid="crMrq2y" class="crMrq2y">×</span> 
+        </button>  
+        <div class="x-dialog-title-text crMrq2y" __cid="crMrq2y"/> 
+      </div>  
+      <div class="x-dialog-body crMrq2y" __cid="crMrq2y"/> 
+    </div> 
+  </span>  
+  <div xmlns="" component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full pcQ7JvEb-iosstatusbar crMrq2y" xid="panel1" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}" __cid="crMrq2y"> 
+    <div class="x-panel-top crMrq2y" xid="top1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="crMrq2y"> 
+      <div component="$model/UI2/system/components/justep/titleBar/titleBar" class="x-titlebar crMrq2y" data-bind="component:{name:'$model/UI2/system/components/justep/titleBar/titleBar'}" data-config="{&quot;title&quot;:&quot;WeX5三大核心技术之js模块化&quot;}" __cid="crMrq2y"> 
+        <div class="x-titlebar-left crMrq2y" __cid="crMrq2y"> 
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon crMrq2y" xid="backBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{operation:'window.close'}" data-config="{&quot;icon&quot;:&quot;icon-chevron-left&quot;,&quot;label&quot;:&quot;&quot;}" __cid="crMrq2y"> 
+            <i class="icon-chevron-left crMrq2y" __cid="crMrq2y"/>  
+            <span __cid="crMrq2y" class="crMrq2y"/> 
+          </a> 
+        </div>  
+        <div class="x-titlebar-title crMrq2y" __cid="crMrq2y">WeX5三大核心技术之js模块化</div>  
+        <div class="x-titlebar-right  crMrq2y" __cid="crMrq2y"> 
+          <div class="empty crMrq2y" __cid="crMrq2y"/>  
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link crMrq2y" xid="button1" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{operation:'windowDialog1.open'}" data-config="{&quot;label&quot;:&quot;打开对话框&quot;}" __cid="crMrq2y"> 
+            <i xid="i1" __cid="crMrq2y" class="crMrq2y"/>  
+            <span xid="span1" __cid="crMrq2y" class="crMrq2y">打开对话框</span> 
+          </a> 
+        </div> 
+      </div> 
+    </div>  
+    <div class="x-panel-content container crMrq2y" xid="content1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="crMrq2y"> 
+      <button xid="button4" onClick="showMessage()" style="height:41px;" __cid="crMrq2y" class="crMrq2y">调用传统js的showMessage方法</button>  
+      <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default crMrq2y" xid="button2" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:button2Click" data-config="{&quot;label&quot;:&quot;调用当前模块中的showMessage方法&quot;}" __cid="crMrq2y"> 
+        <i xid="i2" __cid="crMrq2y" class="crMrq2y"/>  
+        <span xid="span2" __cid="crMrq2y" class="crMrq2y">调用当前模块中的showMessage方法</span> 
+      </a> 
+    </div>  
+    <style __cid="crMrq2y" class="crMrq2y">.x-panel.pcQ7JvEb-iosstatusbar &gt;.x-panel-top {height: 48px;}.x-panel.pcQ7JvEb-iosstatusbar &gt;.x-panel-content { top: 48px;bottom: nullpx;}.x-panel.pcQ7JvEb-iosstatusbar &gt;.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.pcQ7JvEb-iosstatusbar &gt;.x-panel-top,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pcQ7JvEb-iosstatusbar &gt;.x-panel-top {height: 68px;}.iosstatusbar .x-panel.pcQ7JvEb-iosstatusbar &gt;.x-panel-content,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pcQ7JvEb-iosstatusbar &gt;.x-panel-content { top: 68px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pcQ7JvEb-iosstatusbar &gt;.x-panel-top {height: 48px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pcQ7JvEb-iosstatusbar &gt;.x-panel-content {top: 48px;}</style> 
+  </div> 
+</div>

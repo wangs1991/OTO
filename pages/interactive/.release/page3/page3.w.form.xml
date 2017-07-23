@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div xmlns="http://www.w3.org/1999/xhtml" component="$model/UI2/system/components/justep/window/window" design="device:m;" xid="window" class="window c6Zreuy" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="c6Zreuy" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/window/window,">  
+  <div component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" data-events="onLoad:modelLoad;onParamsReceive:modelParamsReceive" __cid="c6Zreuy" class="c6Zreuy"></div>  
+  <div xid="view" __cid="c6Zreuy" class="c6Zreuy">
+    <h3 xid="Page3" __cid="c6Zreuy" class="c6Zreuy">内嵌页面：Page3</h3>
+    <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default c6Zreuy" xid="button1" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:button1Click" data-config="{&quot;label&quot;:&quot;显示所有参数&quot;}" __cid="c6Zreuy"> 
+      <i xid="i1" __cid="c6Zreuy" class="c6Zreuy"/>  
+      <span xid="span1" __cid="c6Zreuy" class="c6Zreuy">显示所有参数</span>
+    </a>  
+    <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default c6Zreuy" xid="button2" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:button2Click" data-config="{&quot;label&quot;:&quot;返回数据&quot;}" __cid="c6Zreuy"> 
+      <i xid="i2" __cid="c6Zreuy" class="c6Zreuy"/>  
+      <span xid="span2" __cid="c6Zreuy" class="c6Zreuy">返回数据</span>
+    </a>
+  </div>
+  <div xid="container" __cid="c6Zreuy" class="c6Zreuy"/> 
+</div>
