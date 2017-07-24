@@ -9,7 +9,7 @@
       <div component="$UI/system/components/justep/titleBar/titleBar" class="x-titlebar"
         xid="titleBar1"> 
         <div class="x-titlebar-left" xid="left1"/>  
-        <div class="x-titlebar-title" xid="title1">asdfasdf</div>  
+        <div class="x-titlebar-title" xid="title1"><![CDATA[wushijie]]></div>  
         <div class="x-titlebar-right reverse" xid="right1"/>
       </div>
     </div>  
