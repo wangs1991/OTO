@@ -9,18 +9,12 @@
   <div component="$UI/system/components/justep/panel/panel" class="x-panel x-full"
     xid="panel1"> 
     <div class="x-panel-top" xid="top1"> 
-      <!-- <div component="$UI/system/components/justep/titleBar/titleBar" class="x-titlebar"
-        xid="titleBar1"> 
-        <div class="x-titlebar-left" xid="left1"/>  
-        <div class="x-titlebar-title" xid="title1">asdfasdf</div>  
-        <div class="x-titlebar-right reverse" xid="right1">设置阿斯蒂芬</div>
-      </div> -->  
       <div component="$UI/system/components/justep/titleBar/titleBar" class="x-titlebar app-title-ctner"
         xid="titleBar1"> 
         <div class="x-titlebar-left" xid="left1" bind-click="goBack"> 
-          <i class="webapp ic-back" style="display:none"/> 
+          <i class="webapp ic-back"/> 
         </div>  
-        <div class="x-titlebar-title" xid="title1">设置</div>  
+        <div class="x-titlebar-title" xid="title1"><![CDATA[nininininininininininini----wushijie]]></div>  
         <div class="x-titlebar-right reverse" xid="right1"/> 
       </div> 
     </div>  
