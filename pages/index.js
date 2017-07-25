@@ -1,9 +1,10 @@
 define(function(require) {
+	require("css!../assets/style/base").load();
+	
 	var $ = require("jquery");
 	var justep = require("$UI/system/lib/justep");
 	var ShellImpl = require('$UI/system/lib/portal/shellImpl');
-//	var Config = require('../config/config.js');
-//	console.log(COnfig);
+	var Config = require('../config/config');
 
 	var Model = function() {
 		this.callParent();

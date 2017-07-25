@@ -2,16 +2,27 @@
 
 <div xmlns="http://www.w3.org/1999/xhtml" xid="window" class="window portal-main" component="$UI/system/components/justep/window/window">  
   <div component="$UI/system/components/justep/model/model" xid="model" style="height:auto;left:350px;top:66px;"
-    onLoad="modelLoad"/>  
+    onLoad="modelLoad">
+    <div component="$UI/system/components/justep/data/data" autoLoad="true"
+      xid="data1" confirmRefresh="false"/>
+  </div>  
   <div component="$UI/system/components/justep/panel/panel" class="x-panel x-full"
     xid="panel1"> 
-    <div class="x-panel-top" xid="top1">
-      <div component="$UI/system/components/justep/titleBar/titleBar" class="x-titlebar"
+    <div class="x-panel-top" xid="top1"> 
+      <!-- <div component="$UI/system/components/justep/titleBar/titleBar" class="x-titlebar"
         xid="titleBar1"> 
         <div class="x-titlebar-left" xid="left1"/>  
         <div class="x-titlebar-title" xid="title1">asdfasdf</div>  
-        <div class="x-titlebar-right reverse" xid="right1"/>
-      </div>
+        <div class="x-titlebar-right reverse" xid="right1">设置阿斯蒂芬</div>
+      </div> -->  
+      <div component="$UI/system/components/justep/titleBar/titleBar" class="x-titlebar app-title-ctner"
+        xid="titleBar1"> 
+        <div class="x-titlebar-left" xid="left1" bind-click="goBack"> 
+          <i class="webapp ic-back" style="display:none"/> 
+        </div>  
+        <div class="x-titlebar-title" xid="title1">设置</div>  
+        <div class="x-titlebar-right reverse" xid="right1"/> 
+      </div> 
     </div>  
     <div class="x-panel-content  x-scroll-view" xid="content1" style="bottom: 0px; height: 100%;"
       _xid="C79D82AEB1900001F9E5123057971270"> 

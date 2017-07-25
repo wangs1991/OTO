@@ -1,0 +1,632 @@
+/*样式定制
+ * 主色调：#0078ff
+ * 标题字号：55px
+ * 
+ */
+@font-face {
+	font-family: 'webapp'; project id 323567
+	src: url('../font/iconfont.eot');
+	src: url('../font/iconfont.eot?#iefix')
+		format('embedded-opentype'),
+		url('../font/iconfont.woff') format('woff'),
+		url('../font/iconfont.ttf') format('truetype'),
+		url('../font/iconfont.svg#webapp') format('svg');
+}
+/* @font-face {
+  font-family: 'webapp';  project id 323567
+  src: url('//at.alicdn.com/t/font_ujucpbc2ivygb9.eot');
+  src: url('//at.alicdn.com/t/font_ujucpbc2ivygb9.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_ujucpbc2ivygb9.woff') format('woff'),
+  url('//at.alicdn.com/t/font_ujucpbc2ivygb9.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_ujucpbc2ivygb9.svg#webapp') format('svg');
+}
+ */
+.webapp {
+	font-family: "webapp" !important;
+	font-size: 16px;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.ic-jilu:before {
+	content: "\e659";
+}
+
+.ic-fankui:before {
+	content: "\e60c";
+}
+
+.ic-ziping:before {
+	content: "\e61f";
+}
+
+.ic-enter:before {
+	content: "\e626";
+}
+
+.ic-back:before {
+	content: "\e613";
+}
+
+.ic-refresh:before {
+	content: "\e62d";
+}
+
+.ic-video:before {
+	content: "\e6b2";
+}
+
+.ic-vr:before {
+	content: "\e673";
+}
+
+.ic-loginout:before {
+	content: "\e6dc";
+}
+
+.ic-xinli:before {
+	content: "\e676";
+}
+
+.ic-help:before {
+	content: "\e6a4";
+}
+
+.ic-more:before {
+	content: "\e611";
+}
+
+.nav-xinli:before {
+	content: "\e78c";
+}
+
+.nav-course:before {
+	content: "\e632";
+}
+
+.nav-record:before {
+	content: "\e620";
+}
+
+.nav-setting:before {
+	content: "\e610";
+}
+/* 主屏图标 */
+.mn-speech:before {
+	content: "\e756";
+}
+.mn-common:before {
+	content: "\e622";
+}
+.mn-exam:before {
+	content: "\e605";
+}
+.mn-social:before {
+	content: "\e604";
+}
+.mn-plane:before {
+	content: "\e69f";
+}
+.mn-dog:before {
+	content: "\e73f";
+}
+.mn-spider:before {
+	content: "\e606";
+}
+.mn-zhanglang:before {
+	content: "\e603";
+}
+
+
+body {
+	backgorund: #eee;
+}
+
+.mgt-10 {
+	margin-top: 10px;
+}
+
+.mgt-15 {
+	margin-top: 15px;;
+}
+
+.mgt-20 {
+	margin-top: 20px;
+}
+
+.block {
+	display: block !important;
+}
+.mgb-not{
+	margin-bottom: 0!important;
+}
+/* 底部栏美化 */
+.app-son {
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.app-son .btn {
+	background-color: transparent;
+	color: #B3ABAB;
+}
+
+.app-son .btn.active {
+	color: #0078ff;
+}
+
+.app-title-ctner {
+	background-color: #0078ff !important;
+	text-align: center;
+	z-index: 50;
+	color: #fff!important;
+	border: 0!important;
+}
+
+.app-title-ctner .x-titlebar-title {
+	font-size: 18px;
+	font-weight: normal!important;
+	color: #fff!important;
+}
+
+.app-title-ctner .webapp {
+	font-size: 24px;
+	margin-top: 2px;
+}
+
+.app-list li{
+	background-color: #fff;
+	border: 0;
+	border-bottom: 1px solid #ededed;
+	font-size: 16px;
+	line-height: 1.5em;
+	padding: 10px 0;
+	margin: 0;
+}
+
+.app-list li:last-child {
+	border-bottom: 0;
+}
+
+.app-list li .webapp {
+	font-size: 25px;
+	position: relative;
+	top: 2px;
+}
+
+.app-list li .ic-video {
+	position: relative;
+	top: 1px;
+}
+
+.app-list li .text-panel {
+	position: relative;
+	top: 2px;
+}
+
+/* 首屏心里问题样式 */
+.type-bar .text-black{
+	padding: 5px!important;
+	font-size: 14px!important;
+	margin-top: 23px!important;
+	
+}
+.main-icon{
+	width: 45px;
+	height: 45px;
+	background-color: #f00;
+	margin: 0 auto;
+	border-radius: 100px;
+	text-align: center;
+	line-height: 45px;
+}
+.main-icon .webapp{
+	color: #fff;
+	font-size: 25px;
+}
+.f-fr {
+	float: right;
+}
+
+.tac {
+	text-align: center;
+}
+
+.x-panel-content {
+	background-color: #eee !important;
+}
+
+.section-card {
+	background-color: #fff!important;
+}
+.section-normal{
+	padding: 15px;
+}
+
+.user-card {
+	padding: 15px;
+}
+.timer-more{
+	position: relative;
+	top: -1px!important;
+}
+.btn-card{
+	padding: 15px;
+}
+.content-detail {
+	padding: 15px;
+	line-height: 1.5em;
+	font-size: 14px;
+}
+.content-detail textarea{
+	display: block;
+	background-color: #fff!important;
+	line-height: 1.5em;
+	border: none!important;
+	box-shadow: none!important;
+	-webkit-box-shadow: none!important;
+	padding: 0!important;
+}
+
+.symbol-card {
+	position: relative;
+	z-index: 3;
+}
+
+.user-card .user-head {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 0 0 6px rgba(0, 120, 255, .3);
+}
+
+.user-card .media-body {
+	position: relative;
+	top: 8px;
+}
+
+.section-card .app-list li {
+	background-color: #fff;
+	padding: 10px 15px;
+}
+.app-list.scence-list li{
+	padding-left: 0;
+	padding-right: 0;
+}
+.app-list.scence-list li .val-selector{
+	margin-top: 10px;
+}
+.course-list.app-list li {
+	padding-bottom: 4px;
+}
+
+.input-card * {
+	font-size: 14px !important;
+}
+
+.content-detail textarea,.content-detail input {
+	font-size: 16px;
+}
+.content-detail .header{
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+.content-detail .paragraph{
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+	text-indent: 2em;
+}
+.content-detail .tb-bottom-line{
+	margin-top: -1em;
+	margin-bottom: 1em;
+}
+
+.symbol-card .symbol-img {
+	display: block;
+	width: 100%!important;
+	max-heigth: 400px;
+	overflow: hidden;
+}
+
+.symbol-card .symbol-info {
+	position: absolute;
+	z-index: 5;
+	top: 10px;
+	left: 20px;
+	right: 20px;
+}
+
+.biologyFdback .center-pull {
+	z-index: 0;
+}
+
+.stard-title{
+	font-size: 22px!important;
+	color: #000;
+}
+.main-title {
+	font-size: 16px!important;
+	color: #333;
+	font-weight: normal;
+}
+
+.sub-title {
+	font-size: 14px;
+	color: #666;
+	font-weight: normal;
+}
+
+.lab-title {
+	font-size: 12px;
+	color: #999;
+}
+
+.strss-text {
+	font-size: 20px;
+	font-style: italic;
+}
+
+.sub-title label{
+	left: 2em!important;
+}
+.sub-title label:before{
+	margin-left: -2em!important;
+	top: -1px;
+}
+.score-big{
+	font-size: 60px;
+	color: #0078ff;
+	text-align: center;
+	padding-top: .5em;
+	padding-bottom: .5em;;
+	text-shadow: 5px 5px 10px #1a99e2;
+}
+.flex-list{
+	display: flex;
+	justify-content: space-between;
+}
+.flex-item{
+	flex-grow: 1;
+	padding-right: 15px;
+}
+.flex-item:last-child{
+	padding-right: 0;
+}
+
+.v-middle {
+	transform: translateY(80%);
+	font-size: 25px !important;
+}
+
+.f-smaller {
+	font-size: 50% !important;
+	margin-left: -0.5em;
+}
+
+.warn-txt {
+	color: #dd5600;
+}
+
+.safe-txt {
+	color: #73a839;
+}
+
+video {
+	display: block;
+	width: 100%;
+}
+.wel-carousel .carousel-indicators {
+	bottom: 20px;
+	padding: 3px 5px;
+}
+.wel-carousel .item,
+.wel-carousel .item img{
+	display: block;
+	height: 100%;
+}
+.button {
+	display: block;
+	width: 100%;
+	font-zise: 16px;
+	color: #fff!important;
+	padding: 8px 12px!important;
+}
+
+.button * {
+	font-size: 16px !important;
+}
+.x-panel-bottom{
+	border: 0!important;
+}
+.wel-carousel .item {
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	z-index: -1;
+}
+
+.wel-carousel .carousel-inner {
+	position: absolute !important;
+	height: 100vh;
+}
+
+.wel-carousel .carousel-indicators li {
+	border: 1px solid #0078ff;
+	margin: 0 4px;
+}
+
+.wel-carousel .carousel-indicators .active {
+	background-color: #0078ff;
+	width: 10px;
+	height: 10px;
+}
+
+.wel-pass {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	z-index: 20;
+	font-size: 20px;
+	color: #bbb;
+}
+.item-btn{
+	position: relative;
+	top: 11px;
+}
+.btn-warning{
+	background-color: rgba(211, 0, 0, .71);
+}
+.btn-warning:hover{
+	background-color: rgba(211, 0, 0, .95);
+}
+.content-btn-group.btn-group,
+.content-btn-group.btn-group .btn{
+	border: 0!important;
+	border-bottom: 2px solid transparent!important;
+	color: #666!important;
+}
+.content-btn-group.btn-group .btn{
+	padding-bottom: 6px!important;
+}
+.content-btn-group.btn-group{
+	border-bottom: 1px solid #cdcdcd!important;
+}
+.content-btn-group.btn-group .btn.active{
+	background: #0078ff!important;
+    color: #fff!important;
+}
+.center-elem{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	transform: translate(-50%, -50%)!important;
+}
+.play-ctner{
+	border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    border: 1px solid #0e80e5;
+    text-align: center;
+}
+.main-view{
+	/* margin-top: 40px; */
+	padding-bottom: 20px;
+}
+.main-view .sub-title{
+	font-size: 12px;
+	margin-top: 12px;
+	color: #333;
+	/* letter-spacing: -1px; */
+}
+.play-btn{
+	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+	background-color: #0e80e5;
+	display: inline-block;
+    margin-top: 25px;
+    color: #fff;
+    line-height: 200px;
+    font-size: 18px;
+    opacity: .8;
+    -webkit-animtion: playing .8s infinite;
+    -moz-animtion: playing .8s infinite;
+    -o-animtion: playing .8s infinite;
+    animtion: playing .8s infinite;
+}
+@-webkit-keyframes playing{
+	0%{
+		tranform: scale(1);
+		opacity: .9;
+	}
+	50%{
+		tranform: scale(1.2);
+		opacity: .5;
+	}
+	100%{
+		tranform: scale(1.2);
+		opacity: .9;
+	}
+}
+.center-block canvas{
+	position: static!important;
+}
+.loginer{
+	width: 80%;
+    margin: -10px auto 0;
+}
+.login-ctner.login-ctner{
+	box-shadow: none;
+	color: #fff;
+}
+.login-ctner input{
+	boder: 0!important;
+	border-bottom: 1px solid #fff!important;
+	box-shadow: none!important;
+	padding-left: 40px;
+}
+.login-ctner *{
+	background-color: transparent!important;
+	color: #fff!important;
+}
+.login-ctner .input-group{
+	position: relative;
+	width: 100%;
+}
+.login-ctner .list-group-item{
+	border: none;
+	padding-left: 0;
+	padding-right: 0;
+}
+.login-ctner .input-icon{
+	position: absolute;
+	left: -4px;
+}
+.login-ctner .button{
+	border: 1px solid #0078ff!important;
+	color: #fff!important;
+	border-radius: 5px!important;
+	font-size: 12px;	
+	display: inline-block!important;
+	width: 30%;
+	margin-top: 3px;
+	background-color: rgba(255,255, 255, 0.3)!important;
+}
+.login-bg{
+	background: url(../img/login.jpg) no-repeat;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+.login-ctner ::-webkit-input-placeholder { /* WebKit browsers */ 
+color: #fff; 
+} 
+.login-ctner :-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+color: #fff; 
+} 
+.login-ctner ::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+color: #fff; 
+} 
+.login-ctner :-ms-input-placeholder { /* Internet Explorer 10+ */ 
+color: #fff; 
+}
+.question-list .list-group-item .x-radio{
+	width: 100%;
+}
+.question-list .list-group-item label{
+	width: 100%;
+}
+.content-detail.x-contents-content{
+	max-height: 420px;
+	overflow-x: hidden;
+	overflow: auto;
+}
+.progress{
+	position: relative;
+}
+.progressCtner{
+	position: absolute;
+	left: 5px;
+	top: 3px;
+}
