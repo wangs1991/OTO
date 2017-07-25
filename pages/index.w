@@ -4,4 +4,5 @@
   design="device:m;">
   <div component="$UI/system/components/justep/model/model" xid="model" style="position:absolute;;left:86.0px;top:170.0px"
     onLoad="modelLoad"/>  
-  <div component="$UI/system/components/justep/contents/contents" class="x-contents x-full" active="0" xid="pages" swipe="false" slidable="true"></div></div>
+  <div component="$UI/system/components/justep/contents/contents" class="x-contents x-full" active="0" xid="pages" swipe="false" slidable="true"></div>
+  </div>

@@ -22,5 +22,37 @@ define(function(require){
 		}, function(){});
 	};
 	
+	Model.prototype.newsUserClick = function(event){
+		url = "$UI/OTO/pages/userInfo/newsUser.w";
+		justep.Shell.showPage(url);
+	};
+	
+	Model.prototype.goBack = function(event){
+		justep.Shell.showLeft();
+	};
+	
+	Model.prototype.userInfoClick = function(event){
+		url = "$UI/OTO/pages/userInfo/userInfo.w";
+		justep.Shell.showPage(url);
+	};
+	Model.prototype.modifyPasswordClick = function(event){
+		url = "$UI/OTO/pages/userInfo/modifyPassword.w";
+		justep.Shell.showPage(url);
+	};
+	
+	Model.prototype.assessSelectClick = function(event){
+		url = "$UI/OTO/pages/userInfo/assessSelect.w";
+		justep.Shell.showPage(url);
+	};
+	
+
+	
+	Model.prototype.setUpClick = function(event){
+		url = "$UI/OTO/pages/userInfo/setUp.w";
+		justep.Shell.showPage(url);
+	};
+	
+
+	
 	return Model;
 });

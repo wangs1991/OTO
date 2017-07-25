@@ -24,11 +24,16 @@ define(function(require) {
 				
 				rules: {
 					url: require.toUrl("./rules/index.w")
-				}
-				
+				},
+				newsUser:{
+					url : require.toUrl('./userInfo/newsUser.w')
+				},
 			}
 		});
 	};
+	
+	
+	
 //	打开：justep.Shell.showPage(“main”);
 //	关闭：this.close();
 //	返回上一页：justep.Shell.closePage();
@@ -40,6 +45,8 @@ define(function(require) {
 //		设置显示页面
 		justep.Shell.showPage("main");
 	};
+	
+
 	
 	return Model;
 });

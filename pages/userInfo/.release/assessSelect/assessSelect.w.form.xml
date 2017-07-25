@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div xmlns="http://www.w3.org/1999/xhtml" component="$model/UI2/system/components/justep/window/window" design="device:m;" xid="window" class="window czEbMrq" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="czEbMrq" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/scrollView/scrollView,$model/UI2/system/components/justep/titleBar/titleBar,$model/UI2/system/components/justep/panel/child,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/panel/panel,">
+  <xhtml:style xmlns:xhtml="http://www.w3.org/1999/xhtml">null</xhtml:style>  
+  <div component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" __cid="czEbMrq" class="czEbMrq"></div>  
+  <div component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full pcr6fU7j-iosstatusbar czEbMrq" xid="panel1" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}" __cid="czEbMrq"> 
+    <div class="x-panel-top czEbMrq" xid="top1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="czEbMrq"> 
+      <div component="$model/UI2/system/components/justep/titleBar/titleBar" class="x-titlebar czEbMrq" data-bind="component:{name:'$model/UI2/system/components/justep/titleBar/titleBar'}" data-config="{&quot;title&quot;:&quot;标题&quot;}" __cid="czEbMrq"> 
+        <div class="x-titlebar-left czEbMrq" __cid="czEbMrq"> 
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon czEbMrq" xid="backBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{operation:'window.close'}" data-config="{&quot;icon&quot;:&quot;icon-chevron-left&quot;,&quot;label&quot;:&quot;&quot;}" __cid="czEbMrq"> 
+            <i class="icon-chevron-left czEbMrq" __cid="czEbMrq"/>  
+            <span __cid="czEbMrq" class="czEbMrq"/> 
+          </a> 
+        </div>  
+        <div class="x-titlebar-title czEbMrq" __cid="czEbMrq">自评量表选择</div>  
+        <div class="x-titlebar-right  czEbMrq" __cid="czEbMrq">
+          <div class="empty czEbMrq" __cid="czEbMrq"/>
+        </div> 
+      </div> 
+    </div>  
+    <div class="x-panel-content x-scroll-view czEbMrq" xid="content1" _xid="C79E1CFC497000011AE5500068D1B200" style="bottom: 0px; background-size: cover; background-image: url(http://localhost:41778/x5/UI2/v_/OTO/pages/userInfo/none);" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="czEbMrq">
+      <div class="x-scroll czEbMrq" component="$model/UI2/system/components/justep/scrollView/scrollView" xid="scrollView1" data-bind="component:{name:'$model/UI2/system/components/justep/scrollView/scrollView'}" __cid="czEbMrq"> 
+        <div class="x-content-center x-pull-down container czEbMrq" xid="div1" __cid="czEbMrq"> 
+          <i class="x-pull-down-img glyphicon x-icon-pull-down czEbMrq" xid="i1" __cid="czEbMrq"/>  
+          <span class="x-pull-down-label czEbMrq" xid="span1" __cid="czEbMrq">下拉刷新...</span>
+        </div>  
+        <div class="x-scroll-content czEbMrq" xid="div2" __cid="czEbMrq"> 
+          <div xid="div5" style="text-align:center;" __cid="czEbMrq" class="czEbMrq">
+            <div xid="div4" style="width:70%;display:inline-block;margin-top:35px;" __cid="czEbMrq" class="czEbMrq">
+              <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default czEbMrq" xid="button1" style="width:40%;margin:0 2.5%;background-color:#999;border:2px solid #666;" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-config="{&quot;label&quot;:&quot;社交焦虑&quot;}" __cid="czEbMrq"> 
+                <i xid="i2" __cid="czEbMrq" class="czEbMrq"/>  
+                <span xid="span3" __cid="czEbMrq" class="czEbMrq">社交焦虑</span>
+              </a>  
+              <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default czEbMrq" xid="button2" style="width:40%;margin:0 2.5%;background-color:#999;border:2px solid #666;" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-config="{&quot;label&quot;:&quot;抑郁&quot;}" __cid="czEbMrq"> 
+                <i xid="i3" __cid="czEbMrq" class="czEbMrq"/>  
+                <span xid="span4" __cid="czEbMrq" class="czEbMrq">抑郁</span>
+              </a>
+            </div>  
+            <div xid="div6" style="width:70%;display:inline-block;margin-top:35px;" __cid="czEbMrq" class="czEbMrq"> 
+              <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default czEbMrq" xid="button4" style="width:40%;margin:0 2.5%;background-color:#999;border:2px solid #666;" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-config="{&quot;label&quot;:&quot;社交焦虑&quot;}" __cid="czEbMrq"> 
+                <i xid="i4" __cid="czEbMrq" class="czEbMrq"/>  
+                <span xid="span5" __cid="czEbMrq" class="czEbMrq">社交焦虑</span>
+              </a>  
+              <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default czEbMrq" xid="button3" style="width:40%;margin:0 2.5%;background-color:#999;border:2px solid #666;" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-config="{&quot;label&quot;:&quot;抑郁&quot;}" __cid="czEbMrq"> 
+                <i xid="i5" __cid="czEbMrq" class="czEbMrq"/>  
+                <span xid="span6" __cid="czEbMrq" class="czEbMrq">抑郁</span>
+              </a> 
+            </div>
+          </div>
+        </div>  
+        <div class="x-content-center x-pull-up czEbMrq" xid="div3" __cid="czEbMrq"> 
+          <span class="x-pull-up-label czEbMrq" xid="span2" __cid="czEbMrq">加载更多...</span>
+        </div> 
+      </div>
+    </div>  
+    <style __cid="czEbMrq" class="czEbMrq">.x-panel.pcr6fU7j-iosstatusbar &gt;.x-panel-top {height: 48px;}.x-panel.pcr6fU7j-iosstatusbar &gt;.x-panel-content { top: 48px;bottom: nullpx;}.x-panel.pcr6fU7j-iosstatusbar &gt;.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.pcr6fU7j-iosstatusbar &gt;.x-panel-top,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pcr6fU7j-iosstatusbar &gt;.x-panel-top {height: 68px;}.iosstatusbar .x-panel.pcr6fU7j-iosstatusbar &gt;.x-panel-content,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pcr6fU7j-iosstatusbar &gt;.x-panel-content { top: 68px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pcr6fU7j-iosstatusbar &gt;.x-panel-top {height: 48px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pcr6fU7j-iosstatusbar &gt;.x-panel-content {top: 48px;}</style>
+  </div> 
+</div>

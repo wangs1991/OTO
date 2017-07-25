@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div xmlns="http://www.w3.org/1999/xhtml" component="$model/UI2/system/components/justep/window/window" design="device:m;" xid="window" class="window cMRjMRr" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="cMRjMRr" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/scrollView/scrollView,$model/UI2/system/components/justep/titleBar/titleBar,$model/UI2/system/components/justep/panel/child,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/panel/panel,">
+  <xhtml:style xmlns:xhtml="http://www.w3.org/1999/xhtml">null</xhtml:style>  
+  <div component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" __cid="cMRjMRr" class="cMRjMRr"></div>  
+  <div component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full pc2yem2a-iosstatusbar cMRjMRr" xid="panel1" style="width:100%;font-size:14px;" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}" __cid="cMRjMRr"> 
+    <div class="x-panel-top cMRjMRr" xid="top1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cMRjMRr"> 
+      <div component="$model/UI2/system/components/justep/titleBar/titleBar" class="x-titlebar cMRjMRr" data-bind="component:{name:'$model/UI2/system/components/justep/titleBar/titleBar'}" data-config="{&quot;title&quot;:&quot;标题&quot;}" __cid="cMRjMRr"> 
+        <div class="x-titlebar-left cMRjMRr" __cid="cMRjMRr"> 
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon cMRjMRr" xid="backBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{operation:'window.close'}" data-config="{&quot;icon&quot;:&quot;icon-chevron-left&quot;,&quot;label&quot;:&quot;&quot;}" __cid="cMRjMRr"> 
+            <i class="icon-chevron-left cMRjMRr" __cid="cMRjMRr"/>  
+            <span __cid="cMRjMRr" class="cMRjMRr"/> 
+          </a> 
+        </div>  
+        <div class="x-titlebar-title cMRjMRr" __cid="cMRjMRr">新建用户</div>  
+        <div class="x-titlebar-right  cMRjMRr" __cid="cMRjMRr">
+          <div class="empty cMRjMRr" __cid="cMRjMRr"/>
+        </div> 
+      </div> 
+    </div>  
+    <div class="x-panel-content x-scroll-view cMRjMRr" xid="content1" _xid="C79E07F045D00001EBCAF9768A7099E0" style="bottom: 0px; background-size: cover; background-image: url(http://localhost:42303/x5/UI2/v_/OTO/pages/userInfo/none);" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cMRjMRr"> 
+      <div class="x-scroll cMRjMRr" component="$model/UI2/system/components/justep/scrollView/scrollView" xid="scrollView1" data-bind="component:{name:'$model/UI2/system/components/justep/scrollView/scrollView'}" __cid="cMRjMRr"> 
+        <div class="x-content-center x-pull-down container cMRjMRr" xid="div1" __cid="cMRjMRr"> 
+          <i class="x-pull-down-img glyphicon x-icon-pull-down cMRjMRr" xid="i1" __cid="cMRjMRr"/>  
+          <span class="x-pull-down-label cMRjMRr" xid="span1" __cid="cMRjMRr">下拉刷新...</span>
+        </div>  
+        <div class="x-scroll-content cMRjMRr" xid="div2" __cid="cMRjMRr"> 
+          <div xid="div4" class="clearfix cMRjMRr" style=";margin-top:20px;padding:0 10px;" __cid="cMRjMRr"> 
+            <div xid="div8" class="pull-left cMRjMRr" style="width:30%;" __cid="cMRjMRr"> 
+              <img src="$model/UI2/OTO/pages/img/img_1.jpg" alt="" xid="image1" __cid="cMRjMRr" class="cMRjMRr"/>
+            </div>  
+            <div xid="div4" class="pull-right cMRjMRr" style="width:70%" __cid="cMRjMRr"> 
+              <div xid="div9" class="clearfix cMRjMRr" __cid="cMRjMRr"> 
+                <span xid="span3" class="pull-left cMRjMRr" style="width:25%;" __cid="cMRjMRr">姓名</span>  
+                <input type="text" value="" xid="input2" class="pull-left cMRjMRr" style="width:75%;border-bottom-width:1px;border-bottom-color:#C0C0C0;border-style:none none solid none;background-color:transparent;" __cid="cMRjMRr"/>
+              </div>  
+              <div xid="div12" class="clearfix cMRjMRr" __cid="cMRjMRr"> 
+                <span xid="span4" class="pull-left cMRjMRr" style="width:25%;" __cid="cMRjMRr">性别</span>  
+                <input type="text" value="" xid="input3" class="pull-left cMRjMRr" style="width:75%;border-bottom-width:1px;border-bottom-color:#C0C0C0;border-style:none none solid none;background-color:transparent;" __cid="cMRjMRr"/>
+              </div>  
+              <div xid="div13" class="clearfix cMRjMRr" __cid="cMRjMRr"> 
+                <span xid="span5" class="pull-left cMRjMRr" style="width:25%;" __cid="cMRjMRr">出生年月</span>  
+                <input type="text" value="" xid="input4" class="pull-left cMRjMRr" style="width:75%;border-bottom-width:1px;border-bottom-color:#C0C0C0;border-style:none none solid none;background-color:transparent;" __cid="cMRjMRr"/>
+              </div> 
+            </div> 
+          </div>  
+          <div xid="div17" style="margin:10px;" __cid="cMRjMRr" class="cMRjMRr"> 
+            <div xid="div16" class="clearfix cMRjMRr" __cid="cMRjMRr"> 
+              <span xid="span6" class="pull-left cMRjMRr" style="width:25%;text-align:center;" __cid="cMRjMRr">手机号</span>  
+              <input type="text" value="" xid="input7" class="pull-left cMRjMRr" style="width:75%;border-bottom-width:1px;border-bottom-color:#C0C0C0;border-style:none none solid none;background-color:transparent;" __cid="cMRjMRr"/>
+            </div>  
+            <div xid="div14" class="clearfix cMRjMRr" __cid="cMRjMRr"> 
+              <span xid="span7" class="pull-left cMRjMRr" style="width:25%;text-align:center;" __cid="cMRjMRr">身份证</span>  
+              <input type="text" value="" xid="input6" class="pull-left cMRjMRr" style="width:75%;border-bottom-width:1px;border-bottom-color:#C0C0C0;border-style:none none solid none;background-color:transparent;" __cid="cMRjMRr"/>
+            </div>  
+            <div xid="div15" class="clearfix cMRjMRr" __cid="cMRjMRr"> 
+              <span xid="span8" class="pull-left cMRjMRr" style="width:25%;text-align:center;" __cid="cMRjMRr">职业</span>  
+              <input type="text" value="" xid="input5" class="pull-left cMRjMRr" style="width:75%;border-bottom-width:1px;border-bottom-color:#C0C0C0;border-style:none none solid none;background-color:transparent;" __cid="cMRjMRr"/>
+            </div> 
+          </div>  
+          <div xid="div6" class="clearfix cMRjMRr" style="margin:10px;" __cid="cMRjMRr"> 
+            <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default pull-right cMRjMRr" xid="button1" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-config="{&quot;label&quot;:&quot;自评量表&quot;}" __cid="cMRjMRr"> 
+              <i xid="i2" __cid="cMRjMRr" class="cMRjMRr"/>  
+              <span xid="span3" __cid="cMRjMRr" class="cMRjMRr">自评量表</span>
+            </a> 
+          </div>  
+          <div xid="div7" style="margin:10px;" __cid="cMRjMRr" class="cMRjMRr"> 
+            <h3 xid="h31" style="font-size:16px;" __cid="cMRjMRr" class="cMRjMRr">诊疗分析记录</h3>  
+            <textarea cols="5" rows="5" xid="textarea2" style="width:100%;background-color:transparent;" __cid="cMRjMRr" class="cMRjMRr"/>
+          </div>  
+          <div xid="div18" class="clearfix cMRjMRr" style="margin:10px;text-align:center;" __cid="cMRjMRr"> 
+            <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default cMRjMRr" xid="button2" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-config="{&quot;label&quot;:&quot;创建用户&quot;}" __cid="cMRjMRr"> 
+              <i xid="i2" __cid="cMRjMRr" class="cMRjMRr"/>  
+              <span xid="span9" __cid="cMRjMRr" class="cMRjMRr">创建用户</span>
+            </a> 
+          </div> 
+        </div>  
+        <div class="x-content-center x-pull-up cMRjMRr" xid="div3" __cid="cMRjMRr"> 
+          <span class="x-pull-up-label cMRjMRr" xid="span2" __cid="cMRjMRr">加载更多...</span>
+        </div> 
+      </div>
+    </div>  
+    <style __cid="cMRjMRr" class="cMRjMRr">.x-panel.pc2yem2a-iosstatusbar &gt;.x-panel-top {height: 48px;}.x-panel.pc2yem2a-iosstatusbar &gt;.x-panel-content { top: 48px;bottom: nullpx;}.x-panel.pc2yem2a-iosstatusbar &gt;.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.pc2yem2a-iosstatusbar &gt;.x-panel-top,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pc2yem2a-iosstatusbar &gt;.x-panel-top {height: 68px;}.iosstatusbar .x-panel.pc2yem2a-iosstatusbar &gt;.x-panel-content,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pc2yem2a-iosstatusbar &gt;.x-panel-content { top: 68px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pc2yem2a-iosstatusbar &gt;.x-panel-top {height: 48px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pc2yem2a-iosstatusbar &gt;.x-panel-content {top: 48px;}</style>
+  </div> 
+</div>

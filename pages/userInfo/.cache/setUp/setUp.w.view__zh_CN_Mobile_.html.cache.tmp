@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div xmlns="http://www.w3.org/1999/xhtml" component="$model/UI2/system/components/justep/window/window" design="device:m;" xid="window" class="window c7vEzqm" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="c7vEzqm" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/scrollView/scrollView,$model/UI2/system/components/justep/titleBar/titleBar,$model/UI2/system/components/justep/panel/child,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/panel/panel,">  
+  <style xmlns="" xmlns:xhtml="http://www.w3.org/1999/xhtml">null</style>  
+  <div xmlns="" component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" __cid="c7vEzqm" class="c7vEzqm"/>  
+  <div xmlns="" component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full pcBreyem-iosstatusbar c7vEzqm" xid="panel1" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}" __cid="c7vEzqm"> 
+    <div class="x-panel-top c7vEzqm" xid="top1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="c7vEzqm"> 
+      <div component="$model/UI2/system/components/justep/titleBar/titleBar" class="x-titlebar c7vEzqm" data-bind="component:{name:'$model/UI2/system/components/justep/titleBar/titleBar'}" data-config="{&quot;title&quot;:&quot;标题&quot;}" __cid="c7vEzqm"> 
+        <div class="x-titlebar-left c7vEzqm" __cid="c7vEzqm"> 
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon c7vEzqm" xid="backBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{operation:'window.close'}" data-config="{&quot;icon&quot;:&quot;icon-chevron-left&quot;,&quot;label&quot;:&quot;&quot;}" __cid="c7vEzqm"> 
+            <i class="icon-chevron-left c7vEzqm" __cid="c7vEzqm"/>  
+            <span __cid="c7vEzqm" class="c7vEzqm"/> 
+          </a> 
+        </div>  
+        <div class="x-titlebar-title c7vEzqm" __cid="c7vEzqm">设置</div>  
+        <div class="x-titlebar-right  c7vEzqm" __cid="c7vEzqm"> 
+          <div class="empty c7vEzqm" __cid="c7vEzqm"/> 
+        </div> 
+      </div> 
+    </div>  
+    <div class="x-panel-content x-scroll-view c7vEzqm" xid="content1" _xid="C79E1DE84940000158CB148018C02050" style="bottom: 0px; background-size: cover; background-image: url(http://localhost:41778/x5/UI2/v_/OTO/pages/userInfo/none);" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="c7vEzqm"> 
+      <div class="x-scroll c7vEzqm" component="$model/UI2/system/components/justep/scrollView/scrollView" xid="scrollView1" data-bind="component:{name:'$model/UI2/system/components/justep/scrollView/scrollView'}" __cid="c7vEzqm"> 
+        <div class="x-content-center x-pull-down container c7vEzqm" xid="div1" __cid="c7vEzqm"> 
+          <i class="x-pull-down-img glyphicon x-icon-pull-down c7vEzqm" xid="i1" __cid="c7vEzqm"/>  
+          <span class="x-pull-down-label c7vEzqm" xid="span1" __cid="c7vEzqm">下拉刷新...</span> 
+        </div>  
+        <div class="x-scroll-content c7vEzqm" xid="div2" __cid="c7vEzqm"> 
+          <ul xid="ul1" __cid="c7vEzqm" class="c7vEzqm"> 
+            <li xid="li2" style="border:1px solid #999;padding:10px;" class="clearfix c7vEzqm" __cid="c7vEzqm"> 
+              <div xid="div4" class="pull-left c7vEzqm" __cid="c7vEzqm"> 
+                <img src="@justepContextPath@/v_dbbaeeaa551c47018fc53a1bf4499161l_zh_CNs_d_m/OTO/pages/img/set_1.jpg" alt="" xid="image1" style="width:25px;" height="25px" __cid="c7vEzqm" class="c7vEzqm"/>  
+                <span xid="span3" style="display:inline-block;line-height:30px;margin-left:10px;" __cid="c7vEzqm" class="c7vEzqm">绑定头盔</span> 
+              </div>  
+              <div xid="div5" class="pull-right c7vEzqm" __cid="c7vEzqm"> 
+                <img src="@justepContextPath@/v_8a8eb9fa06f543ecadd0a1d35a2b6e64l_zh_CNs_d_m/OTO/pages/img/set_5.jpg" alt="" xid="image2" __cid="c7vEzqm" class="c7vEzqm"/> 
+              </div> 
+            </li> 
+          </ul> 
+        </div>  
+        <div class="x-content-center x-pull-up c7vEzqm" xid="div3" __cid="c7vEzqm"> 
+          <span class="x-pull-up-label c7vEzqm" xid="span2" __cid="c7vEzqm">加载更多...</span> 
+        </div> 
+      </div> 
+    </div>  
+    <style __cid="c7vEzqm" class="c7vEzqm">.x-panel.pcBreyem-iosstatusbar &gt;.x-panel-top {height: 48px;}.x-panel.pcBreyem-iosstatusbar &gt;.x-panel-content { top: 48px;bottom: nullpx;}.x-panel.pcBreyem-iosstatusbar &gt;.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.pcBreyem-iosstatusbar &gt;.x-panel-top,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pcBreyem-iosstatusbar &gt;.x-panel-top {height: 68px;}.iosstatusbar .x-panel.pcBreyem-iosstatusbar &gt;.x-panel-content,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pcBreyem-iosstatusbar &gt;.x-panel-content { top: 68px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pcBreyem-iosstatusbar &gt;.x-panel-top {height: 48px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pcBreyem-iosstatusbar &gt;.x-panel-content {top: 48px;}</style> 
+  </div> 
+</div>

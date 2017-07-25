@@ -18,19 +18,25 @@
         <div class="x-titlebar-right reverse" xid="right1"/> 
       </div> 
     </div>  
-    <div class="x-panel-content  x-scroll-view" xid="content1" style="bottom: 0px; height: 100%;"
+    <div class="x-panel-content" xid="content1" style="bottom: 0px; height: 100%; background-size: cover; background-image: url(http://localhost:42303/x5/UI2/v_/OTO/pages/none);"
       _xid="C79D82AEB1900001F9E5123057971270"> 
-      <div class="x-scroll" component="$UI/system/components/justep/scrollView/scrollView"
-        xid="scrollView1"> 
-        <div class="x-content-center x-pull-down container" xid="div1"> 
-          <i class="x-pull-down-img glyphicon x-icon-pull-down" xid="i1"/>  
-          <span class="x-pull-down-label" xid="span1">下拉刷新...</span> 
-        </div>  
-        <div class="x-scroll-content" xid="div2"/>  
-        <div class="x-content-center x-pull-up" xid="div3"> 
-          <span class="x-pull-up-label" xid="span2">加载更多...</span> 
-        </div> 
-      </div> 
-    </div> 
+      <a component="$UI/system/components/justep/button/button" class="btn btn-default" label="新建用户" xid="button1" url="./userInfo/newsInfo.w" bind-click="newsUserClick">
+   <i xid="i2"></i>
+   <span xid="span3">新建用户</span></a>
+  <a component="$UI/system/components/justep/button/button" class="btn btn-default" label="用户信息" xid="button2" url="./userInfo/newsInfo.w" bind-click="userInfoClick">
+   <i xid="i1"></i>
+   <span xid="span1">用户信息</span></a>
+  <a component="$UI/system/components/justep/button/button" class="btn btn-default" label="修改密码" xid="button3" url="./userInfo/newsInfo.w" bind-click="modifyPasswordClick">
+   <i xid="i3"></i>
+   <span xid="span2">修改密码</span></a>
+  <a component="$UI/system/components/justep/button/button" class="btn btn-default" label="找回密码" xid="button4" url="./userInfo/newsInfo.w" bind-click="backPasswordClick">
+   <i xid="i4"></i>
+   <span xid="span4">找回密码</span></a>
+  <a component="$UI/system/components/justep/button/button" class="btn btn-default" label="自评量表选择" xid="button5" url="./userInfo/newsInfo.w" bind-click="assessSelectClick">
+   <i xid="i5"></i>
+   <span xid="span5">自评量表选择</span></a>
+  <a component="$UI/system/components/justep/button/button" class="btn btn-default" label="设置" xid="button6" url="./userInfo/newsInfo.w" bind-click="setUpClick">
+   <i xid="i6"></i>
+   <span xid="span6">设置</span></a></div> 
   </div> 
 </div>
