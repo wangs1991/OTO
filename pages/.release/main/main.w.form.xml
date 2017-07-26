@@ -23,7 +23,7 @@
         </div>  
         <div class="x-scroll-content cqIJ3ee" xid="div2" __cid="cqIJ3ee"> 
           <div component="$model/UI2/system/components/justep/list/list" class="x-list cqIJ3ee" xid="list1" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" __cid="cqIJ3ee"> 
-            <ul class="x-list-template user-list hide cqIJ3ee" xid="listTemplateUl1" __cid="cqIJ3ee"> 
+            <ul class="x-list-template user-list hide cqIJ3ee" xid="listTemplateUl1" bind-foreach="{data:$model.foreach_list1($element),afterRender:$model.foreach_afterRender_list1.bind($model,$element)}" __cid="cqIJ3ee"> 
               <li xid="li1" class="user-item cqIJ3ee" bind-foreach="{ data: userList, as: 'user' }" __cid="cqIJ3ee"> 
                 <div component="$model/UI2/system/components/bootstrap/row/row" class="row cqIJ3ee" xid="row1" data-bind="component:{name:'$model/UI2/system/components/bootstrap/row/row'}" __cid="cqIJ3ee"> 
                   <div class="col col-xs-4 cqIJ3ee" xid="col1" bind-text="user.name" __cid="cqIJ3ee"/>  

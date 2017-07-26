@@ -17,6 +17,8 @@ var __result = __parent1._extend(__parent0).extend({
 	this.__id='';
 	this.__cid='cqIJ3ee';
 	this._flag_='b3425a0f6174375c8923dc34812b34ba';
+	this._wCfg_={};
+	this._appCfg_={};
 	this.callParent(contextUrl);
 }}); 
 return __result;});

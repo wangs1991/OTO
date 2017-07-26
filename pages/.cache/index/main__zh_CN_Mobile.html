@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<html xmlns="http://www.w3.org/1999/xhtml" style="width:100%;height:100%" class="no-js">  
-  <head xmlns=""> 
-    <meta charset="utf-8"/>  
-    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>  
-    <meta name="apple-mobile-web-app-capable" content="yes"/>  
-    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>  
-    <meta name="format-detection" content="telephone=no"/>  
-    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>  
-    <script src="../../../v_59558bef40054a6c89952c79898ece30l_zh_CNs_d_m/system/lib/base/modernizr-2.8.3.min.js"/>  
-    <script id="__varReplace">
+<!DOCTYPE HTML>
+<html style="width:100%;height:100%" class="no-js">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="renderer" content="webkit">
+        <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <script src="../../../v_355be463aa054115970379eb42f278c2l_zh_CNs_d_m/system/lib/base/modernizr-2.8.3.min.js"></script>
+		<script id="__varReplace">
     	
     	    	window.__justep = window.__justep || {};
 				window.__justep.isDebug = true;
@@ -18,17 +18,17 @@
 				window.__justep.url = location.href;
 				window.__justep.versionInfo = {};
 		 
-    	</script>  
-    <script id="__updateVersion">
+    	</script>
+        <script id="__updateVersion">
         
 				(function(url, mode){
 					if (("@"+"mode@") === mode) mode = "3";
 					if (("@"+"versionUrl@") === url) url = "system/service/common/app.j";
-					if ((mode!=="1" &amp;&amp; (mode!="2") &amp;&amp; (mode!="3"))) return;
+					if ((mode!=="1" && (mode!="2") && (mode!="3"))) return;
 					var async = (mode=="1");
 					var x5Version = "noApp";
 					var x5AppAgents = /x5app\/([0-9.]*)/.exec(navigator.userAgent);
-					if(x5AppAgents &amp;&amp; x5AppAgents.length &gt; 1){
+					if(x5AppAgents && x5AppAgents.length > 1){
 					   	x5Version = x5AppAgents[1] || "";
 					} 
 					function createXhr(){
@@ -39,7 +39,7 @@
 							               "MSXML2.XMLHttp.3.0",
 							               "MSXML2.XMLHttp",
 							               "Miscrosoft.XMLHTTP"];
-							for(var i = 0; i &lt; version.length; i++){
+							for(var i = 0; i < version.length; i++){
 								try{
 							    	return new ActiveXObject(version[i]);
 								}catch(e){}
@@ -50,7 +50,7 @@
 					
 					function createGuid(){	
 						var guid = '';	
-						for (var i = 1; i &lt;= 32; i++){		
+						for (var i = 1; i <= 32; i++){		
 							var n = Math.floor(Math.random()*16.0).toString(16);		
 							guid += n;		
 							if((i==8)||(i==12)||(i==16)||(i==20))			
@@ -68,18 +68,18 @@
 						var baseItems = [];
 						var pathItems = [];
 						var isPath = false;
-						for (var i=0; i&lt;items.length; i++){
+						for (var i=0; i<items.length; i++){
 							if (mode == "3"){
-								if (items[i] &amp;&amp; (items[i].indexOf("v_") === 0) 
-										&amp;&amp; (items[i].indexOf("l_") !== -1)
-										&amp;&amp; (items[i].indexOf("s_") !== -1)
-										&amp;&amp; (items[i].indexOf("d_") !== -1)
+								if (items[i] && (items[i].indexOf("v_") === 0) 
+										&& (items[i].indexOf("l_") !== -1)
+										&& (items[i].indexOf("s_") !== -1)
+										&& (items[i].indexOf("d_") !== -1)
 										|| (items[i]=="v_")){
 									isPath = true;
 									continue;
 								}
 							}else{
-								if (items[i] &amp;&amp; (items[i].indexOf("v-")===0) &amp;&amp; (items[i].charAt(items[i].length-1)=="-") ){
+								if (items[i] && (items[i].indexOf("v-")===0) && (items[i].charAt(items[i].length-1)=="-") ){
 									isPath = true;
 									continue;
 								}
@@ -105,17 +105,17 @@
 					var path = items[1];
 					var query = items[2];
 					var xhr = createXhr();
-					url += ((url.indexOf("?")!=-1) ? "&amp;" : "?") +"_=" + createGuid();
+					url += ((url.indexOf("?")!=-1) ? "&" : "?") +"_=" + createGuid();
 					if (mode === "3"){
-						url += "&amp;url=" + path;
+						url += "&url=" + path;
 						if (query)
-							url += "&amp;" + query;
+							url += "&" + query;
 					}
 					xhr.open('GET', base + url, async);
 					
 					if (async){
 						xhr.onreadystatechange=function(){
-							if((xhr.readyState == 4) &amp;&amp; (xhr.status == 200) &amp;&amp; xhr.responseText){
+							if((xhr.readyState == 4) && (xhr.status == 200) && xhr.responseText){
 								var versionInfo = JSON.parse(xhr.responseText);
 								window.__justep.versionInfo = versionInfo;
 								window.__justep.versionInfo.baseUrl = base;
@@ -136,11 +136,11 @@
 					
 					try{
 						xhr.send(null);
-						if (!async &amp;&amp; (xhr.status == 200) &amp;&amp; xhr.responseText){
+						if (!async && (xhr.status == 200) && xhr.responseText){
 							var versionInfo = JSON.parse(xhr.responseText);
 							window.__justep.versionInfo = versionInfo;
 							window.__justep.versionInfo.baseUrl = base;
-							if ((mode==="3") &amp;&amp; window.__justep.isDebug){
+							if ((mode==="3") && window.__justep.isDebug){
 								/* 模式3且是调试模式不重定向 */
 							}else{
 								if (query){
@@ -150,7 +150,7 @@
 									path = versionInfo.resourceInfo.indexURL || path; /* 如果返回indexPath则使用indexPath，否则使用当前的path */
 									var indexUrl = versionInfo.baseUrl + versionInfo.resourceInfo.version + path;
 									versionInfo.resourceInfo.indexPageURL = indexUrl; 
-								}else if (versionInfo.resourceInfo &amp;&amp; versionInfo.resourceInfo.version &amp;&amp; (window.__justep.url.indexOf(versionInfo.resourceInfo.version) == -1)){
+								}else if (versionInfo.resourceInfo && versionInfo.resourceInfo.version && (window.__justep.url.indexOf(versionInfo.resourceInfo.version) == -1)){
 									path = versionInfo.resourceInfo.indexURL || path; /* 如果返回indexPath则使用indexPath，否则使用当前的path */
 									var indexUrl = versionInfo.baseUrl + versionInfo.resourceInfo.version + path;
 									window.location.href = indexUrl;
@@ -160,25 +160,23 @@
 					}catch(e2){}
 				}("@versionUrl@", "@mode@"));
                  
-        </script>  
-    <link rel="stylesheet" href="../../../v_e016a27a4cef4f708000ee21b16942e4l_zh_CNs_d_m/system/components/bootstrap.min.css" include="$model/UI2/system/components/bootstrap/lib/css/bootstrap,$model/UI2/system/components/bootstrap/lib/css/bootstrap-theme"/>
-    <link rel="stylesheet" href="../../../v_999e533b2dbc4e038e4d10e3879c6ab3l_zh_CNs_d_m/system/components/comp.min.css" include="$model/UI2/system/components/justep/lib/css2/dataControl,$model/UI2/system/components/justep/input/css/datePickerPC,$model/UI2/system/components/justep/messageDialog/css/messageDialog,$model/UI2/system/components/justep/lib/css3/round,$model/UI2/system/components/justep/input/css/datePicker,$model/UI2/system/components/justep/row/css/row,$model/UI2/system/components/justep/attachment/css/attachment,$model/UI2/system/components/justep/barcode/css/barcodeImage,$model/UI2/system/components/bootstrap/dropdown/css/dropdown,$model/UI2/system/components/justep/dataTables/css/dataTables,$model/UI2/system/components/justep/contents/css/contents,$model/UI2/system/components/justep/common/css/forms,$model/UI2/system/components/justep/locker/css/locker,$model/UI2/system/components/justep/menu/css/menu,$model/UI2/system/components/justep/scrollView/css/scrollView,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/dialog/css/dialog,$model/UI2/system/components/justep/bar/css/bar,$model/UI2/system/components/justep/popMenu/css/popMenu,$model/UI2/system/components/justep/lib/css/icons,$model/UI2/system/components/justep/lib/css4/e-commerce,$model/UI2/system/components/justep/toolBar/css/toolBar,$model/UI2/system/components/justep/popOver/css/popOver,$model/UI2/system/components/justep/panel/css/panel,$model/UI2/system/components/bootstrap/carousel/css/carousel,$model/UI2/system/components/justep/wing/css/wing,$model/UI2/system/components/bootstrap/scrollSpy/css/scrollSpy,$model/UI2/system/components/justep/titleBar/css/titleBar,$model/UI2/system/components/justep/lib/css1/linear,$model/UI2/system/components/justep/numberSelect/css/numberList,$model/UI2/system/components/justep/list/css/list,$model/UI2/system/components/justep/dataTables/css/dataTables"/>
-  </head>  
-  <body xmlns="" style="width:100%;height:100%;margin: 0;"> 
-    <script intro="none"/>  
-    <div id="applicationHost" class="applicationHost" style="width:100%;height:100%;" __component-context__="block">
-      <div xid="window" class="window cjqieai" component="$model/UI2/system/components/justep/window/window" design="device:m;" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="cjqieai" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/contents/contents,$model/UI2/system/components/justep/window/window,">  
-        <style xmlns:xhtml="http://www.w3.org/1999/xhtml">null</style>  
-        <div component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" data-events="onLoad:modelLoad" __cid="cjqieai" class="cjqieai"/>  
-        <div component="$model/UI2/system/components/justep/contents/contents" class="x-contents x-full cjqieai" xid="pages" data-bind="component:{name:'$model/UI2/system/components/justep/contents/contents'}" data-config="{&quot;active&quot;:0,&quot;slidable&quot;:true,&quot;swipe&quot;:false}" __cid="cjqieai"/> 
-      </div>
-    </div>  
-    <div id="downloadGCF" style="display:none;padding:50px;"> 
-      <span>您使用的浏览器需要下载插件才能使用,</span>  
-      <a id="downloadGCFLink" href="#">下载地址</a>  
-      <p>(安装后请重新打开浏览器)</p> 
-    </div>  
-    <script>
+        </script>
+    <link rel="stylesheet" href="../../../v_654678acb60d415cb79ca8189066397el_zh_CNs_d_m/system/components/bootstrap.min.css" include="$model/UI2/system/components/bootstrap/lib/css/bootstrap,$model/UI2/system/components/bootstrap/lib/css/bootstrap-theme"><link rel="stylesheet" href="../../../v_eca79652082547629afe51a65c6ba837l_zh_CNs_d_m/system/components/comp.min.css" include="$model/UI2/system/components/justep/lib/css2/dataControl,$model/UI2/system/components/justep/input/css/datePickerPC,$model/UI2/system/components/justep/messageDialog/css/messageDialog,$model/UI2/system/components/justep/lib/css3/round,$model/UI2/system/components/justep/input/css/datePicker,$model/UI2/system/components/justep/row/css/row,$model/UI2/system/components/justep/attachment/css/attachment,$model/UI2/system/components/justep/barcode/css/barcodeImage,$model/UI2/system/components/bootstrap/dropdown/css/dropdown,$model/UI2/system/components/justep/dataTables/css/dataTables,$model/UI2/system/components/justep/contents/css/contents,$model/UI2/system/components/justep/common/css/forms,$model/UI2/system/components/justep/locker/css/locker,$model/UI2/system/components/justep/menu/css/menu,$model/UI2/system/components/justep/scrollView/css/scrollView,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/dialog/css/dialog,$model/UI2/system/components/justep/bar/css/bar,$model/UI2/system/components/justep/popMenu/css/popMenu,$model/UI2/system/components/justep/lib/css/icons,$model/UI2/system/components/justep/lib/css4/e-commerce,$model/UI2/system/components/justep/toolBar/css/toolBar,$model/UI2/system/components/justep/popOver/css/popOver,$model/UI2/system/components/justep/panel/css/panel,$model/UI2/system/components/bootstrap/carousel/css/carousel,$model/UI2/system/components/justep/wing/css/wing,$model/UI2/system/components/bootstrap/scrollSpy/css/scrollSpy,$model/UI2/system/components/justep/titleBar/css/titleBar,$model/UI2/system/components/justep/lib/css1/linear,$model/UI2/system/components/justep/numberSelect/css/numberList,$model/UI2/system/components/justep/list/css/list,$model/UI2/system/components/justep/dataTables/css/dataTables"></head>
+	
+    <body style="width:100%;height:100%;margin: 0;">
+        <script intro="none"></script>
+    	<div id="applicationHost" class="applicationHost" style="width:100%;height:100%;" __component-context__="block"><div xid="window" class="window cjqieai" component="$model/UI2/system/components/justep/window/window" design="device:m;" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="cjqieai" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/contents/contents,$model/UI2/system/components/justep/window/window,">
+  <style>null</style>  
+  <div component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" data-events="onLoad:modelLoad" __cid="cjqieai" class="cjqieai"></div>  
+  <div component="$model/UI2/system/components/justep/contents/contents" class="x-contents x-full cjqieai" xid="pages" data-bind="component:{name:'$model/UI2/system/components/justep/contents/contents'}" data-config="{&#34;active&#34;:0,&#34;slidable&#34;:true,&#34;swipe&#34;:false}" __cid="cjqieai"></div> 
+</div></div>
+        
+        <div id="downloadGCF" style="display:none;padding:50px;">
+        	<span>您使用的浏览器需要下载插件才能使用, </span>
+        	<a id="downloadGCFLink" href="#">下载地址</a>
+        	<p>(安装后请重新打开浏览器)</p>
+        </div>
+    	<script>
     	
     	            //判断浏览器, 判断GCF
     	 			var browser = {
@@ -205,7 +203,7 @@
     				}
     	            //判断浏览器, 判断GCF
     	            var __continueRun = true;
-    				if (browser.isIe() &amp;&amp; (browser.getVersion() &lt; 10) &amp;&amp; !isGCFInstalled()) {
+    				if (browser.isIe() && (browser.getVersion() < 10) && !isGCFInstalled()) {
     					document.getElementById("applicationHost").style.display = 'none';
     					document.getElementById("downloadGCF").style.display = 'block';
     					var downloadLink = "/" + location.pathname.match(/[^\/]+/)[0] + "/v8.msi";
@@ -213,13 +211,10 @@
     					__continueRun = false;
     	            }
 		 	
-    	</script>  
-    <script id="_metaJS" src="../../../v_b48adae3ba1c44f2a8e0ff30af3c8d3cl_zh_CNs_d_m/system/config/meta.js"> </script>  
-    <script id="_requireJS" src="../../../v_c1a6465a16c748b08420b24b8203d9bcl_zh_CNs_d_m/system/lib/require/require.2.1.10.js"> </script>  
-    <script xmlns:xhtml="http://www.w3.org/1999/xhtml" src="../../../v_2d6a50a6164a4b9894eb7425563bb563l_zh_CNs_d_m/system/core.min.js"></script>
-    <script xmlns:xhtml="http://www.w3.org/1999/xhtml" src="../../../v_15322f035d3d439aa1f0c259d1f9d473l_zh_CNs_d_m/system/common.min.js"></script>
-    <script xmlns:xhtml="http://www.w3.org/1999/xhtml" src="../../../v_a565a1479a4f4017aeb56bd06f221eafl_zh_CNs_d_m/system/components/comp.min.js"></script>
-    <script id="_mainScript">
+    	</script>
+        <script id="_metaJS" src="../../../v_87c081e0fc9b437ca45433da34cc4384l_zh_CNs_d_m/system/config/meta.js"> </script>
+        <script id="_requireJS" src="../../../v_e99ee1e811994f408542d836c18988f9l_zh_CNs_d_m/system/lib/require/require.2.1.10.js"> </script>
+        <script src="../../../v_72adf374e388486f95dec6ab9b521d1al_zh_CNs_d_m/system/core.min.js"></script><script src="../../../v_49b1aad9596f44c8a76c701f31073d23l_zh_CNs_d_m/system/common.min.js"></script><script src="../../../v_37b04780f7794741828a10c163699126l_zh_CNs_d_m/system/components/comp.min.js"></script><script id="_mainScript">
         
 			if (__continueRun) {
                 window.__justep.cssReady = function(fn){
@@ -242,9 +237,9 @@
             		onLoadCss: function(url, node){
             			if (!this.__loadingCss[url]){
             				this.__loadingCss[url] = $.Deferred();	
-                			if (node.attachEvent &amp;&amp;
-                                    !(node.attachEvent.toString &amp;&amp; node.attachEvent.toString().indexOf('[native code') &lt; 0) &amp;&amp;
-                                    !(typeof opera !== 'undefined' &amp;&amp; opera.toString() === '[object Opera]')) {
+                			if (node.attachEvent &&
+                                    !(node.attachEvent.toString && node.attachEvent.toString().indexOf('[native code') < 0) &&
+                                    !(typeof opera !== 'undefined' && opera.toString() === '[object Opera]')) {
                                 node.attachEvent('onreadystatechange', this.onLinkLoad.bind(this));
                             } else {
                                 node.addEventListener('load', this.onLinkLoad.bind(this), false);
@@ -258,7 +253,7 @@
             	        if (evt.type === 'load' ||
                                 (this.readyRegExp.test(target.readyState))) {
             	        	var url = target.getAttribute("href");
-            	        	if (url &amp;&amp; window.__justep.__ResourceEngine.__loadingCss[url]){
+            	        	if (url && window.__justep.__ResourceEngine.__loadingCss[url]){
             	        		window.__justep.__ResourceEngine.__loadingCss[url].resolve(url);
             	        	}
                         }
@@ -267,7 +262,7 @@
             		onLinkError: function(evt){
             	        var target = (evt.currentTarget || evt.srcElement);
         	        	var url = target.getAttribute("href");
-        	        	if (url &amp;&amp; window.__justep.__ResourceEngine.__loadingCss[url]){
+        	        	if (url && window.__justep.__ResourceEngine.__loadingCss[url]){
         	        		window.__justep.__ResourceEngine.__loadingCss[url].resolve(url);
         	        	}
             		},
@@ -283,9 +278,9 @@
     						
     						
     						if ((items[items.length-1].indexOf("v_") === 0) 
-    								&amp;&amp; (items[items.length-1].indexOf("l_") !== -1)
-    								&amp;&amp; (items[items.length-1].indexOf("s_") !== -1)
-    								&amp;&amp; (items[items.length-1].indexOf("d_") !== -1)
+    								&& (items[items.length-1].indexOf("l_") !== -1)
+    								&& (items[items.length-1].indexOf("s_") !== -1)
+    								&& (items[items.length-1].indexOf("d_") !== -1)
     								|| (items[items.length-1]=="v_")){
     							items.splice(items.length-1, 1);
     						}
@@ -308,9 +303,9 @@
             		},
             	
             		loadJs: function(urls){
-            			if (urls &amp;&amp; urls.length&gt;0){
+            			if (urls && urls.length>0){
             				var loadeds = this._getResources("script", "src").concat(this.__loadedJS);
-    	       				for (var i=0; i&lt;urls.length; i++){
+    	       				for (var i=0; i<urls.length; i++){
 								var url = urls[i];
     	        				if(!this._isLoaded(url, loadeds)){
     	        					this.__loadedJS[this.__loadedJS.length] = url;
@@ -319,7 +314,7 @@
     	        					script.src = url;
     	        					document.head.appendChild(script);
     	        					*/
-    	        					//$("head").append("&lt;script  src='" + url + "'/&gt;");
+    	        					//$("head").append("<script  src='" + url + "'/>");
 									var url = require.toUrl("$UI" + url);
     	        					$.ajax({
     	        						url: url,
@@ -335,12 +330,12 @@
             		
             		loadCss: function(styles){
            				var loadeds = this._getResources("link", "href");
-            			if (styles &amp;&amp; styles.length&gt;0){
-            				for (var i=0; i&lt;styles.length; i++){
-    	       					var url = window.__justep.__ResourceEngine.contextPath + styles[i].url
+            			if (styles && styles.length>0){
+            				for (var i=0; i<styles.length; i++){
+    	       					var url = window.__justep.__ResourceEngine.contextPath + styles[i].url.replace("/UI2/", "/");
     	        				if(!this._isLoaded(url, loadeds)){
     	        					var include = styles[i].include || "";
-    	        					var link = $("&lt;link type='text/css' rel='stylesheet' href='" + url + "' include='" + include + "'/&gt;");
+    	        					var link = $("<link type='text/css' rel='stylesheet' href='" + url + "' include='" + include + "'/>");
     	        					this.onLoadCss(url, link[0]);
     	        					$("head").append(link);
     	        				} 
@@ -355,14 +350,14 @@
             				var newUrl = "";
             				var items = url.split("/");
             				var isVls = false;
-            				for (var i=0; i&lt;items.length; i++){
+            				for (var i=0; i<items.length; i++){
             					if (isVls){
                 					newUrl += "/" + items[i];
             					}else{
-                					if (items[i] &amp;&amp; (items[i].indexOf("v_")===0)
-            								&amp;&amp; (items[i].indexOf("l_")!==-1)
-            								&amp;&amp; (items[i].indexOf("s_")!==-1)
-            								&amp;&amp; (items[i].indexOf("d_")!==-1)
+                					if (items[i] && (items[i].indexOf("v_")===0)
+            								&& (items[i].indexOf("l_")!==-1)
+            								&& (items[i].indexOf("s_")!==-1)
+            								&& (items[i].indexOf("d_")!==-1)
             								|| (items[i]=="v_")){
                 						isVls = true;
                 					}
@@ -371,9 +366,9 @@
             				if (!newUrl)
             					newUrl = url;
             				
-            				for (var i=0; i&lt;loadeds.length; i++){
+            				for (var i=0; i<loadeds.length; i++){
 								var originUrl = this._getOriginUrl(loadeds[i]);
-								if (originUrl &amp;&amp; (originUrl.indexOf(newUrl)!==-1)){
+								if (originUrl && (originUrl.indexOf(newUrl)!==-1)){
 									return true;
 								}
     						}
@@ -383,15 +378,15 @@
 
 					_getOriginUrl: function(url){
 						var result = "";
-						if (url &amp;&amp; (url.indexOf(".md5_")!==-1)){
+						if (url && (url.indexOf(".md5_")!==-1)){
 							url = url.split("#")[0];
 							url = url.split("?")[0];
 							var items = url.split(".");
-							for (var i=0; i&lt;items.length; i++){
-								if ((i===items.length-2) &amp;&amp; (items[i].indexOf("md5_")!==-1)){
+							for (var i=0; i<items.length; i++){
+								if ((i===items.length-2) && (items[i].indexOf("md5_")!==-1)){
 									continue;
 								}else{
-									if (i&gt;0) result += ".";
+									if (i>0) result += ".";
 									result += items[i];
 								}
 							}
@@ -404,7 +399,7 @@
             		_getResources: function(tag, attr){
     					var result = [];
     					var scripts = $(tag);
-    					for (var i=0; i&lt;scripts.length; i++){
+    					for (var i=0; i<scripts.length; i++){
     						var v = scripts[i][attr];
     						if (v){
     							result[result.length] = v;
@@ -416,19 +411,20 @@
             	
             	window.__justep.__ResourceEngine.initContextPath();
     			requirejs.config({
-    				baseUrl: window.__justep.__ResourceEngine.contextPath + '/v_0af55c57b65648fdae6bf4bf184223a6l_zh_CNs_d_m/OTO/pages',
+    				baseUrl: window.__justep.__ResourceEngine.contextPath + '/v_8be835b52cfa42c9a5245f00fca384e6l_zh_CNs_d_m/OTO/pages',
     			    paths: {
     			    	/* 解决require.normalizeName与require.toUrl嵌套后不一致的bug   */
-    			    	'$model/UI2/v_': window.__justep.__ResourceEngine.contextPath + '/v_0af55c57b65648fdae6bf4bf184223a6l_zh_CNs_d_m',
-    			    	'$model/UI2': window.__justep.__ResourceEngine.contextPath + '/v_0af55c57b65648fdae6bf4bf184223a6l_zh_CNs_d_m',
+    			    	'$model/UI2/v_': window.__justep.__ResourceEngine.contextPath + '/v_8be835b52cfa42c9a5245f00fca384e6l_zh_CNs_d_m',
+    			    	'$model/UI2': window.__justep.__ResourceEngine.contextPath + '/v_8be835b52cfa42c9a5245f00fca384e6l_zh_CNs_d_m',
     			    	'$model': window.__justep.__ResourceEngine.serverPath,
-    			        'text': window.__justep.__ResourceEngine.contextPath + '/v_0af55c57b65648fdae6bf4bf184223a6l_zh_CNs_d_m/system/lib/require/text.2.0.10',
-    			        'bind': window.__justep.__ResourceEngine.contextPath + '/v_0af55c57b65648fdae6bf4bf184223a6l_zh_CNs_d_m/system/lib/bind/bind',
-    			        'jquery': window.__justep.__ResourceEngine.contextPath + '/v_0af55c57b65648fdae6bf4bf184223a6l_zh_CNs_d_m/system/lib/jquery/jquery-1.11.1.min'
+    			        'text': window.__justep.__ResourceEngine.contextPath + '/v_8be835b52cfa42c9a5245f00fca384e6l_zh_CNs_d_m/system/lib/require/text.2.0.10',
+    			        'bind': window.__justep.__ResourceEngine.contextPath + '/v_8be835b52cfa42c9a5245f00fca384e6l_zh_CNs_d_m/system/lib/bind/bind',
+    			        'jquery': window.__justep.__ResourceEngine.contextPath + '/v_8be835b52cfa42c9a5245f00fca384e6l_zh_CNs_d_m/system/lib/jquery/jquery-1.11.1.min'
     			    },
     			    map: {
     				        '*': {
     				            res: '$model/UI2/system/lib/require/res',
+    				            service: '$model/UI2/system/lib/require/service',
     				            cordova: '$model/UI2/system/lib/require/cordova',
     				            w: '$model/UI2/system/lib/require/w',
     				            css: '$model/UI2/system/lib/require/css'
@@ -439,7 +435,7 @@
     			
     			requirejs(['require', 'jquery', '$model/UI2/system/lib/base/composition', '$model/UI2/system/lib/base/url', '$model/UI2/system/lib/route/hashbangParser', '$model/UI2/system/components/justep/versionChecker/versionChecker', '$model/UI2/system/components/justep/loadingBar/loadingBar', '$model/UI2/system/lib/jquery/domEvent',  '$model/UI2/system/lib/cordova/cordova'],  function (require, $, composition, URL, HashbangParser,versionChecker) { 
     				document.addEventListener('deviceready', function() {
-    	                if (navigator &amp;&amp; navigator.splashscreen &amp;&amp; navigator.splashscreen.hide) {
+    	                if (navigator && navigator.splashscreen && navigator.splashscreen.hide) {
     	                	/*延迟隐藏，视觉效果更理想*/
     	                	setTimeout(function() {navigator.splashscreen.hide();}, 800);
     	                }
@@ -456,13 +452,13 @@
     				
     				var ownerid = new URL(window.__justep.__ResourceEngine.url).getParam("$ownerid");
     				var pwindow = opener;
-    				if (!pwindow &amp;&amp; window.parent &amp;&amp; window.parent.window){
+    				if (!pwindow && window.parent && window.parent.window){
     					pwindow = window.parent.window;
     				}
-    				if(ownerid &amp;&amp; pwindow 
-    						&amp;&amp; pwindow.__justep &amp;&amp; pwindow.__justep.windowOpeners
-    						&amp;&amp; pwindow.__justep.windowOpeners[ownerid]
-    						&amp;&amp; $.isFunction(pwindow.__justep.windowOpeners[ownerid].sendToWindow)){
+    				if(ownerid && pwindow 
+    						&& pwindow.__justep && pwindow.__justep.windowOpeners
+    						&& pwindow.__justep.windowOpeners[ownerid]
+    						&& $.isFunction(pwindow.__justep.windowOpeners[ownerid].sendToWindow)){
     					window.__justep.setParams = function(params){
     						/* 给windowOpener提供再次传参数的接口  */
     						params = params || {};
@@ -471,7 +467,7 @@
     					var winOpener = pwindow.__justep.windowOpeners[ownerid];
     					if(winOpener) winOpener.window = window;
     					$(window).unload(function(event){
-    						if(winOpener &amp;&amp; winOpener.dispatchCloseEvent) winOpener.dispatchCloseEvent();
+    						if(winOpener && winOpener.dispatchCloseEvent) winOpener.dispatchCloseEvent();
     					});
     					var params = winOpener.sendToWindow();
 						context.owner = winOpener;
@@ -496,6 +492,6 @@
     			});    
             }
 		 	
-        </script> 
-  </body> 
+        </script>
+    </body>
 </html>
