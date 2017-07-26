@@ -743,12 +743,28 @@ color: #fff;
 	line-height:30px;
 }
 
+.b-visitor-two span{
+	line-height:30px;
+	text-align:center;
+	display:inline-block;
+}
+.b-visiter-thrSpan{
+	display:block;
+	text-align:center;
+}
 
-
-
-
-
-
+.b-back-btn{
+	text-align:center;
+	margin-top:55px;
+}
+.b-visiter-btn{
+	text-align:center;
+	margin-top:55px;
+	
+}
+.b-visiter-btnTJ{
+	width:50%;
+}
 
 
 
