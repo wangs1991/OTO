@@ -2,18 +2,26 @@
 	"retCode": 1,
 	"msg": "asdfasdf",
 	"data": [{
-		"action": "sd",
-		"eventKind": "",
-		"uid": "",
-		"sid": "",
-		"name": "asd",
-		"sex": "0",
-		"birthday": "sd",
-		"phone": "as",
-		"idCard": "sd",
-		"vocation": "sd",
-		"diagnose": "sd",
-		"questType": "sd",
-		"answer": "sd"
+		"vid": "100000",
+		"name": "张三",
+		"sex": 0,
+		"birthday": "1991-12-12",
+		"phone": "123123123",
+		"idCard": "313423454567567",
+		"vocation": "qwer",
+		"diagnose": "1",
+		"questType": "1",
+		"answer": "1"
+	},{
+		"vid": "100000",
+		"name": "张三",
+		"sex": 0,
+		"birthday": "1991-12-12",
+		"phone": "123123123",
+		"idCard": "313423454567567",
+		"vocation": "qwer",
+		"diagnose": "1",
+		"questType": "1",
+		"answer": "1"
 	}]
 }

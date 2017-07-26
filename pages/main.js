@@ -7,19 +7,27 @@ define(function(require){
 	
 	var Model = function(){
 		this.callParent();
+		this.userList = justep.Bind.observableArray([]);
+		/*this.sexCompute = justep.Bind.computed(function() {
+			console.log(this);
+            return 12;
+        }, this);  */
 	};
 
 	
 	Model.prototype.modelLoad = function(event){
-		var userList = this.comp('userList');
-		console.log('modelLoad');
+		var that = this;
 		Server.test('../mock/test.json').then(function(data){
 			console.log(data);
 			data.data.forEach(function(n, i){
-				console.log(i);
-				console.log(n);
+//				格式化数据
+				if(n.sex == 0){
+					n.sex= '男';
+				}else{
+					n.sex = '女';
+				}
+				that.userList.push(n);
 			});
-			userList.loadData(data);
 		}, function(){});
 	};
 	

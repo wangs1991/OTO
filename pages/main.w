@@ -3,9 +3,7 @@
 <div xmlns="http://www.w3.org/1999/xhtml" xid="window" class="window portal-main" component="$UI/system/components/justep/window/window">  
   <div component="$UI/system/components/justep/model/model" xid="model" style="height:auto;left:350px;top:66px;"
     onLoad="modelLoad"> 
-    <div component="$UI/system/components/justep/data/data" autoLoad="false"
-      xid="userList" confirmRefresh="false" autoNew="false" confirmDelete="false"><master xid="default1" data="data1"></master></div> 
-  </div>  
+    </div>  
   <div component="$UI/system/components/justep/panel/panel" class="x-panel x-full"
     xid="panel1"> 
     <div class="x-panel-top" xid="top1"> 
@@ -64,22 +62,12 @@
           <div component="$UI/system/components/justep/list/list" class="x-list"
             xid="list1"> 
             <ul class="x-list-template user-list" xid="listTemplateUl1"> 
-              <li xid="li1" class="user-item"> 
+              <li xid="li1" class="user-item" bind-foreach="{ data: userList, as: 'user' }"> 
                 <div component="$UI/system/components/bootstrap/row/row" class="row"
                   xid="row1"> 
-                  <div class="col col-xs-4" xid="col1">
-                  	<div align="left" style="height:100%;" bind-text=" $model.userList.name"></div>
-                  </div>  
-                  <div class="col col-xs-4" xid="col2">2</div>  
-                  <div class="col col-xs-4" xid="col3">3</div>
-                </div>
-              </li>
-              <li xid="li1" class="user-item"> 
-                <div component="$UI/system/components/bootstrap/row/row" class="row"
-                  xid="row1"> 
-                  <div class="col col-xs-4" xid="col1">1</div>  
-                  <div class="col col-xs-4" xid="col2">2</div>  
-                  <div class="col col-xs-4" xid="col3">3</div>
+                  <div class="col col-xs-4" xid="col1" bind-text='user.name'></div>  
+                  <div class="col col-xs-4" xid="col2" bind-text='sex'>2</div>  
+                  <div class="col col-xs-4" xid="col3" bind-text='user.birthday'>3</div>
                 </div>
               </li> 
             </ul> 
