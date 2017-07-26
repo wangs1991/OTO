@@ -23,23 +23,50 @@
           <div component="$UI/system/components/justep/smartContainer/smartContainer"
             class="x-smartcontainer" xid="smartContainer1"/>  
           <div class="section-card content-detail input-card"> 
-            <div class="sub-title tac">输入头盔序列号绑定头盔</div>  
+            <!-- <div class="sub-title tac">输入头盔序列号绑定头盔</div>   -->  
             <div class="mgt-20"> 
               <div component="$UI/system/components/justep/labelEdit/labelEdit"
                 class="x-label-edit x-label30" xid="labelEdit1"> 
-                <label class="x-label" xid="label1">头盔序列号</label>  
+                <label class="x-label" xid="label1">设备编码</label>  
                 <div class="x-edit" xid="div1"> 
                   <input component="$UI/system/components/justep/input/input"
-                    class="form-control" xid="deviceInput"/> 
+                    class="form-control" xid="deviceId"/> 
                 </div> 
               </div>  
+              <div component="$UI/system/components/justep/labelEdit/labelEdit"
+                class="x-label-edit x-label30" xid="labelEdit2"> 
+                <label class="x-label" xid="label2">绑定密码</label>  
+                <div class="x-edit" xid="div2"> 
+                  <input component="$UI/system/components/justep/input/input"
+                    class="form-control" xid="devicePwd"/> 
+                </div> 
+              </div>  
+              <div component="$UI/system/components/justep/labelEdit/labelEdit"
+                class="x-label-edit x-label31" xid="labelEdit3">?找回密码</div>  
               <div class="mgt-20"> 
                 <a component="$UI/system/components/justep/button/button"
-                  class="btn btn-default button block" label="绑定" xid="bindButton" onClick="bindButtonClick"> 
+                  class="btn btn-default button block" label="绑定设备" xid="bindButton"
+                  onClick="bindButtonClick"> 
                   <i xid="i1"/>  
                   <span xid="span1"/> 
                 </a> 
-              </div> 
+              </div>
+              <div class="flex-layout mgt-20">
+              	<a component="$UI/system/components/justep/button/button"
+                    class="btn btn-default button block mgr-20" label="解除绑定" xid="unBindBtn"
+                    onClick="bindButtonClick"> 
+                    <i xid="i1"/>  
+                    <span xid="span1"/>
+                  </a>
+                  
+                  <a component="$UI/system/components/justep/button/button"
+                    class="btn btn-default button block" label="修改密码" xid="pwdBtn"
+                    onClick="bindButtonClick"> 
+                    <i xid="i1"/>  
+                    <span xid="span1"/> 
+                  </a> 
+              </div>
+             
             </div> 
           </div> 
         </div>  
