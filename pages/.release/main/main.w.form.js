@@ -6,6 +6,7 @@ require('$model/UI2/system/components/justep/list/list');
 require('$model/UI2/system/components/bootstrap/row/row');
 require('$model/UI2/system/components/justep/titleBar/titleBar');
 require('$model/UI2/system/components/justep/panel/child');
+require('$model/UI2/system/components/justep/data/data');
 require('$model/UI2/system/components/justep/window/window');
 require('$model/UI2/system/components/justep/panel/panel');
 var __parent1=require('$model/UI2/system/lib/base/modelBase'); 
@@ -18,5 +19,6 @@ var __result = __parent1._extend(__parent0).extend({
 	this.__cid='cqIJ3ee';
 	this._flag_='b3425a0f6174375c8923dc34812b34ba';
 	this.callParent(contextUrl);
+ var __Data__ = require("$UI/system/components/justep/data/data");new __Data__(this,{"autoLoad":true,"confirmDelete":true,"confirmRefresh":true,"defCols":{"answer":{"define":"answer","name":"answer","relation":"answer","type":"String"},"birthday":{"define":"birthday","name":"birthday","relation":"birthday","type":"String"},"diagnose":{"define":"diagnose","name":"diagnose","relation":"diagnose","type":"String"},"idCard":{"define":"idCard","name":"idCard","relation":"idCard","type":"String"},"name":{"define":"name","name":"name","relation":"name","type":"String"},"phone":{"define":"phone","name":"phone","relation":"phone","type":"String"},"questType":{"define":"questType","name":"questType","relation":"questType","type":"String"},"sex":{"define":"sex","name":"sex","relation":"sex","type":"String"},"vid":{"define":"vid","name":"vid","relation":"vid","type":"String"},"vocation":{"define":"vocation","name":"vocation","relation":"vocation","type":"String"}},"directDelete":false,"events":{},"idColumn":"vid","limit":20,"xid":"curUser"});
 }}); 
 return __result;});
