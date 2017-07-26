@@ -23,13 +23,13 @@ define(function(require){
 	
 //	去设置
 	Model.prototype.goToSetting = function(){
-		url = "$UI/OTO/pages/setting/settingHomeView.w";
+		url = "$UI/OTO/pages/visitorDetail/settingHomeView.w";
 		justep.Shell.showPage(url);
 	}
 //	去详情页面
 	Model.prototype.goDetail = function(evt){
 		console.log(user);
-		url = "$UI/OTO/pages/setting/settingHomeView.w";
+		url = "$UI/OTO/pages/visitorDetail/detail.w";
 		justep.Shell.showPage(url, {
 			user: user
 		});
