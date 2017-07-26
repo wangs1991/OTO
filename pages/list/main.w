@@ -34,7 +34,7 @@
     <div class="x-panel-content  x-scroll-view" xid="content1" _xid="C79D82AEB1900001F9E5123057971270"> 
       <div class="search_bar"> 
        	<input type="text" placeholder="搜索"/>
-       	<div class="visitor-add">as</div>
+       	<div class="visitor-add" bind-click="addVisitor">as</div>
       </div>
       <div class="x-scroll" component="$UI/system/components/justep/scrollView/scrollView"
         xid="scrollView1" style="top:200px;"> 

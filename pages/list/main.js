@@ -58,6 +58,11 @@ define(function(require){
 		justep.Shell.showPage(url);
 	};
 	
+	Model.prototype.addVisitor = function(){
+		url = "$UI/OTO/pages/userInfo/newsUser.w";
+		justep.Shell.showPage(url);
+	}
+	
 	Model.prototype.goBack = function(event){
 		justep.Shell.showLeft();
 	};
