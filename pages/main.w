@@ -37,6 +37,15 @@
    <span xid="span5">自评量表选择</span></a>
   <a component="$UI/system/components/justep/button/button" class="btn btn-default" label="设置" xid="button6" url="./userInfo/newsInfo.w" bind-click="setUpClick">
    <i xid="i6"></i>
-   <span xid="span6">设置</span></a></div> 
+   <span xid="span6">设置</span></a>
+  <a component="$UI/system/components/justep/button/button" class="btn btn-default" label="放松训练反馈" xid="button7" url="./userInfo/newsInfo.w" bind-click="relaxFeedbackClick">
+   <i xid="i7"></i>
+   <span xid="span7">放松训练反馈</span></a>
+  <a component="$UI/system/components/justep/button/button" class="btn btn-default" label="  OTO心理治疗模块列表" xid="button8" url="./userInfo/newsInfo.w" bind-click="psyShowClick">
+   <i xid="i8"></i>
+   <span xid="span8">  OTO心理治疗模块列表</span></a>
+  <a component="$UI/system/components/justep/button/button" class="btn btn-default" label="设置" xid="button9" url="./userInfo/newsInfo.w" bind-click="setUpClick">
+   <i xid="i9"></i>
+   <span xid="span9">设置</span></a></div> 
   </div> 
 </div>

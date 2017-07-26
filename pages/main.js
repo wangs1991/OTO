@@ -54,5 +54,19 @@ define(function(require){
 	
 
 	
+	Model.prototype.relaxFeedbackClick = function(event){
+		url = "$UI/OTO/pages/userInfo/relaxFeedback.w";
+		justep.Shell.showPage(url);
+	};
+	
+
+	
+	Model.prototype.psyShowClick = function(event){
+		url = "$UI/OTO/pages/userInfo/psyShow.w";
+		justep.Shell.showPage(url);
+	};
+	
+
+	
 	return Model;
 });

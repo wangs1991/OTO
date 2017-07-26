@@ -38,6 +38,18 @@
       <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default cqIJ3ee" xid="button6" url="./userInfo/newsInfo.w" bind-click="setUpClick" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-config="{&quot;label&quot;:&quot;设置&quot;}" __cid="cqIJ3ee"> 
         <i xid="i6" __cid="cqIJ3ee" class="cqIJ3ee"/>  
         <span xid="span6" __cid="cqIJ3ee" class="cqIJ3ee">设置</span>
+      </a>  
+      <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default cqIJ3ee" xid="button7" url="./userInfo/newsInfo.w" bind-click="relaxFeedbackClick" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-config="{&quot;label&quot;:&quot;放松训练反馈&quot;}" __cid="cqIJ3ee"> 
+        <i xid="i7" __cid="cqIJ3ee" class="cqIJ3ee"/>  
+        <span xid="span7" __cid="cqIJ3ee" class="cqIJ3ee">放松训练反馈</span>
+      </a>  
+      <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default cqIJ3ee" xid="button8" url="./userInfo/newsInfo.w" bind-click="psyShowClick" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-config="{&quot;label&quot;:&quot;  OTO心理治疗模块列表&quot;}" __cid="cqIJ3ee"> 
+        <i xid="i8" __cid="cqIJ3ee" class="cqIJ3ee"/>  
+        <span xid="span8" __cid="cqIJ3ee" class="cqIJ3ee">OTO心理治疗模块列表</span>
+      </a>  
+      <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default cqIJ3ee" xid="button9" url="./userInfo/newsInfo.w" bind-click="setUpClick" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-config="{&quot;label&quot;:&quot;设置&quot;}" __cid="cqIJ3ee"> 
+        <i xid="i9" __cid="cqIJ3ee" class="cqIJ3ee"/>  
+        <span xid="span9" __cid="cqIJ3ee" class="cqIJ3ee">设置</span>
       </a>
     </div>  
     <style __cid="cqIJ3ee" class="cqIJ3ee">.x-panel.pcrqqUVj-iosstatusbar &gt;.x-panel-top {height: 48px;}.x-panel.pcrqqUVj-iosstatusbar &gt;.x-panel-content { top: 48px;bottom: nullpx;}.x-panel.pcrqqUVj-iosstatusbar &gt;.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.pcrqqUVj-iosstatusbar &gt;.x-panel-top,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pcrqqUVj-iosstatusbar &gt;.x-panel-top {height: 68px;}.iosstatusbar .x-panel.pcrqqUVj-iosstatusbar &gt;.x-panel-content,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pcrqqUVj-iosstatusbar &gt;.x-panel-content { top: 68px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pcrqqUVj-iosstatusbar &gt;.x-panel-top {height: 48px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pcrqqUVj-iosstatusbar &gt;.x-panel-content {top: 48px;}</style>
