@@ -21,7 +21,6 @@ define(function(require) {
 				p2: {
 					url: require.toUrl("./interactive/page2.w")
 				},
-				
 				rules: {
 					url: require.toUrl("./rules/index.w")
 				},
@@ -30,6 +29,14 @@ define(function(require) {
 				},
 			}
 		});
+		
+		window.putView = function () {
+			
+		}
+		
+		window.goBack = function () {
+			justep.Shell.closePage();
+		}
 	};
 	
 	
@@ -45,8 +52,6 @@ define(function(require) {
 //		设置显示页面
 		justep.Shell.showPage("main");
 	};
-	
-
 	
 	return Model;
 });

@@ -11,14 +11,15 @@ define(function(require){
 
 	
 	Model.prototype.modelLoad = function(event){
-		var indicators = $('[xid="carousel"]>.carousel-indicators>li'),
-			m = this;
-		indicators.click(function(){
-			var index = parseInt($(this).attr("index"));
-			m.comp('carousel').to(index);
-		});
+		var userList = this.comp('userList');
+		console.log('modelLoad');
 		Server.test('../mock/test.json').then(function(data){
 			console.log(data);
+			data.data.forEach(function(n, i){
+				console.log(i);
+				console.log(n);
+			});
+			userList.loadData(data);
 		}, function(){});
 	};
 	
@@ -51,6 +52,12 @@ define(function(require){
 		url = "$UI/OTO/pages/userInfo/setUp.w";
 		justep.Shell.showPage(url);
 	};
+	
+//	去设置
+	Model.prototype.goToSetting = function(){
+		url = "$UI/OTO/pages/setting/settingHomeView.w";
+		justep.Shell.showPage(url);
+	}
 	
 
 	

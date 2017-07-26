@@ -1,5 +1,5 @@
 define(function(require) {
-	require("css!../../main/css/base").load();
+	require("css!../../assets/style/base").load();
 	var $ = require("jquery");
 	var justep = require("$UI/system/lib/justep");
 	
@@ -12,16 +12,8 @@ define(function(require) {
 		return require.toUrl(url);
 	};
 	
-	// 下划刷新
-	Model.prototype.scrollViewPullDown = function(event) {
-	};
-	
-	Model.prototype.topBackBtnClick = function(event){
-		justep.Shell.closePage();
-	};
-	
 	Model.prototype.modelLoad = function(event){
-		window.putView(this);
+//		window.putView(this);
 		
 		var bindDeviceId = localStorage.getItem("BindDeviceID");
 		if (bindDeviceId != null && bindDeviceId != undefined) {
@@ -30,14 +22,14 @@ define(function(require) {
 	};
 	
 	Model.prototype.modelUnLoad = function(event){
-		window.removeView(this);
+//		window.removeView(this);
 	};
 	
 	Model.prototype.bindButtonClick = function(event){
-		var device = this.comp("deviceInput").val();
-		var params = {device:device, uid:window.uid, session:window.session};
+		/*var device = this.comp("deviceInput").val();
+		var params = {device:device, uid:window.uid, session:window.session};*/
 		
-		$.getJSON(AppUtils.getUrl("app/order?action=bind_device"), params, function(data){
+		/*$.getJSON(AppUtils.getUrl("app/order?action=bind_device"), params, function(data){
 			if (data.success == "true") {
 				localStorage.setItem("BindDeviceID", device);
 				
@@ -45,7 +37,9 @@ define(function(require) {
 			} else {
 				justep.Util.hint("绑定失败", {"position":"bottom"});
 			}
-		});
+		});*/
+		var url = "$UI/OTO/pages/password/modifyPassword.w";
+		justep.Shell.showPage(url);
 	};
 	
 	return Model;

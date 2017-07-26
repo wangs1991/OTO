@@ -134,6 +134,9 @@ body {
 .mgt-20 {
 	margin-top: 20px;
 }
+.mgr-20{
+	margin-right: 20px;;
+}
 
 .block {
 	display: block !important;
@@ -431,6 +434,7 @@ video {
 	font-zise: 16px;
 	color: #fff!important;
 	padding: 8px 12px!important;
+	background-color: #0078ff;
 }
 
 .button * {
@@ -629,4 +633,15 @@ color: #fff;
 	position: absolute;
 	left: 5px;
 	top: 3px;
+}
+
+.flex-layout{
+	display: flex;
+}
+.user-list{
+	background-color: #fff;
+}
+.user-item{
+	border-bottom: 1px solid #ddd;
+	padding: 10px 20px;
 }

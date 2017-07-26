@@ -1,5 +1,5 @@
 define(['../config/config'], function(module) {
-	console.log(module);
+//	console.log(module);
 	function post(url, data) {
 		var dtd = $.Deferred(); // 新建一个deferred对象
 		$.ajax({
@@ -16,19 +16,24 @@ define(['../config/config'], function(module) {
 		return dtd.promise();
 	}
 	function get(url) {
-		console.log(url);
-		var dtd = $.Deferred(); // 新建一个deferred对象
+		/*var dtd = $.Deferred(); // 新建一个deferred对象
+		console.log(111);
 		$.ajax({
 			type : 'GET',
 			url : url,
 			success : function(data) {
+				console.log(22222);
 				dtd.resolve(data);
 			},
 			dataType : function(data) {
 				dtd.reject(data);
 			}
 		});
-		return dtd.promise();
+		return dtd.promise();*/
+		return $.ajax({
+			type : 'GET',
+			url : url
+		});
 	}
 	return {
 		test : function(url) {
