@@ -23,7 +23,7 @@ define(function(require){
 	
 //	去设置
 	Model.prototype.goToSetting = function(){
-		url = "$UI/OTO/pages/visitorDetail/settingHomeView.w";
+		url = "$UI/OTO/pages/setting/settingHomeView.w";
 		justep.Shell.showPage(url);
 	}
 //	去详情页面
@@ -42,9 +42,9 @@ define(function(require){
 			data.data.forEach(function(n, i){
 //				格式化数据
 				if(n.sex == 0){
-					n.sex= '男';
+					n.sexTxt= '男';
 				}else{
-					n.sex = '女';
+					n.sexTxt = '女';
 				}
 				
 //				年龄

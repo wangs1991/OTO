@@ -5,7 +5,7 @@
   <div component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" data-events="onunLoad:modelUnLoad;onLoad:modelLoad" __cid="cAbU3Eb" class="cAbU3Eb"></div>  
   <div class="x-panel-content tb-trans cAbU3Eb" xid="content-main" _xid="C78FAA2F9CA000018BB5F64C1B902F90" style="top: 0px; bottom: 0px;" __cid="cAbU3Eb"> 
     <div component="$model/UI2/system/components/justep/titleBar/titleBar" class="x-titlebar app-title-ctner cAbU3Eb" xid="titleBar1" data-bind="component:{name:'$model/UI2/system/components/justep/titleBar/titleBar'}" __cid="cAbU3Eb"> 
-      <div class="x-titlebar-left cAbU3Eb" xid="left1" bind-click="goBack" __cid="cAbU3Eb"> 
+      <div class="x-titlebar-left cAbU3Eb" xid="left1" onClick="goBack" __cid="cAbU3Eb"> 
         <i class="webapp ic-back cAbU3Eb" __cid="cAbU3Eb"/> 
       </div>  
       <div class="x-titlebar-title cAbU3Eb" xid="title1" __cid="cAbU3Eb">设置</div>  
@@ -17,7 +17,7 @@
       <div component="$model/UI2/system/components/justep/contents/content" class="x-panel x-full active cAbU3Eb" xid="panel2" data-bind="component:{name:'$model/UI2/system/components/justep/contents/content'}" __cid="cAbU3Eb"> 
         <div class="x-panel-top cAbU3Eb" xid="top2" __cid="cAbU3Eb"/>  
         <div class="x-panel-content cAbU3Eb" xid="content3" style="bottom:0px;" __cid="cAbU3Eb"> 
-          <ul component="$model/UI2/system/components/justep/list/list" class="x-list x-list-template app-list hide cAbU3Eb" xid="list1" bind-foreach="{data:$model.foreach_list1($element),afterRender:$model.foreach_afterRender_list1.bind($model,$element)}" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" __cid="cAbU3Eb"> 
+          <ul component="$model/UI2/system/components/justep/list/list" class="x-list x-list-template app-list hide cAbU3Eb" xid="list1" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" __cid="cAbU3Eb"> 
             <li xid="li2" bind-click="selectView" data-type="bindVR" __cid="cAbU3Eb" class="cAbU3Eb"> 
               <div component="$model/UI2/system/components/justep/row/row" class="row cAbU3Eb" xid="row3" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cAbU3Eb"> 
                 <div class="col col-xs-1 cAbU3Eb" xid="col7" __cid="cAbU3Eb"> 

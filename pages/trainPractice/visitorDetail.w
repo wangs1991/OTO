@@ -39,7 +39,7 @@
           <div xid="div7" class="b-relax-box"> 
             <div xid="div4" class="w-relax-one clearfix"> 
               <div xid="div5" class="b-relax-oneL fl"> 
-                <img src="$UI/OTO/pages/img/relax_1.jpg" alt="" xid="image1"/>
+                <img src="$UI/OTO/assets/img/relax_1.jpg" alt="" xid="image1"/>
               </div>  
               <ul xid="ul1" class="b-relax-oneR fr" bind-foreach="{ data: user, as: 'user' }"> 
                 <li xid="li1" bind-text="user.name"/>  

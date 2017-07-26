@@ -5,7 +5,10 @@ define(function(require) {
 	var justep = require("$UI/system/lib/justep");
 	var ShellImpl = require('$UI/system/lib/portal/shellImpl');
 	var Config = require('../config/config');
-
+	
+	window.putView = putView;
+	window.goBack = goBack;
+	
 	var Model = function() {
 		this.callParent();
 		
@@ -29,15 +32,15 @@ define(function(require) {
 				},
 			}
 		});
-		
-		window.putView = function () {
-			
-		}
-		
-		window.goBack = function () {
-			justep.Shell.closePage();
-		}
 	};
+	
+	function putView() {
+		
+	}
+	
+	function goBack() {
+		justep.Shell.closePage();
+	}
 	
 	
 	

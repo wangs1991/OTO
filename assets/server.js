@@ -41,6 +41,12 @@ define(['../config/config'], function(module) {
 		getRecords: function(data){
 			return get('../mock/records.json', data);
 		},
+		checkHat: function(){
+			return get('../mock/hat.json');
+		},
+		bindVR: function() {
+			alert();
+		},
 		setCutUser : function(u) {
 			window.localStorage.setItem('curUser', JSON.stringify(u));
 		},

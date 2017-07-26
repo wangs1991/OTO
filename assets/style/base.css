@@ -159,7 +159,7 @@ body {
 }
 
 .app-title-ctner {
-	background-color: #0078ff !important;
+	background: linear-gradient(155deg, #0095f9, #01b7ff);
 	text-align: center;
 	z-index: 50;
 	color: #fff!important;
@@ -634,16 +634,62 @@ color: #fff;
 	left: 5px;
 	top: 3px;
 }
-
+/* 首页列表 */
 .flex-layout{
 	display: flex;
 }
+.visitors_list .x-panel-content{
+	background-color: #f5f5f5!important;
+}
 .user-list{
-	background-color: #fff;
+	background-color: #f5f5f5;
+	padding: 0 30px;
 }
 .user-item{
-	border-bottom: 1px solid #ddd;
+	border: 1px solid #e7e7e7;
+	border-radius: 8px;
 	padding: 10px 20px;
+	background-color: #fff;
+	margin: 20px 0;
+	color: #3e4357;
+	text-align: center;
+}
+.boy{
+	color: #0596ff!important;
+}
+.girl{
+	color: #fc4281!important;
+}
+.search_bar{
+	height: 55px;
+	background-color: #e3e6ed;
+	padding: 10px 30px;
+	position: relative;
+	z-index: 1;
+	padding-right: 80px;
+}
+.search_bar input{
+	border-radius: 6px;
+	background-color: #fff;
+	border: 0;
+	height: 2em;
+	line-height: 2em;
+	padding: 10px;
+	font-size: 16px;
+	display: block;
+	width: 100%;
+}
+.search_bar .visitor-add{
+	position: absolute;
+	right: 20px;
+	top: 10px;
+	
+	width: 30px;
+	height: 30px;
+	background-color: #f00;
+}
+.visitors_list .x-scroll{
+	top: 53px!important;
 }
 
 

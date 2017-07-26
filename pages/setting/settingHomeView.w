@@ -6,7 +6,7 @@
 	</div>  
   	<div class="x-panel-content tb-trans" xid="content-main" _xid="C78FAA2F9CA000018BB5F64C1B902F90" style="top: 0px; bottom: 0px;">
     		<div component="$UI/system/components/justep/titleBar/titleBar" class="x-titlebar app-title-ctner" xid="titleBar1">
-			   <div class="x-titlebar-left" xid="left1" bind-click="goBack">
+			   <div class="x-titlebar-left" xid="left1" onClick="goBack">
 				<i class="webapp ic-back"></i>
 			   </div>
 			   <div class="x-titlebar-title" xid="title1">设置</div>
