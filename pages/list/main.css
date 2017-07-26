@@ -1,13 +1,6 @@
-.x-cards{padding-top:0;}
-.panel{ border:0;}
-.panel.panel-default{ margin-bottom:10px;}
-.row{ margin:0;}
-
-.tb-nopadding{ padding:0;}
-.btn i{ font-size:20px;}
-.btn span{ font-size:12px; font-weight:normal;}
-
-/*底部*/
-.btn-group{ background-color:#fff;}
-.x-card.btn-group .btn.active{ color:#ff4400;}
-.btn-group .btn i{ font-size:20px; padding-bottom:0;}
+.iosstatusbar .x-portal.x-panel >.x-panel-content{
+	top:0 !important;
+}
+.no-iosstatusbar .x-portal.x-panel >.x-panel-content{
+	top:-20px!important;
+}

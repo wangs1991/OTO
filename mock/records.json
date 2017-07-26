@@ -1,0 +1,18 @@
+{
+	"retCode": 1,
+	"msg": "asdfasdf",
+	"data": [{
+		"id": "100001",
+		"lid": "asdf",
+		"content": "1111",
+		"time": "2017-12-12",
+		"duration": 12
+		
+	},{
+		"id": "100001",
+		"lid": "asdf",
+		"content": "1111",
+		"time": "2017-12-12",
+		"duration": 12
+	}]
+}

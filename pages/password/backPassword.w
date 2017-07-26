@@ -26,7 +26,7 @@
     <input type="text" value="" xid="input1" style="line-height:30px;width:65%;" class="pull-left"></input></div> 
    
    </div>
-  <div xid="div6" style="text-align:center;margin-top:55px;">
+  <div xid="div6" class="b-back-btn">
    <a component="$UI/system/components/justep/button/button" class="btn btn-default" label="确定" xid="button1">
     <i xid="i1"></i>
     <span xid="span5">确定</span></a> </div></div>

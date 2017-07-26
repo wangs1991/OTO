@@ -16,7 +16,7 @@ define(function(require){
 	Model.prototype.modelParamsReceive = function(event){
 		console.log(111111111111111);
 	    var context = this.getContext();
-	 
+	    
 	    //获取URL中的参数
 	    var p1 = context.getRequestParameter("p1");
 	    var p2 = context.getRequestParameter("p2");

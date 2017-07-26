@@ -15,7 +15,7 @@ define(function(require) {
 			contentsXid : 'pages', //ShellImpl关联的contents, 即page的显示区域
 			pageMappings: {
 				main: {
-					url: require.toUrl("./main.w")
+					url: require.toUrl("./list/main.w")
 				},
 				
 				p2: {

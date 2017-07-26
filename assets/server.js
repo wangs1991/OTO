@@ -1,6 +1,18 @@
 define(['../config/config'], function(module) {
-//	console.log(module);
+	var $ = require("jquery");
+//	$(document).ajaxStart(function(){
+//        console.log('ajaxStart');
+//        console.log(arguments);
+//	});
+//	$(document).ajaxComplete(function(){
+//        console.log('ajaxComplete');
+//	});
 	function post(url, data) {
+//		在这里增加必须数据
+		data.action = 'app_order';
+		data.eventKind = 41;
+		data.uid = 12;
+
 		var dtd = $.Deferred(); // 新建一个deferred对象
 		$.ajax({
 			type : 'POST',
@@ -16,28 +28,25 @@ define(['../config/config'], function(module) {
 		return dtd.promise();
 	}
 	function get(url) {
-		/*var dtd = $.Deferred(); // 新建一个deferred对象
-		console.log(111);
-		$.ajax({
-			type : 'GET',
-			url : url,
-			success : function(data) {
-				console.log(22222);
-				dtd.resolve(data);
-			},
-			dataType : function(data) {
-				dtd.reject(data);
-			}
-		});
-		return dtd.promise();*/
+		console.log(url);
 		return $.ajax({
 			type : 'GET',
 			url : url
 		});
 	}
 	return {
-		test : function(url) {
-			return get(url);
+		getVisitors : function(url) {
+			return get('../mock/visitors.json');
+		},
+		getRecords: function(data){
+			return get('../mock/records.json', data);
+		},
+		setCutUser : function(u) {
+			window.localStorage.setItem('curUser', JSON.stringify(u));
+		},
+		getCurUser: function(){
+			var u = window.localStorage.getItem('curUser');
+			return JSON.parse(u);
 		}
 	};
 });
