@@ -4,6 +4,7 @@ define(function(require){
 	var Server = require('../../assets/server');
 	var user = null;
 	var vid = 0;
+	var name = '';
 	
 
 	
@@ -11,15 +12,12 @@ define(function(require){
 		this.callParent();
 		var that = this;
 //		绑定数组进去
-		this.userList = justep.Bind.observableArray([]);
+		this.userList = justep.Bind.observableArray([]); // 列表数据
+		this.selectState = justep.Bind.observable(false); // 搜索状态
 		this.gotDetail = function(){
 			user = this;
 			that.goDetail()
 		}
-		/*this.sexCompute = justep.Bind.computed(function() {
-			console.log(this);
-            return 12;
-        }, this);  */
 	};
 	
 //	去设置
@@ -33,10 +31,37 @@ define(function(require){
 		url = "$UI/OTO/pages/trainPractice/visitorDetail.w";
 		justep.Shell.showPage(url);
 	}
+//	搜索动作
+	Model.prototype.goSearch = function(e){
+//		读取到数据
+		name = $.trim(this.comp("userIpt").val());
+		if(name.length > 0){
+			this.selectState.set(true);
+		}else{
+			this.selectState.set(false);
+		}
+		if(e.keyCode == 13){
+//			回车搜索
+			if(name.length > 0){				
+				this.userList.set([]);
+				vid = 0;
+				this.comp('userList')._pullUp();
+			}
+		}
+	}
 	
 	Model.prototype.modelLoad = function(event){
 		
 	};
+//	列表数据恢复方法
+	Model.prototype.resetData = function(){
+		vid = 0;
+		name = '';
+		this.comp("userIpt").val('')
+		this.userList.splice(0, this.userList.length);
+		this.comp('userList')._pullUp();
+	};
+//	列表数据加载方法
 	Model.prototype.loadList = function(){
 		var that = this,
 			date = new Date(),
@@ -44,7 +69,8 @@ define(function(require){
 //		获取数据，并格式化
 		Server.getVisitors({
 			vid: vid,
-			eventKind: 32
+			eventKind: 32,
+			name: name
 		}).then(function(data){
 			data.dataList.forEach(function(n, i){
 //				格式化数据
@@ -60,15 +86,17 @@ define(function(require){
 			vid++;
 		}, function(){});
 	}
-	Model.prototype.newsUserClick = function(event){
-		url = "$UI/OTO/pages/userInfo/newsUser.w";
-		justep.Shell.showPage(url);
-	};
-	
+//	新建用户 && 取消搜索
 	Model.prototype.addVisitor = function(){
-		url = "$UI/OTO/pages/userInfo/newsUser.w";
-		justep.Shell.showPage(url);
+		if(this.selectState){
+			this.resetData();
+		}else{
+			url = "$UI/OTO/pages/userInfo/newsUser.w";
+			justep.Shell.showPage(url);
+		}		
 	}
+	
+	
 	
 	Model.prototype.goBack = function(event){
 		justep.Shell.showLeft();

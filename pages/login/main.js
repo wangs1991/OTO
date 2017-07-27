@@ -120,8 +120,6 @@ define(function(require) {
 			phone: phone,
 			code: code
 		}).then(function(data){
-			console.log(data, 'from pos 1');
-			console.log(data.success);
 			if(data.success == 'true'){
 				window.uid = data.uid;
 				window.session = data.session;

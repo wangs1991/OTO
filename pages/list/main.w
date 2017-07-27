@@ -34,11 +34,12 @@
     <div class="x-panel-content  x-scroll-view" xid="content1" _xid="C79D82AEB1900001F9E5123057971270"
       style="bottom: 0px;" supportpulldown="true"> 
       <div class="search_bar"> 
-        <input type="text" placeholder="搜索"/>  
-        <div class="visitor-add" bind-click="addVisitor">as</div> 
+      	<input component="$UI/system/components/justep/input/input" class=""
+                xid="userIpt" placeHolder="搜索" bind-keyup="goSearch"/>
+        <div class="visitor-add" bind-click="addVisitor" bind-blur="resetData">+</div> 
       </div>  
       <div class="x-scroll visitors_list" component="$UI/system/components/justep/scrollView/scrollView"
-        xid="scrollView1" style="top:120px;width:100%;" onPullUp="loadList"> 
+        xid="userList" style="top:120px;width:100%;" onPullUp="loadList"> 
         <div class="x-scroll-content" xid="div2"> 
           <div component="$UI/system/components/justep/list/list" class="x-list"
             xid="list1"> 

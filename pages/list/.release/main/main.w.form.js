@@ -1,6 +1,7 @@
 define(function(require){
 require('$model/UI2/system/components/justep/model/model');
 require('$model/UI2/system/components/justep/loadingBar/loadingBar');
+require('$model/UI2/system/components/justep/input/input');
 require('$model/UI2/system/components/justep/scrollView/scrollView');
 require('$model/UI2/system/components/justep/list/list');
 require('$model/UI2/system/components/bootstrap/row/row');
