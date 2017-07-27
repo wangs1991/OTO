@@ -31,13 +31,14 @@
         </div> 
       </div> 
     </div>  
-    <div class="x-panel-content  x-scroll-view" xid="content1" _xid="C79D82AEB1900001F9E5123057971270"> 
+    <div class="x-panel-content  x-scroll-view" xid="content1" _xid="C79D82AEB1900001F9E5123057971270"
+      style="bottom: 0px;" supportpulldown="true"> 
       <div class="search_bar"> 
-       	<input type="text" placeholder="搜索"/>
-       	<div class="visitor-add" bind-click="addVisitor">as</div>
-      </div>
-      <div class="x-scroll" component="$UI/system/components/justep/scrollView/scrollView"
-        xid="scrollView1" style="top:200px;"> 
+        <input type="text" placeholder="搜索"/>  
+        <div class="visitor-add" bind-click="addVisitor">as</div> 
+      </div>  
+      <div class="x-scroll visitors_list" component="$UI/system/components/justep/scrollView/scrollView"
+        xid="scrollView1" style="top:120px;width:100%;" onPullUp="loadList"> 
         <div class="x-scroll-content" xid="div2"> 
           <div component="$UI/system/components/justep/list/list" class="x-list"
             xid="list1"> 
@@ -49,11 +50,14 @@
                   <div class="col col-xs-4" xid="col2" bind-text="sexTxt" bind-css="{'boy': user.sex == 0, 'girl': user.sex == 1}">2</div>  
                   <div class="col col-xs-4" xid="col3" bind-text="user.age">3</div> 
                 </div> 
-              </li> 
+              </li>
             </ul> 
           </div> 
         </div>  
+        <div class="x-content-center x-pull-up" xid="div3"> 
+          <span class="x-pull-up-label" xid="span2">加载更多...</span> 
         </div> 
+      </div> 
     </div> 
   </div> 
 </div>

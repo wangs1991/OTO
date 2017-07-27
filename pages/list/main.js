@@ -3,6 +3,7 @@ define(function(require){
 	var justep = require("$UI/system/lib/justep");
 	var Server = require('../../assets/server');
 	var user = null;
+	var vid = 0;
 	
 
 	
@@ -28,31 +29,37 @@ define(function(require){
 	}
 //	去详情页面
 	Model.prototype.goDetail = function(evt){
-		Server.setCutUser(user);
+		Server.setCurUser(user);
 		url = "$UI/OTO/pages/trainPractice/visitorDetail.w";
 		justep.Shell.showPage(url);
 	}
 	
 	Model.prototype.modelLoad = function(event){
+		
+	};
+	Model.prototype.loadList = function(){
 		var that = this,
 			date = new Date(),
 			cy = date.getFullYear();
 //		获取数据，并格式化
-		Server.getVisitors().then(function(data){
-			data.data.forEach(function(n, i){
+		Server.getVisitors({
+			vid: vid,
+			eventKind: 32
+		}).then(function(data){
+			data.dataList.forEach(function(n, i){
 //				格式化数据
 				if(n.sex == 0){
 					n.sexTxt= '男';
 				}else{
 					n.sexTxt = '女';
 				}
-				
 //				年龄
 				n.age = cy - n.birthday.split('-')[0];
 				that.userList.push(n);
 			});
+			vid++;
 		}, function(){});
-	};
+	}
 	Model.prototype.newsUserClick = function(event){
 		url = "$UI/OTO/pages/userInfo/newsUser.w";
 		justep.Shell.showPage(url);

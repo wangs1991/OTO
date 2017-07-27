@@ -1,42 +1,73 @@
 define(['../config/config'], function(module) {
 	var $ = require("jquery");
-//	$(document).ajaxStart(function(){
-//        console.log('ajaxStart');
-//        console.log(arguments);
-//	});
-//	$(document).ajaxComplete(function(){
-//        console.log('ajaxComplete');
-//	});
-	function post(url, data) {
-//		在这里增加必须数据
-		data.action = 'app_order';
-		data.eventKind = 41;
-		data.uid = 12;
-
+	var baseUrl = 'http://test.adai-tech.com:8801';
+	
+	function get(url, data) {
 		var dtd = $.Deferred(); // 新建一个deferred对象
+		console.log(url);
 		$.ajax({
-			type : 'POST',
-			url : url,
-			data : data,
-			success : function(data) {
+			type : 'GET',
+			url : baseUrl+url,
+			data: data,
+			dataType: 'json',
+			success: function(data){
 				dtd.resolve(data);
 			},
-			dataType : function(data) {
+			error: function(data){
 				dtd.reject(data);
 			}
 		});
-		return dtd.promise();
+		return dtd;
 	}
-	function get(url) {
-		console.log(url);
-		return $.ajax({
-			type : 'GET',
-			url : url
+	function fetch(url, data){
+		var dtd = $.Deferred(); // 新建一个deferred对象
+		data = $.extend(data, {
+			action: 'app_order',
+			uid: window.uid,
+			sid: window.session
 		});
+		$.ajax({
+			type : 'POST',
+			url : baseUrl+url,
+			data: data,
+			dataType: 'json',
+			success: function(data){
+				console.log(data);
+				var ret = data.ret;
+				if(ret.retCode == 0){
+//					成功
+					dtd.resolve(data);
+				}else{
+					console.log(ret.msg);
+					dtd.reject(data);
+				}
+			},
+			error: function(data){
+				dtd.reject(data);
+			}
+		});
+		return dtd;
 	}
 	return {
-		getVisitors : function(url) {
-			return get('../mock/visitors.json');
+		checkState: function(){
+			var dtd = $.Deferred();
+			window.uid = localStorage.getItem("uid");
+			window.session = localStorage.getItem("session");
+			if(uid && session){
+				dtd.resolve();
+			}else{
+				dtd.reject();
+			}
+			return dtd;
+		},
+		getCode: function(data){
+			return get('/app/order', data);
+		},
+		login: function(data){
+			return get('/app/order', data, cbk);
+		},
+		getVisitors : function(data) {
+			return fetch('/app/order', data);
 		},
 		getRecords: function(data){
 			return get('../mock/records.json', data);
@@ -47,7 +78,7 @@ define(['../config/config'], function(module) {
 		bindVR: function() {
 			alert();
 		},
-		setCutUser : function(u) {
+		setCurUser : function(u) {
 			window.localStorage.setItem('curUser', JSON.stringify(u));
 		},
 		getCurUser: function(){

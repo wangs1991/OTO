@@ -16,12 +16,12 @@
         </div> 
       </div> 
     </div>  
-    <div class="x-panel-content  x-scroll-view cFFnEJ3" xid="content1" _xid="C79D82AEB1900001F9E5123057971270" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cFFnEJ3"> 
+    <div class="x-panel-content  x-scroll-view cFFnEJ3" xid="content1" _xid="C79D82AEB1900001F9E5123057971270" style="bottom: 0px;" supportpulldown="true" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cFFnEJ3"> 
       <div class="search_bar cFFnEJ3" __cid="cFFnEJ3"> 
         <input type="text" placeholder="搜索" __cid="cFFnEJ3" class="cFFnEJ3"/>  
-        <div class="visitor-add cFFnEJ3" __cid="cFFnEJ3">as</div> 
+        <div class="visitor-add cFFnEJ3" bind-click="addVisitor" __cid="cFFnEJ3">as</div> 
       </div>  
-      <div class="x-scroll cFFnEJ3" component="$model/UI2/system/components/justep/scrollView/scrollView" xid="scrollView1" style="top:200px;" data-bind="component:{name:'$model/UI2/system/components/justep/scrollView/scrollView'}" __cid="cFFnEJ3"> 
+      <div class="x-scroll visitors_list cFFnEJ3" component="$model/UI2/system/components/justep/scrollView/scrollView" xid="scrollView1" style="top:120px;width:100%;" data-bind="component:{name:'$model/UI2/system/components/justep/scrollView/scrollView'}" data-events="onPullUp:loadList" __cid="cFFnEJ3"> 
         <div class="x-scroll-content cFFnEJ3" xid="div2" __cid="cFFnEJ3"> 
           <div component="$model/UI2/system/components/justep/list/list" class="x-list cFFnEJ3" xid="list1" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" __cid="cFFnEJ3"> 
             <ul class="x-list-template user-list hide cFFnEJ3" xid="listTemplateUl1" bind-foreach="{ data: userList, as: 'user' }" __cid="cFFnEJ3"> 
@@ -34,6 +34,9 @@
               </li> 
             </ul> 
           </div> 
+        </div>  
+        <div class="x-content-center x-pull-up cFFnEJ3" xid="div3" __cid="cFFnEJ3"> 
+          <span class="x-pull-up-label cFFnEJ3" xid="span2" __cid="cFFnEJ3">加载更多...</span> 
         </div> 
       </div> 
     </div>  

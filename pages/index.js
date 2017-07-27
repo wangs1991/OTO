@@ -4,13 +4,19 @@ define(function(require) {
 	var $ = require("jquery");
 	var justep = require("$UI/system/lib/justep");
 	var ShellImpl = require('$UI/system/lib/portal/shellImpl');
-	var Config = require('../config/config');
+	var Server = require('../assets/server');
 	
 	window.putView = putView;
 	window.goBack = goBack;
+	window.uid;
+	window.session;
+	window.sessionOK;
+	window.mainView;
+	window.isLogin = false;
 	
 	var Model = function() {
 		this.callParent();
+		window.mainView = this;
 		
 		
 		//创建Shell实例
@@ -19,6 +25,9 @@ define(function(require) {
 			pageMappings: {
 				main: {
 					url: require.toUrl("./list/main.w")
+				},
+				login: {
+					url: require.toUrl("./login/main.w")
 				},
 				
 				p2: {
@@ -42,19 +51,27 @@ define(function(require) {
 		justep.Shell.closePage();
 	}
 	
+	Model.prototype.loginSuccess = function(){
+		justep.Shell.showPage("main");
+	}
+	
 	
 	
 //	打开：justep.Shell.showPage(“main”);
 //	关闭：this.close();
 //	返回上一页：justep.Shell.closePage();
 	Model.prototype.modelLoad = function(event) {
-//		Config.show();
 //		判断是否登录
-		var login = false;
-		
 //		设置显示页面
-		justep.Shell.showPage("main");
+		window.isLogin = Server.checkState().then(function(){
+			justep.Shell.showPage("main");
+		}, function(){
+			justep.Shell.showPage("login");
+		});
 	};
+	Model.prototype.loginSuccess = function(){
+		justep.Shell.showPage("main");
+	}
 	
 	return Model;
 });

@@ -557,64 +557,7 @@ video {
 .center-block canvas{
 	position: static!important;
 }
-.loginer{
-	width: 80%;
-    margin: -10px auto 0;
-}
-.login-ctner.login-ctner{
-	box-shadow: none;
-	color: #fff;
-}
-.login-ctner input{
-	boder: 0!important;
-	border-bottom: 1px solid #fff!important;
-	box-shadow: none!important;
-	padding-left: 40px;
-}
-.login-ctner *{
-	background-color: transparent!important;
-	color: #fff!important;
-}
-.login-ctner .input-group{
-	position: relative;
-	width: 100%;
-}
-.login-ctner .list-group-item{
-	border: none;
-	padding-left: 0;
-	padding-right: 0;
-}
-.login-ctner .input-icon{
-	position: absolute;
-	left: -4px;
-}
-.login-ctner .button{
-	border: 1px solid #0078ff!important;
-	color: #fff!important;
-	border-radius: 5px!important;
-	font-size: 12px;	
-	display: inline-block!important;
-	width: 30%;
-	margin-top: 3px;
-	background-color: rgba(255,255, 255, 0.3)!important;
-}
-.login-bg{
-	background: url(../img/login.jpg) no-repeat;
-	-webkit-background-size: 100% 100%;
-	background-size: 100% 100%;
-}
-.login-ctner ::-webkit-input-placeholder { /* WebKit browsers */ 
-color: #fff; 
-} 
-.login-ctner :-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
-color: #fff; 
-} 
-.login-ctner ::-moz-placeholder { /* Mozilla Firefox 19+ */ 
-color: #fff; 
-} 
-.login-ctner :-ms-input-placeholder { /* Internet Explorer 10+ */ 
-color: #fff; 
-}
+
 .question-list .list-group-item .x-radio{
 	width: 100%;
 }
@@ -634,6 +577,91 @@ color: #fff;
 	left: 5px;
 	top: 3px;
 }
+/* 2017-7-27 ws */
+/* 登录页面 */
+.login_panel .login-bg{
+	background-color: #fff!important;
+}
+.login_header{
+	height: 30vh;
+	background: #2a90f4;
+	position: relative;
+	z-index: 1;
+}
+.login_header .image-wall{
+	display: block;
+	width: 200px;
+	height: auto;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+.loginer{
+	position: relative;
+	top: 35vh;
+}
+/* old */
+.loginer{
+	width: 80%;
+    margin: 0 auto 0;
+}
+.login-ctner{
+	box-shadow: none;
+	color: #fff;
+}
+.login-ctner input,
+.login-ctner input:focus{
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 1px solid #dcdde1;
+	box-shadow: none!important;
+	margin-left: 40px;
+	color: #1c1c1c;
+	font-size: 20px;
+}
+/* .login-ctner *{
+	background-color: transparent!important;
+	color: #1c1c1c!important;
+} */
+.login-ctner .input-group{
+	position: relative;
+	width: 100%;
+}
+.login-ctner .list-group-item{
+	border: none;
+	padding-left: 0;
+	padding-right: 0;
+}
+.login-ctner .input-icon{
+	position: absolute;
+	left: -4px;
+}
+.login-ctner .button{
+	border: 1px solid #2a90f2!important;
+	color: #2a90f2!important;
+	border-radius: 5px!important;
+	font-size: 12px;	
+	display: inline-block!important;
+	width: 30%;
+	margin-top: 3px;
+	background-color: rgba(255,255, 255, 0.3)!important;
+	position: absolute;
+}
+.login-ctner ::-webkit-input-placeholder { /* WebKit browsers */ 
+color: #fff; 
+} 
+.login-ctner :-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+color: #fff; 
+} 
+.login-ctner ::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+color: #fff; 
+} 
+.login-ctner :-ms-input-placeholder { /* Internet Explorer 10+ */ 
+color: #fff; 
+}
+/* old end */
 /* 首页列表 */
 .flex-layout{
 	display: flex;
@@ -688,11 +716,11 @@ color: #fff;
 	height: 30px;
 	background-color: #f00;
 }
-.visitors_list .x-scroll{
-	top: 53px!important;
+.visitors_list.x-scroll{
+ 	top: 53px!important;
 }
 
-
+/* 2017-7-27 ws end */
 
 .cb{
   clear: both;
