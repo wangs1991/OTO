@@ -25,10 +25,11 @@
     <i class="x-pull-down-img glyphicon x-icon-pull-down" xid="i1"></i>
     <span class="x-pull-down-label" xid="span1">下拉刷新...</span></div> 
    <div class="x-scroll-content" xid="div2">
-  <div xid="div7" class="b-relax-box"><div xid="div4" class="w-relax-one clearfix"><div xid="div5" class="b-relax-oneL fl"><img src="$UI/OTO/pages/img/relax_1.jpg" alt="" xid="image1"></img></div>
-  <ul xid="ul1" class="b-relax-oneR fr"><li xid="li1"><![CDATA[张三]]></li>
-  <li xid="li2"><![CDATA[男]]></li>
-  <li xid="li3"><![CDATA[34岁]]></li></ul>
+  <div xid="div7" class="b-relax-box"><div xid="div4" class="w-relax-one clearfix"><div xid="div5" class="b-relax-oneL fl">
+  <img src="$UI/OTO/assets/img/user_1.png" alt="" xid="image1" class="fl"></img>
+  <div xid="div8" class="fl b-relax-one"><h3 xid="h31"><![CDATA[张三]]></h3><span xid="span6"><![CDATA[男]]></span>
+  <span xid="span7"><![CDATA[34岁]]></span></div>
+  </div>
   </div><ul xid="ul2" class="b-relax-two clearfix"><li xid="li4"><![CDATA[20170403]]></li>
   <li xid="li5"><![CDATA[ 深呼吸放松练习 ]]></li>
   <li xid="li6"><![CDATA[5分钟]]></li></ul>

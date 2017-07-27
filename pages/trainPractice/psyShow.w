@@ -2,18 +2,17 @@
 
 <div xmlns="http://www.w3.org/1999/xhtml" component="$UI/system/components/justep/window/window" design="device:m;"
   xid="window" class="window">  
-  <div component="$UI/system/components/justep/model/model" xid="model" onLoad="modelLoad"></div>  
+  <div component="$UI/system/components/justep/model/model" xid="model" onLoad="modelLoad" style="top:31px;left:230px;height:auto;"></div>  
   <div component="$UI/system/components/justep/panel/panel" class="x-panel x-full"
     xid="panel1"> 
     <div class="x-panel-top" xid="top1"> 
       <div component="$UI/system/components/justep/titleBar/titleBar" title="标题"
         class="x-titlebar"> 
         <div class="x-titlebar-left"> 
-          <a component="$UI/system/components/justep/button/button" label=""
-            class="btn btn-link btn-only-icon" icon="icon-chevron-left" onClick="{operation:'window.close'}"
+          <a component="$UI/system/components/justep/button/button" class="btn btn-link btn-only-icon" icon="icon-chevron-left" onClick="{operation:'window.close'}"
             xid="backBtn"> 
             <i class="icon-chevron-left"/>  
-            <span/> 
+            <span>关闭</span> 
           </a> 
         </div>  
         <div class="x-titlebar-title"><![CDATA[ OTO心理治疗模块列表]]></div>  
@@ -32,72 +31,47 @@
           <div xid="div4" class="b-psy-box">
             <div xid="div7" class="b-psy-one">
               <div xid="div8" class="b-psy-oneA">
-                <span component="$UI/system/components/justep/button/radio"
-                  class="x-radio" xid="radio2"/>
-                <span xid="span4" bind-text="hatState"><![CDATA[头盔已连接]]></span>
-              </div>
+                <img src="$UI/OTO/assets/img/psy_5.png" alt="" xid="image1"></img>
+  <span xid="span3"><![CDATA[头盔已连接]]></span></div>
             </div>
             <div xid="div10" class="b-psy-two clearfix">
-              <div xid="div11" class="b-psy-twoA">
+              <div xid="div11" class="b-psy-twoA ">
                 <img src="$UI/OTO/assets/img/psy_1.png" alt="" xid="image2"/>
-                <span xid="span7"><![CDATA[放松类]]></span> 
-              </div>  
+                </div>  
               <div xid="div18" class="b-psy-twoA"> 
-                <img src="$UI/OTO/assets/img/psy_1.png" alt="" xid="image3"/>  
-                <span xid="span8"><![CDATA[焦虑类]]></span>
-              </div>  
+                <img src="$UI/OTO/assets/img/psy_2.png" alt="" xid="image3"/>  
+                </div>  
               <div xid="div19" class="b-psy-twoA"> 
-                <img src="$UI/OTO/assets/img/psy_1.png" alt="" xid="image4"/>  
-                <span xid="span9"><![CDATA[恐惧类]]></span>
-              </div>  
+                <img src="$UI/OTO/assets/img/psy_3.png" alt="" xid="image4"/>  
+                </div>  
               <div xid="div20" class="b-psy-twoA"> 
-                <img src="$UI/OTO/assets/img/psy_1.png" alt="" xid="image5"/>  
-                <span xid="span10"><![CDATA[创伤类]]></span>
-              </div>
+                <img src="$UI/OTO/assets/img/psy_4.png" alt="" xid="image5"/>  
+                </div>
             </div>
             <ul xid="ul2" class="b-psy-thr clearfix">
-              <li xid="li5">
-                <img src="$UI/OTO/assets/img/psy_2.png" alt="" xid="image6"/>  
+              <li xid="li5" class="clearfix">
+                <img src="$UI/OTO/assets/img/psy_6.png" alt="" xid="image6"/>  
                 <span xid="span11"><![CDATA[肌肉渐进式放松]]></span>
               </li>  
-              <li xid="li6">
-                <img src="$UI/OTO/assets/img/psy_2.png" alt="" xid="image7"/>  
+              <li xid="li6" class="clearfix">
+                <img src="$UI/OTO/assets/img/psy_6.png" alt="" xid="image7"/>  
                 <span xid="span12"><![CDATA[深呼吸放松]]></span>
               </li>  
-              <li xid="li7">
-                <img src="$UI/OTO/assets/img/psy_2.png" alt="" xid="image8"/>  
-                <span xid="span13"><![CDATA[快速放松]]></span>
-              </li>
-            </ul>  
-            <ul xid="ul3" class="b-psy-thr clearfix"> 
-              <li xid="li9"> 
-                <img src="$UI/OTO/assets/img/psy_2.png" alt="" xid="image9"/>  
-                <span xid="span16"><![CDATA[面试焦虑]]></span>
-              </li>  
-              <li xid="li8"> 
-                <img src="$UI/OTO/assets/img/psy_2.png" alt="" xid="image10"/>  
-                <span xid="span15"><![CDATA[汇报焦虑]]></span>
-              </li>  
-              <li xid="li10"> 
-                <img src="$UI/OTO/assets/img/psy_2.png" alt="" xid="image11"/>  
-                <span xid="span14"><![CDATA[公众演讲焦虑]]></span>
-              </li> 
-            </ul>  
-            <ul xid="ul4" class="b-psy-thr clearfix"> 
-              <li xid="li12"> 
-                <img src="$UI/OTO/assets/img/psy_2.png" alt="" xid="image12"/>  
-                <span xid="span19"><![CDATA[考试焦虑]]></span>
-              </li>  
-              <li xid="li11"> 
-                <img src="$UI/OTO/assets/img/psy_2.png" alt="" xid="image13"/>  
-                <span xid="span18"><![CDATA[恐高症]]></span>
-              </li>  
-              <li xid="li13"> 
-                <img src="$UI/OTO/assets/img/psy_2.png" alt="" xid="image14"/>  
-                <span xid="span17"><![CDATA[EMDR]]></span>
-              </li> 
-            </ul>
-          </div> 
+              </ul>  
+            <ul xid="ul1" class="b-psy-thr clearfix">
+   <li xid="li2" class="clearfix">
+    <img src="$UI/OTO/assets/img/psy_6.png" alt="" xid="image8"></img>
+    <span xid="span5">肌肉渐进式放松</span></li> 
+   <li xid="li1" class="clearfix">
+    <img src="$UI/OTO/assets/img/psy_6.png" alt="" xid="image9"></img>
+    <span xid="span4">深呼吸放松</span></li> </ul>
+  <ul xid="ul3" class="b-psy-thr clearfix">
+   <li xid="li4" class="clearfix">
+    <img src="$UI/OTO/assets/img/psy_6.png" alt="" xid="image10"></img>
+    <span xid="span7">肌肉渐进式放松</span></li> 
+   <li xid="li3" class="clearfix">
+    <img src="$UI/OTO/assets/img/psy_6.png" alt="" xid="image11"></img>
+    <span xid="span6">深呼吸放松</span></li> </ul></div> 
         </div>  
         <div class="x-content-center x-pull-up" xid="div3"> 
           <span class="x-pull-up-label" xid="span2">加载更多...</span>
