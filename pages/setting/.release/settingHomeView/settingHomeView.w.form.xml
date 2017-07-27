@@ -17,7 +17,7 @@
       <div component="$model/UI2/system/components/justep/contents/content" class="x-panel x-full active cAbU3Eb" xid="panel2" data-bind="component:{name:'$model/UI2/system/components/justep/contents/content'}" __cid="cAbU3Eb"> 
         <div class="x-panel-top cAbU3Eb" xid="top2" __cid="cAbU3Eb"/>  
         <div class="x-panel-content cAbU3Eb" xid="content3" style="bottom:0px;" __cid="cAbU3Eb"> 
-          <ul component="$model/UI2/system/components/justep/list/list" class="x-list x-list-template app-list hide cAbU3Eb" xid="list1" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" __cid="cAbU3Eb"> 
+          <ul component="$model/UI2/system/components/justep/list/list" class="x-list x-list-template app-list hide cAbU3Eb" xid="list1" bind-foreach="{data:$model.foreach_list1($element),afterRender:$model.foreach_afterRender_list1.bind($model,$element)}" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" __cid="cAbU3Eb"> 
             <li xid="li2" bind-click="selectView" data-type="bindVR" __cid="cAbU3Eb" class="cAbU3Eb"> 
               <div component="$model/UI2/system/components/justep/row/row" class="row cAbU3Eb" xid="row3" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cAbU3Eb"> 
                 <div class="col col-xs-1 cAbU3Eb" xid="col7" __cid="cAbU3Eb"> 
