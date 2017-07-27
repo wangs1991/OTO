@@ -70,7 +70,7 @@ define(['../config/config'], function(module) {
 			return fetch('/app/order', data);
 		},
 		getRecords: function(data){
-			return get('../mock/records.json', data);
+			return fetch('/app/order', data);
 		},
 		checkHat: function(){
 			return get('../mock/hat.json');

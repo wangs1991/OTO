@@ -20,10 +20,10 @@ define(function(require){
 		this.user.push(userData);
 		
 		var records = Server.getRecords({
-			vid: userData.vid
+			eventKind: 42
 		}).then(function(data){
 			console.log(data);
-			data.data.forEach(function(n, i){
+			data.dataList.forEach(function(n, i){
 				that.records.push(n);
 			});
 		});
