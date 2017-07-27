@@ -13,7 +13,7 @@ define(function(require){
 		var that = this;
 //		绑定数组进去
 		this.userList = justep.Bind.observableArray([]); // 列表数据
-		this.selectState = justep.Bind.observable(false); // 搜索状态
+		this.selectState = false; // 搜索状态
 		this.gotDetail = function(){
 			user = this;
 			that.goDetail()
@@ -36,9 +36,9 @@ define(function(require){
 //		读取到数据
 		name = $.trim(this.comp("userIpt").val());
 		if(name.length > 0){
-			this.selectState.set(true);
+			this.selectState = true;
 		}else{
-			this.selectState.set(false);
+			this.selectState = false;
 		}
 		if(e.keyCode == 13){
 //			回车搜索
@@ -57,6 +57,7 @@ define(function(require){
 	Model.prototype.resetData = function(){
 		vid = 0;
 		name = '';
+		this.selectState = false;
 		this.comp("userIpt").val('')
 		this.userList.splice(0, this.userList.length);
 		this.comp('userList')._pullUp();
@@ -88,9 +89,10 @@ define(function(require){
 	}
 //	新建用户 && 取消搜索
 	Model.prototype.addVisitor = function(){
-		if(this.selectState){
+		console.log(this.selectState);
+		if(this.selectState){  // 取消搜索
 			this.resetData();
-		}else{
+		}else{	// 添加用户
 			url = "$UI/OTO/pages/userInfo/newsUser.w";
 			justep.Shell.showPage(url);
 		}		

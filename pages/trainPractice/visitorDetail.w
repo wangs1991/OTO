@@ -27,14 +27,9 @@
         </div> 
       </div> 
     </div>  
-    <div class="x-panel-content x-scroll-view" xid="content1" _xid="C79E6F8D4D6000018266103018081380"
-      style="bottom: 0px; background-size: cover; background-image: url(http://localhost:47487/x5/UI2/v_/OTO/pages/trainPractice/none);">
+    <div class="x-panel-content x-scroll-view" xid="content1" _xid="C79E6F8D4D6000018266103018081380" style="bottom: 0px;">
       <div class="x-scroll" component="$UI/system/components/justep/scrollView/scrollView"
         xid="scrollView1"> 
-        <div class="x-content-center x-pull-down container" xid="div1"> 
-          <i class="x-pull-down-img glyphicon x-icon-pull-down" xid="i2"/>  
-          <span class="x-pull-down-label" xid="span2">下拉刷新...</span>
-        </div>  
         <div class="x-scroll-content" xid="div2">
           <div xid="div7" class="b-relax-box"> 
             <div xid="div4" class="w-relax-one clearfix"> 
@@ -42,8 +37,8 @@
                 <img src="$UI/OTO/assets/img/relax_1.jpg" alt="" xid="image1"/>
               </div>  
               <ul xid="ul1" class="b-relax-oneR fr" bind-foreach="{ data: user, as: 'user' }"> 
-                <li xid="li1" bind-text="user.name"/>  
-                <li xid="li2" bind-text="user.sex">男</li>
+                <li xid="li1" bind-text="user.name"/>
+                <li xid="li2" bind-text="user.sexTxt">男</li>
                 <li xid="li3" bind-text="user.age+'岁'"/>
                 <li/> 
               </ul> 
