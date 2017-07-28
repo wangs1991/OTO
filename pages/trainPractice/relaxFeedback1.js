@@ -28,13 +28,5 @@ define(function(require){
 		var url = "$UI/OTO/pages/userInfo/userInfo.w";
 		justep.Shell.showPage(url);
 	};
-	Model.prototype.qiehuanClick = function(event){
-		var ss=this.comp("b-relax-a");
-		var ss1=$.trim(this.comp("b-relax-a"));
-		console.log(ss,ss1);
-	    var index=$(".b-relax-thrA").index();
-	    console.log(index,"asdasdasdasd");
-//		$(".b-relax-thrA")
-	};
 	return Model;
 });

@@ -73,7 +73,7 @@ define(function(require){
 			eventKind: 32,
 			name: name
 		}).then(function(data){
-			data.dataList.forEach(function(n, i){
+			data.dataList.forEach(function(n, i){				
 //				格式化数据
 				if(n.sex == 0){
 					n.sexTxt= '男';
@@ -84,6 +84,7 @@ define(function(require){
 				n.age = cy - n.birthday.split('-')[0];
 				that.userList.push(n);
 			});
+			console.log(that.userList);
 			vid++;
 		}, function(){});
 	}
