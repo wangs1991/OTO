@@ -25,62 +25,62 @@ define(function(require) {
 	
 	//接收
 	Model.prototype.modelParamsReceive = function(event){
-		if (!event.hasOwnProperty("params")) {
-			console.log("no params");
-			return;
-		}
-		if (!event.params.hasOwnProperty("data")) {
-			console.log("no data");
-			return;
-		}
-		if (!event.params.data.hasOwnProperty("id")) {
-			console.log("no id");
-			return;
-		}
-		
-		var params = event.params;
-		recvID = params.data.id;
-		recvScene = params.data.scene;
-		recvCourse = params.data.course;
-		
-		//创建audioplayer
-		this.createAudioElement();
+//		if (!event.hasOwnProperty("params")) {
+//			console.log("no params");
+//			return;
+//		}
+//		if (!event.params.hasOwnProperty("data")) {
+//			console.log("no data");
+//			return;
+//		}
+//		if (!event.params.data.hasOwnProperty("id")) {
+//			console.log("no id");
+//			return;
+//		}
+//		
+//		var params = event.params;
+//		recvID = params.data.id;
+//		recvScene = params.data.scene;
+//		recvCourse = params.data.course;
+//		
+//		//创建audioplayer
+//		this.createAudioElement();
 	};	
 	
 	Model.prototype.createAudioElement = function(){
-		audioPlayer = document.createElement("audio");
+//		audioPlayer = document.createElement("audio");
 	};
 	
 	//获取商品信息
 	Model.prototype.fangsongMusicDataCustomRefresh = function(event){
-		var url = require.toUrl("./main/json/fangsongMusicData.json");
+//		var url = require.toUrl("./main/json/fangsongMusicData.json");
 //		allData.loadDataFromFile(url,event.source,true);
 	};
 	
 	Model.prototype.gobuttonClick = function(event){
-		var selectedIDs = "";
-		selectedIDs += "{\n\"scenes\":[\n";
-		selectedIDs += "{\"ad\":\"" + recvCourse + "\", \"trainScene\":\""+recvScene+"\", \"difficulty\":\"" + recvCourse + "\", \"id\":\""+recvID+"\"}\n";
-		selectedIDs += "]\n}";
-		
-		var params = {device:window.device, eventKind:11, value:selectedIDs, uid:window.uid, session:window.session};
-		$.getJSON(AppUtils.getUrl("app/order?action=app_order") , params, function(data){
-			//justep.Util.hint("selectedIDs:" + selectedIDs, {"position":"bottom"});
-		});
-		
-		//进入课程场景选择
-		var url = "$UI/xlzl/runningView.w";
-		var params = {
-	        data : {
-	            id : recvID,
-	            scene : recvScene,
-	            course : recvCourse
-	        }
-	    };
-	    
-	    justep.Shell.showPage(url, params);
-	    
-		justep.Shell.closePage();
+//		var selectedIDs = "";
+//		selectedIDs += "{\n\"scenes\":[\n";
+//		selectedIDs += "{\"ad\":\"" + recvCourse + "\", \"trainScene\":\""+recvScene+"\", \"difficulty\":\"" + recvCourse + "\", \"id\":\""+recvID+"\"}\n";
+//		selectedIDs += "]\n}";
+//		
+//		var params = {device:window.device, eventKind:11, value:selectedIDs, uid:window.uid, session:window.session};
+//		$.getJSON(AppUtils.getUrl("app/order?action=app_order") , params, function(data){
+//			//justep.Util.hint("selectedIDs:" + selectedIDs, {"position":"bottom"});
+//		});
+//		
+//		//进入课程场景选择
+//		var url = "$UI/xlzl/runningView.w";
+//		var params = {
+//	        data : {
+//	            id : recvID,
+//	            scene : recvScene,
+//	            course : recvCourse
+//	        }
+//	    };
+//	    
+//	    justep.Shell.showPage(url, params);
+//	    
+//		justep.Shell.closePage();
 	};
 	
 	Model.prototype.backBtnClick = function(event){

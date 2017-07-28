@@ -6,6 +6,11 @@ define(function(require){
 	var Model = function(){
 		this.callParent();
 	};
+	
+	Model.prototype.assessSelect = function (){
+		url = "$UI/OTO/pages/userInfo/assessSelect.w";
+		justep.Shell.showPage(url);
+	}
 
 	return Model;
 });

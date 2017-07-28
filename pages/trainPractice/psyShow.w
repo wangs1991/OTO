@@ -11,7 +11,7 @@
         class="x-titlebar app-title-ctner"> 
         <div class="x-titlebar-left"> 
           <a component="$UI/system/components/justep/button/button" class="btn btn-link btn-only-icon"
-            icon="icon-chevron-left" onClick="{operation:'window.close'}" xid="backBtn"> 
+            icon="icon-chevron-left" xid="backBtn" bind-click="goBack"> 
             <i class="icon-chevron-left"/>  
             <span>关闭</span> 
           </a> 

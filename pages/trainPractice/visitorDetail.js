@@ -15,6 +15,7 @@ define(function(require){
 		
 	}
 	
+//	加载数据
 	Model.prototype.loadData = function () {
 		var that = this;
 		userData = Server.getCurUser();
@@ -32,13 +33,25 @@ define(function(require){
 		});
 	}
 	
+//	开始练习
 	Model.prototype.goToLearn = function(){
 		var url = "$UI/OTO/pages/trainPractice/psyShow.w";
 		justep.Shell.showPage(url);
 	}
+//	获取当前用户数据
 	Model.prototype.goUserInfo = function (){
 		var url = "$UI/OTO/pages/userInfo/userInfo.w";
 		justep.Shell.showPage(url);
+	};
+//	去列表详情
+	Model.prototype.recordDetail = function(evt){
+		var url = "$UI/OTO/pages/trainPractice/relaxFeedback.w",
+			target = $(evt.currentTarget), //获取事件目标对象
+			lid = target.attr('lid'),
+			params = {
+				lid: lid
+			};
+		justep.Shell.showPage(url, params);
 	}
 	return Model;
 });

@@ -59,7 +59,7 @@
        <span xid="span14" class="fl">职业</span>
        <input type="text" value="" xid="input8" class="fl"></input></div> </div> </div> 
     <div xid="div6" class="clearfix b-user-thr">
-     <a component="$UI/system/components/justep/button/button" class="btn btn-default b-user-thrButton" label="社交量表  38分" xid="button1">
+     <a component="$UI/system/components/justep/button/button" class="btn btn-default b-user-thrButton" label="社交量表  38分" xid="button1" bind-click="assessSelect">
       <i xid="i2"></i>
       <span xid="span3">社交量表  38分</span></a> </div> 
     <div xid="div7" style="margin:10px;" class="b-user-four">

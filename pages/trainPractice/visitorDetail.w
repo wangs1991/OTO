@@ -12,9 +12,8 @@
         <i class="webapp ic-back"/> 
       </div>  
       <div class="x-titlebar-title" xid="title1">生物数据反馈记录</div>  
-      <div class="x-titlebar-right reverse" xid="right1" bind-click="goUserInfo"> 
-        <div>改</div>
-      </div> 
+      <div class="x-titlebar-right reverse" xid="right1" bind-click="goUserInfo">
+      	<div>改</div></div> 
     </div>  
     <div component="$UI/system/components/justep/contents/contents" class="x-contents x-full"
       active="0" xid="contents1"> 
@@ -48,20 +47,15 @@
             <div class="x-content-center x-pull-down container" xid="div1"> 
               <i class="x-pull-down-img glyphicon x-icon-pull-down" xid="i1"/>  
               <span class="x-pull-down-label" xid="span1"/> 
-            </div>  
+            </div>
             <div class="x-scroll-content" xid="div2"> 
               <!-- 数据列表 -->  
               <div class="section-card mgt-10"> 
                 <div component="$UI/system/components/justep/list/list" class="x-list"
                   xid="list2" data="data" limit="-1" disablePullToRefresh="true" disableInfiniteLoad="true"> 
                   <ul component="$UI/system/components/justep/list/list" class="x-list x-list-template"
-                    xid="list1" bind-foreach="{ data: records, as: 'item' }"> 
-                    <li xid="li4"> 
-                      <span bind-text="item.time"/>  
-                      <span bind-text="item.content"/>  
-                      <span bind-text="item.duration"/> 
-                    </li> 
-                  </ul>  
+                    xid="list1" bind-foreach="{ data: records, as: 'item' }" style="display: none;">
+                  </ul>
                   <table class="table table-bordered table-hover table-striped"
                     component="$UI/system/components/bootstrap/table/table" xid="table1"> 
                     <thead xid="thead1"> 
@@ -72,7 +66,7 @@
                       </tr> 
                     </thead>  
                     <tbody class="x-list-template" xid="listTemplate1" bind-foreach="{ data: records, as: 'item' }"> 
-                      <tr xid="tr2"> 
+                      <tr xid="tr2" bind-click="recordDetail" bind-attr="{lid: item.lid}"> 
                         <td xid="td2"> 
                           <span xid="span6" class="b-visiter-thrSpan" bind-text="item.time"/> 
                         </td>  
@@ -99,8 +93,8 @@
               <span xid="span22">开始练习</span> 
             </a> 
           </div> 
+        </div>  
         </div> 
-      </div> 
     </div> 
   </div> 
 </div>
