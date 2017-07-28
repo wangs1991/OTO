@@ -55,6 +55,12 @@ define(function(require) {
 		justep.Shell.showPage("main");
 	}
 	
+	Model.prototype.logout = function(){
+		window.localStorage.removeItem('session');
+		window.localStorage.removeItem('uid');
+		justep.Shell.showPage("login");
+	}
+	
 	
 	
 //	打开：justep.Shell.showPage(“main”);

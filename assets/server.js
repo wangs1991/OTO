@@ -1,6 +1,7 @@
 define(['../config/config'], function(module) {
 	var $ = require("jquery");
 	var baseUrl = 'http://test.adai-tech.com:8801';
+	var justep = require("$UI/system/lib/justep");
 	
 	function get(url, data) {
 		var dtd = $.Deferred(); // 新建一个deferred对象
@@ -39,6 +40,7 @@ define(['../config/config'], function(module) {
 					dtd.resolve(data);
 				}else{
 					console.log(ret.msg);
+					justep.Util.hint(ret.msg);
 					dtd.reject(data);
 				}
 			},
@@ -64,7 +66,7 @@ define(['../config/config'], function(module) {
 			return get('/app/order', data);
 		},
 		login: function(data){
-			return get('/app/order', data, cbk);
+			return get('/app/order', data);
 		},
 		getVisitors : function(data) {
 			return fetch('/app/order', data);
@@ -75,8 +77,8 @@ define(['../config/config'], function(module) {
 		checkHat: function(data){
 			return fetch('/app/order', data);
 		},
-		bindVR: function() {
-			alert();
+		bindVR: function(data) {
+			return fetch('/app/order', data);
 		},
 		setCurUser : function(u) {
 			window.localStorage.setItem('curUser', JSON.stringify(u));
@@ -84,6 +86,19 @@ define(['../config/config'], function(module) {
 		getCurUser: function(){
 			var u = window.localStorage.getItem('curUser');
 			return JSON.parse(u);
+		},
+		deviceId : function(id){
+			if(id){
+				window.localStorage.setItem('devId', id);
+				return id;
+			}
+			return window.localStorage.getItem('devId');
+		},
+		resetPwd: function(data){
+			return fetch('/app/order', data);
+		},
+		uploadOption: function(data){
+			return fetch('/app/order', data);
 		}
 	};
 });

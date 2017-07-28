@@ -16,6 +16,8 @@ define(function(require){
 			eventKind: 33
 		}).then(function(data){
 			that.hatState.set(true);
+			console.log(data);
+			Server.deviceId(data.deviceId);
 		});
 	}
 	

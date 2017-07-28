@@ -26,15 +26,15 @@
             <div class="sub-title">请描述具体问题，并留下您的联系方式， 便于我们与您联系。</div>  
             <div class="mgt-10"> 
               <textarea component="$UI/system/components/justep/textarea/textarea"
-                class="form-control" xid="textarea1" style="height:122px;" placeholder="请描述具体问题"/> 
+                class="form-control" xid="description" style="height:122px;" placeholder="请描述具体问题"/> 
             </div>  
             <div class="mgt-10"> 
               <input component="$UI/system/components/justep/input/input" class="form-control"
-                xid="input1" placeholder="请输入联系方式"/> 
+                xid="contact" placeholder="请输入联系方式"/> 
             </div>  
             <div class="mgt-10"> 
               <a component="$UI/system/components/justep/button/button" class="btn btn-default button block"
-                label="提交" xid="button1"> 
+                label="提交" xid="button1" bind-click="uploadOpn"> 
                 <i xid="i1"/>  
                 <span xid="span1"/> 
               </a> 
