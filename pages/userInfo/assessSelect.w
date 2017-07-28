@@ -2,7 +2,7 @@
 
 <div xmlns="http://www.w3.org/1999/xhtml" component="$UI/system/components/justep/window/window" design="device:m;"
   xid="window" class="window">  
-  <div component="$UI/system/components/justep/model/model" xid="model" style="left:18px;top:83px;height:244px;"></div>  
+  <div xid="div10"></div><div component="$UI/system/components/justep/model/model" xid="model" style="left:18px;top:83px;height:244px;"></div>  
   <div component="$UI/system/components/justep/panel/panel" class="x-panel x-full"
     xid="panel1"> 
     <div class="x-panel-top" xid="top1"> 
@@ -29,32 +29,32 @@
           <span class="x-pull-down-label" xid="span1">下拉刷新...</span>
         </div>  
         <div class="x-scroll-content" xid="div2"> 
-          <div xid="div5" style="text-align:center;">
-            <div xid="div4" style="width:70%;display:inline-block;margin-top:35px;">
-              <a component="$UI/system/components/justep/button/button" class="btn btn-default"
-                label="社交焦虑" xid="button1" style="width:40%;margin:0 2.5%;background-color:#999;border:2px solid #666;" bind-click="goTest(1)"> 
-                <i xid="i2"/>  
-                <span xid="span3">社交焦虑</span>
-              </a>  
-              <a component="$UI/system/components/justep/button/button" class="btn btn-default"
-                label="抑郁" xid="button2" style="width:40%;margin:0 2.5%;background-color:#999;border:2px solid #666;"> 
-                <i xid="i3"/>  
-                <span xid="span4">抑郁</span>
-              </a>
-            </div>  
-            <div xid="div6" style="width:70%;display:inline-block;margin-top:35px;"> 
-              <a component="$UI/system/components/justep/button/button" class="btn btn-default"
-                label="社交焦虑" xid="button4" style="width:40%;margin:0 2.5%;background-color:#999;border:2px solid #666;"> 
-                <i xid="i4"/>  
-                <span xid="span5">社交焦虑</span>
-              </a>  
-              <a component="$UI/system/components/justep/button/button" class="btn btn-default"
-                label="抑郁" xid="button3" style="width:40%;margin:0 2.5%;background-color:#999;border:2px solid #666;"> 
-                <i xid="i5"/>  
-                <span xid="span6">抑郁</span>
-              </a> 
-            </div>
-          </div>
+          <div xid="div5" style="text-align:center;margin-top:35px;">
+            <div xid="div4" style="width:90%;display:inline-block;margin-bottom:15px;" class="clearfix b-assess-one">
+              <div xid="div11" class="btn btn-default fl b-assess-oneA b-assess-oneB" style="width:45%;margin:0 2.5%;"><span xid="span13"><![CDATA[社交焦虑 38分]]></span></div>
+  <div xid="div12" class="btn btn-default fl b-assess-oneA" style="width:45%;margin:0 2.5%;">
+   <span xid="span14"><![CDATA[抑郁]]></span></div></div>  
+            <div xid="div6" style="width:90%;display:inline-block;margin-bottom:15px;" class="clearfix b-assess-one">
+   
+   
+  <div xid="div13" class="btn btn-default fl b-assess-oneA" style="width:45%;margin:0 2.5%;">
+   <span xid="span15"><![CDATA[恐高]]></span></div>
+  <div xid="div14" class="btn btn-default fl b-assess-oneA" style="width:45%;margin:0 2.5%;">
+   <span xid="span16"><![CDATA[考试焦虑]]></span></div></div>
+  <div xid="div17" style="width:90%;display:inline-block;margin-bottom:15px;" class="clearfix b-assess-one">
+   <div xid="div15" class="btn btn-default fl b-assess-oneA" style="width:45%;margin:0 2.5%;">
+    <span xid="span18"><![CDATA[汇报焦虑]]></span></div> 
+   <div xid="div16" class="btn btn-default fl b-assess-oneA" style="width:45%;margin:0 2.5%;">
+    <span xid="span17"><![CDATA[公众演讲焦虑]]></span></div> </div>
+  <div xid="div20" style="width:90%;display:inline-block;margin-bottom:15px;" class="clearfix b-assess-one">
+   <div xid="div18" class="btn btn-default fl b-assess-oneA" style="width:45%;margin:0 2.5%;">
+    <span xid="span20"><![CDATA[考试焦虑]]></span></div> 
+   <div xid="div19" class="btn btn-default fl b-assess-oneA" style="width:45%;margin:0 2.5%;">
+    <span xid="span19"><![CDATA[恐高症]]></span></div> </div>
+  <div xid="div23" style="width:90%;display:inline-block;margin-bottom:15px;" class="clearfix b-assess-one">
+   <div xid="div21" class="btn btn-default fl b-assess-oneA" style="width:45%;margin:0 2.5%;">
+    <span xid="span22"><![CDATA[EMDR]]></span></div> 
+   </div></div>
         </div>  
         <div class="x-content-center x-pull-up" xid="div3"> 
           <span class="x-pull-up-label" xid="span2">加载更多...</span>

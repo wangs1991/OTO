@@ -805,7 +805,7 @@ color: #fff;
 	width:33.333333%
 }
 .b-relax-thr li{
-	border:1px solid #999;padding:10px;
+	padding:10px;
 }
 .b-relax-thrA img{
 	width:25px;
@@ -978,21 +978,242 @@ color: #fff;
 	padding:5px;
 	width:100%;
 }
+.panel-heading{
+	padding:0;
+	border-top:1px solid #999;
+	border-bottom:1px solid #999;
+}
+.panel-default>.panel-heading{
+	background:#fff;
+}
+.panel{
+	margin-bottom:0;
+	box-shadow:none;
+}
+.panel-group{
+	margin-bottom:0;
+}
+.b-assess-oneA{
+	border:none;
+	line-height:60px;
+	background:#f8f8f8;
+	color:#333;
+}
+.b-assess-oneB{
+	border:none;
+	line-height:60px;
+	background:#2a90f4;
+	color:#fff;
+}
+.b-exam-one{
+	position:relative;
+}
+.b-exam-one img.b-exam-oneB{
+	width:100%;
+	display:inline-block;
+}
+.b-exam-oneA{
+	margin:0 4%;
+	width:92%;
+	border:1px solid #19a1ff;
+	text-align:center;
+	padding:10px 0;
+	background:#fff;
+	border-radius:5px;
+	position:relative;
+	bottom:20px;
+}
+.b-exam-oneA span{
+	line-height:18px;
+	font-size:14px;
+	color:#19a1ff;
+}
+.b-exam-oneA img{
+	width:15px;
+	margin-left:10px;
+}
+.b-exam-top{
+	margin-top:15px;
+}
+.b-exam-two{
+	padding:1rem 0;
+	margin-bottom:14px;
+}
+.b-exam-BG{
+	background:url(../img/exam_4.png) center top no-repeat;
+	background-size:100% 100%;
+	margin:0 4%;
+	height:15rem;
+	
+}
+.b-exam-two li{
+	float: left;
+    width: 20%;
+    font-size: 0.6rem;
+    color: #333;
+    padding: 0.25rem 0;
+    text-align: center;
+    border-right: 1px solid #999;
+    margin: 0.25rem 0;
+}
+.b-exam-two .b-exam-twoA{
+	color:#19a0ff;
+}
+.b-exam-two .b-exam-twoC{
+	border-right:none;
+}
+.b-exam-thr li{
 
+	font-size:0.7rem;
+	color:#333;
+	padding:1rem 10%;
+}
+.b-exam-thrA{
+	margin-top:20px;
+}
+.b-exam-thrB{
+	width:1rem;
+}
+.b-exam-four{
+	width:92%;
+	margin:0 4%;	
+	padding-top:20px;
+}
+.b-exam-fourA{
+	width:80%;
+	border:1px solid #19a1ff;
+	text-align:center;
+	padding:10px 0;
+	background:#fff;
+	border-radius:5px;
+}
+.b-exam-fourA span{
+	line-height:18px;
+	font-size:14px;
+	color:#19a1ff;
+}
+.b-exam-fourA img{
+	width:15px;
+	margin-left:10px;
+}
+.b-exam-five{
+	text-align:center;
+	margin:20px 15px 0 0;
+}
+.b-exam-five img{
+	width:20px;
+	margin-right:10px;
+}
+.b-exam-five span{
+	line-height:24px;
+	font-size:14px;
+}
+.b-breath-oneA{
+	margin:0 4%;
+	width:92%;
+	text-align:center;
+	padding:10px 0;
+	position:relative;
+	bottom:40px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.b-breath-two{
+	padding:0.5rem 0;
+	margin:0;
+}
+.b-breath-BG{
+	background:url(../img/breath_9.png) center top no-repeat;
+	background-size:100% 100%;
+	margin:0 4%;
+	height:15rem;
+	
+}
+.b-breath-two li{
+	float: left;
+    width: 25%;
+    font-size: 0.6rem;
+    color: #333;
+    text-align: center;
+    border-right: 1px solid #999;
+}
+.b-breath-two li img{
+	height:20px;
+	
+}
+.b-breath-two li span{
+	display:block;
+	text-align:center;
+	line-height:28px;
+}
+.b-breath-two .b-exam-twoA{
+	color:#19a0ff;
+}
+.b-breath-two .b-breath-twoC{
+	border-right:none;
+}
+.b-breath-thrA img{
+	width:30px;
+	border-radius:50%;
+	margin-right:5px;
+}
+.b-breath-thrA span{
+	line-height:30px;
+	color:#333;
+	font-size:14px;
+}
+.b-breath-thr li{
+	font-size: 0.7rem;
+    color: #333;
+    padding: 0.2rem 6%;
+}
+.b-breath-thr li:nth-of-type(2),.b-breath-thr li:nth-of-type(3)
+{
+    margin-top:3px;
+}
+.b-breath-thr li input[type="radio"], input[type="checkbox"]{
+	margin-top:12px;
+	display:inline-block;
+}
+.checkboxTwo input[type=checkbox] {
+	visibility: hidden;
+}
+.checkboxTwo {
+	    width: 55px;
+    height: 30px;
+    background: #19a0ff;
+    /* margin: 20px 60px; */
+        margin-top: 7px;
+    border-radius: 50px;
+    position: relative;
+}
+.checkboxTwo:before {
+	content: '';
+	position: absolute;
+	top: 19px;
+	left: 14px;
+	height: 2px;
+	width: 90px;
+}
+.checkboxTwo label {
+	display: block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    transition: all .5s ease;
+    cursor: pointer;
+    position: absolute;
+    top: 6px;
+    z-index: 1;
+    left: 12px;
+    background: #fff;
+}
+.checkboxTwo input[type=checkbox]:checked + label {
+	left: 25px;
+	background: #26ca28;
+}
 
 

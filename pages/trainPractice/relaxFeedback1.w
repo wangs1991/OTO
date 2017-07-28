@@ -43,22 +43,37 @@
               <li xid="li6"><![CDATA[5分钟]]></li>
             </ul>  
             <ul xid="ul3" class="b-relax-thr"> 
-              <li xid="li8" class="clearfix"> 
+              <div component="$UI/system/components/bootstrap/accordion/accordion" xid="accordion1">
+   <div component="$UI/system/components/bootstrap/panel/panel" xid="panel2" class="panel panel-default">
+    <div xid="heading1" style="background-color:transparent;" class="panel-heading">
+     <li xid="li8" class="clearfix"> 
                  
-              <div xid="b-relax-a" class="pull-left b-relax-thrA" bind-click="qiehuanClick"> 
+              <div xid="div13" class="pull-left b-relax-thrA"> 
                   <img src="$UI/OTO/assets/img/relax_2.jpg" alt="" xid="image3" />  
                   <span xid="span3"><![CDATA[皮肤电数据]]></span>
-                </div>
-  <div xid="div15"><span xid="span8"><![CDATA[1]]></span></div>
-  </li><li xid="li7" class="clearfix">
-   <div xid="b-relax-b" class="pull-left b-relax-thrA" bind-click="qiehuanClick">
+                </div></li></div> 
+    <div class="panel-collapse collapse in" xid="div1">
+     <div class="panel-body" xid="div3"><div xid="div6"><span xid="span1"><![CDATA[22222222222]]></span></div>
+  </div></div> </div> </div>  
+              <div component="$UI/system/components/bootstrap/accordion/accordion" class="panel-group" xid="accordion2">
+   <div class="panel panel-default" component="$UI/system/components/bootstrap/panel/panel" xid="panel3">
+    <div class="panel-heading" xid="heading2">
+     
+  <li xid="li7" class="clearfix">
+   <div xid="div10" class="pull-left b-relax-thrA">
     <img src="$UI/OTO/assets/img/relax_2.jpg" alt="" xid="image2"></img>
-    <span xid="span4"><![CDATA[诊疗记录]]></span></div> 
-  <div xid="div16"><span xid="span9"><![CDATA[2]]></span></div></li><li xid="li9" class="clearfix">
-   <div xid="b-relax-c" class="pull-left b-relax-thrA" bind-click="qiehuanClick">
+    <span xid="span4"><![CDATA[诊疗记录]]></span></div> </li></div> 
+    <div class="panel-collapse collapse in" xid="div8">
+     <div class="panel-body" xid="div9"><span xid="span2"><![CDATA[1]]></span></div></div> </div> </div><div component="$UI/system/components/bootstrap/accordion/accordion" class="panel-group" xid="accordion3">
+   <div class="panel panel-default" component="$UI/system/components/bootstrap/panel/panel" xid="panel4">
+    <div class="panel-heading" xid="heading3">
+     
+  <li xid="li9" class="clearfix">
+   <div xid="div14" class="pull-left b-relax-thrA">
     <img src="$UI/OTO/assets/img/relax_2.jpg" alt="" xid="image4"></img>
-    <span xid="span6"><![CDATA[自评量表]]></span></div> 
-  <div xid="div17"><span xid="span10"><![CDATA[3]]></span></div></li></ul>
+    <span xid="span6"><![CDATA[自评量表]]></span></div> </li></div> 
+    <div class="panel-collapse collapse in" xid="div11">
+     <div class="panel-body" xid="div12"><span xid="span5"><![CDATA[3333333333333]]></span></div></div> </div> </div></ul>
           </div> 
         </div>  
         </div>
