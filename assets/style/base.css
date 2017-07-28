@@ -77,6 +77,10 @@
 	content: "\e611";
 }
 
+.ic-setting:before {
+	content: "\e610";
+}
+
 .nav-xinli:before {
 	content: "\e78c";
 }
@@ -663,6 +667,13 @@ color: #fff;
 }
 /* old end */
 /* 首页列表 */
+.i-setting-img{
+	width: 48px;
+	height: 48px;
+	background: url('../img/setting.png') no-repeat center center;
+	-webkit-background-size: 50% 50%;
+	background-size: 50% 50%;
+}
 .flex-layout{
 	display: flex;
 }
@@ -700,10 +711,10 @@ color: #fff;
 	border-radius: 6px;
 	background-color: #fff;
 	border: 0;
-	height: 2em;
-	line-height: 2em;
-	padding: 10px;
-	font-size: 16px;
+	height: 2.5em;
+	line-height: 2.5em;
+	padding: 0 10px;
+	font-size: 14px;
 	display: block;
 	width: 100%;
 }
@@ -714,10 +725,22 @@ color: #fff;
 	
 	width: 30px;
 	height: 30px;
-	background-color: #f00;
+	background: url('../img/add.png') no-repeat center center;
+	-webkit-background-size: 50% 50%;
+	background-size: 20px 20px;
+	text-indent: -9999px;
+}
+.search_bar .visitor-add.rotate{
+	transform: rotate(45deg);
 }
 .visitors_list.x-scroll{
  	top: 53px!important;
+}
+
+
+.card_user{
+	background-color: #fff;
+	padding: 15px;
 }
 
 /* 2017-7-27 ws end */

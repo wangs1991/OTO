@@ -12,8 +12,9 @@
         <i class="webapp ic-back"/> 
       </div>  
       <div class="x-titlebar-title" xid="title1">生物数据反馈记录</div>  
-      <div class="x-titlebar-right reverse" xid="right1" bind-click="goUserInfo">
-      	<div>改</div></div> 
+      <div class="x-titlebar-right reverse" xid="right1" bind-click="goUserInfo"> 
+        <div>改</div>
+      </div> 
     </div>  
     <div component="$UI/system/components/justep/contents/contents" class="x-contents x-full"
       active="0" xid="contents1"> 
@@ -22,18 +23,22 @@
         <div class="x-panel-top" xid="top2"/>  
         <div class="x-panel-content" xid="content3" style="bottom:0px;"> 
           <!-- 顶部用户卡片  -->  
-          <div class="section-card symbol-card" style="height:230px;"> 
-            <div xid="div4" class="w-relax-one clearfix"> 
-              <div xid="div5" class="b-relax-oneL fl"> 
-                <img src="$UI/OTO/assets/img/relax_1.jpg" alt="" xid="image1"/> 
+          <div class="symbol-card card_user" style="height:110px;"> 
+            <div class="media" xid="media1"> 
+              <div class="media-left" xid="mediaLeft1"> 
+                <a href="#" xid="a1"> 
+                  <img class="media-object" src="$UI/OTO/assets/img/relax_1.jpg" alt="" xid="image2"/>
+                </a> 
               </div>  
-              <ul xid="ul1" class="b-relax-oneR fr" bind-foreach="{ data: user, as: 'user' }"> 
+              <div class="media-body" xid="mediaBody1"> 
+                <ul xid="ul1" class="b-relax-oneR fr" bind-foreach="{ data: user, as: 'user' }"> 
                 <li xid="li1" bind-text="user.name"/>  
                 <li xid="li2" bind-text="user.sexTxt">男</li>  
                 <li xid="li3" bind-text="user.age+'岁'"/>  
                 <li/> 
-              </ul> 
-            </div> 
+              </ul>
+              </div> 
+            </div>  
           </div>  
           <!-- 拉动刷新数据	 -->  
           <div class="x-scroll-content" xid="div3"> 
@@ -47,15 +52,14 @@
             <div class="x-content-center x-pull-down container" xid="div1"> 
               <i class="x-pull-down-img glyphicon x-icon-pull-down" xid="i1"/>  
               <span class="x-pull-down-label" xid="span1"/> 
-            </div>
+            </div>  
             <div class="x-scroll-content" xid="div2"> 
               <!-- 数据列表 -->  
               <div class="section-card mgt-10"> 
                 <div component="$UI/system/components/justep/list/list" class="x-list"
                   xid="list2" data="data" limit="-1" disablePullToRefresh="true" disableInfiniteLoad="true"> 
                   <ul component="$UI/system/components/justep/list/list" class="x-list x-list-template"
-                    xid="list1" bind-foreach="{ data: records, as: 'item' }" style="display: none;">
-                  </ul>
+                    xid="list1" bind-foreach="{ data: records, as: 'item' }" style="display: none;"></ul>  
                   <table class="table table-bordered table-hover table-striped"
                     component="$UI/system/components/bootstrap/table/table" xid="table1"> 
                     <thead xid="thead1"> 
@@ -93,8 +97,8 @@
               <span xid="span22">开始练习</span> 
             </a> 
           </div> 
-        </div>  
         </div> 
+      </div> 
     </div> 
   </div> 
 </div>

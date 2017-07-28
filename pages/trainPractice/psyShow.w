@@ -26,8 +26,8 @@
         <div xid="div7" class="b-psy-one" bind-click="goBindVR"> 
           <div xid="div8" class="b-psy-oneA"> 
             <img src="$UI/OTO/assets/img/psy_5.png" alt="" xid="image1"/>  
-            <span xid="span3" bind-if="hatState"><![CDATA[头盔已连接]]></span>  
-            <span xid="span3" bind-if="!hatState"><![CDATA[头盔未连接]]></span> 
+            <span xid="span3" bind-if="hatState.lastValue">头盔已连接</span>  
+            <span xid="span3" bind-if="!hatState.lastValue">头盔未连接</span> 
           </div> 
         </div> 
         <div xid="div10" class="b-psy-two clearfix"> 
@@ -44,7 +44,7 @@
             <img src="$UI/OTO/assets/img/psy_4.png" alt="" xid="image5"/> 
           </div> 
         </div>  
-        <ul xid="ul2" class="b-psy-thr clearfix" bind-click="enterCource(11)"> 
+        <ul xid="ul2" class="b-psy-thr clearfix" bind-click="enterCources"> 
           <li xid="li5" class="clearfix"> 
             <img src="$UI/OTO/assets/img/psy_6.png" alt="" xid="image6"/>  
             <span xid="span11"><![CDATA[肌肉渐进式放松]]></span> 

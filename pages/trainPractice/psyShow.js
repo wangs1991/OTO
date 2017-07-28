@@ -18,12 +18,14 @@ define(function(require){
 			that.hatState.set(true);
 			console.log(data);
 			Server.deviceId(data.deviceId);
+		}, function(data){
+			that.hatState.set(false);
 		});
 	}
 	
-	Model.prototype.enterCource = function(type){
+	Model.prototype.enterCources = function(type){
 		var params = {
-				type: type
+				type: 1
 		    },
 		    url = "$UI/OTO/pages/trainPractice/fangsongMusicView.w";
 		justep.Shell.showPage(url, params);

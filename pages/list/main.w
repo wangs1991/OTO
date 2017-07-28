@@ -27,7 +27,9 @@
         </div>  
         <div class="x-titlebar-title" xid="title1"><![CDATA[来访者列表]]></div>  
         <div class="x-titlebar-right reverse" xid="right1"> 
-          <div bind-click="goToSetting">设置</div> 
+          <div bind-click="goToSetting">
+          	<div class="i-setting-img"></div>
+          </div> 
         </div> 
       </div> 
     </div>  

@@ -37,8 +37,11 @@ define(function(require){
 		name = $.trim(this.comp("userIpt").val());
 		if(name.length > 0){
 			this.selectState = true;
+			$('.visitor-add').addClass('rotate');
+			console.log(111111111);
 		}else{
 			this.selectState = false;
+			$('.visitor-add').removeClass('rotate');
 		}
 		if(e.keyCode == 13){
 //			回车搜索
@@ -58,6 +61,7 @@ define(function(require){
 		vid = 0;
 		name = '';
 		this.selectState = false;
+		$('.visitor-add').removeClass('rotate');
 		this.comp("userIpt").val('')
 		this.userList.splice(0, this.userList.length);
 		this.comp('userList')._pullUp();
