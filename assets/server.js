@@ -72,8 +72,8 @@ define(['../config/config'], function(module) {
 		getRecords: function(data){
 			return fetch('/app/order', data);
 		},
-		checkHat: function(){
-			return get('../mock/hat.json');
+		checkHat: function(data){
+			return fetch('/app/order', data);
 		},
 		bindVR: function() {
 			alert();

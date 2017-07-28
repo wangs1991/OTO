@@ -9,14 +9,16 @@ define(function(require){
 		this.callParent();
 		this.records = justep.Bind.observableArray([]);
 		this.user = justep.Bind.observableArray([]);
-		this.sexFormat = function(){
-			console.log(this);
-		}
 	};
 	
 	Model.prototype.modelLoad = function(event){
+		
+	}
+	
+	Model.prototype.loadData = function () {
 		var that = this;
 		userData = Server.getCurUser();
+		this.user.pop();
 		this.user.push(userData);
 		
 		var records = Server.getRecords({
@@ -32,6 +34,10 @@ define(function(require){
 	
 	Model.prototype.goToLearn = function(){
 		var url = "$UI/OTO/pages/trainPractice/psyShow.w";
+		justep.Shell.showPage(url);
+	}
+	Model.prototype.goUserInfo = function (){
+		var url = "$UI/OTO/pages/userInfo/userInfo.w";
 		justep.Shell.showPage(url);
 	}
 	return Model;

@@ -44,9 +44,5 @@ define(function(require) {
 	Model.prototype.modelUnLoad = function(event) {
 		//window.removeView(this);
 	};
-	
-	Model.prototype.goBack = function(event){
-		
-	};
 	return Model;
 });

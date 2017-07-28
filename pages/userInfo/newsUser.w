@@ -5,8 +5,8 @@
   <div component="$UI/system/components/justep/panel/panel" 
     class="x-panel x-full" xid="panel1" style="width:100%;font-size:14px;"> 
       <div class="x-panel-top" xid="top1"> 
-        <div component="$UI/system/components/justep/titleBar/titleBar" title="标题"
-          class="x-titlebar">
+        <div component="$UI/system/components/justep/titleBar/titleBar" title="新建用户"
+          class="x-titlebar app-title-ctner">
           <div class="x-titlebar-left"> 
             <a component="$UI/system/components/justep/button/button"
               label="" class="btn btn-link btn-only-icon" icon="icon-chevron-left"

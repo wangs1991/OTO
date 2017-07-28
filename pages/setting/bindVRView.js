@@ -13,16 +13,11 @@ define(function(require) {
 	};
 	
 	Model.prototype.modelLoad = function(event){
-//		window.putView(this);
 		
 		var bindDeviceId = localStorage.getItem("BindDeviceID");
 		if (bindDeviceId != null && bindDeviceId != undefined) {
 			this.comp("deviceInput").val(bindDeviceId);
 		}
-	};
-	
-	Model.prototype.modelUnLoad = function(event){
-//		window.removeView(this);
 	};
 	
 	Model.prototype.bindButtonClick = function(event){

@@ -5,6 +5,11 @@ define(function(require){
 	var Model = function(){
 		this.callParent();
 	};
+	
+	Model.prototype.goTest = function(type){
+		url = "$UI/OTO/pages/userInfo/testView.w";
+		justep.Shell.showPage(url);
+	}
 
 	return Model;
 });

@@ -1,0 +1,39 @@
+.h5{ line-height:2; color:#212121;}
+.text-black{ color:#333;}
+.text-gray{ color:#f1f1f1; font-size:17px; font-weight:normal;}
+.text-white{ color:#fff; font-size:17px; font-weight:normal;}
+.text-line-head{ color:#0563c1; font-size:20px; font-weight:normal; }
+.text-line-bottom{ color:#0563c1; font-size:20px; font-weight:normal; text-decoration:underline; text-align:center;}
+.text-data-bottom{ color:#979797; font-size:15px; font-weight:normal; text-align:center;}
+.text-title-head{ color:#212121; font-size:22px; font-weight:bold; text-align:center;}
+.text-bottom-black{ color:#212121; font-size:17px; font-weight:normal;}
+.text-bottom-green{ color:#6abe6a; font-size:17px; font-weight:normal;}
+.text-complete {color:#fe6e3f; font-size:35px; font-weight:normal; text-align:center;}
+.text-white-shadow{ color:#e7e7e7; text-shadow: 1px 1px 1px #212121}
+.div-center{ font-size:17px; font-weight:normal; text-align:center;}
+
+.o-img4{ width:50px; height:50px;}
+
+.x-titlebar{ background-color:#fff000; color:#777; border-bottom:1px solid #999;}
+.panel-heading{ border-color:#ffffff;}
+
+.tb-bottom-line { border-bottom: 1px solid #a7a7a7; border-top:none; border-left:none; border-right:none; }
+.tb-bottom-dashedline { border-bottom: 1px dashed #a7a7a7; border-top:none; border-left:none; border-right:none; }
+.tb-bottom-line-gray { border-bottom: 1px solid #f1f1f1; border-top:none; border-left:none; border-right:none; }
+.tb-test-line { border-bottom: 1px solid #cfeacf; border-top:1px solid #cfeacf; border-left:1px solid #cfeacf; border-right:1px solid #cfeacf; }
+
+/*没有左右边距*/
+.o-nopadding{ padding-left:0; padding-right:0;}
+
+/*跟贴数量*/
+.badge{ background-color:#ffffff;}
+
+/*内容文字*/
+.lead{ line-height:36px; text-align:justify;}
+
+/*底部**/
+.x-panel-bottom{ padding:5px 10px;}
+.x-panel-bottom .input-group .input-group-addon{ background-color:#fff; border-left:0; border-right:0; border-top:0; border-radius:0 0 0 8px;}
+.x-panel-bottom .input-group .form-control{ width:auto; border-left:0; border-right:0; border-top:0; border-radius:0 0 8px 0;}
+.x-panel-bottom .input-group .form-control:focus{ box-shadow:none; border-color:#efefef;}
+.x-panel-bottom .form-control-feedback{ right:15px;}

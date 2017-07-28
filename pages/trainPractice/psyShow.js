@@ -6,15 +6,30 @@ define(function(require){
 
 	var Model = function(){
 		this.callParent();
-		this.hatState = justep.Bind.observable();
+		this.hatState = justep.Bind.observable(false);
 	};
 	
 	Model.prototype.modelLoad = function(){
 		var that = this;
-		Server.checkHat().then(function(data){
-			console.log(data);
-			that.hatState.set(data.ret);
+//		验证头盔绑定状态
+		Server.checkHat({
+			eventKind: 33
+		}).then(function(data){
+			that.hatState.set(true);
 		});
+	}
+	
+	Model.prototype.enterCource = function(type){
+		var params = {
+				type: type
+		    },
+		    url = "$UI/OTO/pages/trainPractice/fangsongMusicView.w";
+		justep.Shell.showPage(url, params);
+	};
+	
+	Model.prototype.goBindVR = function(){
+		var url = "$UI/OTO/pages/setting/bindVRView.w";
+		justep.Shell.showPage(url);
 	}
 
 	return Model;

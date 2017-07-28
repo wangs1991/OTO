@@ -6,7 +6,7 @@
     style="height:auto;top:351px;left:451px;"/>  
   <div component="$UI/system/components/justep/panel/panel" class="x-panel x-full x-card login_panel"
     xid="panel2"> 
-    <div class="x-panel-content  x-cards container login-bg" xid="content1"> 
+    <div class="x-panel-content x-cards container login-bg" xid="content1"> 
       <div component="$UI/system/components/justep/contents/contents" class="x-contents x-full"
         active="0" xid="contents2"> 
         <div class="x-contents-content login_header" xid="content3">
