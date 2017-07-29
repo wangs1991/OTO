@@ -15,7 +15,6 @@ define(function(require){
 		this.user.pop();
 		this.user.push(userData);
 		
-		
 	}
 	Model.prototype.modelParamsReceive = function(event){
 		if (event.hasOwnProperty("params")) {

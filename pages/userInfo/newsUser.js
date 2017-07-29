@@ -17,6 +17,35 @@ define(function(require){
 		var url = require.toUrl("$UI/OTO/pages/userInfo/assessSelect.w");
 		justep.Shell.showPage(url);
 	};
+	
+	Model.prototype.startclick =function(event){
+		
+		window.skinFeelStart = true;
+		
+	}
+	
+	Model.prototype.andclick =function(event){		
+	
+		var shinArray_1 =	window.skinArraylist;
+		window.skinArraylist={};	
+		window.skinFeelStart = true;
+								
+	}
+	
+	Model.prototype.endclick =function(event){
+		
+		var shinArray_2 =	window.skinArraylist;
+		window.skinFeelStart = flase;
+		
+				
+	}
 
+	Model.prototype.button3Click = function(event){
+
+	};
+	
+	
+	
+	
 	return Model;
 });

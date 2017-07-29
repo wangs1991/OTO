@@ -23,20 +23,21 @@
         <div class="x-panel-top" xid="top2"/>  
         <div class="x-panel-content" xid="content3" style="bottom:70px;"> 
           <!-- 顶部用户卡片  -->  
-          <div class="symbol-card card_user" style="height:110px;"> 
+          <div class="symbol-card card_user" style="height:110px;" bind-foreach="{ data: user, as: 'user' }"> 
             <div class="media" xid="media1"> 
-              <div class="media-left" xid="mediaLeft1"> 
+              <div class="media-left avator-ctner" xid="mediaLeft1"> 
                 <div class="avator"> 
-                  <img class="media-object" src="$UI/OTO/assets/img/relax_1.jpg"
+                  <img class="media-object" src="$UI/OTO/assets/img/user_boy.jpg"
                     alt="" xid="image2"/> 
                 </div> 
+                <div class="sex" bind-css="{'boy': user.sex == 0, 'girl': user.sex == 1}"></div>
               </div>  
               <div class="media-body" xid="mediaBody1"> 
                 <ul xid="ul1" class="b-relax-oneR" bind-foreach="{ data: user, as: 'user' }"> 
                   <li xid="li1" class="user_name" bind-text="user.name"/>  
                   <li xid="li2" class="user_info"> 
                     <span bind-text="user.sexTxt"/>  
-                    <span bind-text="user.age+'岁'"/> 
+                    <span bind-text="user.age+'岁'"/>
                   </li> 
                 </ul> 
               </div> 
@@ -66,7 +67,7 @@
                     disableInfiniteLoad="true" style="background-color:transparent;"
                     bind-foreach="{data: records, as: 'item'}"> 
                     <div component="$UI/system/components/bootstrap/row/row"
-                      class="row new_listItem" xid="row2"> 
+                      class="row new_listItem" xid="row2" bind-attr="{lid: item.lid}"  bind-click="recordDetail"> 
                       <div class="col col-xs-4" xid="col7" bind-text="item.time"/>  
                       <div class="col col-xs-4" xid="col8" bind-text="item.content"/>  
                       <div class="col col-xs-4" xid="col9" bind-text="item.duration"/> 

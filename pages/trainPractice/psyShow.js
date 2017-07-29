@@ -26,7 +26,7 @@ define(function(require){
 	Model.prototype.enterCources = function(evt){
 		var target = $(evt.currentTarget), //获取事件目标对象
 			type = target.attr('data-type'),
-		    url = "$UI/OTO/pages/trainPractice/"+type+".w";
+		    url = "$UI/OTO/pages/coursesOptions/"+type+".w";
 		if(!type){
 			return false;
 		}

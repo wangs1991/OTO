@@ -68,7 +68,7 @@
       <h3 xid="h31" class="fl">诊疗分析记录</h3></div> 
      <textarea cols="5" rows="5" xid="textarea2" class="b-user-fourB"></textarea></div> 
     <div xid="div15" class="clearfix b-user-thr">
-     <a component="$UI/system/components/justep/button/button" class="btn btn-default b-user-thrButton" label="创建用户" xid="button3">
+     <a component="$UI/system/components/justep/button/button" class="btn btn-default b-user-thrButton" label="创建用户" xid="button3" onClick="startclick">
       <i xid="i3"></i>
       <span xid="span16">创建用户</span></a> </div> </div> 
    <div class="x-content-center x-pull-up" xid="div3">

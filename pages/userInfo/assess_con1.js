@@ -1,9 +1,9 @@
 define(function(require) {
-	require("css!../../main/css/base").load();
+	require("css!../../assets/style/base").load();
 	var $ = require("jquery");
 	var justep = require("$UI/system/lib/justep");
-	var allData = require("../../main/js/loadData");
-	require("../../main/js/AppUtils");
+	var allData = require("../../assets/js/loadData");
+	require("../../assets/js/AppUtils");
 	
 	var recvID;
 	var recvScene;
@@ -97,7 +97,7 @@ define(function(require) {
 		var url = "";
 		
 		console.log(recvKind);
-		
+		//根据上个页面的点击内容加载不同的JSON文件
 		switch(recvKind)
 		{
 			case "面试":
@@ -391,7 +391,7 @@ define(function(require) {
 	};
 	
 	Model.prototype.goBack = function(event){
-		
+		this.close();
 	};
 	
 	return Model;

@@ -6,6 +6,8 @@ define(function(require) {
 	var ShellImpl = require('$UI/system/lib/portal/shellImpl');
 	var Server = require('../assets/server');
 	
+	require("cordova!com.phonegap.plugins.skin");
+	
 	window.putView = putView;
 	window.goBack = goBack;
 	window.uid;
@@ -13,6 +15,9 @@ define(function(require) {
 	window.sessionOK;
 	window.mainView;
 	window.isLogin = false;
+	window.skinValue = 0;		//皮肤电设备信息
+	window.skinFeelStart = false;
+	window.skinArraylist={};
 	
 	var Model = function() {
 		this.callParent();
@@ -61,20 +66,44 @@ define(function(require) {
 		justep.Shell.showPage("login");
 	}
 	
-	
-	
-//	打开：justep.Shell.showPage(“main”);
-//	关闭：this.close();
-//	返回上一页：justep.Shell.closePage();
+	//打开：justep.Shell.showPage(“main”);
+	//关闭：this.close();
+	//返回上一页：justep.Shell.closePage();
 	Model.prototype.modelLoad = function(event) {
-//		判断是否登录
-//		设置显示页面
+		//开始得到皮肤电信息
+		if (window.Skin != null && window.Skin != undefined && window.Skin.startRecord != null && window.Skin.startRecord != undefined) {
+			window.Skin.startRecord();
+		}
+		
+		setInterval(function() {
+			if (window.Skin != null && window.Skin != undefined && window.Skin.getSkinValue != null && window.Skin.getSkinValue != undefined) {
+				window.Skin.getSkinValue(function(data){
+					justep.Util.hint("skin:" + data.skin, {"position":"bottom"});
+					window.skinValue = data.skin;	
+					if(window.skinFeelStart == true){
+						window.skinArraylist.push(window.skinValue);
+					}else{
+						window.skinArraylist={};
+					}
+				});
+			}
+		}, 200);
+		
+		//判断是否登录
+		//设置显示页面
 		window.isLogin = Server.checkState().then(function(){
 			justep.Shell.showPage("main");
 		}, function(){
 			justep.Shell.showPage("login");
 		});
 	};
+	
+	Model.prototype.modelUnLoad = function(event){
+		if (window.Skin != null && window.Skin != undefined && window.Skin.stopRecord != null && window.Skin.stopRecord != undefined) {
+			window.Skin.stopRecord();
+		}
+	};
+	
 	Model.prototype.loginSuccess = function(){
 		justep.Shell.showPage("main");
 	}

@@ -7,41 +7,21 @@ define(function(require){
 		this.callParent();
 	};
 
-	Model.prototype.goTest1 = function(event){
-		var params = {kind:"面试"};
-		url = "$UI/OTO/pages/userInfo/assess_con1.w";
-		justep.Shell.showPage(url,params);
-	};
 
-	Model.prototype.goTest2 = function(event){
-		var params = {kind:"演讲"};
+	Model.prototype.goTest = function(evt){
+		var target = $(evt.currentTarget), //获取事件目标对象
+		type = target.attr('data-type');
+		var title = {
+				1: '演讲',
+				2: '工作',
+				3: '恐高',
+				4: '考试',
+				5: '异性'
+		};
+		var params = {kind: title[type]};
 		url = "$UI/OTO/pages/userInfo/assess_con1.w";
 		justep.Shell.showPage(url,params);
 	};
 	
-	Model.prototype.goTest3 = function(event){
-		var params = {kind:"工作"};
-		url = "$UI/OTO/pages/userInfo/assess_con1.w";
-		justep.Shell.showPage(url,params);
-	};
-
-	Model.prototype.goTest4 = function(event){
-		var params = {kind:"恐高"};
-		url = "$UI/OTO/pages/userInfo/assess_con1.w";
-		justep.Shell.showPage(url,params);
-	};
-
-	Model.prototype.goTest5 = function(event){
-		var params = {kind:"考试"};
-		url = "$UI/OTO/pages/userInfo/assess_con1.w";
-		justep.Shell.showPage(url,params);
-	};
-
-	Model.prototype.goTest6 = function(event){
-		var params = {kind:"异性"};
-		url = "$UI/OTO/pages/userInfo/assess_con1.w";
-		justep.Shell.showPage(url,params);
-	};
-
 	return Model;
 });

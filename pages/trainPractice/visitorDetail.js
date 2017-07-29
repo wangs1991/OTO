@@ -9,6 +9,9 @@ define(function(require){
 		this.callParent();
 		this.records = justep.Bind.observableArray([]);
 		this.user = justep.Bind.observableArray([]);
+		this.sexType = function(){
+			return 1;
+		}
 	};
 	
 	Model.prototype.modelLoad = function(event){

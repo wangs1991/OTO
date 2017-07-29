@@ -163,7 +163,7 @@ body {
 }
 
 .app-title-ctner {
-	background: linear-gradient(155deg, #0095f9, #01b7ff);
+	background: linear-gradient(-300deg, #0095f9, #01b7ff);
 	text-align: center;
 	z-index: 50;
 	color: #fff!important;
@@ -240,7 +240,7 @@ body {
 }
 
 .x-panel-content {
-	background-color: #eee !important;
+	background-color: #f5f5f5 !important;
 }
 
 .section-card {
@@ -755,8 +755,27 @@ color: #fff;
 	background-color: #fff;
 	padding: 15px;
 }
+.card_user .avator-ctner{
+	position: relative;
+	z-index: 3;
+}
+.card_user .avator-ctner .sex{
+	position: absolute;
+	right: 10px;
+	bottom: 5px;
+	width: 20px;
+	height: 20px;
+	-webkit-background-size: contain!important;
+	background-size: contain!important;
+}
+.card_user .avator-ctner .sex.boy{
+	background: url('../img/i-boy.png') no-repeat center center;
+}
+.card_user .avator-ctner .sex.girl{
+	background: url('../img/i-girl.png') no-repeat center center;
+}
 .card_user .avator{
-	border-bottom: 2px solid #e7e7e7;
+	border: 2px solid #d5d5d5;
 	border-radius: 50%;
 	width: 78px;
 	height: 78px;
@@ -823,6 +842,28 @@ color: #fff;
 .new_listItem.list_head{
 	font-weight: bold;
 }
+
+.main_padding{
+	padding: 20px 10px;
+}
+/*放松练习*/
+.ratio-section{
+	/*按照2:1比例定;*/
+	background-color: #f0f0f0;
+	padding-bottom: 50%;
+	width: 100%;
+	height: 0;
+	position: relative;
+	z-index: 1;
+}
+.ratio-section .inner-content{
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+}
 /* 2017-7-27 ws end */
 
 .cb{
@@ -850,7 +891,7 @@ color: #fff;
 }
 .b-relax-oneR{
 	width:80%;
-	padding-top:4%;
+	padding-top: 15px;
 }
 /*.b-relax-oneR li{
 	float:left;
@@ -1266,6 +1307,12 @@ color: #fff;
 .b-breath-two .b-breath-twoC{
 	border-right:none;
 }
+
+/*abcdefg*/
+.tab-title-three li{
+	width: 33.333%;
+}
+/*abcdefg*/
 .b-breath-thrA img{
 	width:30px;
 	border-radius:50%;

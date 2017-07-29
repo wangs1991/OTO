@@ -59,7 +59,7 @@
             <img src="$UI/OTO/assets/img/psy_8.png" alt="" xid="image8"/>  
             <span xid="span5"><![CDATA[快速放松]]></span> 
           </li>  
-          <li xid="li1" class="type_anxious clearfix" data-type="examTender" bind-click="enterCources"> 
+          <li xid="li1" class="type_anxious clearfix" data-type="interview" bind-click="enterCources"> 
             <img src="$UI/OTO/assets/img/psy_9.png" alt="" xid="image9"/>  
             <span xid="span4"><![CDATA[面试焦虑]]></span> 
           </li> 
@@ -75,11 +75,11 @@
           </li> 
         </ul>  
         <ul xid="ul4" class="b-psy-thr clearfix"> 
-          <li xid="li7" class="type_anxious clearfix"> 
+          <li xid="li7" class="type_anxious clearfix" data-type="examTender" bind-click="enterCources"> 
             <img src="$UI/OTO/assets/img/psy_12.png" alt="" xid="image13"/>  
             <span xid="span2"><![CDATA[考试焦虑]]></span>
           </li>  
-          <li xid="li8" class="type_fear clearfix"> 
+          <li xid="li8" class="type_fear clearfix" data-type="acrophobia" bind-click="enterCources">  
             <img src="$UI/OTO/assets/img/psy_13.png" alt="" xid="image12"/>  
             <span xid="span1"><![CDATA[恐高症]]></span>
           </li> 

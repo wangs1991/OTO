@@ -30,43 +30,51 @@
             <div xid="div4" style="width:90%;display:inline-block;margin-bottom:15px;"
               class="clearfix b-assess-one"> 
               <div xid="div11" class="btn btn-default fl b-assess-oneA b-assess-oneB"
-                style="width:45%;margin:0 2.5%;" d bind-click="goTest">
+                style="width:45%;margin:0 2.5%;" data-type="1" bind-click="goTest">
                 <span xid="span13"><![CDATA[社交焦虑 38分]]></span>
               </div>  
-              <div xid="div12" class="btn btn-default fl b-assess-oneA" style="width:45%;margin:0 2.5%;"> 
+              <div xid="div12" class="btn btn-default fl b-assess-oneA" 
+              	style="width:45%;margin:0 2.5%;" data-type="2" bind-click="goTest"> 
                 <span xid="span14"><![CDATA[抑郁]]></span>
               </div>
             </div>  
             <div xid="div6" style="width:90%;display:inline-block;margin-bottom:15px;"
               class="clearfix b-assess-one"> 
-              <div xid="div13" class="btn btn-default fl b-assess-oneA" style="width:45%;margin:0 2.5%;"> 
+              <div xid="div13" class="btn btn-default fl b-assess-oneA" 
+              style="width:45%;margin:0 2.5%;" data-type="3" bind-click="goTest"> 
                 <span xid="span15"><![CDATA[恐高]]></span>
               </div>  
-              <div xid="div14" class="btn btn-default fl b-assess-oneA" style="width:45%;margin:0 2.5%;"> 
+              <div xid="div14" class="btn btn-default fl b-assess-oneA" 
+              	style="width:45%;margin:0 2.5%;" data-type="4" bind-click="goTest"> 
                 <span xid="span16"><![CDATA[考试焦虑]]></span>
               </div>
             </div>  
             <div xid="div17" style="width:90%;display:inline-block;margin-bottom:15px;"
               class="clearfix b-assess-one"> 
-              <div xid="div15" class="btn btn-default fl b-assess-oneA" style="width:45%;margin:0 2.5%;"> 
+              <div xid="div15" class="btn btn-default fl b-assess-oneA" 
+               style="width:45%;margin:0 2.5%;" data-type="5" bind-click="goTest"> 
                 <span xid="span18"><![CDATA[汇报焦虑]]></span>
               </div>  
-              <div xid="div16" class="btn btn-default fl b-assess-oneA" style="width:45%;margin:0 2.5%;"> 
+              <div xid="div16" class="btn btn-default fl b-assess-oneA"
+               style="width:45%;margin:0 2.5%;" data-type="6" bind-click="goTest"> 
                 <span xid="span17"><![CDATA[公众演讲焦虑]]></span>
               </div> 
             </div>  
             <div xid="div20" style="width:90%;display:inline-block;margin-bottom:15px;"
               class="clearfix b-assess-one"> 
-              <div xid="div18" class="btn btn-default fl b-assess-oneA" style="width:45%;margin:0 2.5%;"> 
+              <div xid="div18" class="btn btn-default fl b-assess-oneA"
+               style="width:45%;margin:0 2.5%;" data-type="7" bind-click="goTest"> 
                 <span xid="span20"><![CDATA[考试焦虑]]></span>
               </div>  
-              <div xid="div19" class="btn btn-default fl b-assess-oneA" style="width:45%;margin:0 2.5%;"> 
+              <div xid="div19" class="btn btn-default fl b-assess-oneA"
+               style="width:45%;margin:0 2.5%;" data-type="8" bind-click="goTest"> 
                 <span xid="span19"><![CDATA[恐高症]]></span>
               </div> 
             </div>  
             <div xid="div23" style="width:90%;display:inline-block;margin-bottom:15px;"
               class="clearfix b-assess-one"> 
-              <div xid="div21" class="btn btn-default fl b-assess-oneA" style="width:45%;margin:0 2.5%;"> 
+              <div xid="div21" class="btn btn-default fl b-assess-oneA"
+               style="width:45%;margin:0 2.5%;" data-type="9" bind-click="goTest"> 
                 <span xid="span22"><![CDATA[EMDR]]></span>
               </div> 
             </div>
