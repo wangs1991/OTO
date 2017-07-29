@@ -12,5 +12,11 @@ define(function(require){
 		justep.Shell.showPage(url);
 	}
 
+	Model.prototype.button1Click = function(event){
+		console.log("goToSetting");
+		var url = require.toUrl("$UI/OTO/pages/userInfo/assessSelect.w");
+		justep.Shell.showPage(url);
+	};
+
 	return Model;
 });

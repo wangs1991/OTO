@@ -1,0 +1,25 @@
+[
+{"id":"1", "title":"我在考试中充满信心并感觉轻松", "question1":"从未有", "question2":"有时有", "question3":"经常有", "question4":"常常有", "question1_score":"1", "question2_score":"2", "question3_score":"3", "question4_score":"4", "select":"0"},
+{"id":"2", "title":"我在考试中感到焦虑不安", "question1":"从未有", "question2":"有时有", "question3":"经常有", "question4":"常常有", "question1_score":"1", "question2_score":"2", "question3_score":"3", "question4_score":"4", "select":"0"},
+{"id":"3", "title":"在考试中我一直想着成绩，这会影响我答卷", "question1":"从未有", "question2":"有时有", "question3":"经常有", "question4":"常常有", "question1_score":"1", "question2_score":"2", "question3_score":"3", "question4_score":"4", "select":"0"},
+{"id":"4", "title":"我一参加重大考试就感到浑身发僵", "question1":"从未有", "question2":"有时有", "question3":"经常有", "question4":"常常有", "question1_score":"1", "question2_score":"2", "question3_score":"3", "question4_score":"4", "select":"0"},
+{"id":"5", "title":"我在考试中想着自己能否毕业", "question1":"从未有", "question2":"有时有", "question3":"经常有", "question4":"常常有", "question1_score":"1", "question2_score":"2", "question3_score":"3", "question4_score":"4", "select":"0"},
+{"id":"6", "title":"我越努力答卷，就越觉得头脑混乱", "question1":"从未有", "question2":"有时有", "question3":"经常有", "question4":"常常有", "question1_score":"1", "question2_score":"2", "question3_score":"3", "question4_score":"4", "select":"0"},
+{"id":"7", "title":"在考试中担心成绩不好影响我集中精力答卷", "question1":"从未有", "question2":"有时有", "question3":"经常有", "question4":"常常有", "question1_score":"1", "question2_score":"2", "question3_score":"3", "question4_score":"4", "select":"0"},
+{"id":"8", "title":"我一参加重大考试就坐立不安", "question1":"从未有", "question2":"有时有", "question3":"经常有", "question4":"常常有", "question1_score":"1", "question2_score":"2", "question3_score":"3", "question4_score":"4", "select":"0"},
+{"id":"9", "title":"尽管做了充分的准备，我仍感到考试很紧张", "question1":"从未有", "question2":"有时有", "question3":"经常有", "question4":"常常有", "question1_score":"1", "question2_score":"2", "question3_score":"3", "question4_score":"4", "select":"0"},
+{"id":"10", "title":"我在取回试卷之前感到很紧张", "question1":"从未有", "question2":"有时有", "question3":"经常有", "question4":"常常有", "question1_score":"1", "question2_score":"2", "question3_score":"3", "question4_score":"4", "select":"0"},
+{"id":"11", "title":"我在考试中感到非常紧张", "question1":"从未有", "question2":"有时有", "question3":"经常有", "question4":"常常有", "question1_score":"1", "question2_score":"2", "question3_score":"3", "question4_score":"4", "select":"0"},
+{"id":"12", "title":"我希望考试不要这么烦人", "question1":"从未有", "question2":"有时有", "question3":"经常有", "question4":"常常有", "question1_score":"1", "question2_score":"2", "question3_score":"3", "question4_score":"4", "select":"0"},
+{"id":"13", "title":"我一参加重大考试就紧张得肚子疼", "question1":"从未有", "question2":"有时有", "question3":"经常有", "question4":"常常有", "question1_score":"1", "question2_score":"2", "question3_score":"3", "question4_score":"4", "select":"0"},
+{"id":"14", "title":"我一参加重大考试就感到自己要失败", "question1":"从未有", "question2":"有时有", "question3":"经常有", "question4":"常常有", "question1_score":"1", "question2_score":"2", "question3_score":"3", "question4_score":"4", "select":"0"},
+{"id":"15", "title":"我在参加重大考试前感到很慌恐", "question1":"从未有", "question2":"有时有", "question3":"经常有", "question4":"常常有", "question1_score":"1", "question2_score":"2", "question3_score":"3", "question4_score":"4", "select":"0"},
+{"id":"16", "title":"我在参加重大考试前感到很忧虑", "question1":"从未有", "question2":"有时有", "question3":"经常有", "question4":"常常有", "question1_score":"1", "question2_score":"2", "question3_score":"3", "question4_score":"4", "select":"0"},
+{"id":"17", "title":"在考试中我担心考得不好会有甚么结果", "question1":"从未有", "question2":"有时有", "question3":"经常有", "question4":"常常有", "question1_score":"1", "question2_score":"2", "question3_score":"3", "question4_score":"4", "select":"0"},
+{"id":"18", "title":"我在参加重大考试时感到心跳加速", "question1":"从未有", "question2":"有时有", "question3":"经常有", "question4":"常常有", "question1_score":"1", "question2_score":"2", "question3_score":"3", "question4_score":"4", "select":"0"},
+{"id":"19", "title":"考试之后，我竭力控制自己不去担心，但做不到", "question1":"从未有", "question2":"有时有", "question3":"经常有", "question4":"常常有", "question1_score":"1", "question2_score":"2", "question3_score":"3", "question4_score":"4", "select":"0"},
+{"id":"20", "title":"我在考试中紧张得连本来知道的东西都忘了", "question1":"从未有", "question2":"有时有", "question3":"经常有", "question4":"常常有", "question1_score":"1", "question2_score":"2", "question3_score":"3", "question4_score":"4", "select":"0"},
+]
+
+
+

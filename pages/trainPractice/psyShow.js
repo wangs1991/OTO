@@ -23,12 +23,14 @@ define(function(require){
 		});
 	}
 	
-	Model.prototype.enterCources = function(type){
-		var params = {
-				type: 1
-		    },
-		    url = "$UI/OTO/pages/trainPractice/fangsongMusicView.w";
-		justep.Shell.showPage(url, params);
+	Model.prototype.enterCources = function(evt){
+		var target = $(evt.currentTarget), //获取事件目标对象
+			type = target.attr('data-type'),
+		    url = "$UI/OTO/pages/trainPractice/"+type+".w";
+		if(!type){
+			return false;
+		}
+		justep.Shell.showPage(url); 
 	};
 	
 	Model.prototype.goBindVR = function(){
