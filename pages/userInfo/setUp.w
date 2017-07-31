@@ -24,11 +24,23 @@
    <div class="x-content-center x-pull-down container" xid="div1">
     <i class="x-pull-down-img glyphicon x-icon-pull-down" xid="i1"></i>
     <span class="x-pull-down-label" xid="span1">下拉刷新...</span></div> 
-   <div class="x-scroll-content" xid="div2"><ul xid="ul1"><li xid="li2" style="border:1px solid #999;padding:10px;" class="clearfix">
-  <div xid="div4" class="pull-left"><img src="$UI/OTO/pages/img/set_1.jpg" alt="" xid="image1" style="width:25px;" height="25px"></img><span xid="span3" style="display:inline-block;line-height:30px;margin-left:10px;"><![CDATA[绑定头盔]]></span></div>
+   <div class="x-scroll-content" xid="div2"><ul xid="ul1" class="b-set-one"><li xid="li2" class="clearfix">
+  <div xid="div4" class="pull-left"><img src="$UI/OTO/assets/img/set_1.png" alt="" xid="image1" style="width:25px;" height="25px"></img><span xid="span3" style="display:inline-block;line-height:30px;margin-left:10px;"><![CDATA[绑定头盔]]></span></div>
   <div xid="div5" class="pull-right">
-   <img src="$UI/OTO/pages/img/set_5.jpg" alt="" xid="image2"></img>
-   </div></li></ul>
+   <img src="$UI/OTO/assets/img/set_5.png" alt="" xid="image2"></img>
+   </div></li>
+  <li xid="li1" class="clearfix">
+   <div xid="div7" class="pull-left">
+    <img src="$UI/OTO/assets/img/set_2.png" alt="" xid="image3" style="width:25px;" height="25px"></img>
+    <span xid="span4" style="display:inline-block;line-height:30px;margin-left:10px;"><![CDATA[注销帐号]]></span></div> 
+   <div xid="div6" class="pull-right">
+    <img src="$UI/OTO/assets/img/set_5.png" alt="" xid="image4"></img></div> </li>
+  <li xid="li4" class="clearfix">
+   <div xid="div11" class="pull-left">
+    <img src="$UI/OTO/assets/img/set_3.png" alt="" xid="image7" style="width:25px;" height="25px"></img>
+    <span xid="span6" style="display:inline-block;line-height:30px;margin-left:10px;"><![CDATA[帮助与反馈]]></span></div> 
+   <div xid="div10" class="pull-right">
+    <img src="$UI/OTO/assets/img/set_5.png" alt="" xid="image8"></img></div> </li></ul>
   </div>
    <div class="x-content-center x-pull-up" xid="div3">
     <span class="x-pull-up-label" xid="span2">加载更多...</span></div> </div></div>

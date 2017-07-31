@@ -22,24 +22,21 @@
     </div>  
     <div class="x-panel-content" xid="content1"> 
       <div xid="div1" style="text-align:center;padding-top:20px;"> 
-        <div xid="div2" class="clearfix" style="width:70%;margin-top:20px;display:inline-block;"> 
-          <span xid="span1" class="pull-left" style="width:35%;line-height:30px;"><![CDATA[旧密码]]></span>  
+        <div xid="div2" class="clearfix b-modify-one" style="margin-top:20px;display:inline-block;"> 
           <input component="$UI/system/components/justep/input/input" class="form-control pull-left" xid="oldPwd" 
-          	style="line-height:30px;width:65%;"/>
+          	style="line-height:30px;"/>
         </div>  
-        <div xid="div3" class="clearfix" style="width:70%;margin-top:20px;display:inline-block;"> 
-          <span xid="span2" class="pull-left" style="width:35%;line-height:30px;"><![CDATA[新密码]]></span>  
+        <div xid="div3" class="clearfix b-modify-one" style="margin-top:20px;display:inline-block;"> 
           <input component="$UI/system/components/justep/input/input" class="form-control pull-left" xid="newPwd" 
-          style="line-height:30px;width:65%;"/>
+          style="line-height:30px;"/>
         </div>  
-        <div xid="div5" class="clearfix" style="width:70%;margin-top:20px;display:inline-block;"> 
-          <span xid="span4" class="pull-left" style="width:35%;line-height:30px;"><![CDATA[确认新密码]]></span>  
+        <div xid="div5" class="clearfix b-modify-one" style="margin-top:20px;display:inline-block;"> 
           <input component="$UI/system/components/justep/input/input" class="form-control pull-left" xid="newPwdRe" 
-          style="line-height:30px;width:65%;"/>
+          style="line-height:30px;"/>
         </div> 
       </div>  
-      <div xid="div6" style="text-align:center;margin-top:35px;"> 
-        <a component="$UI/system/components/justep/button/button" class="btn btn-default"
+      <div xid="div6" style="text-align:center;margin-top:35px;" class="clearfix b-user-thr"> 
+        <a component="$UI/system/components/justep/button/button" class="btn btn-default b-user-thrButton"
           label="确定" xid="button1" bind-click="uploadPwd"> 
           <i xid="i1"/>  
           <span xid="span5">确定</span> 

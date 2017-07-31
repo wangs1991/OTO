@@ -1,5 +1,6 @@
 define(function(require) {
 	require("css!../../main/css/base").load();
+	//require("css!../../assets/style/base").load();
 	var $ = require("jquery");
 	var justep = require("$UI/system/lib/justep");
 	var Server = require('../../assets/server');

@@ -21,17 +21,15 @@
         </div> 
       </div>  
     <div class="x-panel-content" xid="content1">
-  <div xid="div1" style="text-align:center;padding-top:20px;"><div xid="div2" class="clearfix" style="width:70%;margin-top:20px;display:inline-block;"><span xid="span1" class="pull-left" style="width:35%;line-height:30px;"><![CDATA[旧密码]]></span><input type="text" value="" xid="input1" style="line-height:30px;width:65%;" class="pull-left"></input>
+  <div xid="div1" style="text-align:center;padding-top:20px;"><div xid="div2" class="clearfix b-modify-one" bind-text="密码"><input type="text" value="" xid="input1" class="pull-left" bind-value="旧密码" placeHolder="旧密码"></input>
   </div>
-  <div xid="div3" class="clearfix" style="width:70%;margin-top:20px;display:inline-block;">
-   <span xid="span2" class="pull-left" style="width:35%;line-height:30px;"><![CDATA[新密码]]></span>
-   <input type="text" value="" xid="input2" style="line-height:30px;width:65%;" class="pull-left"></input></div>
-  <div xid="div5" class="clearfix" style="width:70%;margin-top:20px;display:inline-block;">
-   <span xid="span4" class="pull-left" style="width:35%;line-height:30px;"><![CDATA[确认新密码]]></span>
-   <input type="text" value="" xid="input4" style="line-height:30px;width:65%;" class="pull-left"></input></div></div>
-  <div xid="div6" style="text-align:center;margin-top:35px;"><a component="$UI/system/components/justep/button/button" class="btn btn-default" label="确定" xid="button1">
-   <i xid="i1"></i>
-   <span xid="span5">确定</span></a></div>
-  </div>
+  <div xid="div3" class="clearfix b-modify-one">
+   <input type="text" value="" xid="input2" class="pull-left" placeHolder="新密码"></input></div>
+  <div xid="div5" class="clearfix b-modify-one">
+   <input type="text" value="" xid="input4" class="pull-left" placeHolder="确认新密码"></input></div></div>
+  <div xid="div14" class="clearfix b-user-thr">
+   <a component="$UI/system/components/justep/button/button" class="btn btn-default b-user-thrButton" label="确定" xid="button1" bind-click="beginStudy">
+    <i xid="i2"></i>
+    <span xid="span14">确定</span></a> </div></div>
   </div> 
 </div>
