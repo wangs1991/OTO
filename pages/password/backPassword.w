@@ -21,13 +21,12 @@
         </div> 
       </div>  
     <div class="x-panel-content" xid="content1"><div xid="div1" style="text-align:center;padding-top:20px;">
-   <div xid="div2" class="clearfix" style="width:70%;margin-top:35px;display:inline-block;">
-    <span xid="span1" class="pull-left" style="width:35%;line-height:30px;"><![CDATA[手机号]]></span>
-    <input type="text" value="" xid="input1" style="line-height:30px;width:65%;" class="pull-left"></input></div> 
+   <div xid="div2" class="clearfix b-modify-one" style="margin-top:35px;display:inline-block;width:70%;">
+    <input type="text" value="" xid="input1" class="pull-left"></input></div> 
    
    </div>
-  <div xid="div6" class="b-back-btn">
-   <a component="$UI/system/components/justep/button/button" class="btn btn-default" label="确定" xid="button1">
+  <div xid="div6" class="b-back-btn clearfix b-user-thr">
+   <a component="$UI/system/components/justep/button/button" class="btn btn-default b-user-thrButton" label="确定" xid="button1">
     <i xid="i1"></i>
     <span xid="span5">确定</span></a> </div></div>
   </div> 

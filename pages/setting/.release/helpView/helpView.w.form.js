@@ -18,6 +18,8 @@ var __result = __parent1._extend(__parent0).extend({
 	this.__id='';
 	this.__cid='cmumeU3';
 	this._flag_='c1821565de89902ad6c2b429c0077daf';
+	this._wCfg_={};
+	this._appCfg_={};
 	this.callParent(contextUrl);
 }}); 
 return __result;});

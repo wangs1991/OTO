@@ -1174,9 +1174,7 @@ color: #fff;
 .b-exam-oneA{
 	margin:0 4%;
 	width:92%;
-	border:1px solid #19a1ff;
 	text-align:center;
-	padding:10px 0;
 	background:#fff;
 	border-radius:5px;
 	position:relative;
@@ -1243,9 +1241,7 @@ color: #fff;
 }
 .b-exam-fourA{
 	width:80%;
-	border:1px solid #19a1ff;
 	text-align:center;
-	padding:10px 0;
 	background:#fff;
 	border-radius:5px;
 }
@@ -1454,7 +1450,7 @@ color: #fff;
     height: 30px;
     background: #19a0ff;
     /* margin: 20px 60px; */
-        margin-top: 7px;
+        margin-top: 4px;
     border-radius: 50px;
     position: relative;
 }

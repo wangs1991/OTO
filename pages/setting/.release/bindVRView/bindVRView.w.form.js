@@ -18,6 +18,8 @@ var __result = __parent1._extend(__parent0).extend({
 	this.__id='';
 	this.__cid='cj2eU7v';
 	this._flag_='961e0818c131554ddfca502ee6ea1239';
+	this._wCfg_={};
+	this._appCfg_={};
 	this.callParent(contextUrl);
 }}); 
 return __result;});

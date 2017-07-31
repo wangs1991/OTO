@@ -225,12 +225,11 @@
                     <option value="3">皑皑雪山</option> 
                   </select> 
                 </div> 
-              </div>  
               <div xid="div19" class="fr checkboxTwo"> 
-                <input type="checkbox" value="1" name="isOpen" xid="checkbox2"
-                  id="checkboxTwoInput"/>  
+                <input type="checkbox" value="1" name="isOpen" xid="checkbox2" id="checkboxTwoInput" />  
                 <label xid="label1" for="checkboxTwoInput"><![CDATA[]]></label> 
-              </div> 
+              </div></div>  
+               
             </div> 
           </div> 
         </form>  
