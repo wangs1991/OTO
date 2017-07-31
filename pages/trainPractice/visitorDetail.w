@@ -27,7 +27,7 @@
             <div class="media" xid="media1"> 
               <div class="media-left avator-ctner" xid="mediaLeft1"> 
                 <div class="avator"> 
-                  <img class="media-object" src="$UI/OTO/assets/img/user_boy.jpg"
+                  <img class="media-object" bind-attr="{src: user.face}"
                     alt="" xid="image2"/> 
                 </div> 
                 <div class="sex" bind-css="{'boy': user.sex == 0, 'girl': user.sex == 1}"></div>

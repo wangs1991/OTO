@@ -17,18 +17,18 @@
         <div xid="div1" class="list-group login-ctner"> 
           <div class="list-group-item"> 
             <div class="input-group" xid="div7"> 
-              <span class="input-group-addon input-icon" xid="span2"> 
+              <span class="input-group-addon input-icon phone" xid="span2"> 
                 <i class="linear linear-phonehandset"/> 
               </span>
               <input component="$UI/system/components/justep/input/input" class="form-control x-inputText tb-range-no-line"
-                xid="nameInput" placeHolder="请输入您的手机号" style="width: 68%;"/>  
+                xid="nameInput" placeHolder="请输入您的手机号"/>  
               <span class="input-group-addon button pull-right" xid="getcodeSpan"
                 bind-click="getcodeSpanClick"><![CDATA[获取验证码]]></span> 
             </div> 
           </div>  
           <div class="list-group-item" xid="div6"> 
             <div class="input-group" xid="div8"> 
-              <span class="input-group-addon input-icon" xid="span3"> 
+              <span class="input-group-addon input-icon code" xid="span3"> 
                 <i class="linear linear-dinner" xid="i3"/> 
               </span>  
               <input component="$UI/system/components/justep/input/input" class="form-control x-inputText tb-range-no-line"

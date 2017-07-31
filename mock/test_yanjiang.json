@@ -1,5 +1,6 @@
 [
-
+code:"6";
+{[
 {"id":"1", "type":"one", "title":"在必须与权威人士（老师、上司）谈话时，我感到紧张", "question1":"非常不同意", "question2":"不同意", "question3":"不确定", "question4":"同意", "question5":"非常同意","question1_score":"1", "question2_score":"2", "question3_score":"3", "question4_score":"4","question5_score":"5", "select":"0"},
 {"id":"2", "type":"one", "title":"我感觉很难与他人有目光的接触", "question1":"非常不同意", "question2":"不同意", "question3":"不确定", "question4":"同意", "question5":"非常同意","question1_score":"1", "question2_score":"2", "question3_score":"3", "question4_score":"4","question5_score":"5", "select":"0"},
 {"id":"3", "type":"one", "title":"如果我不得不谈论自己或自己的感受时，我会紧张", "question1":"非常不同意", "question2":"不同意", "question3":"不确定", "question4":"同意", "question5":"非常同意","question1_score":"1", "question2_score":"2", "question3_score":"3", "question4_score":"4","question5_score":"5", "select":"0"},
@@ -25,5 +26,5 @@
 {"id":"23", "type":"two", "title":"我在演讲时思维变得混乱和不连贯", "question1":"非常同意", "question2":"同意", "question3":"不确定", "question4":"不同意", "question5":"非常不同意","question1_score":"1", "question2_score":"2", "question3_score":"3", "question4_score":"4","question5_score":"5", "select":"0"},
 {"id":"24", "type":"two", "title":"我期望我在演讲时充满信心", "question1":"非常同意", "question2":"同意", "question3":"不确定", "question4":"不同意", "question5":"非常不同意","question1_score":"1", "question2_score":"2", "question3_score":"3", "question4_score":"4","question5_score":"5", "select":"0"},
 {"id":"25", "type":"two", "title":"我在演讲时太紧张，以致把我确实知道的事情都忘记了", "question1":"非常同意", "question2":"同意", "question3":"不确定", "question4":"不同意", "question5":"非常不同意","question1_score":"1", "question2_score":"2", "question3_score":"3", "question4_score":"4","question5_score":"5", "select":"0"}
-
+]}
 ]

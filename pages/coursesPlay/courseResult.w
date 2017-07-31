@@ -57,49 +57,56 @@
               <li xid="li5"><![CDATA[ 深呼吸放松练习 ]]></li>  
               <li xid="li6"><![CDATA[5分钟]]></li> 
             </ul>  
-            <ul xid="ul3" class="b-relax-thr"> 
-              <div component="$UI/system/components/bootstrap/accordion/accordion"
-                xid="accordion1" tabbed="true"> 
-                <div component="$UI/system/components/bootstrap/panel/panel"
-                  xid="panel2" class="panel panel-default"> 
-                  <div xid="heading1" style="background-color:transparent;"
-                    class="panel-heading"> 
-                    <li xid="li8" class="clearfix"> 
-                      <div xid="div13" class="pull-left b-relax-thrA"> 
-                        <img src="$UI/OTO/assets/img/relax_2.jpg" alt="" xid="image3"/>  
-                        <span xid="span3"><![CDATA[皮肤电数据]]></span> 
-                      </div> 
-                    </li> 
-                  </div>  
-                  <div class="panel-collapse collapse" xid="div1"> 
-                    <div class="panel-body" xid="div3"> 
-                      <div xid="div6"> 
-                        <span xid="span1"><![CDATA[22222222222]]></span> 
+            <form name="relaxRes" id="relaxRes"> 
+              <ul xid="ul3" class="b-relax-thr"> 
+                <!-- <li bind-foreach="{data:listView, as: 'viewItem'}"> 
+                  <div component="$UI/system/components/bootstrap/accordion/accordion"
+                    xid="accordion1" tabbed="true"> 
+                    <div component="$UI/system/components/bootstrap/panel/panel"
+                      xid="panel2" class="panel panel-default"> 
+                      <div xid="heading1" style="background-color:transparent;"
+                        class="panel-heading"> 
+                        <li xid="li8" class="clearfix"> 
+                          <div xid="div13" class="pull-left b-relax-thrA"> 
+                            <img src="$UI/OTO/assets/img/relax_2.jpg" alt=""
+                              xid="image3"/>  
+                            <span xid="span3" bind-text="viewItem.title"/>
+                          </div> 
+                        </li> 
+                      </div>  
+                      <div class="panel-collapse collapse" xid="div1"> 
+                        <div class="panel-body" xid="div3"> 
+                          <div xid="div6"> 
+                            <input component="$UI/system/components/justep/input/input"
+                              class="form-control" name="baseLine" xid="input1" value="1,2,0.5,1.2"/> 
+                          </div> 
+                        </div> 
                       </div> 
                     </div> 
                   </div> 
-                </div> 
-              </div>  
-              <div component="$UI/system/components/bootstrap/accordion/accordion"
-                class="panel-group" xid="accordion2"> 
-                <div class="panel panel-default" component="$UI/system/components/bootstrap/panel/panel"
-                  xid="panel3"> 
-                  <div class="panel-heading" xid="heading2"> 
-                    <li xid="li7" class="clearfix"> 
-                      <div xid="div10" class="pull-left b-relax-thrA"> 
-                        <img src="$UI/OTO/assets/img/relax_2.jpg" alt="" xid="image2"/>  
-                        <span xid="span4"><![CDATA[诊疗记录]]></span> 
+                </li> -->  
+                <div component="$UI/system/components/bootstrap/accordion/accordion"
+                  class="panel-group" xid="accordion2"> 
+                  <div class="panel panel-default" component="$UI/system/components/bootstrap/panel/panel"
+                    xid="panel3"> 
+                    <div class="panel-heading" xid="heading2"> 
+                      <li xid="li7" class="clearfix"> 
+                        <div xid="div10" class="pull-left b-relax-thrA"> 
+                          <img src="$UI/OTO/assets/img/relax_2.jpg" alt=""
+                            xid="image2"/>  
+                          <span xid="span4"><![CDATA[咨询记录]]></span> 
+                        </div> 
+                      </li> 
+                    </div>  
+                    <div class="panel-collapse collapse" xid="div8"> 
+                      <div class="panel-body" xid="div9"> 
+                        <textarea component="$UI/system/components/justep/textarea/textarea"
+                          class="form-control" name="diagnose" xid="textarea1"/> 
                       </div> 
-                    </li> 
-                  </div>  
-                  <div class="panel-collapse collapse" xid="div8"> 
-                    <div class="panel-body" xid="div9"> 
-                      <span xid="span2"><![CDATA[1]]></span> 
                     </div> 
                   </div> 
-                </div> 
-              </div>  
-              <div component="$UI/system/components/bootstrap/accordion/accordion"
+                </div>  
+                <!-- <div component="$UI/system/components/bootstrap/accordion/accordion"
                 class="panel-group" xid="accordion3"> 
                 <div class="panel panel-default" component="$UI/system/components/bootstrap/panel/panel"
                   xid="panel4"> 
@@ -117,17 +124,17 @@
                     </div> 
                   </div> 
                 </div> 
-              </div> 
-            </ul>
-            
+              </div>  --> 
+              </ul> 
+            </form>  
             <div xid="div14" class="clearfix b-user-thr"> 
-            <a component="$UI/system/components/justep/button/button" class="btn btn-default b-user-thrButton"
-              label="保存" xid="button1" bind-click="saveData"> 
-              <i xid="i2"/>  
-              <span xid="span14">保存</span> 
-            </a> 
+              <a component="$UI/system/components/justep/button/button" class="btn btn-default b-user-thrButton"
+                label="保存" xid="button1" bind-click="saveData"> 
+                <i xid="i2"/>  
+                <span xid="span14">保存</span> 
+              </a> 
+            </div> 
           </div> 
-          </div>
         </div> 
       </div> 
     </div> 

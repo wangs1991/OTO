@@ -18,6 +18,8 @@ define(function(require) {
 	window.skinValue = 0;		//皮肤电设备信息
 	window.skinFeelStart = false;
 	window.skinArraylist={};
+	window.ip = 'test.adai-tech.com';
+	window.device = "all";
 	
 	var Model = function() {
 		this.callParent();
@@ -76,7 +78,9 @@ define(function(require) {
 		}
 		
 		setInterval(function() {
+			console.log(window.Skin);
 			if (window.Skin != null && window.Skin != undefined && window.Skin.getSkinValue != null && window.Skin.getSkinValue != undefined) {
+				console.log(window.Skin);
 				window.Skin.getSkinValue(function(data){
 					justep.Util.hint("skin:" + data.skin, {"position":"bottom"});
 					window.skinValue = data.skin;	

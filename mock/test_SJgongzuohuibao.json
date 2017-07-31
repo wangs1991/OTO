@@ -24,5 +24,4 @@
 {"id":"23", "type":"two", "title":"我害怕在工作汇报时表达自己的意见", "question1":"非常同意", "question2":"同意", "question3":"不确定", "question4":"不同意", "question5":"非常不同意","question1_score":"-1", "question2_score":"-2", "question3_score":"-3", "question4_score":"-4","question5_score":"-5", "select":"0"},
 {"id":"24", "type":"two", "title":"在工作汇报中的交流常使我不自然", "question1":"非常同意", "question2":"同意", "question3":"不确定", "question4":"不同意", "question5":"非常不同意","question1_score":"-1", "question2_score":"-2", "question3_score":"-3", "question4_score":"-4","question5_score":"-5", "select":"0"},
 {"id":"25", "type":"two", "title":"在工作汇报中回答间题时，我非常地放松", "question1":"非常同意", "question2":"同意", "question3":"不确定", "question4":"不同意", "question5":"非常不同意","question1_score":"1", "question2_score":"2", "question3_score":"3", "question4_score":"4","question5_score":"5", "select":"0"}
-
 ]

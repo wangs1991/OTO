@@ -3,27 +3,27 @@ define(function(require){
 	var $ = require("jquery");
 	var justep = require("$UI/system/lib/justep");
 	var Server = require('../../assets/server');
+	var loosenType = -1;
+	var page;
 
 	var Model = function(){
 		this.callParent();
 		this.hatState = justep.Bind.observable(false);
+		this.title = justep.Bind.observable('');
 	};
-	
-	Model.prototype.beginStudy = function(){
-		var params = {
-			title: '放松训练',
-			button: '结束训练',
-			next: '$UI/OTO/pages/trainPractice/courseResult.w'
-		};
-		var url = "$UI/OTO/pages/coursesPlay/relaxPlay.w";
-		justep.Shell.showPage(url, params);
-	}
 	
 	Model.prototype.goBindVR = function(){
 		var url = "$UI/OTO/pages/setting/bindVRView.w";
 		justep.Shell.showPage(url);
 	}
-
+	
+//	接收参数
+	Model.prototype.modelParamsReceive = function(evt){
+		console.log(evt.params);
+		this.title.set(evt.params.title);
+		loosenType = evt.params.type;
+		page = evt.params.page;
+	}
 	Model.prototype.modelLoad = function(){
 		var that = this;
 //		验证头盔绑定状态
@@ -36,6 +36,29 @@ define(function(require){
 		}, function(data){
 			that.hatState.set(false);
 		});
+	}
+	
+	Model.prototype.beginStudy =function(event){
+		window.skinFeelStart = true;
+//		开始练习请求服务器
+		var data = $('#courseOpt').serialize();
+		var params = Server.toJson(data);
+		params.eventKind = 34;
+		params.vid = Server.getCurUser().vid;
+		params.loosenType = 1;
+		Server.startRelease(params).then(function(data){
+			var params = {
+				title: '放松训练',
+				button: '结束训练',
+				next: '$UI/OTO/pages/coursesPlay/courseResult.w',
+				lid: data.lid,
+				page: page,
+				type: loosenType
+			};
+			var url = "$UI/OTO/pages/coursesPlay/relaxPlay.w";
+			justep.Shell.showPage(url, params);
+		});
+		
 	}
 	return Model;
 });

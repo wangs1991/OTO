@@ -40,25 +40,25 @@
                 <ul class="nav nav-tabs clearfix b-breath-two" xid="ul3"> 
                   <li class="active" xid="li8"> 
                     <a class="tab-btn" content="tabContent1" xid="tabItem1"> 
-                      <img src="$UI/OTO/assets/img/breath_2.jpg" alt="" xid="image3"/>  
+                      <!-- <img src="$UI/OTO/assets/img/breath_2.jpg" alt="" xid="image3"/> -->  
                       <span xid="span5"><![CDATA[放松场景]]></span> 
                     </a> 
                   </li>  
                   <li role="presentation" xid="li9"> 
                     <a class="tab-btn" content="tabContent2" xid="tabItem2"> 
-                      <img src="$UI/OTO/assets/img/breath_3.jpg" alt="" xid="image4"/>  
+                      <!-- <img src="$UI/OTO/assets/img/breath_3.jpg" alt="" xid="image4"/> -->  
                       <span xid="span6"><![CDATA[音乐场景]]></span> 
                     </a> 
                   </li>  
                   <li role="presentation" xid="li9"> 
                     <a class="tab-btn" content="tabContent3" xid="tabItem3"> 
-                      <img src="$UI/OTO/assets/img/breath_4.jpg" alt="" xid="image5"/>  
+                      <!-- <img src="$UI/OTO/assets/img/breath_4.jpg" alt="" xid="image5"/> -->  
                       <span xid="span7"><![CDATA[指导语]]></span> 
                     </a> 
                   </li>  
                   <li role="presentation" xid="li9"> 
                     <a class="tab-btn" content="tabContent4" xid="tabItem4"> 
-                      <img src="$UI/OTO/assets/img/breath_5.jpg" alt="" xid="image6"/>  
+                      <!-- <img src="$UI/OTO/assets/img/breath_5.jpg" alt="" xid="image6"/> -->  
                       <span xid="span8"><![CDATA[时长]]></span> 
                     </a> 
                   </li> 

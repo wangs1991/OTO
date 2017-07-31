@@ -27,7 +27,7 @@ define(function(require){
 		
 		var records = Server.getRecords({
 			eventKind: 42,
-			vid: 1
+			vid: userData.uid
 		}).then(function(data){
 			console.log(data);
 			data.dataList.forEach(function(n, i){

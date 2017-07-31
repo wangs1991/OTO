@@ -53,6 +53,11 @@ define(function(require){
 		}
 	}
 	
+//	进入页面刷新数据
+	Model.prototype.enterPage = function(){
+		console.log(1111);
+	};
+	
 	Model.prototype.modelLoad = function(event){
 		
 	};
