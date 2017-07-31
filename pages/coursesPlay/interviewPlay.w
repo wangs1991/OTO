@@ -29,7 +29,7 @@
           </div> 
         </div>  
         <div class="ratio-section main_padding"> 
-          <div class="inner-content main_padding">asdfa</div> 
+          <div class="inner-content main_padding">asdasdasd</div> 
         </div> 
       </div>  
       <a component="$UI/system/components/justep/button/button" class="btn btn-default button block"

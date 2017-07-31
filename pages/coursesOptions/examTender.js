@@ -17,6 +17,7 @@ define(function(require){
 		window.skinFeelStart = true;
 //		开始练习请求服务器
 		var data = $('#courseOpt').serialize();
+		data = decodeURI(data);
 		var params = Server.toJson(data);
 		var curVisitor = Server.getCurUser();
 		var next;
@@ -24,6 +25,7 @@ define(function(require){
 		params.vid = curVisitor.uid;
 //		next会根据是否开启放松训练决定
 		next = '$UI/OTO/pages/coursesPlay/exposePlay.w';
+//		所有的课程开始都会调用课程第一步接口，即保存配置数据的接口
 		Server.startRelease(params).then(function(data){
 			var params = {
 				title: '考试练习',
@@ -34,8 +36,13 @@ define(function(require){
 				type: loosenType
 			};
 //			判断是否开启场景
-			
-			var url = "$UI/OTO/pages/coursesPlay/relaxPlay.w";
+			var isOpen = $('#checkboxTwoInput').is(':checked');
+			var url;
+			if(isOpen){
+				url = "$UI/OTO/pages/coursesPlay/relaxPlay.w";
+			}else{
+				url = '$UI/OTO/pages/coursesPlay/exposePlay.w';
+			}
 			justep.Shell.showPage(url, params);
 		});
 	}
@@ -65,6 +72,17 @@ define(function(require){
 		}, function(data){
 			that.hatState.set(false);
 		});
+	}
+	
+//	视图逻辑
+	Model.prototype.switchSence = function(evt){
+//		点击场景选择，检验是否要进入放松练习
+		var isOpen = $('#checkboxTwoInput').is(':checked');
+		if(!isOpen){
+			$('#senceOption').attr('disabled', 'disabled');
+		}else{
+			$('#senceOption').removeAttr('disabled');
+		}
 	}
 
 	return Model;

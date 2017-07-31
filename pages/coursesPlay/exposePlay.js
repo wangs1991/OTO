@@ -70,22 +70,31 @@ define(function(require) {
 				});
 			});
 		}, 2000);
-		
-		//初始化图表
+		//		初始化图表
 		this.initEchart();
+		
 	};
 	
 	Model.prototype.goToSave = function(){
-		//停止发送Live请求
-		clearInterval(liveTimer);
-		
+		this.saveSkinData('expose');
 		Server.stopCourse({
 				eventKind: 40,
 				lid: courseModel.lid
 			}).then(function(data){
 				url = '$UI/OTO/pages/coursesPlay/courseResult.w';
+				courseModel.result = {};
+				for(var i in data){
+					if(1 !== 'ret'){
+						courseModel.result[i] = data[i];
+					}
+				}
 				justep.Shell.showPage(url, courseModel);
 			});
+	}
+	
+	//	获取当前页面的皮肤电数据
+	Model.prototype.saveSkinData = function(name){
+		Server.skinData(name, window.skinArraylist);
 	}
 	
 	Model.prototype.modelParamsReceive = function(event){
@@ -113,6 +122,7 @@ define(function(require) {
 		
 		var params = event.params;
 		courseModel = params;
+		this.title.set(params.title);
 		this.button.set(params.button);
 		url = params.next;
 	};
@@ -120,16 +130,22 @@ define(function(require) {
 	// from zhiyong
 	
 	Model.prototype.startclick = function(event) {
+
 		window.skinFeelStart = true;
+
 	}
 
 	Model.prototype.andclick = function(event) {
+
 		window.skinArraylist = {};
 		window.skinFeelStart = true;
+
 	}
 
 	Model.prototype.endclick = function(event) {
+
 		window.skinFeelStart = flase;
+
 	}
 
 	Model.prototype.button3Click = function(event) {

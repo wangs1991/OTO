@@ -1,20 +1,37 @@
 define(function(require){
 	require("css!../../assets/style/base").load();
 	var $ = require("jquery");
+	require("../../assets/echart/dist/echarts-all");
 	var justep = require("$UI/system/lib/justep");
 	var Server = require('../../assets/server');
 
 	var Model = function(){
+		var dateStr = this.formDate(+new Date());
 		this.callParent();
 		this.user = justep.Bind.observableArray([]);
-		this.listView = justep.Bind.observableArray([]);
+		this.skinInfo =  justep.Bind.observable("");
+		this.duration = justep.Bind.observable();
+		this.title = justep.Bind.observable();
+		this.curDate = justep.Bind.observable(dateStr);
 	};
 	
 	Model.prototype.modelLoad = function(){
 		var that = this;
 		userData = Server.getCurUser();
 		this.user.pop();
-		this.user.push(userData);		
+		this.user.push(userData);
+		
+		/*获取页面的下拉组件*/
+		this.skinData = $("#skinData");
+		this.skinData.hide();
+		this.consult = $("#consult");
+		this.consult.hide();
+		this.exam = $("#exam");
+		this.exam.hide();
+		this.voice = $("#voice");
+		this.voice.hide();
+		this.sheet = $("#sheet");
+		this.sheet.hide();
 	}
 	
 	Model.prototype.saveData = function(){
@@ -22,8 +39,10 @@ define(function(require){
 		var params = Server.toJson(data);
 		if(courseModel.page === 'breathing'){
 			params.eventKind = 36;
+			params.baseLine = Server.skinData('relax');
 		}else{
 			params.eventKind = 41;
+			params.skin = Server.skinData('expose').join(',');
 		}
 		params.lid = window.courseModel.lid;
 		Server.saveCourse(params).then(function(){
@@ -33,19 +52,83 @@ define(function(require){
 		});
 	}
 	
+	Model.prototype.formDate = function(str){
+		var myDate = new Date(str);
+		var YYYY = myDate.getFullYear(),
+			MM = myDate.getMonth()+1,
+			DD = myDate.getDate();
+			MM = MM < 10? '0'+MM : MM;
+			DD = DD < 10? '0'+DD: DD;
+		return YYYY+MM+DD;
+	}
+	
 	Model.prototype.modelParamsReceive = function(event){
 		if (event.hasOwnProperty("params")) {
 			console.log(event.params);
 		}
 		window.courseModel = event.params;
+		this.title.set(courseModel.title);
+		this.duration.set(courseModel.result.duration);
 		
 //		根据课程类型的不同，区别添加不同的展示模块
-		this.listView.push({
-			id: 1,
-			title: '皮肤电数据',
-			content: 'asdf',
-			action: 'asdf'
-		}); 
+		switch (courseModel.page){
+			case 'breathing':{
+				this.initSkinData();
+				this.initConsult();
+				break;
+			};
+			case 'interview': {
+				this.initSkinData();
+				this.initVoice();
+				this.initConsult();
+				this.initSheet();
+			};
+			case 'exam': {
+				this.initSkinData();
+				this.initExam();
+				this.initConsult();
+				this.initSheet();
+			};
+			case 'acrophobia': {
+				this.initSkinData();
+				this.initConsult();
+				this.initSheet();
+			}
+		} 
+		
+		
+	}
+	
+	Model.prototype.initSkinData = function(){
+		this.skinData.show();
+		var data = Server.skinData('relax');
+		var displayData = [];
+		var time = 0;
+		$('#baseLine').val(data.join(','));
+		for(var i =0, len = data.length; i < len; i++){
+			displayData.push([time+200*i, data[i]]);
+		}
+		options.series[0].data = displayData;
+		try{
+			window.myChartClock = echarts.init($('#echart')[0]);
+			window.myChartClock.setOption(options, true);
+		}catch(e){
+		}
+
+	}
+	Model.prototype.initConsult = function(){
+		this.consult.show();
+	}
+	Model.prototype.initExam = function(){
+		this.exam.show();
+		$('#score').val(courseModel.result.totalSore);
+	}
+	Model.prototype.initVoice = function(){
+		this.voice.show();
+		$('#voice').val(courseModel.result.speech);
+	}
+	Model.prototype.initSheet = function(){
+		this.sheet.show();
 	}
 	
 	//	获取当前用户数据

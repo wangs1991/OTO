@@ -30,10 +30,11 @@ define(function(require) {
 		clearInterval(liveTimer);
 		
 //		区别是否有暴露训练
+		this.saveSkinData('relax');
 		if(courseModel.page === 'breathing'){
+			console.warn(url);
 //			不存在暴露训练的放松类训练
-//			结束时需要返回服务器状态 停止训练
-			this.saveSkinData('relax');
+//			结束时需要返回服务器状态 停止训
 			Server.stopCourse({
 				eventKind: 35,
 				lid: courseModel.lid
@@ -41,12 +42,13 @@ define(function(require) {
 				justep.Shell.showPage(url, courseModel);
 			});
 		}else{
-//			存在暴露训练的焦虑类练习
-			this.saveSkinData('expose');
-			Server.goExpose({
+//			存在且打开放松训练的暴露训练的焦虑类练习
+			var params = {
 				eventKind: 38,
 				lid: courseModel.lid
-			}).then(function(data){
+			};
+			params.baseLine = Server.skinData('relax');
+			Server.goExpose(params).then(function(data){
 				justep.Shell.showPage(url, courseModel);
 			});
 		}
@@ -55,8 +57,8 @@ define(function(require) {
 	
 //	获取当前页面的皮肤电数据
 	Model.prototype.saveSkinData = function(name){
-//		skinData
-	}
+		Server.skinData(name, window.skinArraylist);
+	};
 
 	Model.prototype.modelParamsReceive = function(event) {
 		if (!event.hasOwnProperty("params")) {
@@ -132,7 +134,14 @@ define(function(require) {
 			var show = 100;
 			var resLen = displayData.length;
 			options.series[0].data = displayData.splice(Math.min(show, resLen));
-			myChartClock && myChartClock.setOption(options);
+//			if(myChartClock){
+			try{
+				window.myChartClock.setOption(options);
+			}catch(e){
+				console.log(e);
+			}
+			
+//			}
 		}
 	})();
 

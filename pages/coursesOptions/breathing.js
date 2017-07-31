@@ -42,10 +42,12 @@ define(function(require){
 		window.skinFeelStart = true;
 //		开始练习请求服务器
 		var data = $('#courseOpt').serialize();
+		data = decodeURI(data);
 		var params = Server.toJson(data);
 		params.eventKind = 34;
 		params.vid = Server.getCurUser().vid;
 		params.loosenType = 1;
+//		所有的课程开始都会调用课程第一步接口，即保存配置数据的接口
 		Server.startRelease(params).then(function(data){
 			var params = {
 				title: '放松训练',

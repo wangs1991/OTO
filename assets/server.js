@@ -78,11 +78,11 @@ define(['../config/config'], function(module) {
 		skinData: function(key, data){
 			if(data){
 				window.localStorage.setItem(key, data.join('/'));
-				return {key: data};
+//				清空数据
+				window.skinArraylist = [];
+				return data;
 			}else{
-				var res = {};
-				res[key] = window.localStorage.getItem(key);
-				return res;
+				return window.localStorage.getItem(key).split('/');
 			}
 		},
 //		获取验证码
@@ -143,15 +143,19 @@ define(['../config/config'], function(module) {
 		},
 //		开始放松类练习 // 放松和暴露是两条皮肤点数据
 		startRelease: function(data){
+//			所有的课程开始都会调用课程第一步接口，即保存配置数据的接口
+//			保存训练开始时间点
+			window.courseStart = +new Date();
 			return fetch('/app/order', data);
 		},
 //		获取训练动作
 		getActions: function(data){
-			return fetch('/app/order', data);
-		},
-//		结束放松训练
-		stopCourse: function(data){
 			return get('/app/order', data);
+		},
+//		所有课程结束接口
+		stopCourse: function(data){
+			window.courseEnd = +new Date();
+			return fetch('/app/order', data);
 		},
 		// 训练结果保存
 		saveCourse: function(data){

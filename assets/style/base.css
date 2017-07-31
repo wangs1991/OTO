@@ -1205,7 +1205,7 @@ color: #fff;
 }
 .b-exam-two li{
 	float: left;
-    width: 20%!important;
+    /*width: 20%!important;*/
     font-size: 0.6rem;
     color: #333;
     padding: 0.25rem 0;

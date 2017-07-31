@@ -134,14 +134,14 @@
                       <!-- <span xid="span12"><![CDATA[放松练习场景选择]]></span>  
                 <img src="$UI/OTO/assets/img/exam_2.jpg" alt="" xid="image4"/>  -->  
                       <select component="$UI/system/components/justep/select/select"
-                        class="form-control" xid="select2" name="sceneId"> 
+                        class="form-control" xid="select2" name="sceneId" id="senceOption"> 
                         <option value="1" selected="true">日本和屋</option>  
                         <option value="2">海边沙滩</option>  
                         <option value="3">皑皑雪山</option> 
                       </select> 
                     </div> 
                   <div xid="div19" class="fr checkboxTwo"> 
-                    <input type="checkbox" value="1" name="isOpen" xid="checkbox2" id="checkboxTwoInput" />  
+                    <input type="checkbox" value="1" name="isOpen" xid="checkbox2" checked="checked" bind-click="switchSence" id="checkboxTwoInput" />  
                     <label xid="label1" for="checkboxTwoInput"><![CDATA[]]></label> 
                   </div></div>  
                    
