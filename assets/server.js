@@ -74,6 +74,17 @@ define(['../config/config'], function(module) {
 			}
 			return dtd;
 		},
+//		皮肤点的读取操作
+		skinData: function(key, data){
+			if(data){
+				window.localStorage.setItem(key, data.join('/'));
+				return {key: data};
+			}else{
+				var res = {};
+				res[key] = window.localStorage.getItem(key);
+				return res;
+			}
+		},
 //		获取验证码
 		getCode: function(data){
 			return get('/app/order', data);
@@ -130,7 +141,7 @@ define(['../config/config'], function(module) {
 		getAssess: function(data){
 			return fetch('/app/order', data);
 		},
-//		开始放松类练习
+//		开始放松类练习 // 放松和暴露是两条皮肤点数据
 		startRelease: function(data){
 			return fetch('/app/order', data);
 		},
@@ -140,11 +151,13 @@ define(['../config/config'], function(module) {
 		},
 //		结束放松训练
 		stopCourse: function(data){
-			return fetch('/app/order', data);
+			return get('/app/order', data);
 		},
+		// 训练结果保存
 		saveCourse: function(data){
 			return fetch('/app/order', data);
 		},
+		// 开始暴露训练
 		goExpose: function(data){
 			return fetch('/app/order', data);
 		}

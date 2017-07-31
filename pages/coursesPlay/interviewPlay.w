@@ -3,7 +3,7 @@
 <div xmlns="http://www.w3.org/1999/xhtml" class="main13" component="$UI/system/components/justep/window/window"
   design="device:mobile;" xid="window">  
   <div component="$UI/system/components/justep/model/model" xid="model" style="height:auto;top:241px;left:673px;"
-    onLoad="modelLoad" onParamsReceive="modelParamsReceive"/>  
+    onLoad="modelLoad" onParamsReceive="modelParamsReceive" onunLoad="modelUnLoad"/>  
   <div component="$UI/system/components/justep/panel/panel" class="x-panel x-full"
     xid="panel1"> 
     <div class="x-panel-top" xid="top1"> 

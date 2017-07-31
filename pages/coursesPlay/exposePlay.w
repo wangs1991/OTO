@@ -3,7 +3,7 @@
 <div xmlns="http://www.w3.org/1999/xhtml" class="main13" component="$UI/system/components/justep/window/window"
   design="device:mobile;" xid="window">  
   <div component="$UI/system/components/justep/model/model" xid="model" style="height:auto;top:241px;left:673px;"
-    onLoad="modelLoad" onParamsReceive="modelParamsReceive"/>  
+    onLoad="modelLoad" onParamsReceive="modelParamsReceive" onunLoad="modelUnLoad"/>  
   <div component="$UI/system/components/justep/panel/panel" class="x-panel x-full"
     xid="panel1"> 
     <div class="x-panel-top" xid="top1"> 
@@ -30,8 +30,18 @@
           </div> 
         </div>  
         
-        <div class="ratio-section main_padding"> 
-          <div class="inner-content main_padding">皮肤波纹</div> 
+        <div class="main_padding"> 
+          <div class="inner-content main_padding">
+          	<div xid="div1" style="height:300px;" class="center-block"> 
+              <div xid="skinInfoDiv" align="left" style="position:relative;left:5px;top:-5px;height:30px;"> 
+                <span xid="skinInfoSpan" class="text-black" bind-text="skinInfo"/>
+              </div>  
+              <div xid="nullAlertDiv2" style="display:none;position:relative;height:0px;width:100%;top:100px;"
+                class="text-alert-null">没有数据信息，请正确佩戴皮肤电心率设备</div>  
+              <div xid="wave2" id="echart" style="width:100%;height:300px;position: static;"
+                class="main"/> 
+            </div>
+          </div> 
         </div>
         
         <div xid="settingListDiv" class="tb-range-no_line list_list_list"> 
