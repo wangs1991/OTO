@@ -1398,8 +1398,56 @@ color: #fff;
 	margin-top:12px;
 	display:inline-block;
 }
+
+.b-modify-one{
+	width:75%;
+	margin-top:20px;
+	display:inline-block;
+}
+.b-modify-one input{
+	width:100%;
+	line-height:36px;
+	background:transparent;
+	border-radius:15px;
+	height:36px;
+	border:1px solid #999;
+	font-size:14px;
+	padding:0 5px;
+}
+
+.b-set-one li{
+	border-bottom:1px solid #999;
+	padding:10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .checkboxTwo input[type=checkbox] {
-	/*visibility: hidden;*/
+	visibility: hidden;
 }
 .checkboxTwo {
 	    width: 55px;
