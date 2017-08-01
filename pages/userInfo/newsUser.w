@@ -2,7 +2,8 @@
 
 <div xmlns="http://www.w3.org/1999/xhtml" component="$UI/system/components/justep/window/window" design="device:m;"
   xid="window" class="window">  
-  <div component="$UI/system/components/justep/model/model" xid="model" style="top:-7px;left:83px;height:auto;" onActive="enterPage"/>  
+  <div component="$UI/system/components/justep/model/model" xid="model" style="top:-7px;left:83px;height:auto;"
+    onActive="enterPage"/>  
   <div component="$UI/system/components/justep/panel/panel" class="x-panel x-full"
     xid="panel1" style="width:100%;font-size:14px;"> 
     <div class="x-panel-top" xid="top1"> 
@@ -28,7 +29,7 @@
           <div class="x-scroll-content" xid="div2"> 
             <div xid="div13" class="b-user-topBox"> 
               <div xid="div4" class="clearfix b-user-one"> 
-                <div xid="div8" class="fl b-user-oneA"> 
+                <div xid="div8" class="fl b-user-oneA"  bind-click="uploadImg"> 
                   <img src="$UI/OTO/assets/img/user_1.png" alt="" xid="image1"/> 
                 </div>  
                 <div xid="div4" class="fl b-user-two"> 
@@ -40,13 +41,15 @@
                     <img src="$UI/OTO/assets/img/user_3.png" alt="" xid="image3"
                       class="fl"/>  
                     <span xid="span4" class="fl">性别</span>  
-                    <input type="text" name="sex" xid="input3" class="fl b-user-twoInput"/> 
+                    <input type="text" name="sex" xid="input3" class="fl b-user-twoInput"
+                      bind-click="selectSex"/> 
                   </div>  
                   <div xid="div5" class="clearfix b-user-twoA b-user-twoB"> 
                     <img src="$UI/OTO/assets/img/user_4.png" alt="" xid="image6"
                       class="fl"/>  
                     <span xid="span5" class="fl">出生年月</span>  
-                    <input type="text" name="birthday" xid="input4" class="fl"/> 
+                    <input type="text" name="birthday" id="birthday" xid="birthday"
+                      class="fl" bind-click="selectDate"/> 
                   </div> 
                 </div> 
               </div>  
@@ -73,11 +76,11 @@
             </div>  
             <div xid="div6" class="clearfix b-user-thr"> 
               <a component="$UI/system/components/justep/button/button" class="btn btn-default b-user-thrButton"
-                label="社交量表  38分" xid="button1" bind-click="assessSelect"> 
+                label="社交量表" xid="button1" bind-click="assessSelect"> 
                 <i xid="i2"/>  
                 <span xid="span3">社交量表</span> 
-              </a> 
-              <input name="questType" type="text" id="questType" class="hide"/>	
+              </a>  
+              <input name="questType" type="text" id="questType" class="hide"/>  
               <input type="text" name="answer" id="answer" xid="input8" class="hide"/> 
             </div>  
             <div xid="div7" style="margin:10px;" class="b-user-four"> 
@@ -96,7 +99,35 @@
             </div> 
           </div> 
         </form> 
-      </div> 
+      </div>  
+      <div component="$UI/system/components/justep/datePicker/datePicker" class="x-popPicker"
+        xid="datePicker" onOK="getDate"> 
+        <div class="x-popPicker-overlay" xid="div1"/>  
+        <div class="x-popPicker-content" xid="div3"> 
+          <div class="x-poppicker-header" xid="div16"> 
+            <button class="btn btn-default x-btn-ok" xid="button2">确定</button> 
+          </div> 
+        </div> 
+      </div>  
+      <div component="$UI/system/components/justep/picker/popPicker" class="x-popPicker"
+        xid="sexSelector" onOK="getSex"> 
+        <div class="x-popPicker-overlay" xid="div43"/>  
+        <div class="x-popPicker-content" xid="div44"> 
+          <div class="x-poppicker-header" xid="div45"> 
+            <button class="btn btn-default x-btn-ok" xid="button7">确定</button>
+          </div>  
+          <div component="$UI/system/components/justep/picker/picker" class="x-picker"
+            xid="picker6"> 
+            <div class="x-picker-inner" xid="div46"> 
+              <div class="x-pciker-rule x-pciker-rule-ft" xid="div47"/>  
+              <ul class="x-list-template x-pciker-list" xid="listTemplateUl6"> 
+                <li xid="li6"/>
+              </ul>  
+              <div class="x-pciker-rule x-pciker-rule-bg" xid="div48"/>
+            </div> 
+          </div> 
+        </div> 
+      </div>
     </div> 
   </div> 
 </div>

@@ -13,6 +13,11 @@ define(function(require){
 		this.duration = justep.Bind.observable();
 		this.title = justep.Bind.observable();
 		this.curDate = justep.Bind.observable(dateStr);
+		
+		this.subject = justep.Bind.observable();
+		this.score = justep.Bind.observable();
+		this.totalScore = justep.Bind.observable();
+		this.answerList = justep.Bind.observableArray();		
 	};
 	
 	Model.prototype.modelLoad = function(){
@@ -71,6 +76,7 @@ define(function(require){
 		this.duration.set(courseModel.result.duration);
 		
 //		根据课程类型的不同，区别添加不同的展示模块
+		console.log(courseModel.page);
 		switch (courseModel.page){
 			case 'breathing':{
 				this.initSkinData();
@@ -83,7 +89,7 @@ define(function(require){
 				this.initConsult();
 				this.initSheet();
 			};
-			case 'exam': {
+			case 'examTender': {
 				this.initSkinData();
 				this.initExam();
 				this.initConsult();
@@ -94,9 +100,7 @@ define(function(require){
 				this.initConsult();
 				this.initSheet();
 			}
-		} 
-		
-		
+		}
 	}
 	
 	Model.prototype.initSkinData = function(){
@@ -121,7 +125,16 @@ define(function(require){
 	}
 	Model.prototype.initExam = function(){
 		this.exam.show();
-		$('#score').val(courseModel.result.totalSore);
+		var answers = courseModel.result.answer; 	// '1:2,2:3,3:2,4:1'
+		var subject = courseModel.result.subject;	// 学科
+		var score = courseModel.result.score;		// 自评列表
+		var totalScore = courseModel.result.totalScore;	// 考试总成绩
+		var subjecDirec = ['语文', '数学', '外语'];
+		
+		this.subject.set(subjecDirec[subject-1]);
+		this.score.set(score);
+		this.totalScore.set(totalScore);
+//		this.answerList;
 	}
 	Model.prototype.initVoice = function(){
 		this.voice.show();

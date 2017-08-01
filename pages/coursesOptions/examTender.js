@@ -22,7 +22,8 @@ define(function(require){
 		var curVisitor = Server.getCurUser();
 		var next;
 		params.eventKind = 49;
-		params.vid = curVisitor.uid;
+		params.vid = curVisitor.id;
+		params.loosenType = loosenType;
 //		next会根据是否开启放松训练决定
 		next = '$UI/OTO/pages/coursesPlay/exposePlay.w';
 //		所有的课程开始都会调用课程第一步接口，即保存配置数据的接口
@@ -55,7 +56,6 @@ define(function(require){
 //	接收参数
 	Model.prototype.modelParamsReceive = function(evt){
 		console.log(evt.params);
-		this.title.set(evt.params.title);
 		loosenType = evt.params.type;
 		page = evt.params.page;
 	}

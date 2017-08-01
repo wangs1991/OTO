@@ -33,7 +33,7 @@ define(function(require){
 				3: '演讲',
 				4: '考试',
 				5: '恐高',
-				6:'异性'	
+				6: '异性'	
 				};
 		var params = {kind: title[type]};
 		url = "$UI/OTO/pages/userInfo/assess_con.w";
@@ -55,6 +55,7 @@ define(function(require){
 	Model.prototype.modelParamsReceive = function(event){
 		pgeType = event.params.type;
 	}
+	
 	
 	return Model;
 });

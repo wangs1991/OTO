@@ -131,7 +131,15 @@ define(function(require) {
 //					}
 //				});
 //			}
-		}, 200);
+
+			//防止数组内存溢出
+			if (window.skinArraylist.length > 1800) {
+				window.skinArraylist.shift();
+			}
+			if (window.skinTimeList.length > 1800) {
+				window.skinTimeList.shift();
+			}
+		}, 500);
 		
 		//判断是否登录
 		//设置显示页面

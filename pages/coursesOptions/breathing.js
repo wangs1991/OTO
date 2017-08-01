@@ -3,7 +3,7 @@ define(function(require){
 	var $ = require("jquery");
 	var justep = require("$UI/system/lib/justep");
 	var Server = require('../../assets/server');
-	var loosenType = -1;
+	var loosenType = loosenType;
 	var page;
 
 	var Model = function(){
@@ -45,8 +45,8 @@ define(function(require){
 		data = decodeURI(data);
 		var params = Server.toJson(data);
 		params.eventKind = 34;
-		params.vid = Server.getCurUser().vid;
-		params.loosenType = 1;
+		params.vid = Server.getCurUser().id;
+		params.loosenType = loosenType;
 //		所有的课程开始都会调用课程第一步接口，即保存配置数据的接口
 		Server.startRelease(params).then(function(data){
 			var params = {

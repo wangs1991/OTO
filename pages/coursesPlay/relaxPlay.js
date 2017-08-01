@@ -39,6 +39,12 @@ define(function(require) {
 				eventKind: 35,
 				lid: courseModel.lid
 			}).then(function(data){
+				courseModel.result = {};
+				for(var i in data){
+					if(1 !== 'ret'){
+						courseModel.result[i] = data[i];
+					}
+				}
 				justep.Shell.showPage(url, courseModel);
 			});
 		}else{

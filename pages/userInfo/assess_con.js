@@ -105,33 +105,39 @@ define(function(require) {
 				url = require.toUrl("../../mock/test_mianshi.json");
 				$(".scotxt").eq(0).html("社交焦虑自评");
 				$(".scotxt").eq(1).html("面试焦虑自评");
+				$(".title_on").html("面试焦虑自评量表");
 				break;		
 			case "演讲":
 				url = require.toUrl("../../mock/test_yanjiang.json");
 				$(".scotxt").eq(0).html("社交焦虑自评");
 				$(".scotxt").eq(1).html("公众演讲自评");
+				$(".title_on").html("公众演讲自评量表");
 				break;
 			case "工作":
 				url = require.toUrl("../../mock/test_SJgongzuohuibao.json");
 				$(".scotxt").eq(0).html("社交焦虑自评");
 				$(".scotxt").eq(1).html("会议发言自评");
+				$(".title_on").html("会议发言自评量表");
 				break;
 			case "异性":
 				url = require.toUrl("../../mock/test_SJyixingxiangchu.json");
 				$(".scotxt").eq(0).html("社交焦虑自评");
 				$(".scotxt").eq(1).html("异性相处自评");
+				$(".title_on").html("异性相处自评量表");
 				break;
 			
 			case "恐高":
 				url = require.toUrl("../../mock/test_konggao.json");
 				$(".scotxt").eq(0).html("恐高自评");
 				$(".scotxt").eq(1).html("");
+				$(".title_on").html("恐高自评量表");
 				$(".list-group li").eq(4).hide();
 				$(".score-big").eq(1).hide();
 				break;
 			case "考试":			
 				url = require.toUrl("../../mock/test_kaoshijiaolv.json");
 				$(".scotxt").eq(0).html("考试焦虑自评");
+				$(".title_on").html("考试焦虑自评量表");
 				$(".scotxt").eq(1).html("");
 				$(".list-group li").eq(4).hide();
 				$(".score-big").eq(1).hide();

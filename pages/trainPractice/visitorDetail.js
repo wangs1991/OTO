@@ -4,6 +4,7 @@ define(function(require){
 	var justep = require("$UI/system/lib/justep");
 	var Server = require('../../assets/server');
 	var userData = null;
+	var page = 0;
 
 	var Model = function(){
 		this.callParent();
@@ -27,7 +28,7 @@ define(function(require){
 		
 		var records = Server.getRecords({
 			eventKind: 42,
-			vid: userData.uid
+			vid: page++
 		}).then(function(data){
 			console.log(data);
 			data.dataList.forEach(function(n, i){

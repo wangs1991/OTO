@@ -21,9 +21,9 @@ define(function(require){
 		var curVisitor = Server.getCurUser();
 		var next;
 		params.eventKind = 37;
-		params.vid = curVisitor.uid;
+		params.vid = curVisitor.id;
+		params.loosenType = loosenType;
 		params.isOpen = params.isOpen? params.isOpen: 0;
-		console.log(params.isOpen);
 		next = '$UI/OTO/pages/coursesPlay/exposePlay.w';
 //		所有的课程开始都会调用课程第一步接口，即保存配置数据的接口
 		Server.startRelease(params).then(function(data){
@@ -54,7 +54,7 @@ define(function(require){
 //	接收参数
 	Model.prototype.modelParamsReceive = function(evt){
 		console.log(evt.params);
-		this.title.set(evt.params.title);
+		
 		loosenType = evt.params.type;
 		page = evt.params.page;
 	}
