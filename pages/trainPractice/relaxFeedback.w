@@ -27,26 +27,25 @@
         xid="scrollView1" style="background-color:transparent;"> 
         <div class="x-scroll-content" xid="div2"> 
           <!-- 顶部用户卡片  -->  
-          <div class="symbol-card card_user" style="height:110px;" bind-foreach="{ data: user, as: 'user' }"> 
-            <div class="media" xid="media1"> 
+          <div bind-foreach="{ data: user, as: 'user' }" style="height:110px;"> 
+             
+          <div class="media" xid="media1"> 
               <div class="media-left avator-ctner" xid="mediaLeft1"> 
                 <div class="avator"> 
-                  <img class="media-object" src="$UI/OTO/assets/img/user_boy.jpg"
-                    alt="" xid="image2"/> 
+                  <img class="media-object" src="$UI/OTO/assets/img/user_boy.jpg" alt="" xid="image2" /> 
                 </div>  
-                <div class="sex" bind-css="{'boy': user.sex == 0, 'girl': user.sex == 1}"/> 
+                <div class="sex" bind-css="{'boy': user.sex == 0, 'girl': user.sex == 1}" /> 
               </div>  
               <div class="media-body" xid="mediaBody1"> 
                 <ul xid="ul1" class="b-relax-oneR" bind-foreach="{ data: user, as: 'user' }"> 
-                  <li xid="li1" class="user_name" bind-text="user.name"/>  
+                  <li xid="li1" class="user_name" bind-text="user.name" />  
                   <li xid="li2" class="user_info"> 
-                    <span bind-text="user.sexTxt"/>  
-                    <span bind-text="user.age+'岁'"/> 
+                    <span bind-text="user.sexTxt" />  
+                    <span bind-text="user.age+'岁'" /> 
                   </li> 
                 </ul> 
               </div> 
-            </div> 
-          </div>  
+            </div></div>  
           <!-- 顶部用户卡片 end -->  
           <div class="main-container" style="top: 100px;"> 
             <div xid="div6" class="title_bar"> 
@@ -81,7 +80,7 @@
                 </div> 
               </div>  
               <div component="$UI/system/components/bootstrap/accordion/accordion"
-                class="panel-group b-relax-marginBottom" xid="accordion2"> 
+                class="panel-group b-relax-border" xid="accordion2"> 
                 <div class="panel panel-default b-relax-panel" component="$UI/system/components/bootstrap/panel/panel"
                   xid="panel3"> 
                   <div class="panel-heading" xid="heading2"> 
