@@ -1158,7 +1158,6 @@ color: #fff;
 .panel{
 	margin-bottom:0;
 	box-shadow:none;
-	border:none;
 }
 .panel-group{
 	margin-bottom:0;
@@ -1521,7 +1520,12 @@ color: #fff;
 .b-relax-marginBottom{
 	
 }
-
+.b-bindVRView-cont span{
+	display:block;
+	text-align:center;
+	color:#999;
+	font-size:14px;
+}
 
 
 

@@ -79,9 +79,7 @@
                             <div xid="skinInfoDiv" align="left" style="position:relative;left:5px;top:-5px;height:30px;"> 
                               <span xid="skinInfoSpan" class="text-black"/> 
                             </div>   
-                            <div xid="wave2" id="echart" style="height:300px;position: static;display: block; width: 80vw"
-                              class="main"/> 
-                          </div>  
+                            <div xid="wave2" id="echart" style="height:300px;position: static;display: block; width: 80vw" class="main"></div></div>  
                           <input component="$UI/system/components/justep/input/input"
                             class="form-control" name="baseLine" xid="input1" id="baseLine" style="display: none;"/> 
                         </div> 
@@ -105,9 +103,7 @@
                     </div>  
                     <div class="panel-collapse collapse" xid="div8"> 
                       <div class="panel-body" xid="div9"> 
-                        <textarea component="$UI/system/components/justep/textarea/textarea"
-                          class="form-control" name="diagnose" xid="diagnose" id="diagnose"/> 
-                      </div> 
+                        </div> 
                     </div> 
                   </div> 
                 </div>  
@@ -127,8 +123,7 @@
                     </div>  
                     <div class="panel-collapse collapse" xid="div4"> 
                       <div class="panel-body" xid="div5">
-						<h2>考试科目：<span bind-text="subject"></span></h2>
-						<p>得分：<span bind-text="score"></span>/<span bind-text="totalScore"></span></p>
+                      	<input type="text" name="score" id="score" style="display: none;"/>
                       </div> 
                     </div> 
                   </div> 
@@ -149,9 +144,7 @@
                     </div>  
                     <div class="panel-collapse collapse" xid="div8"> 
                       <div class="panel-body" xid="div9"> 
-                        <textarea component="$UI/system/components/justep/textarea/textarea"
-                          class="form-control" name="voice" xid="voice" id="voice" /> 
-                      </div> 
+                        </div> 
                     </div> 
                   </div> 
                 </div>  
@@ -170,7 +163,7 @@
                       </li> 
                     </div>  
                     <div class="panel-collapse collapse" xid="div11"> 
-                      <div class="panel-body" xid="div12"></div> 
+                      <div class="panel-body" xid="div12"><span xid="span5"><![CDATA[123]]></span></div> 
                     </div> 
                   </div> 
                 </div> 

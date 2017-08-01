@@ -23,7 +23,7 @@
           <div component="$UI/system/components/justep/smartContainer/smartContainer"
             class="x-smartcontainer" xid="smartContainer1"><div class="section-card content-detail input-card"> 
             <!-- <div class="sub-title tac">输入头盔序列号绑定头盔</div>   -->  
-            <div class="mgt-20"> 
+            <div class="mgt-20 b-hide "> 
               <div component="$UI/system/components/justep/labelEdit/labelEdit" class="x-label-edit x-label30" xid="deviceIdGroup"> 
                 <label class="x-label" xid="label1">设备编码</label>  
                 <div class="x-edit" xid="div1"> 
@@ -37,16 +37,10 @@
                 </div> 
               </div>  
               <div component="$UI/system/components/justep/labelEdit/labelEdit" class="x-label-edit x-label31" xid="findPwd">?找回密码</div>  
-              <div class="mgt-20"> 
-                <a component="$UI/system/components/justep/button/button" class="btn btn-default button block" label="绑定设备" xid="bindButton" bind-click="bindVR"> 
-                  <i xid="i1" />  
-                  <span xid="span1" /> 
-                </a> 
-              </div>
               <div class="flex-layout mgt-20">
-              	<a component="$UI/system/components/justep/button/button" class="btn btn-default button block mgr-20" label="解除绑定" xid="unBindBtn" onClick="unbindVR"> 
+              	<a component="$UI/system/components/justep/button/button" class="btn btn-default button block mgr-20" label="绑定设备" xid="unBindBtn" bind-click="bindVR"> 
                     <i xid="i1" />  
-                    <span xid="span1" />
+                    <span xid="span1" >绑定设备</span>
                   </a>
                   
                   <a component="$UI/system/components/justep/button/button" class="btn btn-default button block" label="修改密码" xid="pwdBtn" onClick="bindButtonClick"> 
@@ -56,7 +50,23 @@
               </div>
              
             </div> 
-          </div></div>  
+          <div class="mgt-20 b-hide b-show" xid="div5">
+   <div xid="div10" style="text-align:center;"><div xid="div9" style="width:80%;display:inline-block;"><div component="$UI/system/components/justep/labelEdit/labelEdit" class="x-label-edit x-label30" xid="labelEdit3" style="color:#868686:">
+    <label class="x-label" xid="label3" style="color:#868686;">设备编码</label>
+    <div class="x-edit" xid="div4">
+     <span xid="span3" style="color:#868686;"><![CDATA[XSDF5689MFM]]></span></div> </div></div></div> 
+   
+   <div xid="div8" class="b-bindVRView-cont"><span xid="span4"><![CDATA[欢迎使用OTO心理]]></span>
+  <span xid="span5"><![CDATA[——咨询师好帮手！]]></span></div>
+  <div component="$UI/system/components/justep/labelEdit/labelEdit" class="x-label-edit x-label31" xid="labelEdit1">?找回密码</div>
+   
+   <div class="flex-layout mgt-20" xid="div7">
+    <a component="$UI/system/components/justep/button/button" class="btn btn-default button block mgr-20" label="解除绑定" xid="button3" bind-click="unbindVR">
+     <i xid="i2"></i>
+     <span xid="span2">解除绑定</span></a> 
+    <a component="$UI/system/components/justep/button/button" class="btn btn-default button block" label="修改密码" xid="button1" onClick="bindButtonClick">
+     <i xid="i2"></i>
+     <span xid="span2"></span></a> </div> </div></div></div>  
            
         </div>  
         </div> 
