@@ -18,13 +18,17 @@ define(function(require) {
 	window.skinValue = 0;		//皮肤电设备信息
 	window.skinFeelStart = false;
 	window.skinArraylist=[];
-	window.skinArraylist=[];
 	window.skinTimeList = [];
+	
+	window.skinTotalArraylist=[];
+	window.skinTotalTimeList = [];
+	
 	window.ip = 'test.adai-tech.com';
 	window.device = "all";
 	window.myChartClock;  // 图表
 	window.courseStart;	  // 课程开始时间点
 	window.courseEnd;	  // 课程结束时间点
+	
 	window.options = {
 	    tooltip : {
             trigger: 'axis'
@@ -123,6 +127,10 @@ define(function(require) {
 //					window.skinValue = data.skin;	
 //					if(window.skinFeelStart == true){
 //						window.skinArraylist.push(window.skinValue);
+
+						window.skinTotalArraylist.push(Math.random()+1); // 这句话是模拟数据
+						window.skinTotalTimeList.push(+new Date());	// 要保留，图标的横坐标【时间点】
+						
 						window.skinArraylist.push(Math.random()+1); // 这句话是模拟数据
 						window.skinTimeList.push(+new Date());	// 要保留，图标的横坐标【时间点】
 						window.updateEchart && window.updateEchart(); // 触发图标更新
@@ -133,10 +141,18 @@ define(function(require) {
 //			}
 
 			//防止数组内存溢出
-			if (window.skinArraylist.length > 1800) {
+			if (window.skinTotalArraylist.length > 1800) {
+				window.skinTotalArraylist.shift();
+			}
+			if (window.skinTotalTimeList.length > 1800) {
+				window.skinTotalTimeList.shift();
+			}
+			
+			var oneMin = 120;
+			if (window.skinArraylist.length > oneMin) {
 				window.skinArraylist.shift();
 			}
-			if (window.skinTimeList.length > 1800) {
+			if (window.skinTimeList.length > oneMin) {
 				window.skinTimeList.shift();
 			}
 		}, 500);

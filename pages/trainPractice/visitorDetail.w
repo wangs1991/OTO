@@ -67,7 +67,7 @@
                     disableInfiniteLoad="true" style="background-color:transparent;"
                     bind-foreach="{data: records, as: 'item'}"> 
                     <div component="$UI/system/components/bootstrap/row/row"
-                      class="row new_listItem" xid="row2" bind-attr="{lid: item.lid}"  bind-click="recordDetail"> 
+                      class="row new_listItem" xid="row2" bind-attr="{lid: item.lid}"  data-bind="click: $parent.gotDetail"> 
                       <div class="col col-xs-4" xid="col7" bind-text="item.time"/>  
                       <div class="col col-xs-4" xid="col8" bind-text="item.content"/>  
                       <div class="col col-xs-4" xid="col9" bind-text="item.duration"/> 

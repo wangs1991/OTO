@@ -101,6 +101,10 @@ define(['../config/config'], function(module) {
 		getRecords: function(data){
 			return fetch('/app/order', data);
 		},
+//		获取训练详情
+		getPecDetail: function(data){
+			return fetch('/app/order', data);
+		},
 //		检测设备连接状态
 		checkHat: function(data){
 			return fetch('/app/order', data);
