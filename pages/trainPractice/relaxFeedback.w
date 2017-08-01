@@ -59,9 +59,9 @@
             </ul>  
             <ul xid="ul3" class="b-relax-thr"> 
               <div component="$UI/system/components/bootstrap/accordion/accordion"
-                xid="accordion1" tabbed="true"> 
+                xid="accordion1" tabbed="true" class="b-relax-marginBottom"> 
                 <div component="$UI/system/components/bootstrap/panel/panel"
-                  xid="panel2" class="panel panel-default"> 
+                  xid="panel2" class="panel panel-default b-relax-panel"> 
                   <div xid="heading1" style="background-color:transparent;"
                     class="panel-heading"> 
                     <li xid="li8" class="clearfix"> 
@@ -81,8 +81,8 @@
                 </div> 
               </div>  
               <div component="$UI/system/components/bootstrap/accordion/accordion"
-                class="panel-group" xid="accordion2"> 
-                <div class="panel panel-default" component="$UI/system/components/bootstrap/panel/panel"
+                class="panel-group b-relax-marginBottom" xid="accordion2"> 
+                <div class="panel panel-default b-relax-panel" component="$UI/system/components/bootstrap/panel/panel"
                   xid="panel3"> 
                   <div class="panel-heading" xid="heading2"> 
                     <li xid="li7" class="clearfix"> 
@@ -100,8 +100,8 @@
                 </div> 
               </div>  
               <div component="$UI/system/components/bootstrap/accordion/accordion"
-                class="panel-group" xid="accordion3"> 
-                <div class="panel panel-default" component="$UI/system/components/bootstrap/panel/panel"
+                class="panel-group b-relax-marginBottom" xid="accordion3"> 
+                <div class="panel panel-default b-relax-panel" component="$UI/system/components/bootstrap/panel/panel"
                   xid="panel4"> 
                   <div class="panel-heading" xid="heading3"> 
                     <li xid="li9" class="clearfix"> 
