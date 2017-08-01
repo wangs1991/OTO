@@ -854,7 +854,7 @@ color: #fff;
 	padding: 12px 0;
 	margin-left: 0;
 	margin-right: 0;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	text-align: center;
 	color: #3f4256;
 }
@@ -1506,6 +1506,18 @@ color: #fff;
     line-height: 20px;
     border-radius: 5px;
     text-align: center;
+}
+.b-relax-marginBottom{
+	margin-bottom:10px;
+}
+.b-relax-panel{
+	border-radius:10px;
+}
+.panel-group .b-relax-panel{
+	border-radius:10px;
+}
+.panel-group .panel-heading{
+	border-radius:10px;
 }
 .b-hide{
 	display:none;
