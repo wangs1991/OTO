@@ -117,9 +117,8 @@ define(function(require) {
 		//		除去 面试、汇报、公众演讲 动作列表是死的
 		if( courseModel.page === 'exam' || courseModel.page === 'speech' || courseModel.page === 'public' ){
 //					动作列表相关的操作
-			for (var i = 1; i <= 9; i++) {
-				this.getElementByXid("c" + i).style.display = "none";
-			}
+			$('#asyncActions').show();
+			$('#staticActions').hide();
 			
 			
 			if (loadControlAniTimer != null && loadControlAniTimer != undefined) {
@@ -153,12 +152,17 @@ define(function(require) {
 						}
 						
 						anisJson["c" + (i + 1)].set(anisArray[i]);
-						self.getElementByXid("c" + (i + 1)).style.display = "";
+//						self.getElementByXid("c" + (i + 1)).style.display = "";
 					}
+					$('#asyncActions').show();
+					$('#staticActions').hide();
 	
 					//justep.Util.hint("controller anis:" + anisArray.length, {"position" : "bottom"});
 				});
 			}, 200);
+		}else{
+			$('#staticActions').show();
+			$('#asyncActions').hide();
 		}
 	};
 	

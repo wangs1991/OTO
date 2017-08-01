@@ -11,11 +11,24 @@ define(function(require) {
 	};
 	
 	Model.prototype.modelLoad = function(event){
-//		目前不会验证是否有设备绑定
-		var bindDeviceId = localStorage.getItem("BindDeviceID");
-		if (bindDeviceId != null && bindDeviceId != undefined) {
-			this.comp("deviceInput").val(bindDeviceId);
-		}
+//		验证是否有设备绑定
+		Server.checkHat({
+			eventKind: 33
+		}).then(function(data){
+//			绑定成功
+			$('#win_bind').show();
+			$('#bindButton').show();
+			$('#win_unbind').hide();
+			$('#unBindBtn').hide();
+			Server.deviceId(data.deviceId);
+			this.comp("deviceInput").val(data.deviceId);
+		}, function(data){
+//			绑定失败
+			$('#win_bind').hide();
+			$('#bindButton').hide();
+			$('#win_unbind').show();
+			$('#unBindBtn').show();
+		});
 	};
 	
 //	绑定设备
@@ -63,20 +76,15 @@ define(function(require) {
 		return true;
 	}
 	
-	Model.prototype.bindButtonClick = function(event){
-		/*var device = this.comp("deviceInput").val();
-		var params = {device:device, uid:window.uid, session:window.session};*/
-		
-		/*$.getJSON(AppUtils.getUrl("app/order?action=bind_device"), params, function(data){
-			if (data.success == "true") {
-				localStorage.setItem("BindDeviceID", device);
-				
-				justep.Util.hint("绑定成功", {"position":"bottom"});
-			} else {
-				justep.Util.hint("绑定失败", {"position":"bottom"});
-			}
-		});*/
+//	修改密码
+	Model.prototype.modifyPwd = function(event){
 		var url = "$UI/OTO/pages/password/modifyPassword.w";
+		justep.Shell.showPage(url);
+	};
+	
+//	找回密码
+	Model.prototype.findPwd = function(event){
+		var url = "$UI/OTO/pages/password/backPassword.w";
 		justep.Shell.showPage(url);
 	};
 	
