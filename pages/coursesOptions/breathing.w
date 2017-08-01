@@ -100,7 +100,7 @@
                       <ul xid="ul2" class="b-breath-thr"> 
                         <li xid="li6" class="clearfix"> 
                           <div xid="div9" class="fl b-breath-thrA"> 
-                            <img src="$UI/OTO/assets/img/breath_6.jpg" alt=""
+                            <img src="$UI/OTO/assets/img/breath_10.png" alt=""
                               xid="image7"/>  
                             <span xid="span10"><![CDATA[歌曲一]]></span> 
                           </div>  
@@ -109,7 +109,7 @@
                         </li>  
                         <li xid="li5" class="clearfix"> 
                           <div xid="div10" class="fl b-breath-thrA"> 
-                            <img src="$UI/OTO/assets/img/breath_7.jpg" alt=""
+                            <img src="$UI/OTO/assets/img/breath_11.png" alt=""
                               xid="image8"/>  
                             <span xid="span4"><![CDATA[歌曲二]]></span> 
                           </div>  
@@ -118,7 +118,7 @@
                         </li>  
                         <li xid="li7" class="clearfix"> 
                           <div xid="div11" class="fl b-breath-thrA"> 
-                            <img src="$UI/OTO/assets/img/breath_8.png" alt=""
+                            <img src="$UI/OTO/assets/img/breath_12.png" alt=""
                               xid="image9"/>  
                             <span xid="span9"><![CDATA[歌曲三]]></span> 
                           </div>  
@@ -131,7 +131,7 @@
                       <ul xid="ul2" class="b-breath-thr"> 
                         <li xid="li6" class="clearfix"> 
                           <div xid="div9" class="fl b-breath-thrA"> 
-                            <img src="$UI/OTO/assets/img/breath_6.jpg" alt=""
+                            <img src="$UI/OTO/assets/img/breath_13.png" alt=""
                               xid="image7"/>  
                             <span xid="span10"><![CDATA[打开指导语]]></span> 
                           </div>  
@@ -140,7 +140,7 @@
                         </li>  
                         <li xid="li5" class="clearfix"> 
                           <div xid="div10" class="fl b-breath-thrA"> 
-                            <img src="$UI/OTO/assets/img/breath_7.jpg" alt=""
+                            <img src="$UI/OTO/assets/img/breath_14.png" alt=""
                               xid="image8"/>  
                             <span xid="span4"><![CDATA[关闭指导语]]></span> 
                           </div>  
@@ -153,7 +153,7 @@
                       <ul xid="ul2" class="b-breath-thr"> 
                         <li xid="li6" class="clearfix"> 
                           <div xid="div9" class="fl b-breath-thrA"> 
-                            <img src="$UI/OTO/assets/img/breath_6.jpg" alt=""
+                            <img src="$UI/OTO/assets/img/breath_15.png" alt=""
                               xid="image7"/>  
                             <span xid="span10"><![CDATA[三分钟]]></span> 
                           </div>  
@@ -162,7 +162,7 @@
                         </li>  
                         <li xid="li5" class="clearfix"> 
                           <div xid="div10" class="fl b-breath-thrA"> 
-                            <img src="$UI/OTO/assets/img/breath_7.jpg" alt=""
+                            <img src="$UI/OTO/assets/img/breath_16.png" alt=""
                               xid="image8"/>  
                             <span xid="span4"><![CDATA[五分钟]]></span> 
                           </div>  
@@ -171,7 +171,7 @@
                         </li>  
                         <li xid="li7" class="clearfix"> 
                           <div xid="div11" class="fl b-breath-thrA"> 
-                            <img src="$UI/OTO/assets/img/breath_8.png" alt=""
+                            <img src="$UI/OTO/assets/img/breath_17.png" alt=""
                               xid="image9"/>  
                             <span xid="span9"><![CDATA[十分钟]]></span> 
                           </div>  
