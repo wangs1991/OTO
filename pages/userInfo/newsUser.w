@@ -3,7 +3,13 @@
 <div xmlns="http://www.w3.org/1999/xhtml" component="$UI/system/components/justep/window/window" design="device:m;"
   xid="window" class="window">  
   <div component="$UI/system/components/justep/model/model" xid="model" style="top:-7px;left:83px;height:auto;"
-    onActive="enterPage"/>  
+    onActive="enterPage"> 
+    <div component="$UI/system/components/justep/data/data" autoLoad="true"
+      xid="sexData" idColumn="id"><column name="id" type="String" xid="xid1"></column>
+  <column name="sex" type="String" xid="xid2"></column>
+  <column name="text" type="String" xid="xid3"></column>
+  <data xid="default1">[{&quot;id&quot;:&quot;0&quot;,&quot;sex&quot;:&quot;0&quot;,&quot;text&quot;:&quot;女&quot;},{&quot;id&quot;:&quot;1&quot;,&quot;sex&quot;:&quot;1&quot;,&quot;text&quot;:&quot;男&quot;}]</data></div> 
+  </div>  
   <div component="$UI/system/components/justep/panel/panel" class="x-panel x-full"
     xid="panel1" style="width:100%;font-size:14px;"> 
     <div class="x-panel-top" xid="top1"> 
@@ -29,7 +35,7 @@
           <div class="x-scroll-content" xid="div2"> 
             <div xid="div13" class="b-user-topBox"> 
               <div xid="div4" class="clearfix b-user-one"> 
-                <div xid="div8" class="fl b-user-oneA"  bind-click="uploadImg"> 
+                <div xid="div8" class="fl b-user-oneA" bind-click="uploadImg"> 
                   <img src="$UI/OTO/assets/img/user_1.png" alt="" xid="image1"/> 
                 </div>  
                 <div xid="div4" class="fl b-user-two"> 
@@ -41,8 +47,10 @@
                     <img src="$UI/OTO/assets/img/user_3.png" alt="" xid="image3"
                       class="fl"/>  
                     <span xid="span4" class="fl">性别</span>  
-                    <input type="text" name="sex" xid="input3" class="fl b-user-twoInput"
-                      bind-click="selectSex"/> 
+                    <input type="text" id="sexTxt" xid="input3" class="fl b-user-twoInput"
+                      bind-click="selectSex"/>
+                     <input type="text" name="sex" id="sex" xid="input3" class="fl b-user-twoInput"
+                       style="display: none;"/>
                   </div>  
                   <div xid="div5" class="clearfix b-user-twoA b-user-twoB"> 
                     <img src="$UI/OTO/assets/img/user_4.png" alt="" xid="image6"
@@ -52,7 +60,7 @@
                       class="fl" bind-click="selectDate"/> 
                   </div> 
                 </div> 
-              </div>  
+              </div>
               <div xid="div17" style="margin:10px;"> 
                 <div xid="div10" class="clearfix b-user-twoA b-user-twoC"> 
                   <img src="$UI/OTO/assets/img/user_5.png" alt="" xid="image8"
@@ -114,20 +122,20 @@
         <div class="x-popPicker-overlay" xid="div43"/>  
         <div class="x-popPicker-content" xid="div44"> 
           <div class="x-poppicker-header" xid="div45"> 
-            <button class="btn btn-default x-btn-ok" xid="button7">确定</button>
+            <button class="btn btn-default x-btn-ok" xid="button7">确定</button> 
           </div>  
-          <div component="$UI/system/components/justep/picker/picker" class="x-picker"
-            xid="picker6"> 
-            <div class="x-picker-inner" xid="div46"> 
-              <div class="x-pciker-rule x-pciker-rule-ft" xid="div47"/>  
-              <ul class="x-list-template x-pciker-list" xid="listTemplateUl6"> 
-                <li xid="li6"/>
+          <div component="$UI/system/components/justep/picker/picker" class="x-picker x-picker-2"
+            xid="list1" data="sexData" style="width: 100%;"> 
+            <div class="x-picker-inner"> 
+              <div class="x-pciker-rule x-pciker-rule-ft"/>  
+              <ul class="x-list-template x-pciker-list" xid="listTemplateUl1"> 
+                <li xid="li1" bind-text="val('text')"/> 
               </ul>  
-              <div class="x-pciker-rule x-pciker-rule-bg" xid="div48"/>
+              <div class="x-pciker-rule x-pciker-rule-bg"/> 
             </div> 
           </div> 
         </div> 
-      </div>
+      </div> 
     </div> 
   </div> 
 </div>

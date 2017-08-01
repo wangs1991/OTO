@@ -107,7 +107,7 @@
                     <div class="panel-collapse collapse" xid="div8"> 
                       <div class="panel-body" xid="div9"> 
                         <textarea component="$UI/system/components/justep/textarea/textarea"
-                          class="form-control" name="diagnose" xid="diagnose" id="diagnose"/> 
+                          class="form-control" name="diagnose" xid="diagnose" id="diagnose" readonly="readonly"/> 
                       </div> 
                     </div> 
                   </div> 
@@ -151,7 +151,7 @@
                     <div class="panel-collapse collapse" xid="div8"> 
                       <div class="panel-body" xid="div9"> 
                         <textarea component="$UI/system/components/justep/textarea/textarea"
-                          class="form-control" name="voice" xid="voice" id="voice" /> 
+                          class="form-control" name="voice" xid="voice" id="voice" readonly="readonly"/> 
                       </div> 
                     </div> 
                   </div> 
@@ -171,7 +171,9 @@
                       </li> 
                     </div>  
                     <div class="panel-collapse collapse" xid="div11"> 
-                      <div class="panel-body" xid="div12"></div> 
+                      <div class="panel-body" xid="div12">
+                      	<div id="zplb"></div>
+                      </div> 
                     </div> 
                   </div> 
                 </div> 

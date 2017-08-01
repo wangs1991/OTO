@@ -13,6 +13,7 @@ define(function(require) {
 	var anisJson = {};
 	var self = null;
 	var liveTimer = null;	// 控制图片刷新
+	var loadControlAniTimer = null;
 	
 	var Model = function() {
 		this.callParent();
@@ -49,30 +50,54 @@ define(function(require) {
 	
 	Model.prototype.modelLoad = function(event){
 		self = this;
+		
+		window.skinFeelStart = true;
 
 		for (var i = 1; i <= 9; i++) {
 			this.getElementByXid("c" + i).style.display = "none";
 		}
 		
-		setTimeout(function() {
+		
+		if (loadControlAniTimer != null && loadControlAniTimer != undefined) {
+			clearInterval(loadControlAniTimer);
+		}
+		
+		loadControlAniTimer = setInterval(function() {
 			Server.getActions({
-				action: 'get_controller_ani_list'
+				action: 'get_controller_ani_list',
+				uid : window.uid
 			}).then(function(data){
+				if (data == null || data.anis == null || data.anis == "") {
+					console.log("get_controller_ani_list data is null");
+					return;
+				}
+				
 				anisArray = data.anis.split(',');
-
+				if (anisArray.length == 0) {
+					console.log("get_controller_ani_list anisArray is null");
+					return;
+				}
+				
+				console.log("controller_ani_list length"+anisArray.length + " anis:" + data.anis);
+				
+				//清理Timer
+				clearInterval(loadControlAniTimer);
+				
 				for (var i = 0; i < anisArray.length; i++) {
+					if (i >= 9) {
+						continue;
+					}
+					
 					anisJson["c" + (i + 1)].set(anisArray[i]);
 					self.getElementByXid("c" + (i + 1)).style.display = "";
 				}
 
-				justep.Util.hint("controller anis:" + anisArray.length, {
-					"position" : "bottom"
-				});
+				//justep.Util.hint("controller anis:" + anisArray.length, {"position" : "bottom"});
 			});
 		}, 2000);
-		//		初始化图表
-		this.initEchart();
 		
+		//初始化图表
+		this.initEchart();
 	};
 	
 	Model.prototype.goToSave = function(){
@@ -217,6 +242,7 @@ define(function(require) {
 		myChartClock.setOption(options, true);
 	};
 	
+//	动态更新图表方法
 	updateEchart = (function(){
 		var len = 1,
 			displayData = [];

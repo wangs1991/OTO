@@ -1,84 +1,117 @@
-<!DOCTYPE HTML>
-<div component="$model/UI2/system/components/justep/window/window" design="device:m;" xid="window" class="window cnEVj6b" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="cnEVj6b" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/smartContainer/smartContainer,$model/UI2/system/components/justep/titleBar/titleBar,$model/UI2/system/components/justep/panel/child,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/panel/panel,">
-  <style>null</style>  
-  <div component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" data-events="onLoad:modelLoad" __cid="cnEVj6b" class="cnEVj6b"></div>  
-  <div component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full pcZfii2m-iosstatusbar cnEVj6b" xid="panel1" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}" __cid="cnEVj6b"> 
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div xmlns="http://www.w3.org/1999/xhtml" component="$model/UI2/system/components/justep/window/window" design="device:m;" xid="window" class="window cnEVj6b" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="cnEVj6b" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/smartContainer/smartContainer,$model/UI2/system/components/justep/titleBar/titleBar,$model/UI2/system/components/justep/panel/child,$model/UI2/system/components/justep/data/data,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/picker/picker,$model/UI2/system/components/justep/datePicker/datePicker,$model/UI2/system/components/justep/picker/popPicker,$model/UI2/system/components/justep/panel/panel,">  
+  <style xmlns="" xmlns:xhtml="http://www.w3.org/1999/xhtml">null</style>  
+  <div xmlns="" component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" data-events="onLoad:modelLoad" __cid="cnEVj6b" class="cnEVj6b"/>  
+  <div xmlns="" component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full pcZfii2m-iosstatusbar cnEVj6b" xid="panel1" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}" __cid="cnEVj6b"> 
     <div class="x-panel-top cnEVj6b" xid="top1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cnEVj6b"> 
-      <div component="$model/UI2/system/components/justep/titleBar/titleBar" class="x-titlebar app-title-ctner cnEVj6b" data-bind="component:{name:'$model/UI2/system/components/justep/titleBar/titleBar'}" data-config="{&#34;title&#34;:&#34;用户信息&#34;}" __cid="cnEVj6b"> 
+      <div component="$model/UI2/system/components/justep/titleBar/titleBar" class="x-titlebar app-title-ctner cnEVj6b" data-bind="component:{name:'$model/UI2/system/components/justep/titleBar/titleBar'}" data-config="{&quot;title&quot;:&quot;用户信息&quot;}" __cid="cnEVj6b"> 
         <div class="x-titlebar-left cnEVj6b" __cid="cnEVj6b"> 
-          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon cnEVj6b" xid="backBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'},event:{click:$model._callModelFn.bind($model, 'goBack')}" data-config="{&#34;icon&#34;:&#34;icon-chevron-left&#34;,&#34;label&#34;:&#34;&#34;}" __cid="cnEVj6b"> 
-            <i class="icon-chevron-left cnEVj6b" __cid="cnEVj6b"></i>  
-            <span __cid="cnEVj6b" class="cnEVj6b"></span> 
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon cnEVj6b" xid="backBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'},event:{click:$model._callModelFn.bind($model, 'goBack')}" data-config="{&quot;icon&quot;:&quot;icon-chevron-left&quot;,&quot;label&quot;:&quot;&quot;}" __cid="cnEVj6b"> 
+            <i class="icon-chevron-left cnEVj6b" __cid="cnEVj6b"/>  
+            <span __cid="cnEVj6b" class="cnEVj6b"/> 
           </a> 
         </div>  
         <div class="x-titlebar-title cnEVj6b" __cid="cnEVj6b">用户信息</div>  
-        <div class="x-titlebar-right  cnEVj6b" __cid="cnEVj6b">
-          <div class="empty cnEVj6b" __cid="cnEVj6b"></div>
+        <div class="x-titlebar-right  cnEVj6b" __cid="cnEVj6b"> 
+          <div class="empty cnEVj6b" __cid="cnEVj6b"/> 
         </div> 
       </div> 
     </div>  
-    <div class="x-panel-content x-scroll-view cnEVj6b" xid="content1" _xid="C79E19CDB1500001231014A6A2A06F20" style="bottom: 0px; background-size: cover; background-image: url(http://localhost:42303/x5/UI2/v_/OTO/pages/userInfo/none);" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cnEVj6b"> 
+    <div class="x-panel-content x-scroll-view cnEVj6b" xid="content1" _xid="C79E19CDB1500001231014A6A2A06F20" style="bottom: 0px;" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cnEVj6b"> 
       <div component="$model/UI2/system/components/justep/smartContainer/smartContainer" class="x-smartcontainer cnEVj6b" xid="smartContainer1" data-bind="component:{name:'$model/UI2/system/components/justep/smartContainer/smartContainer'},foreach:{data: user, as: 'user'}" __cid="cnEVj6b"> 
-        <div xid="div13" class="b-user-topBox cnEVj6b" __cid="cnEVj6b"> 
-          <div xid="div4" class="clearfix b-user-one cnEVj6b" __cid="cnEVj6b"> 
-            <div xid="div8" class="fl b-user-oneA cnEVj6b" __cid="cnEVj6b"> 
-              <img src="@justepContextPath@/v_f029115c9a2b44dc98dd5bd1fa895671l_zh_CNs_d_m/OTO/assets/img/user_1.png" alt="" xid="image1" __cid="cnEVj6b" class="cnEVj6b"> 
-            </div>  
-            <div xid="div4" class="fl b-user-two cnEVj6b" __cid="cnEVj6b"> 
-              <div xid="div9" class="clearfix b-user-twoA cnEVj6b" __cid="cnEVj6b"> 
-                <img src="@justepContextPath@/v_2c4273edfe824269bcb92c67471787e5l_zh_CNs_d_m/OTO/assets/img/user_2.png" alt="" xid="image2" class="fl cnEVj6b" __cid="cnEVj6b">  
-                <span xid="span3" class="fl cnEVj6b" __cid="cnEVj6b">姓名</span>  
-                <input type="text" xid="input2" class="fl cnEVj6b" __cid="cnEVj6b" data-bind="value:user.name">  
-                <img src="@justepContextPath@/v_018bbe58c17142bc9b4e46139dd4534dl_zh_CNs_d_m/OTO/assets/img/user_3.png" alt="" xid="image3" class="fl cnEVj6b" __cid="cnEVj6b">  
-                <span xid="span4" class="fl cnEVj6b" __cid="cnEVj6b">性别</span>  
-                <input type="text" xid="input3" class="fl b-user-twoInput cnEVj6b" __cid="cnEVj6b" data-bind="value:user.sexTxt"> 
+        <form name="userInfo" id="userInfo" __cid="cnEVj6b" class="cnEVj6b"> 
+          <div xid="div13" class="b-user-topBox cnEVj6b" __cid="cnEVj6b"> 
+            <div xid="div4" class="clearfix b-user-one cnEVj6b" __cid="cnEVj6b"> 
+              <div xid="div8" class="fl b-user-oneA cnEVj6b" __cid="cnEVj6b"> 
+                <img src="@justepContextPath@/v_9b225f7406ba44a7827129d616fb0fc9l_zh_CNs_d_m/OTO/assets/img/user_1.png" alt="" xid="image1" __cid="cnEVj6b" class="cnEVj6b"/>  
+                <input name="face" id="face" style="display: none;" __cid="cnEVj6b" class="cnEVj6b"/> 
               </div>  
-              <div xid="div5" class="clearfix b-user-twoA b-user-twoB cnEVj6b" __cid="cnEVj6b"> 
-                <img src="@justepContextPath@/v_3e2a6e63c65c4a95b20299ca30eb36acl_zh_CNs_d_m/OTO/assets/img/user_4.png" alt="" xid="image6" class="fl cnEVj6b" __cid="cnEVj6b">  
-                <span xid="span5" class="fl cnEVj6b" __cid="cnEVj6b">出生年月</span>  
-                <input type="text" xid="input4" class="fl cnEVj6b" __cid="cnEVj6b" data-bind="value:user.birthday"> 
+              <div xid="div4" class="fl b-user-two cnEVj6b" __cid="cnEVj6b"> 
+                <div xid="div9" class="clearfix b-user-twoA cnEVj6b" __cid="cnEVj6b"> 
+                  <img src="@justepContextPath@/v_bd637e6676974a34a065efd202fce753l_zh_CNs_d_m/OTO/assets/img/user_2.png" alt="" xid="image2" class="fl cnEVj6b" __cid="cnEVj6b"/>  
+                  <span xid="span3" class="fl cnEVj6b" __cid="cnEVj6b">姓名</span>  
+                  <input type="text" name="name" xid="input2" class="fl cnEVj6b" __cid="cnEVj6b" data-bind="value:user.name"/>  
+                  <img src="@justepContextPath@/v_ea276b1ef4a14539927471f680c3705al_zh_CNs_d_m/OTO/assets/img/user_3.png" alt="" xid="image3" class="fl cnEVj6b" __cid="cnEVj6b"/>  
+                  <span xid="span4" class="fl cnEVj6b" __cid="cnEVj6b">性别</span>  
+                  <input type="text" id="sexTxt" xid="input3" class="fl b-user-twoInput cnEVj6b" __cid="cnEVj6b" data-bind="value:user.sexTxt,event:{click:$model._callModelFn.bind($model, 'selectSex')}"/>  
+                  <input type="text" name="sex" id="sex" xid="input3" class="fl b-user-twoInput cnEVj6b" style="display: none;" __cid="cnEVj6b" data-bind="value:user.sex"/> 
+                </div>  
+                <div xid="div5" class="clearfix b-user-twoA b-user-twoB cnEVj6b" __cid="cnEVj6b"> 
+                  <img src="@justepContextPath@/v_262f8cd6119c444e8543c79cae35452al_zh_CNs_d_m/OTO/assets/img/user_4.png" alt="" xid="image6" class="fl cnEVj6b" __cid="cnEVj6b"/>  
+                  <span xid="span5" class="fl cnEVj6b" __cid="cnEVj6b">出生年月</span>  
+                  <input type="text" name="birthday" id="birthday" xid="input4" class="fl cnEVj6b" __cid="cnEVj6b" data-bind="value:user.birthday,event:{click:$model._callModelFn.bind($model, 'selectDate')}"/> 
+                </div> 
+              </div> 
+            </div>  
+            <div xid="div17" style="margin:10px;" __cid="cnEVj6b" class="cnEVj6b"> 
+              <div xid="div10" class="clearfix b-user-twoA b-user-twoC cnEVj6b" __cid="cnEVj6b"> 
+                <img src="@justepContextPath@/v_0309af1a18b840e0a906c840ef416141l_zh_CNs_d_m/OTO/assets/img/user_5.png" alt="" xid="image8" class="fl cnEVj6b" __cid="cnEVj6b"/>  
+                <span xid="span11" class="fl cnEVj6b" __cid="cnEVj6b">手机号</span>  
+                <input type="text" name="phone" xid="input6" class="fl cnEVj6b" __cid="cnEVj6b" data-bind="value:user.phone"/> 
+              </div>  
+              <div xid="div11" class="clearfix b-user-twoA b-user-twoC cnEVj6b" __cid="cnEVj6b"> 
+                <img src="@justepContextPath@/v_2c381d6a4cd64fda92efc4c291da4677l_zh_CNs_d_m/OTO/assets/img/user_6.png" alt="" xid="image9" class="fl cnEVj6b" __cid="cnEVj6b"/>  
+                <span xid="span13" class="fl cnEVj6b" __cid="cnEVj6b">身份证</span>  
+                <input type="text" name="idCard" xid="input7" class="fl cnEVj6b" __cid="cnEVj6b" data-bind="value:user.idCard"/> 
+              </div>  
+              <div xid="div12" class="clearfix b-user-twoA b-user-twoC cnEVj6b" __cid="cnEVj6b"> 
+                <img src="@justepContextPath@/v_309f1ed6621e42a5adaee3b9a1137758l_zh_CNs_d_m/OTO/assets/img/user_7.png" alt="" xid="image10" class="fl cnEVj6b" __cid="cnEVj6b"/>  
+                <span xid="span14" class="fl cnEVj6b" __cid="cnEVj6b">职业</span>  
+                <input type="text" name="vocation" xid="input8" class="fl cnEVj6b" __cid="cnEVj6b" data-bind="value:user.vocation"/> 
               </div> 
             </div> 
           </div>  
-          <div xid="div17" style="margin:10px;" __cid="cnEVj6b" class="cnEVj6b"> 
-            <div xid="div10" class="clearfix b-user-twoA b-user-twoC cnEVj6b" __cid="cnEVj6b"> 
-              <img src="@justepContextPath@/v_2222f865df1147da99bee673d421ca15l_zh_CNs_d_m/OTO/assets/img/user_5.png" alt="" xid="image8" class="fl cnEVj6b" __cid="cnEVj6b">  
-              <span xid="span11" class="fl cnEVj6b" __cid="cnEVj6b">手机号</span>  
-              <input type="text" xid="input6" class="fl cnEVj6b" __cid="cnEVj6b" data-bind="value:user.phone"> 
-            </div>  
-            <div xid="div11" class="clearfix b-user-twoA b-user-twoC cnEVj6b" __cid="cnEVj6b"> 
-              <img src="@justepContextPath@/v_fd1174f54d5f483eb4f855d3c4df7793l_zh_CNs_d_m/OTO/assets/img/user_6.png" alt="" xid="image9" class="fl cnEVj6b" __cid="cnEVj6b">  
-              <span xid="span13" class="fl cnEVj6b" __cid="cnEVj6b">身份证</span>  
-              <input type="text" xid="input7" class="fl cnEVj6b" __cid="cnEVj6b" data-bind="value:user.idCard"> 
-            </div>  
-            <div xid="div12" class="clearfix b-user-twoA b-user-twoC cnEVj6b" __cid="cnEVj6b"> 
-              <img src="@justepContextPath@/v_9fdce5d9efb344c68b891a0772c275b0l_zh_CNs_d_m/OTO/assets/img/user_7.png" alt="" xid="image10" class="fl cnEVj6b" __cid="cnEVj6b">  
-              <span xid="span14" class="fl cnEVj6b" __cid="cnEVj6b">职业</span>  
-              <input type="text" xid="input8" class="fl cnEVj6b" __cid="cnEVj6b" data-bind="value:user.vocation"> 
-            </div> 
-          </div> 
-        </div>  
-        <div xid="div6" class="clearfix b-user-thr cnEVj6b" __cid="cnEVj6b"> 
-          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default b-user-thrButton cnEVj6b" xid="button1" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'},event:{click:$model._callModelFn.bind($model, 'assessSelect')}" data-config="{&#34;label&#34;:&#34;社交量表  38分&#34;}" __cid="cnEVj6b"> 
-            <i xid="i2" __cid="cnEVj6b" class="cnEVj6b"></i>  
-            <span xid="span3" __cid="cnEVj6b" class="cnEVj6b">社交量表 38分</span> 
-          </a> 
-        </div>  
-        <div xid="div7" style="margin:10px;" class="b-user-four cnEVj6b" __cid="cnEVj6b"> 
-          <div xid="div14" class="b-user-fourA clearfix cnEVj6b" __cid="cnEVj6b"> 
-            <span xid="span15" class="fl cnEVj6b" __cid="cnEVj6b"></span>  
-            <h3 xid="h31" class="fl cnEVj6b" __cid="cnEVj6b">诊疗分析记录</h3> 
+          <div xid="div6" class="clearfix b-user-thr cnEVj6b" __cid="cnEVj6b"> 
+            <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default b-user-thrButton cnEVj6b" xid="button1" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'},event:{click:$model._callModelFn.bind($model, 'assessSelect')}" data-config="{&quot;label&quot;:&quot;社交量表  38分&quot;}" __cid="cnEVj6b"> 
+              <i xid="i2" __cid="cnEVj6b" class="cnEVj6b"/>  
+              <span xid="span3" __cid="cnEVj6b" class="cnEVj6b">社交量表 38分</span>  
+              <input name="questType" id="questType" style="display: none;" __cid="cnEVj6b" class="cnEVj6b"/>  
+              <input name="answer" id="answer" style="display: none;" __cid="cnEVj6b" class="cnEVj6b"/>  
+              <input name="score" id="score" style="display: none;" __cid="cnEVj6b" class="cnEVj6b"/> 
+            </a> 
           </div>  
-          <textarea cols="5" rows="5" xid="textarea2" class="b-user-fourB cnEVj6b" __cid="cnEVj6b" data-bind="value:user.diagnose"></textarea> 
-        </div>  
+          <div xid="div7" style="margin:10px;" class="b-user-four cnEVj6b" __cid="cnEVj6b"> 
+            <div xid="div14" class="b-user-fourA clearfix cnEVj6b" __cid="cnEVj6b"> 
+              <span xid="span15" class="fl cnEVj6b" __cid="cnEVj6b"/>  
+              <h3 xid="h31" class="fl cnEVj6b" __cid="cnEVj6b">诊疗分析记录</h3> 
+            </div>  
+            <textarea cols="5" rows="5" xid="textarea2" name="diagnose" class="b-user-fourB cnEVj6b" __cid="cnEVj6b" data-bind="value:user.diagnose"/> 
+          </div> 
+        </form>  
         <div xid="div15" class="clearfix b-user-thr cnEVj6b" __cid="cnEVj6b"> 
-          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default b-user-thrButton cnEVj6b" xid="button3" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-config="{&#34;label&#34;:&#34;保存&#34;}" __cid="cnEVj6b"> 
-            <i xid="i3" __cid="cnEVj6b" class="cnEVj6b"></i>  
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default b-user-thrButton cnEVj6b" xid="button3" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'},event:{click:$model._callModelFn.bind($model, 'saveModify')}" data-config="{&quot;label&quot;:&quot;保存&quot;}" __cid="cnEVj6b"> 
+            <i xid="i3" __cid="cnEVj6b" class="cnEVj6b"/>  
             <span xid="span16" __cid="cnEVj6b" class="cnEVj6b">保存</span> 
           </a> 
         </div> 
+      </div>  
+      <div component="$model/UI2/system/components/justep/datePicker/datePicker" class="x-popPicker cnEVj6b" xid="datePicker" data-bind="component:{name:'$model/UI2/system/components/justep/datePicker/datePicker'}" data-events="onOK:getDate" __cid="cnEVj6b"> 
+        <div class="x-popPicker-overlay cnEVj6b" xid="div1" __cid="cnEVj6b"/>  
+        <div class="x-popPicker-content cnEVj6b" xid="div3" __cid="cnEVj6b"> 
+          <div class="x-poppicker-header cnEVj6b" xid="div16" __cid="cnEVj6b"> 
+            <button class="btn btn-default x-btn-ok cnEVj6b" xid="button2" __cid="cnEVj6b">确定</button> 
+          </div> 
+        </div> 
+      </div>  
+      <div component="$model/UI2/system/components/justep/picker/popPicker" class="x-popPicker cnEVj6b" xid="sexSelector" data-bind="component:{name:'$model/UI2/system/components/justep/picker/popPicker'}" data-events="onOK:getSex" __cid="cnEVj6b"> 
+        <div class="x-popPicker-overlay cnEVj6b" xid="div43" __cid="cnEVj6b"/>  
+        <div class="x-popPicker-content cnEVj6b" xid="div44" __cid="cnEVj6b"> 
+          <div class="x-poppicker-header cnEVj6b" xid="div45" __cid="cnEVj6b"> 
+            <button class="btn btn-default x-btn-ok cnEVj6b" xid="button7" __cid="cnEVj6b">确定</button> 
+          </div>  
+          <div component="$model/UI2/system/components/justep/picker/picker" class="x-picker x-picker-2 cnEVj6b" xid="list1" style="width: 100%;" data-bind="component:{name:'$model/UI2/system/components/justep/picker/picker'}" data-config="{&quot;data&quot;:&quot;sexData&quot;}" __cid="cnEVj6b"> 
+            <div class="x-picker-inner cnEVj6b" xid="div2" __cid="cnEVj6b"> 
+              <div class="x-pciker-rule x-pciker-rule-ft cnEVj6b" xid="div18" __cid="cnEVj6b"/>  
+              <ul class="x-list-template x-pciker-list hide cnEVj6b" xid="listTemplateUl1" __cid="cnEVj6b" data-bind="foreach:{data:$model.foreach_list1($element),afterRender:$model.foreach_afterRender_list1.bind($model,$element)}"> 
+                <li xid="li1" __cid="cnEVj6b" class="cnEVj6b" data-bind="text:val('text')"/> 
+              </ul>  
+              <div class="x-pciker-rule x-pciker-rule-bg cnEVj6b" xid="div19" __cid="cnEVj6b"/> 
+            </div> 
+          </div> 
+        </div> 
       </div> 
     </div>  
-    <style __cid="cnEVj6b" class="cnEVj6b">.x-panel.pcZfii2m-iosstatusbar >.x-panel-top {height: 48px;}.x-panel.pcZfii2m-iosstatusbar >.x-panel-content { top: 48px;bottom: nullpx;}.x-panel.pcZfii2m-iosstatusbar >.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.pcZfii2m-iosstatusbar >.x-panel-top,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pcZfii2m-iosstatusbar >.x-panel-top {height: 68px;}.iosstatusbar .x-panel.pcZfii2m-iosstatusbar >.x-panel-content,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pcZfii2m-iosstatusbar >.x-panel-content { top: 68px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pcZfii2m-iosstatusbar >.x-panel-top {height: 48px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pcZfii2m-iosstatusbar >.x-panel-content {top: 48px;}</style>
+    <style __cid="cnEVj6b" class="cnEVj6b">.x-panel.pcZfii2m-iosstatusbar &gt;.x-panel-top {height: 48px;}.x-panel.pcZfii2m-iosstatusbar &gt;.x-panel-content { top: 48px;bottom: nullpx;}.x-panel.pcZfii2m-iosstatusbar &gt;.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.pcZfii2m-iosstatusbar &gt;.x-panel-top,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pcZfii2m-iosstatusbar &gt;.x-panel-top {height: 68px;}.iosstatusbar .x-panel.pcZfii2m-iosstatusbar &gt;.x-panel-content,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pcZfii2m-iosstatusbar &gt;.x-panel-content { top: 68px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pcZfii2m-iosstatusbar &gt;.x-panel-top {height: 48px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pcZfii2m-iosstatusbar &gt;.x-panel-content {top: 48px;}</style> 
   </div> 
 </div>

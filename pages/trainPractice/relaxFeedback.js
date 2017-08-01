@@ -29,6 +29,7 @@ define(function(require){
 	}
 	Model.prototype.modelParamsReceive = function(event){
 		var data = event.params;
+		var that = this;
 		
 		this.type.set(data.content);
 		this.date.set(data.time);
@@ -41,9 +42,8 @@ define(function(require){
 		}).then(function(data){
 			console.log(data);
 			courseModel.result = data;
+			that.contentShow();
 		});
-		
-		this.contentShow();
 		
 	}
 	
@@ -51,14 +51,6 @@ define(function(require){
 	Model.prototype.goUserInfo = function (){
 		var url = "$UI/OTO/pages/userInfo/userInfo.w";
 		justep.Shell.showPage(url);
-	};
-	Model.prototype.qiehuanClick = function(event){
-		var ss=this.comp("b-relax-a");
-		var ss1=$.trim(this.comp("b-relax-a"));
-		console.log(ss,ss1);
-	    var index=$(".b-relax-thrA").index();
-	    console.log(index,"asdasdasdasd");
-//		$(".b-relax-thrA")
 	};
 	
 //	控制界面展示
@@ -76,8 +68,8 @@ define(function(require){
 		this.sheet.hide();
 		
 //		根据课程类型的不同，区别添加不同的展示模块
-		console.log(courseModel.loosenType );
-		courseModel.loosenType = 1;
+		console.log(courseModel );
+		courseModel.loosenType = 4;
 		switch (courseModel.loosenType){
 //			放松类
 			case 1:
@@ -113,7 +105,8 @@ define(function(require){
 	
 	Model.prototype.initSkinData = function(){
 		this.skinData.show();
-		var data = Server.skinData('relax');
+		var data = courseModel.result.dataList;
+//		图标数据展示 ？？？？？？？
 		var displayData = [];
 		var time = 0;
 		$('#baseLine').val(data.join(','));
@@ -150,6 +143,9 @@ define(function(require){
 	}
 	Model.prototype.initSheet = function(){
 		this.sheet.show();
+//		var questDect = {};
+//		courseModel.result.questType = 0;
+		$('#zplb').html();
 	}
 	
 	

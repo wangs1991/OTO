@@ -95,8 +95,10 @@ define(function(require){
 				n.age = cy - n.birthday.split('-')[0];
 				that.userList.push(n);
 			});
-			console.log(that.userList);
-			vid++;
+			var len = data.dataList.length;
+			if(len > 0){
+				vid = data.dataList[len-1].id;
+			}	
 		}, function(){});
 	}
 //	新建用户 && 取消搜索
