@@ -15,6 +15,7 @@ define(function(require){
 		
 		this.picName = "";  //图片名称  
         this.picPath = "";  //图片路径
+        
 	};
 	
 	Model.prototype.assessSelect = function (){
@@ -27,15 +28,17 @@ define(function(require){
 	
 //	页面激活去读取数据[用户量表分数]
 	Model.prototype.enterPage = function(){
-		console.log(testType);
-		$('#questType').val(testType);
-		var questions = window.questions,
-			textScore = [];
-		for(var i=0, len=questions.length; i<len; i++){
-			textScore.push(questions[i].id+':'+questions[i].score);
-		}
-		console.log(textScore.join(','));
-		$('#answer').val(textScore.join(','));
+		try{
+			console.log(testType);
+			$('#questType').val(testType);
+			var questions = window.questions,
+				textScore = [];
+			for(var i=0, len=questions.length; i<len; i++){
+				textScore.push(questions[i].id+':'+questions[i].score);
+			}
+			console.log(textScore.join(','));
+			$('#answer').val(textScore.join(','));
+		}catch(e){}
 	}
 //	进入测评模块选择
 	Model.prototype.button1Click = function(event){
@@ -82,14 +85,13 @@ define(function(require){
 //	性别选择
 	Model.prototype.selectSex = function(){
 		var comp = this.comp('sexSelector');
-		comp.set('type', 'text');
 		comp.show();
-//		comp.setValue(new Date(1990,1,1));
 	}
 	Model.prototype.getSex = function(event){
-		var comp = event.source;
-//		var value = comp.getValue();
-		console.log(value);
+		var value = this.comp("sexSelector").getInnerPickers()[0].getSelectedItem().val('sex');
+		var text = this.comp("sexSelector").getInnerPickers()[0].getSelectedItem().val('text');
+		$('#sexTxt').val(text);
+		$('#sex').val(value);
 	}
 	
 	

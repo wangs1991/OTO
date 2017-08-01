@@ -85,7 +85,7 @@ define(function(require) {
 		//开始直播请求
 		liveTimer = setInterval(function() {
 			if (liveImage.complete == true) {
-				console.log("get live image");
+				console.log("get live image, ip:" + window.ip + " lid:" + courseModel.lid);
 				liveImage.src = "http://" + window.ip + ":8801/live/get?id="+courseModel.lid+"&time=" + (new Date()).getTime();
 			}
 		}, 120);
@@ -120,6 +120,7 @@ define(function(require) {
 
 	Model.prototype.modelUnLoad = function(event) {
 		clearInterval(liveTimer);
+		window.skinFeelStart = false;
 	};
 	
 	
