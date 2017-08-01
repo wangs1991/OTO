@@ -35,5 +35,9 @@ define(function(require) {
 		url = params.next;
 	};
 	
+	Model.prototype.modelUnLoad = function(event){
+		
+	};
+	
 	return Model;
 });

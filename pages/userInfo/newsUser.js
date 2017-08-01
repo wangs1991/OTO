@@ -38,6 +38,7 @@ define(function(require){
 //	提交新建用户数据
 	Model.prototype.createUser = function(){
 		var data = $('#newUserSheet').serialize();
+		data = decodeURI(data);
 		var params = Server.toJson(data);
 		params.eventKind = 30;
 		Server.createUser(params).then(function(data){

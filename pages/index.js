@@ -17,9 +17,50 @@ define(function(require) {
 	window.isLogin = false;
 	window.skinValue = 0;		//皮肤电设备信息
 	window.skinFeelStart = false;
-	window.skinArraylist={};
+	window.skinArraylist=[];
+	window.skinArraylist=[];
+	window.skinTimeList = [];
 	window.ip = 'test.adai-tech.com';
 	window.device = "all";
+	window.myChartClock;  // 图表
+	window.courseStart;	  // 课程开始时间点
+	window.courseEnd;	  // 课程结束时间点
+	window.options = {
+	    tooltip : {
+            trigger: 'axis'
+        },
+        legend: {
+        	show: false,
+            data:[]
+        },
+        toolbox: {
+            show : false
+        },
+        calculable : true,
+        xAxis : [
+            {
+                type : 'time'
+            }
+        ],
+        yAxis : [
+            {
+                type : 'value',
+                min: 0,
+                max: 3
+            }
+        ],
+        series : [
+            {
+                name:'电波',
+                type:'line',
+                data: [],
+                symbol:'none',  //这句就是去掉点的  
+                smooth: false  //这句就是让曲线变平滑的 
+            }
+        ]
+	};		   // 图标配置
+	
+	window.updateEchart = null;
 	
 	var Model = function() {
 		this.callParent();
@@ -67,10 +108,7 @@ define(function(require) {
 		window.localStorage.removeItem('uid');
 		justep.Shell.showPage("login");
 	}
-	
-	//打开：justep.Shell.showPage(“main”);
-	//关闭：this.close();
-	//返回上一页：justep.Shell.closePage();
+
 	Model.prototype.modelLoad = function(event) {
 		//开始得到皮肤电信息
 		if (window.Skin != null && window.Skin != undefined && window.Skin.startRecord != null && window.Skin.startRecord != undefined) {
@@ -78,19 +116,21 @@ define(function(require) {
 		}
 		
 		setInterval(function() {
-			console.log(window.Skin);
-			if (window.Skin != null && window.Skin != undefined && window.Skin.getSkinValue != null && window.Skin.getSkinValue != undefined) {
-				console.log(window.Skin);
-				window.Skin.getSkinValue(function(data){
-					justep.Util.hint("skin:" + data.skin, {"position":"bottom"});
-					window.skinValue = data.skin;	
-					if(window.skinFeelStart == true){
-						window.skinArraylist.push(window.skinValue);
-					}else{
-						window.skinArraylist={};
-					}
-				});
-			}
+//			if (window.Skin != null && window.Skin != undefined && window.Skin.getSkinValue != null && window.Skin.getSkinValue != undefined) {
+//				console.log(window.Skin);
+//				window.Skin.getSkinValue(function(data){
+//					justep.Util.hint("skin:" + data.skin, {"position":"bottom"});
+//					window.skinValue = data.skin;	
+//					if(window.skinFeelStart == true){
+//						window.skinArraylist.push(window.skinValue);
+						window.skinArraylist.push(Math.random()+1); // 这句话是模拟数据
+						window.skinTimeList.push(+new Date());	// 要保留，图标的横坐标【时间点】
+						window.updateEchart && window.updateEchart(); // 触发图标更新
+//					}else{
+//						window.skinArraylist=[];
+//					}
+//				});
+//			}
 		}, 200);
 		
 		//判断是否登录

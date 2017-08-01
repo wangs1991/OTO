@@ -82,7 +82,7 @@ define(function(require){
 			eventKind: 32,
 			name: name
 		}).then(function(data){
-			data.dataList.forEach(function(n, i){				
+			data.dataList.forEach(function(n, i){
 //				格式化数据
 				if(n.sex == 0){
 					n.sexTxt= '男';

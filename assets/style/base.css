@@ -1208,7 +1208,7 @@ color: #fff;
 }
 .b-exam-two li{
 	float: left;
-    width: 20%!important;
+    /*width: 20%!important;*/
     font-size: 0.6rem;
     color: #333;
     padding: 0.25rem 0;
@@ -1502,6 +1502,7 @@ color: #fff;
     width: 20px;
     height: 20px;
     z-index: 1001;
+    color:#fff;
     line-height: 20px;
     border-radius: 5px;
     text-align: center;

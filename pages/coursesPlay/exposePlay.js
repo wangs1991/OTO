@@ -1,5 +1,7 @@
 define(function(require) {
 	require("css!../../assets/style/base").load();
+	require("../../assets/echart/dist/echarts-all");
+	require("../../assets/js/AppUtils");
 	var $ = require("jquery");
 	var justep = require("$UI/system/lib/justep");
 	var allData = require("../../assets/js/loadData");
@@ -16,6 +18,9 @@ define(function(require) {
 		this.callParent();
 		this.title = justep.Bind.observable('');
 		this.button = justep.Bind.observable('');
+		
+//		皮肤电
+		this.skinInfo =  justep.Bind.observable("");
 		
 		this.data_controller_name1 = justep.Bind.observable('');
 		this.data_controller_name2 = justep.Bind.observable('');
@@ -50,7 +55,6 @@ define(function(require) {
 		}
 		
 		setTimeout(function() {
-		
 			Server.getActions({
 				action: 'get_controller_ani_list'
 			}).then(function(data){
@@ -66,29 +70,31 @@ define(function(require) {
 				});
 			});
 		}, 2000);
-		
-		var liveImage = self.getElementByXid("liveImage");
-
-		if (liveTimer != null && liveTimer != undefined) {
-			clearInterval(liveTimer);
-		}
-
-		liveTimer = setInterval(function() {
-			if (liveImage.complete == true) {
-				liveImage.src = "http://" + window.ip + ":8801/live/get?id="+courseModel.lid+"&time=" + (new Date()).getTime();
-			}
-		}, 120);
+		//		初始化图表
+		this.initEchart();
 		
 	};
 	
 	Model.prototype.goToSave = function(){
+		this.saveSkinData('expose');
 		Server.stopCourse({
 				eventKind: 40,
 				lid: courseModel.lid
 			}).then(function(data){
 				url = '$UI/OTO/pages/coursesPlay/courseResult.w';
+				courseModel.result = {};
+				for(var i in data){
+					if(1 !== 'ret'){
+						courseModel.result[i] = data[i];
+					}
+				}
 				justep.Shell.showPage(url, courseModel);
 			});
+	}
+	
+	//	获取当前页面的皮肤电数据
+	Model.prototype.saveSkinData = function(name){
+		Server.skinData(name, window.skinArraylist);
 	}
 	
 	Model.prototype.modelParamsReceive = function(event){
@@ -98,8 +104,25 @@ define(function(require) {
 			return;
 		}
 		
+		//得到直播图片
+		var liveImage = self.getElementByXid("liveImage");
+		
+		//清理以前的直播Timer
+		if (liveTimer != null && liveTimer != undefined) {
+			clearInterval(liveTimer);
+		}
+		
+		//开始直播请求
+		liveTimer = setInterval(function() {
+			if (liveImage.complete == true) {
+				console.log("get live image");
+				liveImage.src = "http://" + window.ip + ":8801/live/get?id="+courseModel.lid+"&time=" + (new Date()).getTime();
+			}
+		}, 120);
+		
 		var params = event.params;
 		courseModel = params;
+		this.title.set(params.title);
 		this.button.set(params.button);
 		url = params.next;
 	};
@@ -188,6 +211,27 @@ define(function(require) {
 	Model.prototype.controller9Click = function(event) {
 		control(this, 9);
 	};
+	
+		Model.prototype.initEchart = function(){		
+		myChartClock = echarts.init($('#echart')[0]);
+		myChartClock.setOption(options, true);
+	};
+	
+	updateEchart = (function(){
+		var len = 1,
+			displayData = [];
+		return function(){
+			var nLen = window.skinArraylist.length;
+			for(var i = len-1, l = nLen.length; i < nLen; i++ ){
+				displayData.push([ window.skinTimeList[i], window.skinArraylist[i]]);
+			}
+//			保留展示的100条数据
+			var show = 100;
+			var resLen = displayData.length;
+			options.series[0].data = displayData.splice(Math.min(show, resLen));
+			myChartClock && myChartClock.setOption(options);
+		}
+	})();
 	
 	return Model;
 });
