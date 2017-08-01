@@ -88,17 +88,15 @@
                         <img src="$UI/OTO/assets/img/breath_6.jpg" alt="" xid="image7"/>  
                         <span xid="span10"><![CDATA[轻松]]></span> 
                       </div>  
-                      <input type="radio" value="0" name="difficulty" checked="checked"
-                        xid="radio1" class="fr b-breath-thrB"/> 
-                    </li>  
+                      <input type="radio" value="0" name="difficulty" checked="checked" xid="radio1" class="fr b-breath-thrB"></input>
+  </li>  
                     <li xid="li5" class="clearfix"> 
                       <div xid="div10" class="fl b-breath-thrA"> 
                         <img src="$UI/OTO/assets/img/breath_7.jpg" alt="" xid="image8"/>  
                         <span xid="span4"><![CDATA[紧张]]></span> 
                       </div>  
-                      <input type="radio" value="1" name="difficulty" xid="radio2"
-                        class="fr b-breath-thrB"/> 
-                    </li> 
+                       
+                    <input type="radio" value="1" name="difficulty" xid="radio2" class="fr b-breath-thrB"></input></li> 
                   </ul> 
                 </div>  
                 <div class="tab-pane" xid="tabContent2"> 

@@ -1154,9 +1154,12 @@ color: #fff;
 }
 .b-assess-oneA{
 	border:none;
+	border-bottom:1px solid #eee;
 	line-height:60px;
+	padding:0;
 	background:#fff;
 	color:#333;
+	margin-bottom:10px;
 }
 .b-assess-oneA.finished{
 	border:none;
@@ -1484,4 +1487,28 @@ color: #fff;
 	background: #26ca28;
 }
 
-
+.b-assess-popup{
+	text-align:left;
+}
+.b-assess-popup span{
+	display:block;
+	color:#2c90f4;
+}
+.b-access-number{
+	position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #ff4081;
+    width: 20px;
+    height: 20px;
+    z-index: 1001;
+    line-height: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+.b-hide{
+	display:none;
+}
+.b-show{
+	display:block;
+}
