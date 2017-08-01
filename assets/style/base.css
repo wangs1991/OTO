@@ -1216,16 +1216,7 @@ color: #fff;
 	margin:0 4%;
 	height:15rem;
 }
-.b-exam-two li{
-	float: left;
-    /*width: 20%!important;*/
-    font-size: 0.6rem;
-    color: #333;
-    padding: 0.25rem 0;
-    text-align: center;
-    border-right: 1px solid #999;
-    margin: 0.25rem 0;
-}
+
 .b-exam-two li .tab-btn{
 	padding: 0;
 }
@@ -1289,7 +1280,7 @@ color: #fff;
 }
 
 .b-breath-two{
-	padding: 25px 0 10px 0;
+	padding: 10px 0 10px 0;
 	margin:0;
 }
 .b-breath-BG{
@@ -1407,7 +1398,15 @@ color: #fff;
 	margin-top:12px;
 	display:inline-block;
 }
-
+.b-exam-two li{
+	float: left;
+    /*width: 20%!important;*/
+    font-size: 0.6rem;
+    color: #333;
+    margin-top:10px;
+    text-align: center;
+    border-right: 1px solid #999;
+}
 .b-modify-one{
 	width:75%;
 	margin-top:20px;
