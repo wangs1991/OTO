@@ -41,25 +41,21 @@
                   <ul class="nav nav-tabs clearfix b-breath-two" xid="ul3"> 
                     <li class="active" xid="li8"> 
                       <a class="tab-btn" content="tabContent1" xid="tabItem1"> 
-                        <img src="$UI/OTO/assets/img/breath_2.jpg" alt="" xid="image3"/>  
                         <span xid="span5"><![CDATA[放松场景]]></span> 
                       </a> 
                     </li>  
                     <li role="presentation" xid="li9"> 
                       <a class="tab-btn" content="tabContent2" xid="tabItem2"> 
-                        <img src="$UI/OTO/assets/img/breath_3.jpg" alt="" xid="image4"/>  
                         <span xid="span6"><![CDATA[音乐场景]]></span> 
                       </a> 
                     </li>  
                     <li role="presentation" xid="li9"> 
                       <a class="tab-btn" content="tabContent3" xid="tabItem3"> 
-                        <img src="$UI/OTO/assets/img/breath_4.jpg" alt="" xid="image5"/>  
                         <span xid="span7"><![CDATA[指导语]]></span> 
                       </a> 
                     </li>  
                     <li role="presentation" xid="li9"> 
                       <a class="tab-btn" content="tabContent4" xid="tabItem4"> 
-                        <img src="$UI/OTO/assets/img/breath_5.jpg" alt="" xid="image6"/>  
                         <span xid="span8"><![CDATA[时长]]></span> 
                       </a> 
                     </li> 
@@ -69,8 +65,6 @@
                       <ul xid="ul2" class="b-breath-thr"> 
                         <li xid="li6" class="clearfix"> 
                           <div xid="div9" class="fl b-breath-thrA"> 
-                            <img src="$UI/OTO/assets/img/breath_6.jpg" alt=""
-                              xid="image7"/>  
                             <span xid="span10"><![CDATA[日本和屋]]></span> 
                           </div>  
                           <input type="radio" value="1" checked="checked" name="sceneId" xid="radio1"
@@ -78,8 +72,6 @@
                         </li>  
                         <li xid="li5" class="clearfix"> 
                           <div xid="div10" class="fl b-breath-thrA"> 
-                            <img src="$UI/OTO/assets/img/breath_7.jpg" alt=""
-                              xid="image8"/>  
                             <span xid="span4"><![CDATA[海边沙滩]]></span> 
                           </div>  
                           <input type="radio" value="2" name="sceneId" xid="radio2"
@@ -87,8 +79,6 @@
                         </li>  
                         <li xid="li7" class="clearfix"> 
                           <div xid="div11" class="fl b-breath-thrA"> 
-                            <img src="$UI/OTO/assets/img/breath_8.png" alt=""
-                              xid="image9"/>  
                             <span xid="span9"><![CDATA[皑皑白雪]]></span> 
                           </div>  
                           <input type="radio" value="3" name="sceneId" xid="radio3"
@@ -100,8 +90,6 @@
                       <ul xid="ul2" class="b-breath-thr"> 
                         <li xid="li6" class="clearfix"> 
                           <div xid="div9" class="fl b-breath-thrA"> 
-                            <img src="$UI/OTO/assets/img/breath_10.png" alt=""
-                              xid="image7"/>  
                             <span xid="span10"><![CDATA[歌曲一]]></span> 
                           </div>  
                           <input type="radio" value="1" checked="checked"  name="music" xid="radio1"
@@ -109,8 +97,6 @@
                         </li>  
                         <li xid="li5" class="clearfix"> 
                           <div xid="div10" class="fl b-breath-thrA"> 
-                            <img src="$UI/OTO/assets/img/breath_11.png" alt=""
-                              xid="image8"/>  
                             <span xid="span4"><![CDATA[歌曲二]]></span> 
                           </div>  
                           <input type="radio" value="2" name="music" xid="radio2"
@@ -118,8 +104,6 @@
                         </li>  
                         <li xid="li7" class="clearfix"> 
                           <div xid="div11" class="fl b-breath-thrA"> 
-                            <img src="$UI/OTO/assets/img/breath_12.png" alt=""
-                              xid="image9"/>  
                             <span xid="span9"><![CDATA[歌曲三]]></span> 
                           </div>  
                           <input type="radio" value="3" name="music" xid="radio3"
@@ -131,8 +115,6 @@
                       <ul xid="ul2" class="b-breath-thr"> 
                         <li xid="li6" class="clearfix"> 
                           <div xid="div9" class="fl b-breath-thrA"> 
-                            <img src="$UI/OTO/assets/img/breath_13.png" alt=""
-                              xid="image7"/>  
                             <span xid="span10"><![CDATA[打开指导语]]></span> 
                           </div>  
                           <input type="radio" value="1" checked="checked" name="switch" xid="radio1"
@@ -140,8 +122,6 @@
                         </li>  
                         <li xid="li5" class="clearfix"> 
                           <div xid="div10" class="fl b-breath-thrA"> 
-                            <img src="$UI/OTO/assets/img/breath_14.png" alt=""
-                              xid="image8"/>  
                             <span xid="span4"><![CDATA[关闭指导语]]></span> 
                           </div>  
                           <input type="radio" value="0" name="switch" xid="radio2"
@@ -153,8 +133,6 @@
                       <ul xid="ul2" class="b-breath-thr"> 
                         <li xid="li6" class="clearfix"> 
                           <div xid="div9" class="fl b-breath-thrA"> 
-                            <img src="$UI/OTO/assets/img/breath_15.png" alt=""
-                              xid="image7"/>  
                             <span xid="span10"><![CDATA[三分钟]]></span> 
                           </div>  
                           <input type="radio" value="1" checked="checked" name="duration" xid="radio1"
@@ -162,8 +140,6 @@
                         </li>  
                         <li xid="li5" class="clearfix"> 
                           <div xid="div10" class="fl b-breath-thrA"> 
-                            <img src="$UI/OTO/assets/img/breath_16.png" alt=""
-                              xid="image8"/>  
                             <span xid="span4"><![CDATA[五分钟]]></span> 
                           </div>  
                           <input type="radio" value="2" name="duration" xid="radio2"
@@ -171,8 +147,6 @@
                         </li>  
                         <li xid="li7" class="clearfix"> 
                           <div xid="div11" class="fl b-breath-thrA"> 
-                            <img src="$UI/OTO/assets/img/breath_17.png" alt=""
-                              xid="image9"/>  
                             <span xid="span9"><![CDATA[十分钟]]></span> 
                           </div>  
                           <input type="radio" value="3" name="duration" xid="radio3"
