@@ -25,7 +25,7 @@
       style="bottom: 0px;"> 
       <div class="x-scroll" component="$UI/system/components/justep/scrollView/scrollView"
         xid="scrollView1" style="background-color:transparent;"> 
-        <div class="x-scroll-content" xid="div2"> 
+        <div class="x-scroll-content b-course-top" xid="div2"> 
           <!-- 顶部用户卡片  -->  
           <div class="symbol-card card_user" style="height:110px;" bind-foreach="{ data: user, as: 'user' }"> 
             <div class="media" xid="media1"> 
@@ -49,10 +49,8 @@
           </div>  
           <!-- 顶部用户卡片 end -->  
           <div class="main-container" style="top: 100px;"> 
-            <div xid="div6" class="title_bar"> 
-              <span xid="span5"><![CDATA[练习详情]]></span> 
-            </div>  
-            <ul xid="ul2" class="b-relax-two clearfix new_listItem" style="width: 100%;"> 
+            <div xid="div7" class="title_bar">
+   <span xid="span1">练习详情</span></div><ul xid="ul2" class="b-course-two clearfix new_listItem" style="width: 100%;"> 
               <li xid="li4" bind-text="curDate"></li>  
               <li xid="li5" bind-text="title"></li>  
               <li xid="li6" bind-text="duration"></li>  
@@ -93,7 +91,7 @@
                 </div>  
                 <!-- 咨询记录 -->  
                 <div component="$UI/system/components/bootstrap/accordion/accordion"
-                  class="panel-group" id="consult"> 
+                  class="panel-group b-relax-border" id="consult"> 
                   <div class="panel panel-default" component="$UI/system/components/bootstrap/panel/panel"
                     xid="panel3"> 
                     <div class="panel-heading" xid="heading2"> 
@@ -137,7 +135,7 @@
                 </div>  
                 <!-- 语音记录 -->  
                 <div component="$UI/system/components/bootstrap/accordion/accordion"
-                  class="panel-group" id="voice"> 
+                  class="panel-group b-relax-border" id="voice"> 
                   <div class="panel panel-default" component="$UI/system/components/bootstrap/panel/panel"
                     xid="panel3"> 
                     <div class="panel-heading" xid="heading2"> 
@@ -178,14 +176,10 @@
                 </div> 
               </ul> 
             </form>  
-            <div xid="div14" class="clearfix b-user-thr"> 
-              <a component="$UI/system/components/justep/button/button" class="btn btn-default b-user-thrButton"
-                label="保存" xid="button1" bind-click="saveData"> 
-                <i xid="i2"/>  
-                <span xid="span14">保存</span> 
-              </a> 
-            </div> 
-          </div> 
+            <div xid="div14" class="clearfix b-user-thr">
+   <a component="$UI/system/components/justep/button/button" class="btn btn-default b-user-thrButton" label="保存" xid="button1" bind-click="saveData">
+    <i xid="i2"></i>
+    <span xid="span14">保存</span></a> </div></div> 
         </div> 
       </div> 
     </div> 
