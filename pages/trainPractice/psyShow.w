@@ -59,32 +59,32 @@
             <img src="$UI/OTO/assets/img/psy_8.png" alt="" xid="image8"/>  
             <span xid="span5"><![CDATA[快速放松]]></span> 
           </li>  
-          <li xid="li1" class="type_anxious clearfix" data-type="interview:1" bind-click="enterCources"> 
+          <li xid="li1" class="type_anxious clearfix" data-type="interview:4" bind-click="enterCources"> 
             <img src="$UI/OTO/assets/img/psy_9.png" alt="" xid="image9"/>  
             <span xid="span4"><![CDATA[面试焦虑]]></span> 
           </li> 
         </ul>  
-        <ul xid="ul3" class="b-psy-thr clearfix"> 
+        <ul xid="ul3" class="b-psy-thr clearfix" data-type="interview:5" bind-click="enterCources"> 
           <li xid="li4" class="type_anxious clearfix"> 
             <img src="$UI/OTO/assets/img/psy_10.png" alt="" xid="image10"/>  
             <span xid="span7"><![CDATA[汇报焦虑]]></span> 
           </li>  
-          <li xid="li3" class="type_anxious clearfix"> 
+          <li xid="li3" class="type_anxious clearfix" data-type="interview:6" bind-click="enterCources"> 
             <img src="$UI/OTO/assets/img/psy_11.png" alt="" xid="image11"/>  
             <span xid="span6"><![CDATA[公众演讲焦虑]]></span> 
           </li> 
         </ul>  
-        <ul xid="ul4" class="b-psy-thr clearfix"> 
+        <ul xid="ul4" class="b-psy-thr clearfix" data-type="interview:7" bind-click="enterCources"> 
           <li xid="li7" class="type_anxious clearfix" data-type="examTender:1" bind-click="enterCources"> 
             <img src="$UI/OTO/assets/img/psy_12.png" alt="" xid="image13"/>  
             <span xid="span2"><![CDATA[考试焦虑]]></span>
           </li>  
-          <li xid="li8" class="type_fear clearfix" data-type="acrophobia:1" bind-click="enterCources">  
+          <li xid="li8" class="type_fear clearfix" data-type="acrophobia:8" bind-click="enterCources">  
             <img src="$UI/OTO/assets/img/psy_13.png" alt="" xid="image12"/>  
             <span xid="span1"><![CDATA[恐高症]]></span>
           </li> 
         </ul>  
-        <ul xid="ul5" class="b-psy-thr clearfix"> 
+        <ul xid="ul5" class="b-psy-thr clearfix" data-type="interview:9" bind-click="enterCources"> 
           <li xid="li9" class="type_trauma clearfix"> 
             <img src="$UI/OTO/assets/img/psy_14.png" alt="" xid="image15"/>  
             <span xid="span9"><![CDATA[EMDR]]></span>

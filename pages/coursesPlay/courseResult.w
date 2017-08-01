@@ -127,7 +127,8 @@
                     </div>  
                     <div class="panel-collapse collapse" xid="div4"> 
                       <div class="panel-body" xid="div5">
-                      	<input type="text" name="score" id="score" style="display: none;"/>
+						<h2>考试科目：<span bind-text="subject"></span></h2>
+						<p>得分：<span bind-text="score"></span>/<span bind-text="totalScore"></span></p>
                       </div> 
                     </div> 
                   </div> 

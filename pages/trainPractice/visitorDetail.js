@@ -4,13 +4,21 @@ define(function(require){
 	var justep = require("$UI/system/lib/justep");
 	var Server = require('../../assets/server');
 	var userData = null;
+	var page = 0;
+	var recordItem;
 
 	var Model = function(){
 		this.callParent();
+		var that = this;
 		this.records = justep.Bind.observableArray([]);
 		this.user = justep.Bind.observableArray([]);
 		this.sexType = function(){
 			return 1;
+		}
+		this.gotDetail = function(){
+			console.log(this);
+			recordItem = this;
+			that.recordDetail()
 		}
 	};
 	
@@ -27,9 +35,8 @@ define(function(require){
 		
 		var records = Server.getRecords({
 			eventKind: 42,
-			vid: userData.uid
+			vid: page++
 		}).then(function(data){
-			console.log(data);
 			data.dataList.forEach(function(n, i){
 				that.records.push(n);
 			});
@@ -48,13 +55,8 @@ define(function(require){
 	};
 //	去列表详情
 	Model.prototype.recordDetail = function(evt){
-		var url = "$UI/OTO/pages/trainPractice/relaxFeedback.w",
-			target = $(evt.currentTarget), //获取事件目标对象
-			lid = target.attr('lid'),
-			params = {
-				lid: lid
-			};
-		justep.Shell.showPage(url, params);
+		var url = "$UI/OTO/pages/trainPractice/relaxFeedback.w";
+		justep.Shell.showPage(url, recordItem);
 	}
 	return Model;
 });

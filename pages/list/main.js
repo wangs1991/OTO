@@ -15,6 +15,7 @@ define(function(require){
 		this.userList = justep.Bind.observableArray([]); // 列表数据
 		this.selectState = false; // 搜索状态
 		this.gotDetail = function(){
+			console.log(this);
 			user = this;
 			that.goDetail()
 		}
@@ -28,6 +29,7 @@ define(function(require){
 //	去详情页面
 	Model.prototype.goDetail = function(evt){
 		Server.setCurUser(user);
+		console.log(user);
 		url = "$UI/OTO/pages/trainPractice/visitorDetail.w";
 		justep.Shell.showPage(url);
 	}
