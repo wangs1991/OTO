@@ -1975,9 +1975,13 @@ opacity
 	font-size:12px;
 	text-indent:28px;
 }
-.b-dis-box h4{
-	line-height:30px;
-	padding-bottom:10px;
+.b-dis-box .b-dis-one p{
+	display:inline-block;
+	padding:0;
+	margin:0;
+}
+.b-dis-box span{
+	line-height:24px;
 	color:#666;
 	font-size:14px;
 	text-indent:28px;

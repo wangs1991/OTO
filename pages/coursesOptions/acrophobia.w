@@ -42,19 +42,16 @@
                     xid="ul3"> 
                     <li class="active" xid="li8"> 
                       <a class="tab-btn" content="tabContent1" xid="tabItem1"> 
-                        <img src="$UI/OTO/assets/img/breath_2.jpg" alt="" xid="image3"/>  
                         <span xid="span5"><![CDATA[场景选择]]></span> 
                       </a> 
                     </li>  
                     <li role="presentation" xid="li9"> 
                       <a class="tab-btn" content="tabContent2" xid="tabItem2"> 
-                        <img src="$UI/OTO/assets/img/breath_3.jpg" alt="" xid="image4"/>  
                         <span xid="span6"><![CDATA[性别]]></span> 
                       </a> 
                     </li>  
                     <li role="presentation" xid="li9"> 
                       <a class="tab-btn" content="tabContent3" xid="tabItem3"> 
-                        <img src="$UI/OTO/assets/img/breath_4.jpg" alt="" xid="image5"/>  
                         <span xid="span7"><![CDATA[天气]]></span> 
                       </a> 
                     </li> 
@@ -64,66 +61,54 @@
                       <ul xid="ul2" class="b-breath-thr"> 
                         <li xid="li6" class="clearfix"> 
                           <div xid="div9" class="fl b-breath-thrA"> 
-                            <img src="$UI/OTO/assets/img/breath_6.jpg" alt=""
-                              xid="image7"/>  
                             <span xid="span10"><![CDATA[摩天大楼]]></span> 
                           </div>  
-                          <input type="radio" value="1" checked="checked" name="sceneType"
-                            xid="radio1" class="fr b-breath-thrB"/> 
-                        </li>  
+                           
+                        <label xid="label2" class="fr b-breath-thrB b-demo-label"><![CDATA[]]><input type="radio" value="1" checked="checked" name="sceneType" xid="radio1" class="b-demo-radio"/><span xid="span1" class="b-demo-radioInput"></span></label>
+  </li>  
                         <li xid="li5" class="clearfix"> 
                           <div xid="div10" class="fl b-breath-thrA"> 
-                            <img src="$UI/OTO/assets/img/breath_7.jpg" alt=""
-                              xid="image8"/>  
                             <span xid="span4"><![CDATA[高空栈道]]></span> 
                           </div>  
-                          <input type="radio" value="2" name="sceneType" xid="radio2"
-                            class="fr b-breath-thrB"/> 
-                        </li> 
+                          <label xid="label3" class="fr b-breath-thrB b-demo-label">
+   <input type="radio" value="1" name="sceneType" xid="radio3" class="b-demo-radio"></input>
+   <span xid="span2" class="b-demo-radioInput"></span></label></li> 
                       </ul> 
                     </div>  
                     <div class="tab-pane" xid="tabContent2"> 
                       <ul xid="ul2" class="b-breath-thr"> 
                         <li xid="li6" class="clearfix"> 
                           <div xid="div9" class="fl b-breath-thrA"> 
-                            <img src="$UI/OTO/assets/img/breath_6.jpg" alt=""
-                              xid="image7"/>  
                             <span xid="span10"><![CDATA[男]]></span> 
                           </div>  
-                          <input type="radio" value="1" name="sex" checked="checked"
-                            xid="radio1" class="fr b-breath-thrB"/> 
-                        </li>  
+                          <label xid="label4" class="fr b-breath-thrB b-demo-label">
+   <input type="radio" value="1" checked="checked" name="sex" xid="radio4" class="b-demo-radio"></input>
+   <span xid="span8" class="b-demo-radioInput"></span></label></li>  
                         <li xid="li5" class="clearfix"> 
                           <div xid="div10" class="fl b-breath-thrA"> 
-                            <img src="$UI/OTO/assets/img/breath_7.jpg" alt=""
-                              xid="image8"/>  
                             <span xid="span4"><![CDATA[女]]></span> 
                           </div>  
-                          <input type="radio" value="0" name="sex" xid="radio2"
-                            class="fr b-breath-thrB"/> 
-                        </li> 
+                          <label xid="label5" class="fr b-breath-thrB b-demo-label">
+   <input type="radio" value="1" name="sex" xid="radio5" class="b-demo-radio"></input>
+   <span xid="span9" class="b-demo-radioInput"></span></label></li> 
                       </ul> 
                     </div>  
                     <div class="tab-pane" xid="tabContent3"> 
                       <ul xid="ul2" class="b-breath-thr"> 
                         <li xid="li6" class="clearfix"> 
                           <div xid="div9" class="fl b-breath-thrA"> 
-                            <img src="$UI/OTO/assets/img/breath_6.jpg" alt=""
-                              xid="image7"/>  
                             <span xid="span10"><![CDATA[晴天]]></span> 
                           </div>  
-                          <input type="radio" value="1" name="weather" checked="checked"
-                            xid="radio1" class="fr b-breath-thrB"/> 
-                        </li>  
+                          <label xid="label6" class="fr b-breath-thrB b-demo-label">
+   <input type="radio" value="1" checked="checked" name="weather" xid="radio6" class="b-demo-radio"></input>
+   <span xid="span11" class="b-demo-radioInput"></span></label></li>  
                         <li xid="li5" class="clearfix"> 
                           <div xid="div10" class="fl b-breath-thrA"> 
-                            <img src="$UI/OTO/assets/img/breath_7.jpg" alt=""
-                              xid="image8"/>  
                             <span xid="span4"><![CDATA[雷雨]]></span> 
                           </div>  
-                          <input type="radio" value="2" name="weather" xid="radio2"
-                            class="fr b-breath-thrB"/> 
-                        </li> 
+                          <label xid="label7" class="fr b-breath-thrB b-demo-label">
+   <input type="radio" value="1" name="weather" xid="radio7" class="b-demo-radio"></input>
+   <span xid="span12" class="b-demo-radioInput"></span></label></li> 
                       </ul> 
                     </div> 
                   </div> 
