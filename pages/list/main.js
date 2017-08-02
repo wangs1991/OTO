@@ -15,7 +15,6 @@ define(function(require){
 		this.userList = justep.Bind.observableArray([]); // 列表数据
 		this.selectState = false; // 搜索状态
 		this.gotDetail = function(){
-			console.log(this);
 			user = this;
 			that.goDetail()
 		}
@@ -57,7 +56,7 @@ define(function(require){
 	
 //	进入页面刷新数据
 	Model.prototype.enterPage = function(){
-		console.log(1111);
+		window.location.reload();
 	};
 	
 	Model.prototype.modelLoad = function(event){
@@ -87,9 +86,9 @@ define(function(require){
 			data.dataList.forEach(function(n, i){
 //				格式化数据
 				if(n.sex == 0){
-					n.sexTxt= '男';
+					n.sexTxt= '女';
 				}else{
-					n.sexTxt = '女';
+					n.sexTxt = '男';
 				}
 //				年龄
 				n.age = cy - n.birthday.split('-')[0];

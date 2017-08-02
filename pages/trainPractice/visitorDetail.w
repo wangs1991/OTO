@@ -2,7 +2,7 @@
 
 <div xmlns="http://www.w3.org/1999/xhtml" class="main13 biologyFdback" component="$UI/system/components/justep/window/window"
   design="device:mobile;" xid="window">  
-  <div component="$UI/system/components/justep/model/model" xid="model" onLoad="modelLoad"
+  <div component="$UI/system/components/justep/model/model" xid="model" onLoad="modelLoad" onActive="enterPage"
     style="height:auto;top:2px;left:488px;"/>  
   <div class="x-panel-content tb-trans speechRecList" xid="content-main" _xid="C78FAA2F9CA000018BB5F64C1B902F90"
     style="top: 0px; bottom: 0px;"> 

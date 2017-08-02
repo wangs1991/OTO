@@ -41,7 +41,7 @@
               <img src="$UI/OTO/assets/img/exam_2.jpg" alt="" xid="image3"/> -->  
                 <select component="$UI/system/components/justep/select/select"
                   class="form-control" xid="select1" name="grade"> 
-                  <option value="-1">选择体验者年级数</option>  
+                  <option value="0">选择体验者年级数</option>  
                   <option value="1">初一</option>  
                   <option value="2">初二</option>  
                   <option value="3">初三</option>  
@@ -82,14 +82,14 @@
                       <div xid="div9" class="fl b-breath-thrA"> 
                         <span xid="span10"><![CDATA[轻松]]></span> 
                       </div>  
-                      <input type="radio" value="0" name="difficulty" checked="checked" xid="radio1" class="fr b-breath-thrB"></input>
+                      <input type="radio" value="1" name="difficulty" checked="checked" xid="radio1" class="fr b-breath-thrB"></input>
   </li>  
                     <li xid="li5" class="clearfix"> 
                       <div xid="div10" class="fl b-breath-thrA"> 
                         <span xid="span4"><![CDATA[紧张]]></span> 
                       </div>  
                        
-                    <input type="radio" value="1" name="difficulty" xid="radio2" class="fr b-breath-thrB"></input></li> 
+                    <input type="radio" value="2" name="difficulty" xid="radio2" class="fr b-breath-thrB"></input></li> 
                   </ul> 
                 </div>  
                 <div class="tab-pane" xid="tabContent2"> 
@@ -98,21 +98,21 @@
                       <div xid="div9" class="fl b-breath-thrA"> 
                         <span xid="span10"><![CDATA[3人]]></span> 
                       </div>  
-                      <input type="radio" value="3" name="number" checked="checked"
+                      <input type="radio" value="1" name="number" checked="checked"
                         xid="radio1" class="fr b-breath-thrB"/> 
                     </li>  
                     <li xid="li5" class="clearfix"> 
                       <div xid="div10" class="fl b-breath-thrA"> 
                         <span xid="span4"><![CDATA[5人]]></span> 
                       </div>  
-                      <input type="radio" value="5" name="number" xid="radio2"
+                      <input type="radio" value="2" name="number" xid="radio2"
                         class="fr b-breath-thrB"/> 
                     </li>  
                     <li xid="li7" class="clearfix"> 
                       <div xid="div11" class="fl b-breath-thrA"> 
                         <span xid="span9"><![CDATA[10人]]></span> 
                       </div>  
-                      <input type="radio" value="10" name="number" xid="radio3"
+                      <input type="radio" value="3" name="number" xid="radio3"
                         class="fr b-breath-thrB"/> 
                     </li> 
                   </ul> 

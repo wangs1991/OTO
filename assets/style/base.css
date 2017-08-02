@@ -1018,12 +1018,15 @@ opacity
 	display: block;
 	width: 27%;
 }
-.btn-default{
+.btn-default,
+.btn-default:hover{
 	border-radius: 100px!important;
 	padding: 10px 0;
 	font-size: 16px;
 	background: linear-gradient(-100deg, #2984ff, #16a6ff);
 	box-shadow: 0 5px 10px rgba(22, 166, 255, .4);
+	color: #fff!important;
+	border-color: transparent;
 }
 /* 2017-7-27 ws end */
 .cb {
@@ -1036,7 +1039,7 @@ opacity
 
 .clearfix::after {
 	clear: both;
-	display: block;
+	display: block;s
 	content: '';
 	visibility: hidden;
 }
@@ -1368,6 +1371,52 @@ opacity
 	margin-bottom: 0;
 }
 
+.zplb_ctner{
+	display: flex; display : -ms-flex; display : -webkit-flex;
+	flex-wrap: wrap;
+}
+.zplb_ctner .zplb_item{
+	width: 50%;
+	position: relative;
+	z-index: 1;
+	margin-bottom: 10px;
+}
+.zplb_ctner .zplb_item .b-assess-oneA{
+	border: none;
+	line-height: 60px;
+	background: #fff;
+	color: #333;
+	margin: 10px;
+	border-radius: 6px;
+}
+.zplb_ctner .zplb_item .b-access-number {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: #ff4081;
+	width: 20px;
+	height: 20px;
+	z-index: 1001;
+	color: #fff;
+	line-height: 20px;
+	border-radius: 5px;
+	text-align: center;
+	display: none;
+}
+.zplb_ctner .zplb_item .access-result{
+	color: #2c90f4;
+	line-height: 1em;
+	display: none;
+}
+.zplb_ctner .zplb_item.finished .b-assess-oneA{
+	line-height: 60px;
+	background: #2a90f4;
+	color: #fff;
+}
+.zplb_ctner .zplb_item.finished .b-access-number,
+.zplb_ctner .zplb_item.finished .access-result{
+	display: block;
+}
 .b-assess-oneA {
 	border: none;
 	border-bottom: 1px solid #eee;
@@ -1376,13 +1425,6 @@ opacity
 	background: #fff;
 	color: #333;
 	margin-bottom: 10px;
-}
-
-.b-assess-oneA.finished {
-	border: none;
-	line-height: 60px;
-	background: #2a90f4;
-	color: #fff;
 }
 
 .b-exam-one {
@@ -1726,24 +1768,6 @@ opacity
 .b-assess-popup span {
 	display: block;
 	color: #2c90f4;
-}
-
-.b-access-number {
-	position: absolute;
-	top: -10px;
-	right: -10px;
-	background: #ff4081;
-	width: 20px;
-	height: 20px;
-	z-index: 1001;
-	color: #fff;
-	line-height: 20px;
-	border-radius: 5px;
-	text-align: center;
-}
-
-.b-relax-marginBottom {
-	
 }
 
 .b-bindVRView-cont span {

@@ -125,8 +125,9 @@ define(function(require) {
 	
 //		动作列表相关的操作
 	Model.prototype.getActions = function(){
+		console.log(courseModel.page);
 		//		除去 面试、汇报、公众演讲 动作列表是死的
-		if( courseModel.page === 'exam' || courseModel.page === 'speech' || courseModel.page === 'public' ){
+		if( courseModel.page === 'interview' || courseModel.page === 'speech' || courseModel.page === 'public' ){
 //					动作列表相关的操作
 			$('#asyncActions').show();
 			$('#staticActions').hide();
@@ -173,6 +174,8 @@ define(function(require) {
 			}, 2000);
 		}else{
 			$('#staticActions').show();
+			$('#staticActions > div').hide();
+			$('#staticActions > #'+courseModel.page).show();
 			$('#asyncActions').hide();
 		}
 	};
@@ -266,6 +269,9 @@ define(function(require) {
 
 	Model.prototype.controller9Click = function(event) {
 		control(this, 9);
+	};
+	Model.prototype.controller10Click = function(event) {
+		control(this, 10);
 	};
 	
 	Model.prototype.initEchart = function(){		

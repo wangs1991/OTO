@@ -77,7 +77,7 @@
                               xid="image8"/>  
                             <span xid="span4"><![CDATA[高空栈道]]></span> 
                           </div>  
-                          <input type="radio" value="0" name="sceneType" xid="radio2"
+                          <input type="radio" value="2" name="sceneType" xid="radio2"
                             class="fr b-breath-thrB"/> 
                         </li> 
                       </ul> 

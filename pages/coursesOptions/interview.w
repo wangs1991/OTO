@@ -68,7 +68,7 @@
                               xid="image7"/>  
                             <span xid="span10"><![CDATA[简单]]></span> 
                           </div>  
-                          <input type="radio" value="0" name="difficulty" checked="checked"
+                          <input type="radio" value="1" name="difficulty" checked="checked"
                             xid="radio1" class="fr b-breath-thrB"/> 
                         </li>  
                         <li xid="li5" class="clearfix"> 
@@ -77,7 +77,7 @@
                               xid="image8"/>  
                             <span xid="span4"><![CDATA[困难]]></span> 
                           </div>  
-                          <input type="radio" value="0" name="difficulty" xid="radio2"
+                          <input type="radio" value="2" name="difficulty" xid="radio2"
                             class="fr b-breath-thrB"/> 
                         </li> 
                       </ul> 
