@@ -49,12 +49,17 @@ define(function(require){
 			params.eventKind = 41;
 			params.skin = Server.skinData('expose').join(',');
 		}
+		
 		params.lid = window.courseModel.lid;
+		
 		Server.saveCourse(params).then(function(){
 			//		访问者练习记录
 			var url = '$UI/OTO/pages/trainPractice/visitorDetail.w';
 			justep.Shell.showPage(url);
 		});
+		
+		justep.Shell.closeAll();
+		this.close();
 	}
 	
 	Model.prototype.formDate = function(str){
@@ -148,6 +153,10 @@ define(function(require){
 	Model.prototype.goUserInfo = function (){
 		var url = "$UI/OTO/pages/userInfo/userInfo.w";
 		justep.Shell.showPage(url);
+	};
+	
+	Model.prototype.goBack = function(event){
+		this.close();
 	};
 	
 	return Model;

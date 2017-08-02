@@ -63,5 +63,9 @@ define(function(require){
 		justep.Shell.showPage(url);
 	}
 
+	Model.prototype.goBack = function(event){
+		this.close();
+	};
+
 	return Model;
 });

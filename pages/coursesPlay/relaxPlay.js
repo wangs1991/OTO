@@ -27,7 +27,11 @@ define(function(require) {
 
 	Model.prototype.goToNext = function() {
 		//停止发送Live请求
-		clearInterval(liveTimer);
+		if (liveTimer != null) {
+			clearInterval(liveTimer);
+			liveTimer = null;
+		}
+		
 		
 //		区别是否有暴露训练
 		this.saveSkinData('relax');
@@ -119,7 +123,10 @@ define(function(require) {
 	};
 
 	Model.prototype.modelUnLoad = function(event) {
-		clearInterval(liveTimer);
+		if (liveTimer != null) {
+			clearInterval(liveTimer);
+		}
+		
 		window.skinFeelStart = false;
 	};
 	
@@ -151,6 +158,13 @@ define(function(require) {
 //			}
 		}
 	})();
+
+	Model.prototype.goBack = function(event){
+		if (liveTimer != null) {
+			clearInterval(liveTimer);
+		}
+		this.close();
+	};
 
 	return Model;
 });

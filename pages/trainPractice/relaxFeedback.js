@@ -149,5 +149,10 @@ define(function(require){
 	}
 	
 	
+	Model.prototype.goBack = function(event){
+		this.close();
+	};
+	
+	
 	return Model;
 });
