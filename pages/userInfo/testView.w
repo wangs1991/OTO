@@ -77,8 +77,8 @@
               <div class="section-card mgt-15" xid="clickListGroup"> 
                 <div class="content-detail" xid="bottomDiv">请您仔细阅读每一个陈述，根据您最近的一周实际感觉做出回答。从“没有或很少时间”到“绝大部分或全部时间”表示不同的程度。
                   <a component="$UI/system/components/justep/button/button"
-                    class="btn btn-primary button block mgt-20" label="开始测试" xid="goTestButton"
-                    onClick="goTestButtonClick"> 
+                    class="btn btn-default b-user-thrButton" label="开始测试" xid="goTestButton"
+                    onClick="goTestButtonClick" style="width:100%;margin-top:30px;"> 
                     <span xid="span2">开始测试</span> 
                   </a> 
                 </div> 

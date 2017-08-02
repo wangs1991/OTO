@@ -33,7 +33,7 @@
           <div class="inner-content main_padding"> 
             <div xid="div1" style="height:300px;" class="center-block"> 
               <div xid="skinInfoDiv" align="left" style="position:relative;left:5px;top:-5px;height:30px;"> 
-                <span xid="skinInfoSpan" class="text-black" bind-text="skinInfo"/>
+                <span xid="skinInfoSpan" class="text-black" bind-text="skinInfo"/> 
               </div>  
               <div xid="nullAlertDiv2" style="display:none;position:relative;height:0px;width:100%;top:100px;"
                 class="text-alert-null">没有数据信息，请正确佩戴皮肤电心率设备</div>  
@@ -42,7 +42,12 @@
             </div> 
           </div> 
         </div> 
-      </div>  
+      </div>   
+    </div>  
+    <div class="x-panel-bottom btn-card c3ieMNr" xid="bottom1" style="height: 70px; background-color: rgb(255, 255, 255);"
+      component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}"
+      data-config="{&quot;height&quot;:70}" __cid="c3ieMNr" _xid="C7A06705EEA000019134970023F0CC90"
+      id="C7A06705E7A00001F9E82A50172FB580_bottom1"> 
       <a component="$UI/system/components/justep/button/button" class="btn btn-default button block"
         label="button" xid="button1" bind-click="goToNext"> 
         <i xid="i1"/>  

@@ -84,7 +84,7 @@
             <span xid="span1"><![CDATA[恐高症]]></span>
           </li> 
         </ul>  
-        <ul xid="ul5" class="b-psy-thr clearfix" data-type="interview:9" bind-click="enterCources"> 
+        <ul xid="ul5" class="b-psy-thr clearfix"> 
           <li xid="li9" class="type_trauma clearfix"> 
             <img src="$UI/OTO/assets/img/psy_14.png" alt="" xid="image15"/>  
             <span xid="span9"><![CDATA[EMDR]]></span>

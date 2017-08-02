@@ -73,21 +73,18 @@
                 <ul xid="ul2" class="b-breath-thr"> 
                   <li xid="li6" class="clearfix"> 
                     <div xid="div9" class="fl b-breath-thrA"> 
-                      <img src="$UI/OTO/assets/img/breath_6.jpg" alt="" xid="image7"/>  
                       <span xid="span10"><![CDATA[日本和屋]]></span> 
                     </div>  
                     <input type="radio" value="" name="" xid="radio1" class="fr b-breath-thrB"/> 
                   </li>  
                   <li xid="li5" class="clearfix"> 
                     <div xid="div10" class="fl b-breath-thrA"> 
-                      <img src="$UI/OTO/assets/img/breath_7.jpg" alt="" xid="image8"/>  
                       <span xid="span4"><![CDATA[海边沙滩]]></span> 
                     </div>  
                     <input type="radio" value="" name="" xid="radio2" class="fr b-breath-thrB"/> 
                   </li>  
                   <li xid="li7" class="clearfix"> 
                     <div xid="div11" class="fl b-breath-thrA"> 
-                      <img src="$UI/OTO/assets/img/breath_8.png" alt="" xid="image9"/>  
                       <span xid="span9"><![CDATA[皑皑白雪]]></span> 
                     </div>  
                     <input type="radio" value="" name="" xid="radio3" class="fr b-breath-thrB"/> 

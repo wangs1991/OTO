@@ -167,21 +167,21 @@
           </div>  
           <div class="flex-list" xid="div13"> 
             <div class="flex-item" xid="div14"> 
-              <a component="$UI/system/components/justep/button/button" class="btn btn-primary button"
+              <a component="$UI/system/components/justep/button/button" class="btn btn-default b-user-thrButton"
                 label="上一题" xid="preButton" onClick="preButtonClick"> 
                 <i xid="i2"/>  
                 <span xid="span3">上一题</span>
               </a> 
             </div>  
             <div class="flex-item" xid="applyButton"> 
-              <a component="$UI/system/components/justep/button/button" class="btn btn-primary button"
+              <a component="$UI/system/components/justep/button/button" class="btn btn-default b-user-thrButton"
                 label="提交" onClick="applyButtonClick" xid="button2"> 
                 <i xid="i6"/>  
                 <span xid="span16">提交</span>
               </a> 
             </div>  
             <div class="flex-item" xid="div15"> 
-              <a component="$UI/system/components/justep/button/button" class="btn btn-primary button"
+              <a component="$UI/system/components/justep/button/button" class="btn btn-default b-user-thrButton"
                 label="下一题" xid="nextButton" onClick="nextButtonClick"> 
                 <i xid="i5"/>  
                 <span xid="span15">下一题</span>

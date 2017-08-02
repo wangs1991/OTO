@@ -50,52 +50,7 @@ define(function(require) {
 	
 	Model.prototype.modelLoad = function(event){
 		self = this;
-		
-		window.skinFeelStart = true;
-
-		for (var i = 1; i <= 9; i++) {
-			this.getElementByXid("c" + i).style.display = "none";
-		}
-		
-		
-		if (loadControlAniTimer != null && loadControlAniTimer != undefined) {
-			clearInterval(loadControlAniTimer);
-		}
-		
-		loadControlAniTimer = setInterval(function() {
-			Server.getActions({
-				action: 'get_controller_ani_list',
-				uid : window.uid
-			}).then(function(data){
-				if (data == null || data.anis == null || data.anis == "") {
-					console.log("get_controller_ani_list data is null");
-					return;
-				}
-				
-				anisArray = data.anis.split(',');
-				if (anisArray.length == 0) {
-					console.log("get_controller_ani_list anisArray is null");
-					return;
-				}
-				
-				console.log("controller_ani_list length"+anisArray.length + " anis:" + data.anis);
-				
-				//清理Timer
-				clearInterval(loadControlAniTimer);
-				
-				for (var i = 0; i < anisArray.length; i++) {
-					if (i >= 9) {
-						continue;
-					}
-					
-					anisJson["c" + (i + 1)].set(anisArray[i]);
-					self.getElementByXid("c" + (i + 1)).style.display = "";
-				}
-
-				//justep.Util.hint("controller anis:" + anisArray.length, {"position" : "bottom"});
-			});
-		}, 2000);
-		
+		window.skinFeelStart = true;		
 		//初始化图表
 		this.initEchart();
 	};
@@ -128,6 +83,13 @@ define(function(require) {
 			justep.Shell.closePage();
 			return;
 		}
+//		获取参数
+		var params = event.params;
+		courseModel = params;
+		this.title.set(params.title);
+		this.button.set(params.button);
+		url = params.next;
+		
 		
 		//得到直播图片
 		var liveImage = self.getElementByXid("liveImage");
@@ -145,14 +107,64 @@ define(function(require) {
 			}
 		}, 120);
 		
-		var params = event.params;
-		courseModel = params;
-		this.title.set(params.title);
-		this.button.set(params.button);
-		url = params.next;
-	};
+		this.getActions();
+	}
 	
-	// from zhiyong
+// from zhiyong
+	
+//		动作列表相关的操作
+	Model.prototype.getActions = function(){
+		//		除去 面试、汇报、公众演讲 动作列表是死的
+		if( courseModel.page === 'exam' || courseModel.page === 'speech' || courseModel.page === 'public' ){
+//					动作列表相关的操作
+			$('#asyncActions').show();
+			$('#staticActions').hide();
+			
+			
+			if (loadControlAniTimer != null && loadControlAniTimer != undefined) {
+				clearInterval(loadControlAniTimer);
+			}
+			
+			loadControlAniTimer = setInterval(function() {
+				Server.getActions({
+					action: 'get_controller_ani_list',
+					uid : window.uid
+				}).then(function(data){
+					if (data == null || data.anis == null || data.anis == "") {
+						console.log("get_controller_ani_list data is null");
+						return;
+					}
+					
+					anisArray = data.anis.split(',');
+					if (anisArray.length == 0) {
+						console.log("get_controller_ani_list anisArray is null");
+						return;
+					}
+					
+					console.log("controller_ani_list length"+anisArray.length + " anis:" + data.anis);
+					
+					//清理Timer
+					clearInterval(loadControlAniTimer);
+					
+					for (var i = 0; i < anisArray.length; i++) {
+						if (i >= 9) {
+							continue;
+						}
+						
+						anisJson["c" + (i + 1)].set(anisArray[i]);
+//						self.getElementByXid("c" + (i + 1)).style.display = "";
+					}
+					$('#asyncActions').show();
+					$('#staticActions').hide();
+	
+					//justep.Util.hint("controller anis:" + anisArray.length, {"position" : "bottom"});
+				});
+			}, 200);
+		}else{
+			$('#staticActions').show();
+			$('#asyncActions').hide();
+		}
+	};
 	
 	Model.prototype.startclick = function(event) {
 
@@ -237,8 +249,8 @@ define(function(require) {
 		control(this, 9);
 	};
 	
-		Model.prototype.initEchart = function(){		
-		myChartClock = echarts.init($('#echart')[0]);
+	Model.prototype.initEchart = function(){		
+		myChartClock = echarts.init($('#echartExpose')[0]);
 		myChartClock.setOption(options, true);
 	};
 	
