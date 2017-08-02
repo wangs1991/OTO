@@ -83,7 +83,7 @@
                         <span xid="span10"><![CDATA[轻松]]></span> 
                       </div>  
                       <label xid="label10" class="fr b-breath-thrB b-demo-label">
-   <input type="radio" value="1" name="demo-radioKC1" xid="radio13" class="b-demo-radio" checked="checked"></input>
+   <input type="radio" value="1" name="difficulty" xid="radio13" class="b-demo-radio" checked="checked"></input>
    <span xid="span20" class="b-demo-radioInput"></span></label></li>  
                     <li xid="li5" class="clearfix"> 
                       <div xid="div10" class="fl b-breath-thrA"> 
@@ -91,7 +91,7 @@
                       </div>  
                        
                     <label xid="label2" class="fr b-breath-thrB b-demo-label">
-   <input type="radio" value="1" name="demo-radioKC1" xid="radio4" class="b-demo-radio"></input>
+   <input type="radio" value="1" name="difficulty" xid="radio4" class="b-demo-radio"></input>
    <span xid="span1" class="b-demo-radioInput"></span></label></li> 
                   </ul> 
                 </div>  
@@ -102,21 +102,21 @@
                         <span xid="span10"><![CDATA[3人]]></span> 
                       </div>  
                       <label xid="label3" class="fr b-breath-thrB b-demo-label">
-   <input type="radio" value="1" name="demo-radioKC2" xid="radio5" class="b-demo-radio" checked="checked"></input>
+   <input type="radio" value="1" name="number" xid="radio5" class="b-demo-radio" checked="checked"></input>
    <span xid="span2" class="b-demo-radioInput"></span></label></li>  
                     <li xid="li5" class="clearfix"> 
                       <div xid="div10" class="fl b-breath-thrA"> 
                         <span xid="span4"><![CDATA[5人]]></span> 
                       </div>  
                       <label xid="label4" class="fr b-breath-thrB b-demo-label">
-   <input type="radio" value="1" name="demo-radioKC2" xid="radio6" class="b-demo-radio"></input>
+   <input type="radio" value="1" name="number" xid="radio6" class="b-demo-radio"></input>
    <span xid="span6" class="b-demo-radioInput"></span></label></li>  
                     <li xid="li7" class="clearfix"> 
                       <div xid="div11" class="fl b-breath-thrA"> 
                         <span xid="span9"><![CDATA[10人]]></span> 
                       </div>  
                       <label xid="label5" class="fr b-breath-thrB b-demo-label">
-   <input type="radio" value="1" name="demo-radioKC2" xid="radio7" class="b-demo-radio"></input>
+   <input type="radio" value="1" name="number" xid="radio7" class="b-demo-radio"></input>
    <span xid="span7" class="b-demo-radioInput"></span></label></li> 
                   </ul> 
                 </div>    
@@ -127,21 +127,21 @@
                         <span xid="span10"><![CDATA[语文]]></span> 
                       </div>  
                       <label xid="label6" class="fr b-breath-thrB b-demo-label">
-   <input type="radio" value="1" name="demo-radioKS3" xid="radio8" class="b-demo-radio" checked="checked"></input>
+   <input type="radio" value="1" name="subject" xid="radio8" class="b-demo-radio" checked="checked"></input>
    <span xid="span8" class="b-demo-radioInput"></span></label></li>  
                     <li xid="li5" class="clearfix"> 
                       <div xid="div10" class="fl b-breath-thrA"> 
                         <span xid="span4"><![CDATA[数学]]></span> 
                       </div>  
                       <label xid="label7" class="fr b-breath-thrB b-demo-label">
-   <input type="radio" value="1" name="demo-radioKS3" xid="radio9" class="b-demo-radio"></input>
+   <input type="radio" value="1" name="subject" xid="radio9" class="b-demo-radio"></input>
    <span xid="span11" class="b-demo-radioInput"></span></label></li>  
                     <li xid="li5" class="clearfix"> 
                       <div xid="div10" class="fl b-breath-thrA"> 
                         <span xid="span4"><![CDATA[英语]]></span> 
                       </div>  
                       <label xid="label8" class="fr b-breath-thrB b-demo-label">
-   <input type="radio" value="1" name="demo-radioKS3" xid="radio10" class="b-demo-radio"></input>
+   <input type="radio" value="1" name="subject" xid="radio10" class="b-demo-radio"></input>
    <span xid="span12" class="b-demo-radioInput"></span></label></li> 
                   </ul> 
                 </div>  
@@ -152,21 +152,21 @@
                         <span xid="span10"><![CDATA[10题]]></span> 
                       </div>  
                       <label xid="label9" class="fr b-breath-thrB b-demo-label">
-   <input type="radio" value="1" name="demo-radioKT4" xid="radio11" class="b-demo-radio" checked="checked"></input>
+   <input type="radio" value="1" name="questNum" xid="radio11" class="b-demo-radio" checked="checked"></input>
    <span xid="span15" class="b-demo-radioInput"></span></label></li>  
                     <li xid="li5" class="clearfix"> 
                       <div xid="div10" class="fl b-breath-thrA"> 
                         <span xid="span4"><![CDATA[20题]]></span> 
                       </div>  
                       <label xid="label11" class="fr b-breath-thrB b-demo-label">
-   <input type="radio" value="1" name="demo-radioKT4" xid="radio12" class="b-demo-radio"></input>
+   <input type="radio" value="1" name="questNum" xid="radio12" class="b-demo-radio"></input>
    <span xid="span16" class="b-demo-radioInput"></span></label></li>  
                     <li xid="li7" class="clearfix"> 
                       <div xid="div11" class="fl b-breath-thrA"> 
                         <span xid="span9"><![CDATA[30题]]></span> 
                       </div>  
                       <label xid="label12" class="fr b-breath-thrB b-demo-label">
-   <input type="radio" value="1" name="demo-radioKT4" xid="radio14" class="b-demo-radio"></input>
+   <input type="radio" value="1" name="questNum" xid="radio14" class="b-demo-radio"></input>
    <span xid="span17" class="b-demo-radioInput"></span></label></li> 
                   </ul> 
                 </div> 

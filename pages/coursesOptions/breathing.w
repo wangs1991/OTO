@@ -68,21 +68,21 @@
                             <span xid="span10"><![CDATA[日本和屋]]></span> 
                           </div>  
                           <label xid="label6" class="fr b-breath-thrB b-demo-label">
-   <input type="radio" value="1" name="demo-radioFS!" xid="radio6" class="b-demo-radio" checked="checked"></input>
+   <input type="radio" value="1" name="sceneId" xid="radio6" class="b-demo-radio" checked="checked"></input>
    <span xid="span11" class="b-demo-radioInput"></span></label></li>  
                         <li xid="li5" class="clearfix"> 
                           <div xid="div10" class="fl b-breath-thrA"> 
                             <span xid="span4"><![CDATA[海边沙滩]]></span> 
                           </div>  
                           <label xid="label1" class="fr b-breath-thrB b-demo-label">
-   <input type="radio" value="1" name="demo-radioFS!" xid="radio4" class="b-demo-radio"></input>
+   <input type="radio" value="1" name="sceneId" xid="radio4" class="b-demo-radio"></input>
    <span xid="span1" class="b-demo-radioInput"></span></label></li>  
                         <li xid="li7" class="clearfix"> 
                           <div xid="div11" class="fl b-breath-thrA"> 
                             <span xid="span9"><![CDATA[皑皑白雪]]></span> 
                           </div>  
                           <label xid="label2" class="fr b-breath-thrB b-demo-label">
-   <input type="radio" value="1" name="demo-radioFS!" xid="radio5" class="b-demo-radio"></input>
+   <input type="radio" value="1" name="sceneId" xid="radio5" class="b-demo-radio"></input>
    <span xid="span2" class="b-demo-radioInput"></span></label></li> 
                       </ul> 
                     </div>  
@@ -93,21 +93,21 @@
                             <span xid="span10"><![CDATA[歌曲一]]></span> 
                           </div>  
                           <label xid="label3" class="fr b-breath-thrB b-demo-label">
-   <input type="radio" value="1" name="demo-radioYY2" xid="radio7" class="b-demo-radio" checked="checked"></input>
+   <input type="radio" value="1" name="music" xid="radio7" class="b-demo-radio" checked="checked"></input>
    <span xid="span12" class="b-demo-radioInput"></span></label></li>  
                         <li xid="li5" class="clearfix"> 
                           <div xid="div10" class="fl b-breath-thrA"> 
                             <span xid="span4"><![CDATA[歌曲二]]></span> 
                           </div>  
                           <label xid="label4" class="fr b-breath-thrB b-demo-label">
-   <input type="radio" value="1" name="demo-radioYY2" xid="radio8" class="b-demo-radio"></input>
+   <input type="radio" value="1" name="music" xid="radio8" class="b-demo-radio"></input>
    <span xid="span15" class="b-demo-radioInput"></span></label></li>  
                         <li xid="li7" class="clearfix"> 
                           <div xid="div11" class="fl b-breath-thrA"> 
                             <span xid="span9"><![CDATA[歌曲三]]></span> 
                           </div>  
                           <label xid="label5" class="fr b-breath-thrB b-demo-label">
-   <input type="radio" value="1" name="demo-radioYY2" xid="radio9" class="b-demo-radio"></input>
+   <input type="radio" value="1" name="music" xid="radio9" class="b-demo-radio"></input>
    <span xid="span16" class="b-demo-radioInput"></span></label></li> 
                       </ul> 
                     </div>  
@@ -118,14 +118,14 @@
                             <span xid="span10"><![CDATA[打开指导语]]></span> 
                           </div>  
                           <label xid="label7" class="fr b-breath-thrB b-demo-label">
-   <input type="radio" value="1" name="demo-radioZD3" xid="radio10" class="b-demo-radio" checked="checked"></input>
+   <input type="radio" value="1" name="switch" xid="radio10" class="b-demo-radio" checked="checked"></input>
    <span xid="span17" class="b-demo-radioInput"></span></label></li>  
                         <li xid="li5" class="clearfix"> 
                           <div xid="div10" class="fl b-breath-thrA"> 
                             <span xid="span4"><![CDATA[关闭指导语]]></span> 
                           </div>  
                           <label xid="label8" class="fr b-breath-thrB b-demo-label">
-   <input type="radio" value="1" name="demo-radioZD3" xid="radio11" class="b-demo-radio"></input>
+   <input type="radio" value="1" name="switch" xid="radio11" class="b-demo-radio"></input>
    <span xid="span18" class="b-demo-radioInput"></span></label></li> 
                       </ul> 
                     </div>  
@@ -136,21 +136,21 @@
                             <span xid="span10"><![CDATA[三分钟]]></span> 
                           </div>  
                           <label xid="label9" class="fr b-breath-thrB b-demo-label">
-   <input type="radio" value="1" name="demo-radioSC4" xid="radio12" class="b-demo-radio" checked="checked"></input>
+   <input type="radio" value="1" name="duration" xid="radio12" class="b-demo-radio" checked="checked"></input>
    <span xid="span19" class="b-demo-radioInput"></span></label></li>  
                         <li xid="li5" class="clearfix"> 
                           <div xid="div10" class="fl b-breath-thrA"> 
                             <span xid="span4"><![CDATA[五分钟]]></span> 
                           </div>  
                           <label xid="label10" class="fr b-breath-thrB b-demo-label">
-   <input type="radio" value="1" name="demo-radioSC4" xid="radio13" class="b-demo-radio"></input>
+   <input type="radio" value="1" name="duration" xid="radio13" class="b-demo-radio"></input>
    <span xid="span20" class="b-demo-radioInput"></span></label></li>  
                         <li xid="li7" class="clearfix"> 
                           <div xid="div11" class="fl b-breath-thrA"> 
                             <span xid="span9"><![CDATA[十分钟]]></span> 
                           </div>  
                           <label xid="label11" class="fr b-breath-thrB b-demo-label">
-   <input type="radio" value="1" name="demo-radioSC4" xid="radio14" class="b-demo-radio"></input>
+   <input type="radio" value="1" name="duration" xid="radio14" class="b-demo-radio"></input>
    <span xid="span21" class="b-demo-radioInput"></span></label></li> 
                       </ul> 
                     </div> 
