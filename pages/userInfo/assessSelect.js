@@ -32,21 +32,12 @@ define(function(require){
 		var target = $(evt.currentTarget), //获取事件目标对象
 		type = target.attr('data-type');
 		testType = type;
-		var title = {
-				1: '面试',
-				2: '工作',
-				3: '演讲',
-				4: '考试',
-				5: '恐高',
-				6: '异性'	
-				};
-		var params = {kind: title[type]};
+		var params = {kind: parseInt(type)};
 		url = "$UI/OTO/pages/userInfo/assess_con.w";
 		justep.Shell.showPage(url,params);
 	};
 	
 	Model.prototype.modeLoad = function(){
-		console.log(11111111);
 		var params = {};
 		params.eventKind = 48;
 		if(pgeType){

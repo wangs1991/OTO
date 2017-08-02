@@ -99,25 +99,35 @@ define(function(require) {
 		
 		console.log(recvKind);
 		//根据上个页面的点击内容加载不同的JSON文件
+//		var title = {
+//			5: '工作',
+//			4: '面试',
+//			8: '恐高',
+//			7: '考试',
+//			6: '演讲',
+//			'无': '异性',
+//		};
+		console.log(recvKind === 5, 'adfasdfadf');
 		switch(recvKind)
 		{
-			case "面试":
+			case 4:
 				url = require.toUrl("../../mock/test_mianshi.json");
 				$(".scotxt").eq(0).html("社交焦虑自评");
 				$(".scotxt").eq(1).html("面试焦虑自评");
 				$(".title_on").html("面试焦虑自评量表");
 				break;		
-			case "演讲":
+			case 6:
 				url = require.toUrl("../../mock/test_yanjiang.json");
 				$(".scotxt").eq(0).html("社交焦虑自评");
 				$(".scotxt").eq(1).html("公众演讲自评");
 				$(".title_on").html("公众演讲自评量表");
 				break;
-			case "工作":
+			case 5:
 				url = require.toUrl("../../mock/test_SJgongzuohuibao.json");
 				$(".scotxt").eq(0).html("社交焦虑自评");
 				$(".scotxt").eq(1).html("会议发言自评");
 				$(".title_on").html("会议发言自评量表");
+				console.log(123456765432112345);
 				break;
 			case "异性":
 				url = require.toUrl("../../mock/test_SJyixingxiangchu.json");
@@ -126,7 +136,7 @@ define(function(require) {
 				$(".title_on").html("异性相处自评量表");
 				break;
 			
-			case "恐高":
+			case 8:
 				url = require.toUrl("../../mock/test_konggao.json");
 				$(".scotxt").eq(0).html("恐高自评");
 				$(".scotxt").eq(1).html("");
@@ -134,7 +144,7 @@ define(function(require) {
 				$(".list-group li").eq(4).hide();
 				$(".score-big").eq(1).hide();
 				break;
-			case "考试":			
+			case 7:			
 				url = require.toUrl("../../mock/test_kaoshijiaolv.json");
 				$(".scotxt").eq(0).html("考试焦虑自评");
 				$(".title_on").html("考试焦虑自评量表");
@@ -179,8 +189,6 @@ define(function(require) {
 			}]
 		});
 		
-		//var url = require.toUrl("../../mock/test_mianshi.json");
-		console.log(url);
 		AppUtils.getAction(url, null, function(data) {
 			console.log(data)
 			testDataJson = data;
