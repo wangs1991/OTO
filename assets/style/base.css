@@ -1757,6 +1757,10 @@ opacity
 .tab-title-three li {
 	width: 33.333%;
 }
+.b-course-two li{
+	float: left;
+	width: 33.333%;
+}
 /*abcdefg*/
 .b-breath-thrA img {
 	width: 30px;

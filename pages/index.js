@@ -28,6 +28,15 @@ define(function(require) {
 	window.myChartClock;  // 图表
 	window.courseStart;	  // 课程开始时间点
 	window.courseEnd;	  // 课程结束时间点
+	window.sheetRec = {}; // 自评表得分缓存
+	window.sheetTypeDict = {
+			11: '社交焦虑自评',
+			4: '面试焦虑自评',
+			6: '公众演讲自评',
+			5: '会议发言自评',
+			8: '恐高自评',
+			7: '考试焦虑自评'
+	};
 	
 	window.options = {
 	    tooltip : {

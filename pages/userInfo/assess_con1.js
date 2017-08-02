@@ -4,7 +4,6 @@ define(function(require) {
 	var justep = require("$UI/system/lib/justep");
 	var allData = require("../../assets/js/loadData");
 	require("../../assets/js/AppUtils");
-	var Server = require('../../assets/server');
 	
 	var recvID;
 	var recvScene;
@@ -56,8 +55,8 @@ define(function(require) {
 		var params = event.params;
 		recvKind = params.kind;
 		
-//		this.getElementByXid('panel1').style.display="";
-//		this.getElementByXid('panel2').style.display="none";
+		this.getElementByXid('panel1').style.display="";
+		this.getElementByXid('panel2').style.display="none";
 		this.getElementByXid('panel3').style.display="none";
 		
 		var firstTest = localStorage.getItem("firstTest");
@@ -84,7 +83,7 @@ define(function(require) {
 	};
 	
 	Model.prototype.goTestButtonClick = function(event){
-//		this.getElementByXid('panel1').style.display="none";
+		this.getElementByXid('panel1').style.display="none";
 		this.getElementByXid('panel2').style.display="";
 		this.getElementByXid('panel3').style.display="none";
 	};
@@ -99,62 +98,42 @@ define(function(require) {
 		
 		console.log(recvKind);
 		//根据上个页面的点击内容加载不同的JSON文件
-//		var title = {
-//			5: '工作',
-//			4: '面试',
-//			8: '恐高',
-//			7: '考试',
-//			6: '演讲',
-//			11: '社交'
-//			'无': '异性',
-//		};
 		switch(recvKind)
 		{
-			case 4:
+			case "面试":
 				url = require.toUrl("../../mock/test_mianshi.json");
 				$(".scotxt").eq(0).html("社交焦虑自评");
 				$(".scotxt").eq(1).html("面试焦虑自评");
-				$(".title_on").html("面试焦虑自评量表");
-				window.sheetRec.type = [11, recvKind];
 				break;		
-			case 6:
+			case "演讲":
 				url = require.toUrl("../../mock/test_yanjiang.json");
 				$(".scotxt").eq(0).html("社交焦虑自评");
 				$(".scotxt").eq(1).html("公众演讲自评");
-				$(".title_on").html("公众演讲自评量表");
-				window.sheetRec.type = [11, recvKind];
 				break;
-			case 5:
+			case "工作":
 				url = require.toUrl("../../mock/test_SJgongzuohuibao.json");
 				$(".scotxt").eq(0).html("社交焦虑自评");
 				$(".scotxt").eq(1).html("会议发言自评");
-				$(".title_on").html("会议发言自评量表");
-				window.sheetRec.type = [11, recvKind];
 				break;
 			case "异性":
 				url = require.toUrl("../../mock/test_SJyixingxiangchu.json");
 				$(".scotxt").eq(0).html("社交焦虑自评");
 				$(".scotxt").eq(1).html("异性相处自评");
-				$(".title_on").html("异性相处自评量表");
 				break;
 			
-			case 8:
+			case "恐高":
 				url = require.toUrl("../../mock/test_konggao.json");
 				$(".scotxt").eq(0).html("恐高自评");
 				$(".scotxt").eq(1).html("");
-				$(".title_on").html("恐高自评量表");
 				$(".list-group li").eq(4).hide();
 				$(".score-big").eq(1).hide();
-				window.sheetRec.type = [recvKind];
 				break;
-			case 7:			
+			case "考试":			
 				url = require.toUrl("../../mock/test_kaoshijiaolv.json");
 				$(".scotxt").eq(0).html("考试焦虑自评");
-				$(".title_on").html("考试焦虑自评量表");
 				$(".scotxt").eq(1).html("");
 				$(".list-group li").eq(4).hide();
 				$(".score-big").eq(1).hide();
-				window.sheetRec.type = [recvKind];
 				break;
 		}
 		
@@ -193,7 +172,9 @@ define(function(require) {
 			}]
 		});
 		
+		//var url = require.toUrl("../../mock/test_mianshi.json");
 		AppUtils.getAction(url, null, function(data) {
+			console.log(data)
 			testDataJson = data;
 			
 			
@@ -246,11 +227,6 @@ define(function(require) {
 		if (selectIndex == 0 || selectIndex == undefined) return;
 		
 		controlData.setValueByID("select" + selectIndex, true, "1");
-		if(window.sheetRec.question){
-			window.sheetRec.question.push(selectIndex);
-		} else{
-			window.sheetRec.question = [selectIndex];
-		}
 		
 		//设置选的的第几个
 		testDataJson[curID - 1].select = parseInt(selectIndex);
@@ -339,13 +315,9 @@ define(function(require) {
 		var score = 0;
 		var score_f=18;
 		
-		var questions = [];
 		for (var i = 0; i < count; i++) {
 			var json = testDataJson[i];
-			questions.push({
-				id: json.id,
-				score: json['question'+json.select+'_score']
-			});
+			console.log(i + "-" + json.type);
 			if (json.type == "one") {
 				if (json == null || json.select <= 0) continue;
 				if (json.select == 1) {
@@ -373,11 +345,12 @@ define(function(require) {
 					score_f += parseInt(json.question5_score);
 				}
 			}
+			
 		}					
 		
 		totalScore = score;
 		
-//		this.getElementByXid('panel1').style.display="none";
+		this.getElementByXid('panel1').style.display="none";
 		this.getElementByXid('panel2').style.display="none";
 		this.getElementByXid('panel3').style.display="";
 		
@@ -385,16 +358,13 @@ define(function(require) {
 		controlData.setValueByID("score", totalScore, "1");
 		controlData.setValueByID("score_f", score_f, "1");
 		
-		window.sheetRec.score = [totalScore, score_f];
+		window.testScore = totalScore;
 		
-/*		window.testScore = totalScore;
-		window.questions = questions;*/
-		
+		//alert("totalScore:" + totalScore);
 	};
 	
 	Model.prototype.closeButtonClick = function(event){
-		justep.Shell.closePage();
-		/*var selectedIDs = "";
+		var selectedIDs = "";
 		selectedIDs += "{\n\"scenes\":[\n";
 		selectedIDs += "{\"ad\":\"" + recvCourse + "\", \"trainScene\":\""+recvScene+"\", \"score\":\"" + window.testScore + "\", \"id\":\""+recvID+"\"}\n";
 		selectedIDs += "]\n}";
@@ -417,7 +387,7 @@ define(function(require) {
 		    justep.Shell.showPage("levelCo mpleteReportView.w", params);
 		} else {
 			window.closeAllView();
-		}*/
+		}
 	};
 	
 	Model.prototype.goBack = function(event){

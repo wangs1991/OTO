@@ -20,7 +20,6 @@ define(function(require){
 	//	页面激活去读取数据[用户量表分数]
 	Model.prototype.enterPage = function(){
 		try{
-			console.log(testType);
 			$('#questType').val(testType);
 			var questions = window.questions,
 				textScore = [];
@@ -35,7 +34,9 @@ define(function(require){
 	//	去填自评量表
 	Model.prototype.assessSelect = function (){
 		url = "$UI/OTO/pages/userInfo/assessSelect.w";
-		justep.Shell.showPage(url);
+		justep.Shell.showPage(url, {
+			from: 'modified'
+		});
 	}
 	//	提交用户数据
 	Model.prototype.saveModify = function(){
@@ -44,6 +45,7 @@ define(function(require){
 		var params = Server.toJson(data);
 		params.eventKind = 31;
 		params.vid = Server.getCurUser().id;
+		params.answer = window.formSheetRes;
 		Server.createUser(params).then(function(data){
 			console.log(data);
 			justep.Shell.closePage();

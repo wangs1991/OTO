@@ -21,23 +21,17 @@ define(function(require) {
 	Model.prototype.assessSelect = function() {
 		url = "$UI/OTO/pages/userInfo/assessSelect.w";
 		var params = {
-			type : 'new'
+			from: 'new'
 		};
 		justep.Shell.showPage(url, params);
 	}
 
 	// 页面激活去读取数据[用户量表分数]
 	Model.prototype.enterPage = function() {
-		try {
-			console.log(testType);
-			$('#questType').val(testType);
-			var questions = window.questions, textScore = [];
-			for (var i = 0, len = questions.length; i < len; i++) {
-				textScore.push(questions[i].id + ':' + questions[i].score);
-			}
-			console.log(textScore.join(','));
-			$('#answer').val(textScore.join(','));
-		} catch (e) {
+		try{
+			console.log(window.formSheetRes);
+		}catch(e){
+			
 		}
 	}
 	// 进入测评模块选择
@@ -88,6 +82,7 @@ define(function(require) {
 		data = decodeURI(data);
 		var params = Server.toJson(data);
 		params.eventKind = 30;
+		params.answer = window.formSheetRes;
 		Server.createUser(params).then(function(data) {
 			console.log(data);
 			justep.Shell.closePage();

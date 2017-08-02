@@ -48,6 +48,7 @@ define(function(require){
 		}else{
 			params.eventKind = 41;
 			params.skin = Server.skinData('expose').join(',');
+			params.answer = window.formSheetRes;
 		}
 		
 		params.lid = window.courseModel.lid;
@@ -93,17 +94,20 @@ define(function(require){
 				this.initVoice();
 				this.initConsult();
 				this.initSheet();
+				break;
 			};
 			case 'examTender': {
 				this.initSkinData();
 				this.initExam();
 				this.initConsult();
 				this.initSheet();
+				break;
 			};
 			case 'acrophobia': {
 				this.initSkinData();
 				this.initConsult();
 				this.initSheet();
+				break;
 			}
 		}
 	}
@@ -158,6 +162,14 @@ define(function(require){
 	Model.prototype.goBack = function(event){
 		this.close();
 	};
+	
+//	自评
+	Model.prototype.goTest = function(){
+		var url = "$UI/OTO/pages/userInfo/assessSelect.w";
+		justep.Shell.showPage(url, {
+			from: 'result'
+		});
+	}
 	
 	return Model;
 });

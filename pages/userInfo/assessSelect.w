@@ -32,7 +32,7 @@
               <!-- <div class="zplb_item finished">  -->  
               <div class="zplb_item"> 
                 <span xid="span27" class="b-access-number"><![CDATA[2]]></span>  
-                <div xid="div9" class="b-assess-oneA" data-type="5" bind-click="goTest"> 
+                <div xid="div9" class="zplb_btn b-assess-oneA" data-type="5" bind-click="goTest"> 
                   <span xid="span9"><![CDATA[会议发言自评表]]></span> 
                 </div>  
                 <div class="access-result">
@@ -42,28 +42,28 @@
               </div>  
               <div class="zplb_item"> 
                 <span xid="span27" class="b-access-number b-hide b-show access-result-num"><![CDATA[2]]></span>  
-                <div xid="div9" class="b-assess-oneA" data-type="4" bind-click="goTest"> 
+                <div xid="div9" class="zplb_btn b-assess-oneA" data-type="4" bind-click="goTest"> 
                   <span xid="span9"><![CDATA[面试焦虑自评表]]></span> 
                 </div>  
                 <div class="access-result"/> 
               </div>  
               <div class="zplb_item"> 
-                <span xid="span27" class="b-access-number b-hide b-show"><![CDATA[2]]></span>  
-                <div xid="div11" class="b-assess-oneA" data-type="8" bind-click="goTest"> 
+                <span xid="span27" class="b-access-number b-hide b-show"><![CDATA[1]]></span>  
+                <div xid="div11" class="zplb_btn b-assess-oneA" data-type="8" bind-click="goTest"> 
                   <span xid="span11"><![CDATA[恐高症自评表]]></span> 
                 </div>  
                 <div class="access-result"/> 
               </div>  
               <div class="zplb_item"> 
-                <span xid="span27" class="b-access-number b-hide b-show"><![CDATA[2]]></span>  
-                <div xid="div20" class="b-assess-oneA" data-type="7" bind-click="goTest"> 
+                <span xid="span27" class="b-access-number b-hide b-show"><![CDATA[1]]></span>  
+                <div xid="div20" class="zplb_btn b-assess-oneA" data-type="7" bind-click="goTest"> 
                   <span xid="span10">考试焦虑自评表</span> 
                 </div>  
                 <div class="access-result"/> 
               </div>  
               <div class="zplb_item"> 
                 <span xid="span27" class="b-access-number b-hide b-show"><![CDATA[2]]></span>  
-                <div xid="div21" class="b-assess-oneA" data-type="6" bind-click="goTest"> 
+                <div xid="div21" class="zplb_btn b-assess-oneA" data-type="6" bind-click="goTest"> 
                   <span xid="span7"><![CDATA[公众演讲自评量表]]></span> 
                 </div>  
                 <div class="access-result"/> 

@@ -2,7 +2,8 @@
 
 <div xmlns="http://www.w3.org/1999/xhtml" component="$UI/system/components/justep/window/window" design="device:m;"
   xid="window" class="window">  
-  <div component="$UI/system/components/justep/model/model" xid="model" onLoad="modelLoad" onParamsReceive="modelParamsReceive" style="top:8px;left:271px;height:auto;"/>  
+  <div component="$UI/system/components/justep/model/model" xid="model" onLoad="modelLoad"
+    onParamsReceive="modelParamsReceive" style="top:8px;left:271px;height:auto;"/>  
   <div component="$UI/system/components/justep/panel/panel" class="x-panel x-full"
     xid="panel1"> 
     <div class="x-panel-top" xid="top1"> 
@@ -63,16 +64,22 @@
                           <div xid="div9" class="fl b-breath-thrA"> 
                             <span xid="span10"><![CDATA[摩天大楼]]></span> 
                           </div>  
-                           
-                        <label xid="label2" class="fr b-breath-thrB b-demo-label"><![CDATA[]]><input type="radio" value="1" checked="checked" name="sceneType" xid="radio1" class="b-demo-radio"/><span xid="span1" class="b-demo-radioInput"></span></label>
-  </li>  
+                          <label xid="label2" class="fr b-breath-thrB b-demo-label"><![CDATA[]]>
+                            <input type="radio" value="1" checked="checked" name="sceneType"
+                              xid="radio1" class="b-demo-radio"/>
+                            <span xid="span1" class="b-demo-radioInput"/>
+                          </label> 
+                        </li>  
                         <li xid="li5" class="clearfix"> 
                           <div xid="div10" class="fl b-breath-thrA"> 
                             <span xid="span4"><![CDATA[高空栈道]]></span> 
                           </div>  
-                          <label xid="label3" class="fr b-breath-thrB b-demo-label">
-   <input type="radio" value="1" name="sceneType" xid="radio3" class="b-demo-radio"></input>
-   <span xid="span2" class="b-demo-radioInput"></span></label></li> 
+                          <label xid="label3" class="fr b-breath-thrB b-demo-label"> 
+                            <input type="radio" value="2" name="sceneType" xid="radio3"
+                              class="b-demo-radio"/>  
+                            <span xid="span2" class="b-demo-radioInput"/>
+                          </label>
+                        </li> 
                       </ul> 
                     </div>  
                     <div class="tab-pane" xid="tabContent2"> 
@@ -81,16 +88,22 @@
                           <div xid="div9" class="fl b-breath-thrA"> 
                             <span xid="span10"><![CDATA[男]]></span> 
                           </div>  
-                          <label xid="label4" class="fr b-breath-thrB b-demo-label">
-   <input type="radio" value="1" checked="checked" name="sex" xid="radio4" class="b-demo-radio"></input>
-   <span xid="span8" class="b-demo-radioInput"></span></label></li>  
+                          <label xid="label4" class="fr b-breath-thrB b-demo-label"> 
+                            <input type="radio" value="1" checked="checked" name="sex"
+                              xid="radio4" class="b-demo-radio"/>  
+                            <span xid="span8" class="b-demo-radioInput"/>
+                          </label>
+                        </li>  
                         <li xid="li5" class="clearfix"> 
                           <div xid="div10" class="fl b-breath-thrA"> 
                             <span xid="span4"><![CDATA[女]]></span> 
                           </div>  
-                          <label xid="label5" class="fr b-breath-thrB b-demo-label">
-   <input type="radio" value="1" name="sex" xid="radio5" class="b-demo-radio"></input>
-   <span xid="span9" class="b-demo-radioInput"></span></label></li> 
+                          <label xid="label5" class="fr b-breath-thrB b-demo-label"> 
+                            <input type="radio" value="0" name="sex" xid="radio5"
+                              class="b-demo-radio"/>  
+                            <span xid="span9" class="b-demo-radioInput"/>
+                          </label>
+                        </li> 
                       </ul> 
                     </div>  
                     <div class="tab-pane" xid="tabContent3"> 
@@ -99,16 +112,22 @@
                           <div xid="div9" class="fl b-breath-thrA"> 
                             <span xid="span10"><![CDATA[晴天]]></span> 
                           </div>  
-                          <label xid="label6" class="fr b-breath-thrB b-demo-label">
-   <input type="radio" value="1" checked="checked" name="weather" xid="radio6" class="b-demo-radio"></input>
-   <span xid="span11" class="b-demo-radioInput"></span></label></li>  
+                          <label xid="label6" class="fr b-breath-thrB b-demo-label"> 
+                            <input type="radio" value="1" checked="checked" name="weather"
+                              xid="radio6" class="b-demo-radio"/>  
+                            <span xid="span11" class="b-demo-radioInput"/>
+                          </label>
+                        </li>  
                         <li xid="li5" class="clearfix"> 
                           <div xid="div10" class="fl b-breath-thrA"> 
                             <span xid="span4"><![CDATA[雷雨]]></span> 
                           </div>  
-                          <label xid="label7" class="fr b-breath-thrB b-demo-label">
-   <input type="radio" value="1" name="weather" xid="radio7" class="b-demo-radio"></input>
-   <span xid="span12" class="b-demo-radioInput"></span></label></li> 
+                          <label xid="label7" class="fr b-breath-thrB b-demo-label"> 
+                            <input type="radio" value="2" name="weather" xid="radio7"
+                              class="b-demo-radio"/>  
+                            <span xid="span12" class="b-demo-radioInput"/>
+                          </label>
+                        </li> 
                       </ul> 
                     </div> 
                   </div> 
@@ -124,18 +143,19 @@
                         <option value="2">海边沙滩</option>  
                         <option value="3">皑皑雪山</option> 
                       </select> 
-                    </div> 
-                  <div xid="div19" class="fr checkboxTwo"> 
-                    <input type="checkbox" value="1" name="isOpen" xid="checkbox2" checked="checked" bind-click="switchSence" id="checkboxTwoInput" />  
-                    <label xid="label1" for="checkboxTwoInput"><![CDATA[]]></label> 
-                  </div></div>  
-                   
+                    </div>  
+                    <div xid="div19" class="fr checkboxTwo"> 
+                      <input type="checkbox" value="1" name="isOpen" xid="checkbox2"
+                        checked="checked" bind-click="switchSence" id="checkboxTwoInput"/>  
+                      <label xid="label1" for="checkboxTwoInput"><![CDATA[]]></label> 
+                    </div>
+                  </div> 
                 </div> 
               </div> 
             </form> 
           </div>  
           <div xid="div13" class="b-exam-five"> 
-            <img src="$UI/OTO/assets/img/exam_3.png" alt="" xid="image10"/>
+            <img src="$UI/OTO/assets/img/exam_3.png" alt="" xid="image10"/>  
             <span xid="span13">请佩戴好生物电设备</span> 
           </div>  
           <div xid="div14" class="clearfix b-user-thr"> 

@@ -104,68 +104,96 @@ define(function(require){
 
 
 //  初始化详细的区块
-	Model.prototype.fetchSkinData = function(){		
-		var data = courseModel.result.dataList;
-//		图标数据展示 ？？？？？？？
-		var displayData = [];
-		var time = 0;
-		$('#baseLine').val(data.join(','));
-		for(var i =0, len = data.length; i < len; i++){
-			displayData.push([time+200*i, data[i]]);
+	Model.prototype.fetchSkinData = (function(){
+		var load = false;
+		return function(){
+			if(!load){
+				var data = courseModel.result.dataList;
+		//		图标数据展示 ？？？？？？？
+				var displayData = [];
+				var time = 0;
+				$('#baseLine').val(data.join(','));
+				for(var i =0, len = data.length; i < len; i++){
+					displayData.push([time+200*i, data[i]]);
+				}
+				options.series[0].data = displayData;
+				try{
+					window.myChartClock = echarts.init($('#echart')[0]);
+					window.myChartClock.setOption(options, true);
+				}catch(e){
+				}
+			}
 		}
-		options.series[0].data = displayData;
-		try{
-			window.myChartClock = echarts.init($('#echart')[0]);
-			window.myChartClock.setOption(options, true);
-		}catch(e){
+	})();
+	Model.prototype.fetchConsult = (function(){
+		var load = false;
+		return function(){
+			if(!load){
+				Server.fetchMod({
+					eventKind: 54,
+					lid: courseModel.lid
+				}).then(function(data){
+					$('#diagnose').val(data.diagnose);
+					load = true;
+				});
+			}
 		}
-
-	}
-	Model.prototype.fetchConsult = function(){
-		Server.fetchMod({
-			eventKind: 54,
-			lid: courseModel.lid
-		}).then(function(data){
-			$('#diagnose').val(data.diagnose);
-		});
-	}
-	Model.prototype.fetchExam = function(){
-		var answers = courseModel.result.answer; 	// '1:2,2:3,3:2,4:1'
-		var subject = courseModel.result.subject;	// 学科
-		var score = courseModel.result.score;		// 自评列表
-		var totalScore = courseModel.result.totalScore;	// 考试总成绩
-		var subjecDirec = ['语文', '数学', '外语'];
-		
-		this.subject.set(subjecDirec[subject-1]);
-		this.score.set(score);
-		this.totalScore.set(totalScore);
-		Server.fetchMod({
-			eventKind: 52,
-			lid: courseModel.lid
-		}).then(function(data){
-			$('#diagnose').val(data.diagnose);
-			/*answerList
-			score
-			totalScore
-			subject*/
-		});
-	}
-	Model.prototype.fetchVoice = function(){
-		Server.fetchMod({
-			eventKind: 55,
-			lid: courseModel.lid
-		}).then(function(data){
-			$('#voice').val(data.speech);
-		});
-	}
-	Model.prototype.fetchSheet = function(){
-		Server.fetchMod({
-			eventKind: 53,
-			lid: courseModel.lid
-		}).then(function(data){
-			$('#zplb').html(data.answer);
-		});
-	}
+	})();
+	Model.prototype.fetchExam = (function(){
+		var load = false;
+		return function(){
+			if(!load){
+				var answers = courseModel.result.answer; 	// '1:2,2:3,3:2,4:1'
+				var subject = courseModel.result.subject;	// 学科
+				var score = courseModel.result.score;		// 自评列表
+				var totalScore = courseModel.result.totalScore;	// 考试总成绩
+				var subjecDirec = ['语文', '数学', '外语'];
+				
+				this.subject.set(subjecDirec[subject-1]);
+				this.score.set(score);
+				this.totalScore.set(totalScore);
+				Server.fetchMod({
+					eventKind: 52,
+					lid: courseModel.lid
+				}).then(function(data){
+					$('#diagnose').val(data.diagnose);
+					/*answerList
+					score
+					totalScore
+					subject*/
+					load = true;
+				});
+			}
+		}
+	})();
+	Model.prototype.fetchVoice = (function(){
+		var load = false;
+		return function(){
+			if(!load){
+				Server.fetchMod({
+					eventKind: 55,
+					lid: courseModel.lid
+				}).then(function(data){
+					$('#voice').val(data.speech);
+					load = true;
+				});
+			}
+		}
+	})();
+	Model.prototype.fetchSheet = (function(){
+		var load = false;
+		return function(){
+			if(!load){
+				Server.fetchMod({
+					eventKind: 53,
+					lid: courseModel.lid
+				}).then(function(data){
+					$('#zplb').html(data.answer);
+					load = true;
+				});
+			}
+		}
+	})();
 	
 	
 	Model.prototype.goBack = function(event){

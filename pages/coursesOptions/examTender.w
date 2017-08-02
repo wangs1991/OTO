@@ -96,25 +96,18 @@
                   <ul xid="ul2" class="b-breath-thr"> 
                     <li xid="li6" class="clearfix"> 
                       <div xid="div9" class="fl b-breath-thrA"> 
-                        <span xid="span10"><![CDATA[3人]]></span> 
+                        <span xid="span10"><![CDATA[6人]]></span> 
                       </div>  
                       <input type="radio" value="1" name="number" checked="checked"
                         xid="radio1" class="fr b-breath-thrB"/> 
                     </li>  
                     <li xid="li5" class="clearfix"> 
                       <div xid="div10" class="fl b-breath-thrA"> 
-                        <span xid="span4"><![CDATA[5人]]></span> 
+                        <span xid="span4"><![CDATA[10人]]></span> 
                       </div>  
                       <input type="radio" value="2" name="number" xid="radio2"
                         class="fr b-breath-thrB"/> 
-                    </li>  
-                    <li xid="li7" class="clearfix"> 
-                      <div xid="div11" class="fl b-breath-thrA"> 
-                        <span xid="span9"><![CDATA[10人]]></span> 
-                      </div>  
-                      <input type="radio" value="3" name="number" xid="radio3"
-                        class="fr b-breath-thrB"/> 
-                    </li> 
+                    </li>
                   </ul> 
                 </div>    
                 <div class="tab-pane" xid="tabContent3"> 
@@ -128,7 +121,7 @@
                     </li>  
                     <li xid="li5" class="clearfix"> 
                       <div xid="div10" class="fl b-breath-thrA"> 
-                        <span xid="span4"><![CDATA[数学]]></span> 
+                        <span xid="span4"><![CDATA[历史]]></span> 
                       </div>  
                       <input type="radio" value="2" name="subject" xid="radio2"
                         class="fr b-breath-thrB"/> 
@@ -155,13 +148,13 @@
                       <div xid="div10" class="fl b-breath-thrA"> 
                         <span xid="span4"><![CDATA[20题]]></span> 
                       </div>  
-                      <input type="radio" value="2" name="" xid="radio2" class="fr b-breath-thrB"/> 
+                      <input type="radio" value="2" name="questNum" xid="radio2" class="fr b-breath-thrB"/> 
                     </li>  
                     <li xid="li7" class="clearfix"> 
                       <div xid="div11" class="fl b-breath-thrA"> 
                         <span xid="span9"><![CDATA[30题]]></span> 
                       </div>  
-                      <input type="radio" value="3" name="" xid="radio3" class="fr b-breath-thrB"/> 
+                      <input type="radio" value="3" name="questNum" xid="radio3" class="fr b-breath-thrB"/> 
                     </li> 
                   </ul> 
                 </div> 

@@ -26,7 +26,7 @@ define(function(require) {
 	}
 	// 进入页面刷新数据
 	Model.prototype.enterPage = function() {
-		window.location.reload();
+//		window.location.reload();
 	};
 
 	// 加载数据

@@ -82,21 +82,15 @@
           </div>  
           <div xid="div6" class="clearfix b-user-thr"> 
             <a component="$UI/system/components/justep/button/button" class="btn btn-default b-user-thrButton"
-              label="社交量表  38分" xid="button1" bind-click="assessSelect"> 
+              label="社交量表 " xid="button1" bind-click="assessSelect"> 
               <i xid="i2"/>  
-              <span xid="span3">社交量表 38分</span> 
-              <input name="questType" id="questType" 
-              	style="display: none;" />
-              <input name="answer" id="answer" 
-              	style="display: none;" />
-              <input name="score" id="score" 
-              	style="display: none;" />
+              <span xid="span3">社交量表</span> 
             </a> 
           </div>  
           <div xid="div7" style="margin:10px;" class="b-user-four"> 
             <div xid="div14" class="b-user-fourA clearfix"> 
               <span xid="span15" class="fl"/>  
-              <h3 xid="h31" class="fl">诊疗分析记录</h3> 
+              <h3 xid="h31" class="fl">诊疗分析记录</h3>
             </div>  
             <textarea cols="5" rows="5" xid="textarea2" bind-value="user.diagnose" name="diagnose"
               class="b-user-fourB"/> 

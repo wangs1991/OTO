@@ -9,7 +9,7 @@ var AppUtils = function() {};
  * @returns {String}
  */
 AppUtils.getUrl = function(url){
-	return "http://"+window.ip+":8901/" + url;
+	return "http://"+window.ip+":8801/" + url;
 };
 
 /**

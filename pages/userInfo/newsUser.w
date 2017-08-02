@@ -87,9 +87,7 @@
                 label="社交量表" xid="button1" bind-click="assessSelect"> 
                 <i xid="i2"/>  
                 <span xid="span3">社交量表</span> 
-              </a>  
-              <input name="questType" type="text" id="questType" class="hide"/>  
-              <input type="text" name="answer" id="answer" xid="input8" class="hide"/> 
+              </a>
             </div>  
             <div xid="div7" style="margin:10px;" class="b-user-four"> 
               <div xid="div14" class="b-user-fourA clearfix"> 
