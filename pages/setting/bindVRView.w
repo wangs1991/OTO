@@ -42,14 +42,14 @@
                   </div> 
                 </div> 
               </div>  
-              <div id="win_bind">
+              <div id="win_bind" style="display: none;">
               	<div xid="div10" style="text-align:center;"> 
                   <div xid="div9" style="width:80%;display:inline-block;"> 
                     <div component="$UI/system/components/justep/labelEdit/labelEdit"
                       class="x-label-edit x-label30" xid="labelEdit3" style="color:#868686:"> 
                       <label class="x-label" xid="label3" style="color:#868686;">设备编码</label>  
                       <div class="x-edit" xid="div4"> 
-                        <span xid="span3" style="color:#868686;"><![CDATA[XSDF5689MFM]]></span> 
+                        <span xid="span3" style="color:#868686;" id="deviceId"><![CDATA[XSDF5689MFM]]></span> 
                       </div> 
                     </div> 
                   </div> 
@@ -72,7 +72,7 @@
                   </a> 
                   <a component="$UI/system/components/justep/button/button"
                     class="btn btn-default button mgr-20" label="解除绑定" id="bindButton"
-                    bind-click="unbindVR"> 
+                    bind-click="unbindVR" style="display: none;"> 
                     <i xid="i2"/>  
                     <span xid="span2">解除绑定</span> 
                   </a>

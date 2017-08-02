@@ -16,11 +16,16 @@ define(function(require){
 
 //	页面激活去读取数据
 	Model.prototype.enterPage = function(){
-		console.log(questions);
-		console.log(testType);
-		this.doneType.set(testType);
-		this.doneScore.set(testScore);
-		$('.b-assess-oneA[data-type='+testType+']').addClass('finished');
+//		尝试曲本地读取测评完的成绩
+		try{
+			console.log(questions);
+			console.log(testType);
+			this.doneType.set(testType);
+			this.doneScore.set(testScore);
+			$('.b-assess-oneA[data-type='+testType+']').addClass('finished');
+		}catch(e){
+			
+		}
 	}
 	
 	Model.prototype.goTest = function(evt){

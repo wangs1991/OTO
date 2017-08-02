@@ -36,7 +36,7 @@ define(function(require){
 				button: '开始面试',
 				next: next,
 				lid: data.lid,
-				page: 'exam',
+				page: 'interview',
 				type: loosenType
 			};
 			

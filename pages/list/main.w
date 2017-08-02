@@ -41,7 +41,7 @@
         <div class="visitor-add" bind-click="addVisitor" bind-blur="resetData">+</div> 
       </div>  
       <div class="x-scroll visitors_list" component="$UI/system/components/justep/scrollView/scrollView"
-        xid="userList" style="top:120px;width:100%;" onPullUp="loadList"> 
+        xid="userList" style="top:120px;width:100%;background-color:transparent;" onPullUp="loadList"> 
         <div class="x-scroll-content" xid="div2"> 
           <div component="$UI/system/components/justep/list/list" class="x-list"
             xid="list1"> 
@@ -50,7 +50,7 @@
                 <div component="$UI/system/components/bootstrap/row/row" class="row"
                   xid="row1" data-bind="click: $parent.gotDetail" style="width:100%;"> 
                   <div class="col col-xs-4" xid="col1" bind-text="user.name"/>  
-                  <div class="col col-xs-4" xid="col2" bind-text="sexTxt" bind-css="{'boy': user.sex == 0, 'girl': user.sex == 1}">2</div>  
+                  <div class="col col-xs-4" xid="col2" bind-text="sexTxt" bind-css="{'boy': user.sex == 1, 'girl': user.sex == 0}">2</div>  
                   <div class="col col-xs-4" xid="col3" bind-text="user.age">3</div> 
                 </div> 
               </li>

@@ -21,7 +21,7 @@ define(function(require) {
 			$('#win_unbind').hide();
 			$('#unBindBtn').hide();
 			Server.deviceId(data.deviceId);
-			this.comp("deviceInput").val(data.deviceId);
+			$("#deviceId").html(data.deviceId);
 		}, function(data){
 //			绑定失败
 			$('#win_bind').hide();
