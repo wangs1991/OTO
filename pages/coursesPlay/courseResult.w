@@ -66,7 +66,7 @@
                       class="panel-heading"> 
                       <li xid="li8" class="clearfix"> 
                         <div xid="div13" class="pull-left b-relax-thrA"> 
-                          <img src="$UI/OTO/assets/img/relax_2.jpg" alt=""
+                          <img src="$UI/OTO/assets/img/relax_2.png" alt=""
                             xid="image3"/>  
                           <span xid="span3">皮肤电数据</span> 
                         </div> 
@@ -95,7 +95,7 @@
                     <div class="panel-heading" xid="heading2"> 
                       <li xid="li7" class="clearfix"> 
                         <div xid="div10" class="pull-left b-relax-thrA"> 
-                          <img src="$UI/OTO/assets/img/relax_2.jpg" alt=""
+                          <img src="$UI/OTO/assets/img/relax_2.png" alt=""
                             xid="image2"/>  
                           <span xid="span4"><![CDATA[咨询记录]]></span> 
                         </div> 
@@ -115,7 +115,7 @@
                     <div class="panel-heading" xid="heading4"> 
                       <li xid="li7" class="clearfix"> 
                         <div xid="div10" class="pull-left b-relax-thrA"> 
-                          <img src="$UI/OTO/assets/img/relax_2.jpg" alt=""
+                          <img src="$UI/OTO/assets/img/relax_2.png" alt=""
                             xid="image2"/>  
                           <span xid="span4"><![CDATA[考试结果]]></span> 
                         </div> 
@@ -136,7 +136,7 @@
                     <div class="panel-heading" xid="heading2"> 
                       <li xid="li7" class="clearfix"> 
                         <div xid="div10" class="pull-left b-relax-thrA"> 
-                          <img src="$UI/OTO/assets/img/relax_2.jpg" alt=""
+                          <img src="$UI/OTO/assets/img/relax_2.png" alt=""
                             xid="image2"/>  
                           <span xid="span4"><![CDATA[语音记录]]></span> 
                         </div> 
@@ -156,7 +156,7 @@
                     <div class="panel-heading" xid="heading3"> 
                       <li xid="li9" class="clearfix"> 
                         <div xid="div14" class="pull-left b-relax-thrA"> 
-                          <img src="$UI/OTO/assets/img/relax_2.jpg" alt=""
+                          <img src="$UI/OTO/assets/img/relax_2.png" alt=""
                             xid="image4"/>  
                           <span xid="span6"><![CDATA[自评量表]]></span> 
                         </div> 

@@ -36,8 +36,8 @@
             </div> 
           </div> 
         </div>  
-        <a component="$UI/system/components/justep/button/button" class="btn btn-primary button block"
-          style="margin-top: 50px" label="确认" xid="loginBtn" onClick="loginBtnClick"> 
+        <a component="$UI/system/components/justep/button/button" class="btn btn-default b-user-thrButton"
+          style="margin-top: 50px;width:100%;" label="确认" xid="loginBtn" onClick="loginBtnClick"> 
           <i xid="i4"/>  
           <span xid="span4">确认</span> 
         </a> 
