@@ -32,7 +32,7 @@ define(function(require){
 				button: '开始汇报',
 				next: next,
 				lid: data.lid,
-				page: 'exam',
+				page: 'speech',
 				type: loosenType
 			};
 //			判断是否开启场景

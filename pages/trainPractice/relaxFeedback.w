@@ -63,8 +63,7 @@
                   id="skinData" tabbed="true"> 
                   <div component="$UI/system/components/bootstrap/panel/panel"
                     xid="panel2" class="panel panel-default"> 
-                    <div xid="heading1" style="background-color:transparent;"
-                      class="panel-heading"> 
+                    <div xid="heading1" class="panel-heading" bind-click="fetchSkinData"> 
                       <li xid="li8" class="clearfix"> 
                         <div xid="div13" class="pull-left b-relax-thrA"> 
                           <img src="$UI/OTO/assets/img/relax_2.png" alt=""
@@ -95,7 +94,7 @@
                   class="panel-group" id="consult"> 
                   <div class="panel panel-default" component="$UI/system/components/bootstrap/panel/panel"
                     xid="panel3"> 
-                    <div class="panel-heading" xid="heading2"> 
+                    <div class="panel-heading" xid="heading2"  bind-click="fetchConsult"> 
                       <li xid="li7" class="clearfix"> 
                         <div xid="div10" class="pull-left b-relax-thrA"> 
                           <img src="$UI/OTO/assets/img/relax_2.png" alt=""
@@ -117,7 +116,7 @@
                   class="panel-group" id="exam"> 
                   <div class="panel panel-default" component="$UI/system/components/bootstrap/panel/panel"
                     xid="panel5"> 
-                    <div class="panel-heading" xid="heading4"> 
+                    <div class="panel-heading" xid="heading4"  bind-click="fetchExam"> 
                       <li xid="li7" class="clearfix"> 
                         <div xid="div10" class="pull-left b-relax-thrA"> 
                           <img src="$UI/OTO/assets/img/relax_2.png" alt=""
@@ -139,7 +138,7 @@
                   class="panel-group" id="voice"> 
                   <div class="panel panel-default" component="$UI/system/components/bootstrap/panel/panel"
                     xid="panel3"> 
-                    <div class="panel-heading" xid="heading2"> 
+                    <div class="panel-heading" xid="heading2"  bind-click="fetchVoice"> 
                       <li xid="li7" class="clearfix"> 
                         <div xid="div10" class="pull-left b-relax-thrA"> 
                           <img src="$UI/OTO/assets/img/relax_2.png" alt=""
@@ -161,7 +160,7 @@
                   class="panel-group" id="sheet"> 
                   <div class="panel panel-default" component="$UI/system/components/bootstrap/panel/panel"
                     xid="panel4"> 
-                    <div class="panel-heading" xid="heading3"> 
+                    <div class="panel-heading" xid="heading3"  bind-click="fetchSheet"> 
                       <li xid="li9" class="clearfix"> 
                         <div xid="div14" class="pull-left b-relax-thrA"> 
                           <img src="$UI/OTO/assets/img/relax_2.png" alt=""

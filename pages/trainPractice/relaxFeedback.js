@@ -36,12 +36,11 @@ define(function(require){
 		this.duration.set(data.duration);
 		courseModel = data;
 		
+//		读取概述信息
 		Server.getPecDetail({
 			eventKind: 43,
 			lid: data.lid
 		}).then(function(data){
-			console.log(data);
-			courseModel.result = data;
 			that.contentShow();
 		});
 		
@@ -75,36 +74,37 @@ define(function(require){
 			case 1:
 			case 2:
 			case 3:
-				this.initSkinData();
-				this.initConsult();
+				this.skinData.show();
+				this.consult.show();
 				break;
 //			case 'interview':
 			case 4:
 			case 5:
 			case 6:
-				this.initSkinData();
-				this.initVoice();
-				this.initConsult();
-				this.initSheet();
+				this.skinData.show();
+				this.voice.show();
+				this.consult.show();
+				this.sheet.show();
 				break;
 //			case 'examTender': 
 			case 7:
-				this.initSkinData();
-				this.initExam();
-				this.initConsult();
-				this.initSheet();
+				this.skinData.show();
+				this.exam.show();
+				this.consult.show();
+				this.sheet.show();
 				break;
 //			case 'acrophobia':
 			case 8:
-				this.initSkinData();
-				this.initConsult();
-				this.initSheet();
+				this.skinData.show();
+				this.consult.show();
+				this.sheet.show();
 				break;
 		}
 	}
-	
-	Model.prototype.initSkinData = function(){
-		this.skinData.show();
+
+
+//  初始化详细的区块
+	Model.prototype.fetchSkinData = function(){		
 		var data = courseModel.result.dataList;
 //		图标数据展示 ？？？？？？？
 		var displayData = [];
@@ -121,11 +121,15 @@ define(function(require){
 		}
 
 	}
-	Model.prototype.initConsult = function(){
-		this.consult.show();
+	Model.prototype.fetchConsult = function(){
+		Server.fetchMod({
+			eventKind: 54,
+			lid: courseModel.lid
+		}).then(function(data){
+			$('#diagnose').val(data.diagnose);
+		});
 	}
-	Model.prototype.initExam = function(){
-		this.exam.show();
+	Model.prototype.fetchExam = function(){
 		var answers = courseModel.result.answer; 	// '1:2,2:3,3:2,4:1'
 		var subject = courseModel.result.subject;	// 学科
 		var score = courseModel.result.score;		// 自评列表
@@ -135,17 +139,32 @@ define(function(require){
 		this.subject.set(subjecDirec[subject-1]);
 		this.score.set(score);
 		this.totalScore.set(totalScore);
-//		this.answerList;
+		Server.fetchMod({
+			eventKind: 52,
+			lid: courseModel.lid
+		}).then(function(data){
+			$('#diagnose').val(data.diagnose);
+			/*answerList
+			score
+			totalScore
+			subject*/
+		});
 	}
-	Model.prototype.initVoice = function(){
-		this.voice.show();
-		$('#voice').val(courseModel.result.speech);
+	Model.prototype.fetchVoice = function(){
+		Server.fetchMod({
+			eventKind: 55,
+			lid: courseModel.lid
+		}).then(function(data){
+			$('#voice').val(data.speech);
+		});
 	}
-	Model.prototype.initSheet = function(){
-		this.sheet.show();
-//		var questDect = {};
-//		courseModel.result.questType = 0;
-		$('#zplb').html();
+	Model.prototype.fetchSheet = function(){
+		Server.fetchMod({
+			eventKind: 53,
+			lid: courseModel.lid
+		}).then(function(data){
+			$('#zplb').html(data.answer);
+		});
 	}
 	
 	

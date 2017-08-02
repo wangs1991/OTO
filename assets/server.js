@@ -168,6 +168,11 @@ define(['../config/config'], function(module) {
 		// 开始暴露训练
 		goExpose: function(data){
 			return fetch('/app/order', data);
+		},
+//		获取训练详情
+		fetchMod: function(data){
+			return fetch('/app/order', data);
 		}
+		
 	};
 });
