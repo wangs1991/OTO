@@ -32,5 +32,10 @@ define(function(require){
 			that.hatState.set(false);
 		});
 	}
+	
+	Model.prototype.goBack = function(event){
+		this.close();
+	};
+	
 	return Model;
 });

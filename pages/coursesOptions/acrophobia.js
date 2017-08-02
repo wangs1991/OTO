@@ -84,5 +84,10 @@ define(function(require){
 			$('#senceOption').removeAttr('disabled');
 		}
 	}
+	
+	Model.prototype.goBack = function(event){
+		this.close();
+	};
+	
 	return Model;
 });

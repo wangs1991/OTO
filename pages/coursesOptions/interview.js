@@ -14,18 +14,22 @@ define(function(require){
 	
 	Model.prototype.beginStudy = function(){
 		window.skinFeelStart = true;
-//		开始练习请求服务器
+		
+		//开始练习请求服务器
 		var data = $('#courseOpt').serialize();
 		data = decodeURI(data);
-		var params = Server.toJson(data);
+		
 		var curVisitor = Server.getCurUser();
 		var next;
+		
+		var params = Server.toJson(data);
 		params.eventKind = 37;
 		params.vid = curVisitor.id;
 		params.loosenType = loosenType;
 		params.isOpen = params.isOpen? params.isOpen: 0;
+		
+		//所有的课程开始都会调用课程第一步接口，即保存配置数据的接口
 		next = '$UI/OTO/pages/coursesPlay/exposePlay.w';
-//		所有的课程开始都会调用课程第一步接口，即保存配置数据的接口
 		Server.startRelease(params).then(function(data){
 			var params = {
 				title: '面试练习',
@@ -35,17 +39,19 @@ define(function(require){
 				page: 'exam',
 				type: loosenType
 			};
-//			判断是否开启场景
+			
+			//判断是否开启场景
 			var isOpen = $('#checkboxTwoInput').is(':checked');
 			var url;
 			if(isOpen){
 				url = "$UI/OTO/pages/coursesPlay/relaxPlay.w";
-			}else{
+			} else {
 				url = '$UI/OTO/pages/coursesPlay/exposePlay.w';
 			}
 			justep.Shell.showPage(url, params);
 		});
-	}	
+	}
+	
 	Model.prototype.goBindVR = function(){
 		var url = "$UI/OTO/pages/setting/bindVRView.w";
 		justep.Shell.showPage(url);
@@ -83,5 +89,10 @@ define(function(require){
 			$('#senceOption').removeAttr('disabled');
 		}
 	}
+	
+	Model.prototype.goBack = function(event){
+		this.close();
+	};
+	
 	return Model;
 });

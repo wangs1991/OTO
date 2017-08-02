@@ -56,6 +56,17 @@ define(function(require) {
 	};
 	
 	Model.prototype.goToSave = function(){
+		//停止发送Live请求
+		if (liveTimer != null) {
+			clearInterval(liveTimer);
+			liveTimer = null;
+		}
+		
+		if (loadControlAniTimer != null) {
+			clearInterval(loadControlAniTimer);
+			loadControlAniTimer = null;
+		}
+		
 		this.saveSkinData('expose');
 		Server.stopCourse({
 				eventKind: 40,
@@ -159,7 +170,7 @@ define(function(require) {
 	
 					//justep.Util.hint("controller anis:" + anisArray.length, {"position" : "bottom"});
 				});
-			}, 200);
+			}, 2000);
 		}else{
 			$('#staticActions').show();
 			$('#asyncActions').hide();
@@ -194,7 +205,15 @@ define(function(require) {
 	};
 
 	Model.prototype.modelUnLoad = function(event) {
-		clearInterval(liveTimer);
+		if (liveTimer != null) {
+			clearInterval(liveTimer);
+			liveTimer = null;
+		}
+		
+		if (loadControlAniTimer != null) {
+			clearInterval(loadControlAniTimer);
+			loadControlAniTimer = null;
+		}
 	};
 
 	function control(me, index) {
@@ -270,6 +289,20 @@ define(function(require) {
 			myChartClock && myChartClock.setOption(options);
 		}
 	})();
+	
+	Model.prototype.goBack = function(event){
+		//停止发送Live请求
+		if (liveTimer != null) {
+			clearInterval(liveTimer);
+			liveTimer = null;
+		}
+		
+		if (loadControlAniTimer != null) {
+			clearInterval(loadControlAniTimer);
+			loadControlAniTimer = null;
+		}
+		this.close();
+	};
 	
 	return Model;
 });
