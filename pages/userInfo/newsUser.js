@@ -44,6 +44,9 @@ define(function(require) {
 	// 上传头像
 	Model.prototype.uploadImg = function() {
 		console.log(11111111);
+		var url = require.toUrl("$UI/OTO/pages/test/index.w");
+		justep.Shell.showPage(url);
+		return false;
 		// 拍照
 		var _this = this;
 		document.addEventListener("deviceready", onDeviceReady, false);
@@ -57,7 +60,7 @@ define(function(require) {
 				saveToPhotoAlbum : true,
 				// allowEdit : true,
 				sourceType : 1
-			// 0、2为从相册文件中选择，1为拍照
+				// 0、2为从相册文件中选择，1为拍照
 			});
 			// 拍照成功后回调
 			function onLoadImageSuccess(imageData) {// imageURI imageData
@@ -82,7 +85,7 @@ define(function(require) {
 		data = decodeURI(data);
 		var params = Server.toJson(data);
 		params.eventKind = 30;
-		params.answer = window.formSheetRes;
+		params.answer = JSON.stringify(window.formSheetRes);
 		Server.createUser(params).then(function(data) {
 			console.log(data);
 			justep.Shell.closePage();

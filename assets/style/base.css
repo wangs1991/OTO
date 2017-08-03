@@ -1908,7 +1908,7 @@ opacity
 	position: absolute;
 	top: 19px;
 	left: 14px;
-	height: 2px;
+	height: 0;
 	width: 90px;
 }
 
@@ -1997,4 +1997,27 @@ opacity
 
 .b-show {
 	display: block;
+}
+
+
+.eaxm_list dt{
+	margin-top: 20px;
+}
+.eaxm_list dd{
+	margin: 10px;
+}
+.eaxm_list dd .item-idx{
+	display: inline-block;
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100px;
+	text-align: center;
+	line-height: 1.5em;;
+}
+.eaxm_list dd.answer{
+	color: green;
+}
+.eaxm_list dd.selected .item-idx{
+	background-color: #2c90f4;
+	color: #fff;
 }

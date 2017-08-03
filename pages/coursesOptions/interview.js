@@ -28,6 +28,9 @@ define(function(require){
 		params.loosenType = loosenType;
 		params.isOpen = params.isOpen? params.isOpen: 0;
 		
+		//时长
+		var duration = params.duration;
+		
 		//所有的课程开始都会调用课程第一步接口，即保存配置数据的接口
 		next = '$UI/OTO/pages/coursesPlay/exposePlay.w';
 		Server.startRelease(params).then(function(data){
@@ -37,7 +40,8 @@ define(function(require){
 				next: next,
 				lid: data.lid,
 				page: 'interview',
-				type: loosenType
+				type: loosenType,
+				duration : duration
 			};
 			
 			//判断是否开启场景

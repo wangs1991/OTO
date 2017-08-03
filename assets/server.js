@@ -115,6 +115,14 @@ define(['../config/config'], function(module) {
 		},
 //		存储当前操作用户数据
 		setCurUser : function(u) {
+			var date = new Date(),
+				cy = date.getFullYear();
+				u.age = cy - u.birthday.split('-')[0];
+			if(u.sex == 0){
+				u.sexTxt= '女';
+			}else{
+				u.sexTxt = '男';
+			}
 			window.localStorage.setItem('curUser', JSON.stringify(u));
 		},
 //		获取本地当前操作用户信息

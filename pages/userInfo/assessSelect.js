@@ -16,7 +16,6 @@ define(function(require){
 	Model.prototype.enterPage = function(){
 //		尝试曲本地读取测评完的成绩
 		try{
-			console.log(window.sheetRec);
 			var sheetRec = window.sheetRec,
 				resStr = '',
 				tar;
@@ -60,24 +59,17 @@ define(function(require){
 		if(pgeType){
 //			去上一页获取用户量表数据;
 			var curUser = Server.getCurUser();
-			curUser.answer = {
-					4: {
-						4: 44,
-						11: 76
-					}
-			};
-			console.log(curUser.answer);
 			
 //			解析数据
-			window.formSheetRes = curUser.answer;
+			window.formSheetRes = JSON.parse(curUser.answer);
 			var tar,
-				resStr = '';
-			for(var i in curUser.answer){
-				console.log(curUser.answer[i]);
+				resStr = '',
+				answer = JSON.parse(curUser.answer);
+			for(var i in answer){
 				tar = $('.zplb_item .zplb_btn[data-type='+i+']').parents('.zplb_item');
 				tar.addClass('finished');
-				for(var j in curUser.answer[i]){
-					resStr += '<p>'+window.sheetTypeDict[i]+'： '+curUser.answer[i][j]+'</p>';
+				for(var j in answer[i]){
+					resStr += '<p>'+window.sheetTypeDict[i]+'： '+answer[i][j]+'</p>';
 				}
 				$('.access-result', tar).html(resStr);
 			}

@@ -11,7 +11,9 @@ define(function(require) {
 	
 	var self = null;
 	var liveTimer = null;	// 控制图片刷新
-
+	var durationArray = [3,5,10];
+	var durationDelay = 600;
+	
 	var Model = function() {
 		this.callParent();
 		this.button = justep.Bind.observable('');
@@ -75,7 +77,7 @@ define(function(require) {
 			justep.Shell.closePage();
 			return;
 		}
-
+		
 		console.log("modelParamsReceive2");
 		
 		//得到直播图片
@@ -95,7 +97,21 @@ define(function(require) {
 		}, 120);
 		
 		var params = event.params;
+		var duration = params.duration;
+		
+		durationDelay = durationArray[duration - 1];
+		if (durationDelay > 0 && durationDelay < 15) {
+			durationDelay = durationDelay * 60;
+			
+			setTimeout(function() {
+				self.goToNext();
+			}, durationDelay * 1000);
+		}
+		
 		console.log(params);
+		
+		console.log("relax duration:" + duration + " durationDelay:" + durationDelay);
+		
 		courseModel = event.params;
 		this.button.set(params.button);
 		url = params.next;

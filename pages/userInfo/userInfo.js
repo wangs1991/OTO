@@ -45,9 +45,10 @@ define(function(require){
 		var params = Server.toJson(data);
 		params.eventKind = 31;
 		params.vid = Server.getCurUser().id;
-		params.answer = window.formSheetRes;
+		params.answer = JSON.stringify(window.formSheetRes);
 		Server.createUser(params).then(function(data){
 			console.log(data);
+			Server.setCurUser(params);
 			justep.Shell.closePage();
 		});
 	}

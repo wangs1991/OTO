@@ -191,7 +191,7 @@
         </div> 
       </div>  
       <div component="$UI/system/components/justep/panel/panel" class="x-panel x-full"
-        xid="panel3" style="display: none"> 
+        xid="panel3" style="display: “”"> 
         <div class="x-panel-top" xid="top3"> 
           <div component="$UI/system/components/justep/titleBar/titleBar" class="x-titlebar app-title-ctner"
             xid="titleBar3"> 
@@ -214,8 +214,8 @@
             <div xid="div1" class="score-big" bind-text=" $model.controlData.val(&quot;score_f&quot;)"/> 
           </div>  
           <div class="section-card content-detail mgt-10" xid="div17"> 
-            <div class="sub-title" xid="testCompleteInfoDiv1">以上得分是你的焦虑指数。当超过56分时，说明你存在焦虑。请及时联络心理医生。</div>  
-            <div class="sub-title" xid="testCompleteInfoDiv2" style="display:none">以上分数为您的焦虑等级。</div>  
+            <div class="sub-title" xid="testCompleteInfoDiv1"></div>  
+            <div class="sub-title" xid="testCompleteInfoDiv2" style="display:none"></div>  
             <a component="$UI/system/components/justep/button/button" class="btn btn-primary button block mgt-20"
               label="确定" xid="closeButton" onClick="closeButtonClick"> 
               <i xid="i4"/>  

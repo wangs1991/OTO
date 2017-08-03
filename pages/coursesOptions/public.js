@@ -24,7 +24,12 @@ define(function(require){
 		params.vid = curVisitor.id;
 		params.loosenType = loosenType;
 		params.isOpen = params.isOpen? params.isOpen: 0;
+		
+		//时长
+		var duration = params.duration;
+		
 		next = '$UI/OTO/pages/coursesPlay/exposePlay.w';
+		
 //		所有的课程开始都会调用课程第一步接口，即保存配置数据的接口
 		Server.startRelease(params).then(function(data){
 			var params = {
@@ -33,7 +38,8 @@ define(function(require){
 				next: next,
 				lid: data.lid,
 				page: 'public',
-				type: loosenType
+				type: loosenType,
+				duration : duration
 			};
 //			判断是否开启场景
 			var isOpen = $('#checkboxTwoInput').is(':checked');

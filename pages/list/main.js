@@ -56,7 +56,9 @@ define(function(require){
 	
 //	进入页面刷新数据
 	Model.prototype.enterPage = function(){
-//		window.location.reload();
+		this.userList.splice(0, this.userList.length);
+		vid = 0;
+		this.loadList();
 	};
 	
 	Model.prototype.modelLoad = function(event){

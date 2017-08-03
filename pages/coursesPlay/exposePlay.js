@@ -14,6 +14,8 @@ define(function(require) {
 	var self = null;
 	var liveTimer = null;	// 控制图片刷新
 	var loadControlAniTimer = null;
+	var durationArray = [1,3,5,10];
+	var durationDelay = 600;
 	
 	var Model = function() {
 		this.callParent();
@@ -94,6 +96,9 @@ define(function(require) {
 			justep.Shell.closePage();
 			return;
 		}
+		
+		self = this;
+		
 //		获取参数
 		var params = event.params;
 		courseModel = params;
@@ -101,6 +106,16 @@ define(function(require) {
 		this.button.set(params.button);
 		url = params.next;
 		
+		var duration = params.duration;
+		
+		durationDelay = durationArray[duration - 1];
+		if (durationDelay > 0 && durationDelay < 15) {
+			durationDelay = durationDelay * 60;
+			
+			setTimeout(function() {
+				self.goToSave();
+			}, durationDelay * 1000);
+		}
 		
 		//得到直播图片
 		var liveImage = self.getElementByXid("liveImage");
@@ -137,7 +152,11 @@ define(function(require) {
 				clearInterval(loadControlAniTimer);
 			}
 			
+			console.log("exposePlay getActions");
+			
 			loadControlAniTimer = setInterval(function() {
+				console.log("exposePlay get_controller_ani_list");
+				
 				Server.getActions({
 					action: 'get_controller_ani_list',
 					uid : window.uid
@@ -221,7 +240,9 @@ define(function(require) {
 
 	function control(me, index) {
 		var val = index + ",0,0,0,0";
-
+		
+		console.log("control:" + index);
+		
 		var params = {
 			device : window.device,
 			eventKind : 22,

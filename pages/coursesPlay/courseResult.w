@@ -131,8 +131,33 @@
                     </div>  
                     <div class="panel-collapse collapse" xid="div4"> 
                       <div class="panel-body" xid="div5"> 
-                        <input type="text" name="score" id="score" style="display: none;"/> 
-                      </div> 
+                      <h5>考试科目：
+                        <span bind-text="subject"/>
+                      </h5>  
+                      <p>得分：
+                        <span bind-text="score"/>/
+                        <span bind-text="totalScore"/>
+                      </p>  
+                      <dl class="eaxm_list" bind-foreach="{data: answerList, as: 'item'}"> 
+                        <dt bind-text="($index()+1) + '. ' + item.title"/>  
+                        <dd bind-css="{'selected': item.selected == 1, 'answer': item.answer == 1}">
+                          <span class="item-idx">A. </span>
+                          <span bind-text="item.option1"/>
+                        </dd>  
+                        <dd  bind-css="{'selected': item.selected == 2, 'answer': item.answer == 2}">
+                        	<span class="item-idx">B. </span>
+                          	<span bind-text="item.option2"/>
+                        </dd>  
+                        <dd  bind-css="{'selected': item.selected == 3, 'answer': item.answer == 3}">
+                        	<span class="item-idx">C. </span>
+                          	<span bind-text="item.option3"/>
+                        </dd>
+                        <dd  bind-css="{'selected': item.selected == 4, 'answer': item.answer == 4}">
+                        	<span class="item-idx">D. </span>
+                          	<span bind-text="item.option4"/>
+                        </dd>
+                      </dl> 
+                    </div>  
                     </div> 
                   </div> 
                 </div>  
@@ -152,7 +177,7 @@
                     </div>  
                     <div class="panel-collapse collapse" xid="div8"> 
                       <div class="panel-body" xid="div9"> 
-                        <textarea cols="5" name="voice" rows="5" xid="textarea2"
+                        <textarea cols="5" name="voice" rows="5" id="voiceTxt" xid="textarea2"
                           class="b-user-fourB"/> 
                       </div> 
                     </div> 

@@ -106,19 +106,19 @@
                 <div xid="settingListDiv" class="tb-range-no_line list_list_list"> 
                   <a component="$UI/system/components/justep/button/button"
                     class="btn btn-success btn-sm btn-only-label center-block item-btn"
-                    label="上升" xid="selectCourseButton" onClick="controller1Click"> 
+                    label="走廊备考" xid="selectCourseButton" onClick="controller1Click"> 
                     <i xid="i2"/>  
                     <span xid="span1">走廊备考</span> 
                   </a>  
                   <a component="$UI/system/components/justep/button/button"
                     class="btn btn-success btn-sm btn-only-label center-block item-btn"
-                    label="下降" xid="selectCourseButton" onClick="controller2Click"> 
+                    label="进入考场" xid="selectCourseButton" onClick="controller2Click"> 
                     <i xid="i2"/>  
                     <span xid="span1">进入考场</span> 
                   </a>  
                   <a component="$UI/system/components/justep/button/button"
                     class="btn btn-success btn-sm btn-only-label center-block item-btn"
-                    label="顶层" xid="selectCourseButton" onClick="controller3Click"> 
+                    label="结束考试" xid="selectCourseButton" onClick="controller3Click"> 
                     <i xid="i2"/>  
                     <span xid="span1">结束考试</span> 
                   </a> 
@@ -129,43 +129,43 @@
                 <div xid="settingListDiv" class="tb-range-no_line list_list_list"> 
                   <a component="$UI/system/components/justep/button/button"
                     class="btn btn-success btn-sm btn-only-label center-block item-btn"
-                    label="上升" xid="selectCourseButton" onClick="controller4Click"> 
+                    label="考前对话" xid="selectCourseButton" onClick="controller4Click"> 
                     <i xid="i2"/>  
                     <span xid="span1">考前对话</span> 
                   </a>  
                   <a component="$UI/system/components/justep/button/button"
                     class="btn btn-success btn-sm btn-only-label center-block item-btn"
-                    label="下降" xid="selectCourseButton" onClick="controller5Click"> 
+                    label="老师出现" xid="selectCourseButton" onClick="controller5Click"> 
                     <i xid="i2"/>  
                     <span xid="span1">老师出现</span> 
                   </a>  
                   <a component="$UI/system/components/justep/button/button"
                     class="btn btn-success btn-sm btn-only-label center-block item-btn"
-                    label="顶层" xid="selectCourseButton" onClick="controller6Click"> 
+                    label="开始考试" xid="selectCourseButton" onClick="controller6Click"> 
                     <i xid="i2"/>  
                     <span xid="span1">开始考试</span> 
                   </a>  
                   <a component="$UI/system/components/justep/button/button"
                     class="btn btn-success btn-sm btn-only-label center-block item-btn"
-                    label="顶层" xid="selectCourseButton" onClick="controller7Click"> 
+                    label="老师巡视" xid="selectCourseButton" onClick="controller7Click"> 
                     <i xid="i2"/>  
                     <span xid="span1">老师巡视</span> 
                   </a>  
                   <a component="$UI/system/components/justep/button/button"
                     class="btn btn-success btn-sm btn-only-label center-block item-btn"
-                    label="顶层" xid="selectCourseButton" onClick="controller8Click"> 
+                    label="老师咳嗽" xid="selectCourseButton" onClick="controller8Click"> 
                     <i xid="i2"/>  
                     <span xid="span1">老师咳嗽</span> 
                   </a>  
                   <a component="$UI/system/components/justep/button/button"
                     class="btn btn-success btn-sm btn-only-label center-block item-btn"
-                    label="顶层" xid="selectCourseButton" onClick="controller9Click"> 
+                    label="同学交卷" xid="selectCourseButton" onClick="controller9Click"> 
                     <i xid="i2"/>  
                     <span xid="span1">同学交卷</span> 
                   </a>  
                   <a component="$UI/system/components/justep/button/button"
                     class="btn btn-success btn-sm btn-only-label center-block item-btn"
-                    label="顶层" xid="selectCourseButton" onClick="controller10Click"> 
+                    label="考后对话" xid="selectCourseButton" onClick="controller10Click"> 
                     <i xid="i2"/>  
                     <span xid="span1">考后对话</span> 
                   </a> 

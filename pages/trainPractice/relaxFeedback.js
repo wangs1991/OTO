@@ -1,8 +1,10 @@
 define(function(require){
 	require("css!../../assets/style/base").load();
+	require("../../assets/echart/dist/echarts-all");
 	var $ = require("jquery");
 	var justep = require("$UI/system/lib/justep");
 	var Server = require('../../assets/server');
+	require("../../assets/js/AppUtils");
 	var courseModel;
 
 	var Model = function(){
@@ -14,11 +16,13 @@ define(function(require){
 		this.date = justep.Bind.observable();
 		this.duration = justep.Bind.observable();
 		
-//		区块展示相关
+//		区块展示相关 考试相关
 		this.subject = justep.Bind.observable();
 		this.score = justep.Bind.observable();
 		this.totalScore = justep.Bind.observable();
 		this.answerList = justep.Bind.observableArray();
+		
+		this.zpSheet = justep.Bind.observableArray();
 	};
 	
 	Model.prototype.modelLoad = function(){
@@ -37,15 +41,61 @@ define(function(require){
 		courseModel = data;
 		
 //		读取概述信息
+		var that = this;
 		Server.getPecDetail({
 			eventKind: 43,
 			lid: data.lid
 		}).then(function(data){
 			that.contentShow();
+//			根据返回数据取初始化select
+			that.initSelect(data.dataList);
 		});
-		
 	}
 	
+//	下拉选
+	Model.prototype.initSelect = function(data){
+		var str = '';
+		for(var i = 0, len = data.length; i < len; i++){
+			str += '<option value="'+data[i].lid+'">'+data[i].time+'</option>';
+		}
+		$('#duibi').append(str);
+		
+		$('#duibi').on('change', function(){
+//			获取数据
+			var lid = $(this).val();
+			Server.fetchMod({
+				eventKind: 51,
+				lid: lid
+			}).then(function(data){
+				var time = 0,
+					displayData = [],
+					skin = data.skin.split(',');
+				for(var i =0, len = skin.length; i < len; i++){
+					displayData.push([time+200*i, skin[i]]);
+				}
+	            options.series[1] = {
+	                name:'电波',
+	                type:'line',
+	                data: displayData,
+	                symbol:'none',
+	                smooth: false,
+	                itemStyle: {
+	                	normal: {
+	                		color: '#0bef51'
+	                	}
+	                }
+	            };
+				try{
+					window.myChartClock = echarts.init($('#echart')[0]);
+					window.myChartClock.setOption(options, true);
+				}catch(e){
+				}
+			});
+			console.log(lid);
+//			添加数据
+			
+		});
+	}
 	//	获取当前用户数据
 	Model.prototype.goUserInfo = function (){
 		var url = "$UI/OTO/pages/userInfo/userInfo.w";
@@ -68,7 +118,6 @@ define(function(require){
 		
 //		根据课程类型的不同，区别添加不同的展示模块
 		console.log(courseModel );
-		courseModel.loosenType = 4;
 		switch (courseModel.loosenType){
 //			放松类
 			case 1:
@@ -105,91 +154,147 @@ define(function(require){
 
 //  初始化详细的区块
 	Model.prototype.fetchSkinData = (function(){
-		var load = false;
+		var load = false,
+			lid = 0;
 		return function(){
-			if(!load){
-				var data = courseModel.result.dataList;
-		//		图标数据展示 ？？？？？？？
-				var displayData = [];
-				var time = 0;
-				$('#baseLine').val(data.join(','));
-				for(var i =0, len = data.length; i < len; i++){
-					displayData.push([time+200*i, data[i]]);
-				}
-				options.series[0].data = displayData;
-				try{
-					window.myChartClock = echarts.init($('#echart')[0]);
-					window.myChartClock.setOption(options, true);
-				}catch(e){
-				}
+			if(!load && lid != courseModel.lid){
+				Server.fetchMod({
+					eventKind: 51,
+					lid: courseModel.lid
+				}).then(function(data){
+					var time = 0,
+						displayData = [],
+						skin = data.skin.split(',');
+					for(var i =0, len = skin.length; i < len; i++){
+						displayData.push([time+200*i, skin[i]]);
+					}
+					options.series[0].data = displayData;
+					try{
+						window.myChartClock = echarts.init($('#echart')[0]);
+						window.myChartClock.setOption(options, true);
+					}catch(e){
+					}
+					lid = courseModel.lid;
+				});
 			}
 		}
 	})();
 	Model.prototype.fetchConsult = (function(){
-		var load = false;
+		var load = false,
+			lid = 0;
 		return function(){
-			if(!load){
+			if(!load && lid != courseModel.lid){
 				Server.fetchMod({
 					eventKind: 54,
 					lid: courseModel.lid
 				}).then(function(data){
 					$('#diagnose').val(data.diagnose);
-					load = true;
+//					load = true;
+					lid = courseModel.lid;
 				});
 			}
 		}
 	})();
 	Model.prototype.fetchExam = (function(){
-		var load = false;
+		var load = false,
+			lid = 0;
 		return function(){
-			if(!load){
-				var answers = courseModel.result.answer; 	// '1:2,2:3,3:2,4:1'
-				var subject = courseModel.result.subject;	// 学科
-				var score = courseModel.result.score;		// 自评列表
-				var totalScore = courseModel.result.totalScore;	// 考试总成绩
-				var subjecDirec = ['语文', '数学', '外语'];
-				
-				this.subject.set(subjecDirec[subject-1]);
-				this.score.set(score);
-				this.totalScore.set(totalScore);
+			if(!load && lid != courseModel.lid){
+				var subjecDirec = ['语文', '历史', '外语'];
+				var subjectData = ['Chinese', 'History', 'English'];
+				var that = this;
 				Server.fetchMod({
 					eventKind: 52,
 					lid: courseModel.lid
 				}).then(function(data){
-					$('#diagnose').val(data.diagnose);
-					/*answerList
-					score
-					totalScore
-					subject*/
-					load = true;
+					var rep = data;
+					that.score.set(data.score);
+					that.totalScore.set(data.totalScore);
+					that.subject.set(subjecDirec[data.subject-1]);
+
+					var url = require.toUrl('../../mock/test_'+subjectData[data.subject-1]+'.json');
+					AppUtils.getAction(url, null, function(data) {
+						var list = data; // 问题列表
+//						根据answer去读取问题
+						var answer = rep.answerList;  // 用户作答问题
+						list.forEach(function(n, i){
+							var item = hasIt(n, answer);
+							console.log(item);
+							if(item){
+								var q = item.q,
+									a = item.a;
+								that.answerList.push({
+									title: q.title,
+									option1: q.question1,
+									option2: q.question2,
+									option3: q.question3,
+									option4: q.question4,
+									answer: q.answer,
+									selected: a.selectItem
+								});
+							}
+						});
+						
+					});
+//					load = true;
+					lid = courseModel.lid;
 				});
 			}
 		}
 	})();
+	
+	function hasIt(tar, ori){
+//		比对questId 与 id
+		var res;
+		for(var i = 0, len = ori.length; i < len; i++){
+			if(ori[i].questId == tar.id){
+				res = {q: tar,
+				       a: ori[i]};
+				return res;
+			}
+		}
+		return false;
+	}
 	Model.prototype.fetchVoice = (function(){
-		var load = false;
+		var load = false,
+			lid = 0;
 		return function(){
-			if(!load){
+			if(!load && lid != courseModel.lid){
 				Server.fetchMod({
 					eventKind: 55,
 					lid: courseModel.lid
 				}).then(function(data){
 					$('#voice').val(data.speech);
-					load = true;
+//					load = true;
+					lid = courseModel.lid;
 				});
 			}
 		}
 	})();
 	Model.prototype.fetchSheet = (function(){
-		var load = false;
+		var load = false,
+			lid = 0;
 		return function(){
-			if(!load){
+			if(!load && lid != courseModel.lid){
+				var that = this; 
 				Server.fetchMod({
 					eventKind: 53,
 					lid: courseModel.lid
 				}).then(function(data){
-					$('#zplb').html(data.answer);
-					load = true;
+					console.log(data);
+					var tar,
+						resStr = '',
+						answer = JSON.parse(data.answer);
+					for(var i in answer){
+						tar = $('.zplb_item .zplb_btn[data-type='+i+']').parents('.zplb_item');
+						tar.addClass('finished');
+						for(var j in answer[i]){
+							resStr += '<p>'+window.sheetTypeDict[i]+'： '+answer[i][j]+'</p>';
+						}
+						$('#zplb').html(resStr);
+					}
+//					load = true;
+					lid = courseModel.lid;
 				});
 			}
 		}

@@ -47,6 +47,10 @@ define(function(require){
 		params.eventKind = 34;
 		params.vid = Server.getCurUser().id;
 		params.loosenType = loosenType;
+		
+		//时长
+		var duration = params.duration;
+		
 //		所有的课程开始都会调用课程第一步接口，即保存配置数据的接口
 		Server.startRelease(params).then(function(data){
 			var params = {
@@ -55,8 +59,10 @@ define(function(require){
 				next: '$UI/OTO/pages/coursesPlay/courseResult.w',
 				lid: data.lid,
 				page: page,
-				type: loosenType
+				type: loosenType,
+				duration : duration
 			};
+			
 			var url = "$UI/OTO/pages/coursesPlay/relaxPlay.w";
 			justep.Shell.showPage(url, params);
 		});

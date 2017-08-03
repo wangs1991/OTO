@@ -1,32 +1,32 @@
 [
-{"id":"1"; "title":"Li Hong _____ TV for two hours every evening"; "question1":"watch"; "question2":"watches"; "question3":"watched"; "question4":""; "answer":"2"; "score":"1"};
-{"id":"2"; "title":"--- _________ is he?  --- He is ten"; "question1":"What"; "question2":"Who"; "question3":"How old"; "question4":""; "answer":"3"; "score":"1"};
-{"id":"3"; "title":"Kate and Jane _______ my good friends"; "question1":"is"; "question2":"am"; "question3":"are"; "question4":""; "answer":"3"; "score":"1"};
-{"id":"4"; "title":"--- Where ________ he from?--- He _______ from China."; "question1":"is; come "; "question2":"is; comes"; "question3":"does; is"; "question4":""; "answer":"2"; "score":"1"};
-{"id":"5"; "title":"--- Where is my pencil?--- I can't ______ it."; "question1":"look at"; "question2":"find"; "question3":"look for"; "question4":""; "answer":"2"; "score":"1"};
-{"id":"6"; "title":"We're going to stay here tomorrow. What ____ you?"; "question1":"about"; "question2":"bes"id"es"; "question3":"with"; "question4":""; "answer":"1"; "score":"1"};
-{"id":"7"; "title":"That blue jacket is beautiful"; "question1":"fine "; "question2":"very nice"; "question3":"well"; "question4":""; "answer":"2"; "score":"1"};
-{"id":"8"; "title":"--- _____ are these? --- They are red pencils"; "question1":"What"; "question2":"Where"; "question3":"What colour"; "question4":""; "answer":"1"; "score":"1"};
-{"id":"9"; "title":"My mother _______ three shelves"; "question1":"have"; "question2":"has"; "question3":"is"; "question4":""; "answer":"2"; "score":"1"};
-{"id":"10"; "title":"The man over there is ________"; "question1":"Miss White"; "question2":"Mrs White"; "question3":"Mr White"; "question4":""; "answer":"3"; "score":"1"};
-{"id":"11"; "title":"--- _______ kitchen is clean?  ---- Mary's"; "question1":"Who's"; "question2":"Whose"; "question3":"Who"; "question4":""; "answer":"2"; "score":"1"};
-{"id":"12"; "title":"--- _______ grade are you in? --- Grade Five"; "question1":"Whose"; "question2":"Which"; "question3":"Where"; "question4":""; "answer":"2"; "score":"1"};
-{"id":"13"; "title":"--- _______ on the river? ---- There're some ducks"; "question1":"What"; "question2":"Which"; "question3":"What's"; "question4":""; "answer":"3"; "score":"1"};
-{"id":"14"; "title":"That girl is my friend. ______ name is May"; "question1":"His"; "question2":"Her"; "question3":"Its"; "question4":""; "answer":"2"; "score":"1"};
-{"id":"15"; "title":"Helen is behind me. I am ______ Helen"; "question1":"behind"; "question2":"in front of"; "question3":"bes"id"e"; "question4":""; "answer":"2"; "score":"1"};
-{"id":"16"; "title":"Do you have brothers sisters in your family?"; "question1":" some…and"; "question2":"some…or"; "question3":"any…or"; "question4":"any…and"; "answer":"3"; "score":"1"};
-{"id":"17"; "title":"Jim and Mary good English and computer"; "question1":"are…in"; "question2":"is…in"; "question3":"are…at"; "question4":"is…at"; "answer":"3"; "score":"1"};
-{"id":"18"; "title":"How is the cinema from here?"; "question1":"far"; "question2":"many"; "question3":"much"; "question4":"about"; "answer":"1"; "score":"1"};
-{"id":"19"; "title":"We can have outing in autumn."; "question1":"a…a"; "question2":"an…an"; "question3":"an…/"; "question4":"the…the"; "answer":"3"; "score":"1"};
-{"id":"20"; "title":"--- _______ you like to come?---Of course. I'll come them"; "question1":"What…with"; "question2":"What's…of"; "question3":"Would…with"; "question4":"Would…of"; "answer":"3"; "score":"1"};
-{"id":"21"; "title":"I'd like Helen soon"; "question1":"to write"; "question2":"to write to"; "question3":"to writing to"; "question4":"to writing"; "answer":"3"; "score":"1"};
-{"id":"22"; "title":"Tom in a big house?"; "question1":"Does…live"; "question2":"Does…lives"; "question3":"Do…lives"; "question4":"Do…live"; "answer":"1"; "score":"1"};
-{"id":"23"; "title":"A: What Jane ?B: She's writing an e-mail to her pen friend"; "question1":"is…doin"; "question2":"d"id"…do"; "question3":"will…do"; "question4":"is…going to do"; "answer":"1"; "score":"1"};
-{"id":"24"; "title":"You and I like listening to music. We have the same"; "question1":"both…hobbies"; "question2":"too…hobbies"; "question3":"are…hobby"; "question4":"both…hobby"; "answer":"4"; "score":"1"};
-{"id":"25"; "title":"I'm eleven years old. And my little brother is eight. So"; "question1":"He's taller than me"; "question2":"I'm three years older"; "question3":"I'm two months older"; "question4":"He's older than me"; "answer":"2"; "score":"1"};
-{"id":"26"; "title":"Which season do you like ________, spring or autumn?"; "question1":"good"; "question2":"well"; "question3":"better"; "question4":"best"; "answer":"3"; "score":"1"};
-{"id":"27"; "title":"We can ________ tell her about our new house"; "question1":"too"; "question2":"at"; "question3":"also"; "question4":"on"; "answer":"3"; "score":"1"};
-{"id":"28"; "title":"Can I give ________ ________ e-mail address?"; "question1":"him, me"; "question2":"me, him"; "question3":"my, him"; "question4":"him, my"; "answer":"4"; "score":"1"};
-{"id":"29"; "title":"What would you like? ________"; "question1":"I’d like to some apples"; "question2":"I’d like to listen to music"; "question3":"I’d like some apples"; "question4":"I’d like go to bed"; "answer":"3"; "score":"1"};
-{"id":"30"; "title":"There is a lot of ________ in spring there"; "question1":"rain"; "question2":"rains"; "question3":"rainy"; "question4":"rainy"; "answer":"1"; "score":"1"}
+{"id":"1", "title":"Li Hong _____ TV for two hours every evening", "question1":"watch", "question2":"watches", "question3":"watched", "question4":"", "answer":"2", "score":"1"},
+{"id":"2", "title":"--- _________ is he?  --- He is ten", "question1":"What", "question2":"Who", "question3":"How old", "question4":"", "answer":"3", "score":"1"},
+{"id":"3", "title":"Kate and Jane _______ my good friends", "question1":"is", "question2":"am", "question3":"are", "question4":"", "answer":"3", "score":"1"},
+{"id":"4", "title":"--- Where ________ he from?--- He _______ from China.", "question1":"is, come ", "question2":"is, comes", "question3":"does, is", "question4":"", "answer":"2", "score":"1"},
+{"id":"5", "title":"--- Where is my pencil?--- I can't ______ it.", "question1":"look at", "question2":"find", "question3":"look for", "question4":"", "answer":"2", "score":"1"},
+{"id":"6", "title":"We're going to stay here tomorrow. What ____ you?", "question1":"about", "question2":"besides", "question3":"with", "question4":"", "answer":"1", "score":"1"},
+{"id":"7", "title":"That blue jacket is beautiful", "question1":"fine ", "question2":"very nice", "question3":"well", "question4":"", "answer":"2", "score":"1"},
+{"id":"8", "title":"--- _____ are these? --- They are red pencils", "question1":"What", "question2":"Where", "question3":"What colour", "question4":"", "answer":"1", "score":"1"},
+{"id":"9", "title":"My mother _______ three shelves", "question1":"have", "question2":"has", "question3":"is", "question4":"", "answer":"2", "score":"1"},
+{"id":"10", "title":"The man over there is ________", "question1":"Miss White", "question2":"Mrs White", "question3":"Mr White", "question4":"", "answer":"3", "score":"1"},
+{"id":"11", "title":"--- _______ kitchen is clean?  ---- Mary's", "question1":"Who's", "question2":"Whose", "question3":"Who", "question4":"", "answer":"2", "score":"1"},
+{"id":"12", "title":"--- _______ grade are you in? --- Grade Five", "question1":"Whose", "question2":"Which", "question3":"Where", "question4":"", "answer":"2", "score":"1"},
+{"id":"13", "title":"--- _______ on the river? ---- There're some ducks", "question1":"What", "question2":"Which", "question3":"What's", "question4":"", "answer":"3", "score":"1"},
+{"id":"14", "title":"That girl is my friend. ______ name is May", "question1":"His", "question2":"Her", "question3":"Its", "question4":"", "answer":"2", "score":"1"},
+{"id":"15", "title":"Helen is behind me. I am ______ Helen", "question1":"behind", "question2":"in front of", "question3":"beside", "question4":"", "answer":"2", "score":"1"},
+{"id":"16", "title":"Do you have brothers sisters in your family?", "question1":" some…and", "question2":"some…or", "question3":"any…or", "question4":"any…and", "answer":"3", "score":"1"},
+{"id":"17", "title":"Jim and Mary good English and computer", "question1":"are…in", "question2":"is…in", "question3":"are…at", "question4":"is…at", "answer":"3", "score":"1"},
+{"id":"18", "title":"How is the cinema from here?", "question1":"far", "question2":"many", "question3":"much", "question4":"about", "answer":"1", "score":"1"},
+{"id":"19", "title":"We can have outing in autumn.", "question1":"a…a", "question2":"an…an", "question3":"an…/", "question4":"the…the", "answer":"3", "score":"1"},
+{"id":"20", "title":"--- _______ you like to come?---Of course. I'll come them", "question1":"What…with", "question2":"What's…of", "question3":"Would…with", "question4":"Would…of", "answer":"3", "score":"1"},
+{"id":"21", "title":"I'd like Helen soon", "question1":"to write", "question2":"to write to", "question3":"to writing to", "question4":"to writing", "answer":"3", "score":"1"},
+{"id":"22", "title":"Tom in a big house?", "question1":"Does…live", "question2":"Does…lives", "question3":"Do…lives", "question4":"Do…live", "answer":"1", "score":"1"},
+{"id":"23", "title":"A: What Jane ?B: She's writing an e-mail to her pen friend", "question1":"is…doin", "question2":"did…do", "question3":"will…do", "question4":"is…going to do", "answer":"1", "score":"1"},
+{"id":"24", "title":"You and I like listening to music. We have the same", "question1":"both…hobbies", "question2":"too…hobbies", "question3":"are…hobby", "question4":"both…hobby", "answer":"4", "score":"1"},
+{"id":"25", "title":"I'm eleven years old. And my little brother is eight. So", "question1":"He's taller than me", "question2":"I'm three years older", "question3":"I'm two months older", "question4":"He's older than me", "answer":"2", "score":"1"},
+{"id":"26", "title":"Which season do you like ________, spring or autumn?", "question1":"good", "question2":"well", "question3":"better", "question4":"best", "answer":"3", "score":"1"},
+{"id":"27", "title":"We can ________ tell her about our new house", "question1":"too", "question2":"at", "question3":"also", "question4":"on", "answer":"3", "score":"1"},
+{"id":"28", "title":"Can I give ________ ________ e-mail address?", "question1":"him, me", "question2":"me, him", "question3":"my, him", "question4":"him, my", "answer":"4", "score":"1"},
+{"id":"29", "title":"What would you like? ________", "question1":"I’d like to some apples", "question2":"I’d like to listen to music", "question3":"I’d like some apples", "question4":"I’d like go to bed", "answer":"3", "score":"1"},
+{"id":"30", "title":"There is a lot of ________ in spring there", "question1":"rain", "question2":"rains", "question3":"rainy", "question4":"rainy", "answer":"1", "score":"1"}
 ]

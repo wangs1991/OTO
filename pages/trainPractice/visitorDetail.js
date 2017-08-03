@@ -26,7 +26,15 @@ define(function(require) {
 	}
 	// 进入页面刷新数据
 	Model.prototype.enterPage = function() {
-//		window.location.reload();
+		this.records.splice(0, this.records.length);
+		id = 0;
+		this.loadData();
+		
+//		刷新用户数据
+		userData = Server.getCurUser();
+		this.user.pop();
+		this.user.push(userData);
+		console.log(userData);
 	};
 
 	// 加载数据

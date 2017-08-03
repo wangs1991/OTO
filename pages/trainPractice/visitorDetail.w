@@ -11,7 +11,7 @@
       <div class="x-titlebar-left" xid="left1" bind-click="goBack"> 
         <i class="webapp ic-back"/> 
       </div>  
-      <div class="x-titlebar-title" xid="title1">生物数据反馈记录</div>  
+      <div class="x-titlebar-title" xid="title1">来访者详情</div>  
       <div class="x-titlebar-right reverse" xid="right1" bind-click="goUserInfo"> 
         <div>改</div> 
       </div> 

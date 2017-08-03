@@ -1,32 +1,32 @@
 [
-{"id":"1"; "title":"隋朝大运河的中心在"; "question1":"涿郡"; "question2":"洛阳"; "question3":"余杭"; "question4":"长安"; "answer":"2"; "score":"1"};
-{"id":"2"; "title":"“科举制度”在中国最早出现的时期是"; "question1":"秦汉时期"; "question2":"隋唐时期"; "question3":"宋元时"; "question4":"明清时期"; "answer":"2"; "score":"1"};
-{"id":"3"; "title":"小明将参加; “话说唐太宗”知识竞赛，以下史实不正确的是"; "question1":"任用魏征等贤臣"; "question2":"建立唐朝，定都长安"; "question3":"轻徭薄赋，减轻农民负担"; "question4":"把文成公主嫁给吐蕃赞普松赞干布"; "answer":"2"; "score":"1"};
-{"id":"4"; "title":"武则天得到史学界的基本肯定，主要是因为在"; "question1":"执政时社会经济进一步发展，国力增强"; "question2":"继续推行选拔贤才的政策"; "question3":"处事果断，手段严厉"; "question4":"发展科举制度，创立殿试制度"; "answer":"1"; "score":"1"};
-{"id":"5"; "title":"唐玄宗统治前期，政治清明，经济繁荣，历史上称为"; "question1":"文景之治"; "question2":"开皇之治"; "question3":"贞观之治"; "question4":"开元盛世"; "answer":"4"; "score":"1"};
-{"id":"6"; "title":"; 想了解7世纪时新疆地区的历史，可以阅读"; "question1":"《金刚经》"; "question2":"《大唐西域记》"; "question3":"《天方夜谭》"; "question4":"《荷马史诗》"; "answer":"2"; "score":"1"};
-{"id":"7"; "title":"“百尺长虹横水面，一弯新月出云霄”，这是最古老的石拱桥的赞美。它的设计者是"; "question1":"李春"; "question2":"鲁班"; "question3":"李时珍"; "question4":"宋应星"; "answer":"1"; "score":"1"};
-{"id":"8"; "title":"唐代诗人白居易可能经历的事情是①用纸写诗②读《史记》和《资治通鉴》③欣赏昆曲《牡丹亭》④参加科举考试"; "question1":"①②③④"; "question2":"②③"; "question3":"①④"; "question4":"①③④"; "answer":"3"; "score":"1"};
-{"id":"9"; "title":"我国出过许多的“圣人”。下列选项中搭配错误的是"; "question1":"医圣——张仲景"; "question2":"书圣——王羲之"; "question3":"诗圣——李白"; "question4":"画圣——吴道子"; "answer":"3"; "score":"1"};
-{"id":"10"; "title":"下列有关隋唐社会特点的表述，正确的是"; "question1":"民族政权并立"; "question2":"兼并战争频繁"; "question3":"繁荣而又开放"; "question4":"封建社会危机"; "answer":"3"; "score":"1"};
-{"id":"11"; "title":"下列人物中曾参与抗金斗争的是"; "question1":"岳飞"; "question2":"苏轼"; "question3":"司马光"; "question4":"张择端"; "answer":"1"; "score":"1"};
-{"id":"12"; "title":"下列图片能够反映宋代社会生活的是"; "question1":"赵州桥"; "question2":"敦煌壁画"; "question3":"《步辇图》"; "question4":"《清明上河图》"; "answer":"4"; "score":"1"};
-{"id":"13"; "title":"如果你回到了南宋都城临安，下列各项中可以看到的有①用鱼烹制的菜肴很普遍; ②在“瓦子”里有人在说书，有人在看表演③有人在使用纸币购物; ④人们在传阅《红楼梦》"; "question1":"①③"; "question2":"②④"; "question3":"①②③"; "question4":"①③④"; "answer":"3"; "score":"1"};
-{"id":"14"; "title":"中国瓷器史上的辉煌时代是"; "question1":"唐代"; "question2":"宋代"; "question3":"元代"; "question4":"清代"; "answer":"2"; "score":"1"};
-{"id":"15"; "title":"我国古代经济重心南移，这一过程最终完成于"; "question1":"魏晋南北朝时期"; "question2":"隋唐时期"; "question3":"北宋时期"; "question4":"南宋时期"; "answer":"4"; "score":"1"};
-{"id":"16"; "title":"下列钱币中哪一货币的出现代表着最发达的商品经济?"; "question1":"铲形钱"; "question2":"半两钱"; "question3":"开元通宝"; "question4":"纸币铜板拓片"; "answer":"4"; "score":"1"};
-{"id":"17"; "title":"下列语句中，反映长江流域已成为我国古代经济重心的是"; "question1":"“南朝四百八十寺，多少楼台烟雨中。”(唐•杜牧)"; "question2":"“忆昔开元全盛日，小邑犹藏万家室。”(唐•杜甫)"; "question3":"“苏湖熟，天下足。”(宋•谚语)"; "question4":"“无徽不成镇。”(明清•谚语)"; "answer":"3"; "score":"1"};
-{"id":"18"; "title":"成吉思汗的功绩主要是"; "question1":"灭亡西夏"; "question2":"统一蒙古; "; "question3":"建立元朝"; "question4":"定都大都"; "answer":"2"; "score":"1"};
-{"id":"19"; "title":"我国历史上结束了五代十国、辽、宋、夏、金分裂，实现大统一的朝代是"; "question1":"秦朝"; "question2":"隋朝"; "question3":"元朝"; "question4":"清朝"; "answer":"3"; "score":"1"};
-{"id":"20"; "title":"由中国传入欧洲，为航海家们的航海活动创造条件的科技成就是"; "question1":"指南针"; "question2":"造纸术"; "question3":"印刷术"; "question4":"火药"; "answer":"1"; "score":"1"};
-{"id":"21"; "title":"西藏正式成为中国的一个行政区域是在"; "question1":"秦朝"; "question2":"隋朝"; "question3":"唐朝"; "question4":"元朝"; "answer":"4"; "score":"1"};
-{"id":"22"; "title":"明朝科举制，你认为哪些观点是正确的   ①明朝沿袭了前代科举制度;②明朝开始八股取士③科举试卷仅从四书五经中命题;④答卷文体有严格规定,不许发挥个人见解"; "question1":"①②③④"; "question2":"①③④"; "question3":"①②③"; "question4":".②③④"; "answer":"1"; "score":"1"};
-{"id":"23"; "title":"清朝军机处创设于"; "question1":"顺治时期"; "question2":"康熙时期"; "question3":"雍正时期"; "question4":"乾隆时期"; "answer":"3"; "score":"1"};
-{"id":"24"; "title":"“开辟荆榛逐荷夷，十年始克复先基”赞颂的是"; "question1":"戚继光抗倭"; "question2":"左宗棠收复新疆"; "question3":"郑成功收复台湾"; "question4":"康熙帝抗俄"; "answer":"3"; "score":"1"};
-{"id":"25"; "title":"“中国政府与欧洲国家的首次战争中，获胜的是中国人”所指战役是"; "question1":"涿鹿之战"; "question2":"牧野之战"; "question3":".赤壁之战"; "question4":"雅克萨之战"; "answer":"4"; "score":"1"};
-{"id":"26"; "title":"下列反映民族关系和睦的史实先后顺序是①昭君出塞; ②张骞通西域; ③文成公主入藏; ④达赖、班禅受中央册封"; "question1":"②①③"; "question2":"④③②①"; "question3":"②③①④"; "question4":"①②④③"; "answer":"1"; "score":"1"};
-{"id":"27"; "title":"电视剧《康熙大帝》中，可能出现的历史事件是①册封西藏佛教首领“班禅额尔德尼”封号; ②平定大小和卓叛乱③组织雅克萨自卫反击战; ④设置台湾府"; "question1":"①②③"; "question2":"①②④"; "question3":"①③④"; "question4":"②③④"; "answer":"3"; "score":"1"};
-{"id":"28"; "title":"明代长城西起嘉峪关，东到"; "question1":"鸭绿江"; "question2":"玉门关"; "question3":"居庸关"; "question4":"山海关"; "answer":"1"; "score":"1"};
-{"id":"29"; "title":"我国最早的一部长篇历史小说是"; "question1":"《西游记》"; "question2":"《红楼梦》"; "question3":"《水浒传》; "question4":"《三国演义》"; "answer":"4"; "score":"1"};
-{"id":"30"; "title":"元谋人遗址，你应该带他们去"; "question1":"北京市"; "question2":"陕西省"; "question3":"云南省"; "question4":"浙江省"; "answer":"3"; "score":"1"}
+{"id":"1", "title":"隋朝大运河的中心在", "question1":"涿郡", "question2":"洛阳", "question3":"余杭", "question4":"长安", "answer":"2", "score":"1"},
+{"id":"2", "title":"“科举制度”在中国最早出现的时期是", "question1":"秦汉时期", "question2":"隋唐时期", "question3":"宋元时", "question4":"明清时期", "answer":"2", "score":"1"},
+{"id":"3", "title":"小明将参加, “话说唐太宗”知识竞赛，以下史实不正确的是", "question1":"任用魏征等贤臣", "question2":"建立唐朝，定都长安", "question3":"轻徭薄赋，减轻农民负担", "question4":"把文成公主嫁给吐蕃赞普松赞干布", "answer":"2", "score":"1"},
+{"id":"4", "title":"武则天得到史学界的基本肯定，主要是因为在", "question1":"执政时社会经济进一步发展，国力增强", "question2":"继续推行选拔贤才的政策", "question3":"处事果断，手段严厉", "question4":"发展科举制度，创立殿试制度", "answer":"1", "score":"1"},
+{"id":"5", "title":"唐玄宗统治前期，政治清明，经济繁荣，历史上称为", "question1":"文景之治", "question2":"开皇之治", "question3":"贞观之治", "question4":"开元盛世", "answer":"4", "score":"1"},
+{"id":"6", "title":", 想了解7世纪时新疆地区的历史，可以阅读", "question1":"《金刚经》", "question2":"《大唐西域记》", "question3":"《天方夜谭》", "question4":"《荷马史诗》", "answer":"2", "score":"1"},
+{"id":"7", "title":"“百尺长虹横水面，一弯新月出云霄”，这是最古老的石拱桥的赞美。它的设计者是", "question1":"李春", "question2":"鲁班", "question3":"李时珍", "question4":"宋应星", "answer":"1", "score":"1"},
+{"id":"8", "title":"唐代诗人白居易可能经历的事情是①用纸写诗②读《史记》和《资治通鉴》③欣赏昆曲《牡丹亭》④参加科举考试", "question1":"①②③④", "question2":"②③", "question3":"①④", "question4":"①③④", "answer":"3", "score":"1"},
+{"id":"9", "title":"我国出过许多的“圣人”。下列选项中搭配错误的是", "question1":"医圣——张仲景", "question2":"书圣——王羲之", "question3":"诗圣——李白", "question4":"画圣——吴道子", "answer":"3", "score":"1"},
+{"id":"10", "title":"下列有关隋唐社会特点的表述，正确的是", "question1":"民族政权并立", "question2":"兼并战争频繁", "question3":"繁荣而又开放", "question4":"封建社会危机", "answer":"3", "score":"1"},
+{"id":"11", "title":"下列人物中曾参与抗金斗争的是", "question1":"岳飞", "question2":"苏轼", "question3":"司马光", "question4":"张择端", "answer":"1", "score":"1"},
+{"id":"12", "title":"下列图片能够反映宋代社会生活的是", "question1":"赵州桥", "question2":"敦煌壁画", "question3":"《步辇图》", "question4":"《清明上河图》", "answer":"4", "score":"1"},
+{"id":"13", "title":"如果你回到了南宋都城临安，下列各项中可以看到的有①用鱼烹制的菜肴很普遍, ②在“瓦子”里有人在说书，有人在看表演③有人在使用纸币购物, ④人们在传阅《红楼梦》", "question1":"①③", "question2":"②④", "question3":"①②③", "question4":"①③④", "answer":"3", "score":"1"},
+{"id":"14", "title":"中国瓷器史上的辉煌时代是", "question1":"唐代", "question2":"宋代", "question3":"元代", "question4":"清代", "answer":"2", "score":"1"},
+{"id":"15", "title":"我国古代经济重心南移，这一过程最终完成于", "question1":"魏晋南北朝时期", "question2":"隋唐时期", "question3":"北宋时期", "question4":"南宋时期", "answer":"4", "score":"1"},
+{"id":"16", "title":"下列钱币中哪一货币的出现代表着最发达的商品经济?", "question1":"铲形钱", "question2":"半两钱", "question3":"开元通宝", "question4":"纸币铜板拓片", "answer":"4", "score":"1"},
+{"id":"17", "title":"下列语句中，反映长江流域已成为我国古代经济重心的是", "question1":"“南朝四百八十寺，多少楼台烟雨中。”(唐•杜牧)", "question2":"“忆昔开元全盛日，小邑犹藏万家室。”(唐•杜甫)", "question3":"“苏湖熟，天下足。”(宋•谚语)", "question4":"“无徽不成镇。”(明清•谚语)", "answer":"3", "score":"1"},
+{"id":"18", "title":"成吉思汗的功绩主要是", "question1":"灭亡西夏", "question2":"统一蒙古, ", "question3":"建立元朝", "question4":"定都大都", "answer":"2", "score":"1"},
+{"id":"19", "title":"我国历史上结束了五代十国、辽、宋、夏、金分裂，实现大统一的朝代是", "question1":"秦朝", "question2":"隋朝", "question3":"元朝", "question4":"清朝", "answer":"3", "score":"1"},
+{"id":"20", "title":"由中国传入欧洲，为航海家们的航海活动创造条件的科技成就是", "question1":"指南针", "question2":"造纸术", "question3":"印刷术", "question4":"火药", "answer":"1", "score":"1"},
+{"id":"21", "title":"西藏正式成为中国的一个行政区域是在", "question1":"秦朝", "question2":"隋朝", "question3":"唐朝", "question4":"元朝", "answer":"4", "score":"1"},
+{"id":"22", "title":"明朝科举制，你认为哪些观点是正确的   ①明朝沿袭了前代科举制度,②明朝开始八股取士③科举试卷仅从四书五经中命题,④答卷文体有严格规定,不许发挥个人见解", "question1":"①②③④", "question2":"①③④", "question3":"①②③", "question4":".②③④", "answer":"1", "score":"1"},
+{"id":"23", "title":"清朝军机处创设于", "question1":"顺治时期", "question2":"康熙时期", "question3":"雍正时期", "question4":"乾隆时期", "answer":"3", "score":"1"},
+{"id":"24", "title":"“开辟荆榛逐荷夷，十年始克复先基”赞颂的是", "question1":"戚继光抗倭", "question2":"左宗棠收复新疆", "question3":"郑成功收复台湾", "question4":"康熙帝抗俄", "answer":"3", "score":"1"},
+{"id":"25", "title":"“中国政府与欧洲国家的首次战争中，获胜的是中国人”所指战役是", "question1":"涿鹿之战", "question2":"牧野之战", "question3":".赤壁之战", "question4":"雅克萨之战", "answer":"4", "score":"1"},
+{"id":"26", "title":"下列反映民族关系和睦的史实先后顺序是①昭君出塞, ②张骞通西域, ③文成公主入藏, ④达赖、班禅受中央册封", "question1":"②①③", "question2":"④③②①", "question3":"②③①④", "question4":"①②④③", "answer":"1", "score":"1"},
+{"id":"27", "title":"电视剧《康熙大帝》中，可能出现的历史事件是①册封西藏佛教首领“班禅额尔德尼”封号, ②平定大小和卓叛乱③组织雅克萨自卫反击战, ④设置台湾府", "question1":"①②③", "question2":"①②④", "question3":"①③④", "question4":"②③④", "answer":"3", "score":"1"},
+{"id":"28", "title":"明代长城西起嘉峪关，东到", "question1":"鸭绿江", "question2":"玉门关", "question3":"居庸关", "question4":"山海关", "answer":"1", "score":"1"},
+{"id":"29", "title":"我国最早的一部长篇历史小说是", "question1":"《西游记》", "question2":"《红楼梦》", "question3":"《水浒传》", "question4":"《三国演义》", "answer":"4", "score":"1"},
+{"id":"30", "title":"元谋人遗址，你应该带他们去", "question1":"北京市", "question2":"陕西省", "question3":"云南省", "question4":"浙江省", "answer":"3", "score":"1"}
 ]

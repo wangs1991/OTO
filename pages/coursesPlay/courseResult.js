@@ -2,6 +2,7 @@ define(function(require){
 	require("css!../../assets/style/base").load();
 	var $ = require("jquery");
 	require("../../assets/echart/dist/echarts-all");
+	require("../../assets/js/AppUtils");
 	var justep = require("$UI/system/lib/justep");
 	var Server = require('../../assets/server');
 
@@ -48,19 +49,18 @@ define(function(require){
 		}else{
 			params.eventKind = 41;
 			params.skin = Server.skinData('expose').join(',');
-			params.answer = window.formSheetRes;
+			params.answer = JSON.stringify(window.formSheetRes);
 		}
 		
 		params.lid = window.courseModel.lid;
-		
 		Server.saveCourse(params).then(function(){
 			//		访问者练习记录
 			var url = '$UI/OTO/pages/trainPractice/visitorDetail.w';
 			justep.Shell.showPage(url);
 		});
 		
-		justep.Shell.closeAll();
-		this.close();
+		/*justep.Shell.closeAll();
+		this.close();*/
 	}
 	
 	Model.prototype.formDate = function(str){
@@ -74,9 +74,6 @@ define(function(require){
 	}
 	
 	Model.prototype.modelParamsReceive = function(event){
-		if (event.hasOwnProperty("params")) {
-			console.log(event.params);
-		}
 		window.courseModel = event.params;
 		this.title.set(courseModel.title);
 		this.duration.set(courseModel.result.duration);
@@ -108,7 +105,14 @@ define(function(require){
 				this.initConsult();
 				this.initSheet();
 				break;
+			};
+			default:{
+				this.initSkinData();
+				this.initConsult();
+				this.initSheet();
+				break;
 			}
+			
 		}
 	}
 	
@@ -134,20 +138,44 @@ define(function(require){
 	}
 	Model.prototype.initExam = function(){
 		this.exam.show();
-		var answers = courseModel.result.answer; 	// '1:2,2:3,3:2,4:1'
-		var subject = courseModel.result.subject;	// 学科
-		var score = courseModel.result.score;		// 自评列表
-		var totalScore = courseModel.result.totalScore;	// 考试总成绩
-		var subjecDirec = ['语文', '数学', '外语'];
 		
-		this.subject.set(subjecDirec[subject-1]);
-		this.score.set(score);
-		this.totalScore.set(totalScore);
-//		this.answerList;
+		var subjecDirec = ['语文', '历史', '外语'];
+		var subjectData = ['Chinese', 'History', 'English'];
+		var that = this;
+		
+		var rep = window.courseModel.result;
+		console.log(rep, 'asdfasdf');
+		that.score.set(rep.score);
+		that.totalScore.set(rep.totalScore);
+		that.subject.set(subjecDirec[rep.subject-1]);
+
+		var url = require.toUrl('../../mock/test_'+subjectData[rep.subject-1]+'.json');
+		AppUtils.getAction(url, null, function(data) {
+			var list = data; // 问题列表
+//						根据answer去读取问题
+			var answer = rep.answerList;  // 用户作答问题
+			list.forEach(function(n, i){
+				var item = hasIt(n, answer);
+				if(item){
+					var q = item.q,
+						a = item.a;
+					that.answerList.push({
+						title: q.title,
+						option1: q.question1,
+						option2: q.question2,
+						option3: q.question3,
+						option4: q.question4,
+						answer: q.answer,
+						selected: a.selectItem
+					});
+				}
+			});
+			
+		});
 	}
 	Model.prototype.initVoice = function(){
 		this.voice.show();
-		$('#voice').val(courseModel.result.speech);
+		$('#voiceTxt').val(courseModel.result.speech);
 	}
 	Model.prototype.initSheet = function(){
 		this.sheet.show();
@@ -162,7 +190,18 @@ define(function(require){
 	Model.prototype.goBack = function(event){
 		this.close();
 	};
-	
+	function hasIt(tar, ori){
+//		比对questId 与 id
+		var res;
+		for(var i = 0, len = ori.length; i < len; i++){
+			if(ori[i].questId == tar.id){
+				res = {q: tar,
+				       a: ori[i]};
+				return res;
+			}
+		}
+		return false;
+	}
 //	自评
 	Model.prototype.goTest = function(){
 		var url = "$UI/OTO/pages/userInfo/assessSelect.w";
