@@ -1846,7 +1846,7 @@ opacity
 .b-breath-two li:last-child {
 	border-right: 0 !important;
 }
-.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover,.nav-tabs > li.active > a:active, .nav-tabs > li.active > a:focus{
 	color:#2c90f4;
 }
 .b-breath-two li .tab-btn{
