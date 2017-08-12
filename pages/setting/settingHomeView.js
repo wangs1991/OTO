@@ -36,10 +36,6 @@ define(function(require) {
 				version: version,
 				eventKind: 56
 			}, function(data){
-				if(data.version && data.version == version){
-					justep.Util.hint('最新版本，不需要更新');
-					return false;
-				}
 				if(data.url && data.url.length>0){
 					cordova.InAppBrowser.open(data.url, '_system');
 				}

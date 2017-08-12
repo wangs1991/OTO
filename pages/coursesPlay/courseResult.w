@@ -5,7 +5,7 @@
   <div component="$UI/system/components/justep/model/model" xid="model" style="left:18px;top:83px;height:244px;"
     onParamsReceive="modelParamsReceive" onLoad="modelLoad" onActive="enterPage" onunLoad="modelUnLoad"
     onInactive="modelUnLoad"/>  
-  <div component="$UI/system/components/justep/panel/panel" class="x-panel x-full"
+  <div component="$UI/system/components/justep/panel/panel" id="courseRes" class="x-panel x-full"
     xid="panel1"> 
     <div class="x-panel-top" xid="top1"> 
       <div component="$UI/system/components/justep/titleBar/titleBar" title="练习记录"

@@ -313,7 +313,7 @@ define(function(require) {
 	Model.prototype.initEchart = function(){		
 		myChartClock = echarts.init($('#echartExpose')[0]);
 		window.options.series.length = 1;
-		window.options.yAxis[0].max = 10;
+//		window.options.yAxis[0].max = 10;
 		options.series[0].data = [];
 		myChartClock.setOption(options, true);
 	};

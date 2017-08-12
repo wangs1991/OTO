@@ -181,11 +181,11 @@ define(function(require){
 					detailEcharOpt.series[0].data = displayData;
 					try{
 						window.myChartClock = echarts.init($('#echartDetail')[0]);
-						if(courseModel.loosenType <= 3){
-							detailEcharOpt.yAxis[0].max = 10;
-						}else{
-							detailEcharOpt.yAxis[0].max = 2;
-						}
+//						if(courseModel.loosenType <= 3){
+//							detailEcharOpt.yAxis[0].max = 10;
+//						}else{
+//							detailEcharOpt.yAxis[0].max = 2;
+//						}
 						window.myChartClock.setOption(detailEcharOpt, true);
 					}catch(e){
 					}

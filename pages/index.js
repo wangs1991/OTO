@@ -67,9 +67,7 @@ define(function(require) {
         ],
         yAxis : [
             {
-                type : 'value',
-                min: 0,
-                max: 10
+                type : 'value'
             }
         ],
         series : [

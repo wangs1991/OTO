@@ -130,7 +130,7 @@ define(function(require) {
 		relaxEchatOpts = $.extend(relaxEchatOpts, window.options);
 		relaxEchatOpts.series.length = 1;
 		myChartClock = echarts.init($('#echartRelax')[0]);
-		relaxEchatOpts.yAxis[0].max = 10;
+//		relaxEchatOpts.yAxis[0].max = 10;
 		relaxEchatOpts.series[0].data = [];
 		myChartClock.setOption(relaxEchatOpts, true);
 	};

@@ -59,10 +59,14 @@ define(function(require){
 		
 		params.lid = window.courseModel.lid;
 		Server.saveCourse(params).then(function(){
-			window.questions = {};
+
 			//		访问者练习记录
 			var url = '$UI/OTO/pages/trainPractice/visitorDetail.w';
 			justep.Shell.showPage(url);
+			
+			//			清空之前的自评量表数据
+			window.formSheetRes = {};
+			window.sheetRec = {};
 			
 			justep.Shell.closeAll();
 			self.close();
@@ -155,7 +159,7 @@ define(function(require){
 		options.series[0].data = displayData;
 		try{
 			window.myChartClock = echarts.init($('#echartres')[0]);
-			window.options.yAxis[0].max = 10;
+//			window.options.yAxis[0].max = 10;
 			window.myChartClock.setOption(options, true);
 		}catch(e){
 			console.log(e);
@@ -164,51 +168,19 @@ define(function(require){
 	}
 	Model.prototype.initConsult = function(){
 		this.consult.show();
-		$('#consultInpt').val('');
+		$('#courseRes #consultInpt').val('');
 	}
 	Model.prototype.initExam = function(){
 		this.exam.show();
-		
-		var subjecDirec = ['语文', '历史', '外语'];
-		var subjectData = ['Chinese', 'History', 'English'];
-		var that = this;
-		
-		var rep = window.courseModel.result;
-		that.score.set(rep.score);
-		that.totalScore.set(rep.totalScore);
-		that.subject.set(subjecDirec[rep.subject-1]);
-
-		var url = require.toUrl('../../mock/test_'+subjectData[rep.subject-1]+'.json');
-		AppUtils.getAction(url, null, function(data) {
-			var list = data; //问题列表
-			
-			//根据answer去读取问题
-			var answer = rep.answerList;  // 用户作答问题
-			list.forEach(function(n, i){
-				var item = hasIt(n, answer);
-				if(item){
-					var q = item.q,
-						a = item.a;
-					that.answerList.push({
-						title: q.title,
-						option1: q.question1,
-						option2: q.question2,
-						option3: q.question3,
-						option4: q.question4,
-						answer: q.answer,
-						selected: a.selectItem
-					});
-				}
-			});
-			
-		});
+		this.answerList.set([]);
 	}
 	Model.prototype.initVoice = function(){
 		this.voice.show();
-		$('#voiceTxt').val('');
+		$('#courseRes #voiceTxt').val('');
 	}
 	Model.prototype.initSheet = function(){
-		window.questions = {};
+//		window.questions = {};
+		$('#courseRes #answer').val('');
 		this.sheet.show();
 	}
 	
@@ -245,6 +217,10 @@ define(function(require){
 						var list = data; // 问题列表
 //						根据answer去读取问题
 						var answer = rep.answerList;  // 用户作答问题
+						console.log(answer);
+						if(!answer || answer.length < 1){
+							return false;
+						}
 						list.forEach(function(n, i){
 							var item = hasIt(n, answer);
 							if(item){
@@ -279,7 +255,7 @@ define(function(require){
 					lid: courseModel.lid
 				}).then(function(data){
 //					$('#voice').val(data.speech);
-					$('#voiceTxt').val(courseModel.result.speech);
+					$('#courseRes #voiceTxt').val(courseModel.result.speech);
 				});
 			}
 			lid = courseModel.lid;
