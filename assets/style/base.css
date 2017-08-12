@@ -1846,24 +1846,23 @@ opacity
 .b-breath-two li:last-child {
 	border-right: 0 !important;
 }
-
-.b-breath-two li .tab-btn,.b-breath-two li .tab-btn：hover {
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover,.nav-tabs > li.active > a:active, .nav-tabs > li.active > a:focus{
+	color:#2c90f4;
+}
+.b-breath-two li .tab-btn{
 	font-size: 12px;
-	color: #333;
 	text-align: center;
 	border-right: 1px solid #e3e3e3;
 	position: relative;
+	padding: 0;
+	border: 0 !important;
+	color: #3f4256;
 }
 
 .b-breath-two li:last-child {
 	border-right: 0 !important;
 }
 
-.b-breath-two li .tab-btn,.b-breath-two li .tab-btn：hover {
-	padding: 0;
-	border: 0 !important;
-	color: #3f4256;
-}
 
 .b-breath-two li.active .tab-btn {
 	color: #2c90f4;
