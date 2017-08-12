@@ -1,7 +1,7 @@
 define(function(require){
 require('$model/UI2/system/components/justep/model/model');
 require('$model/UI2/system/components/justep/loadingBar/loadingBar');
-require('$model/UI2/system/components/justep/contents/contents');
+require('$model/UI2/system/components/justep/button/button');
 require('$model/UI2/system/components/justep/window/window');
 var __parent1=require('$model/UI2/system/lib/base/modelBase'); 
 var __parent0=require('$model/UI2/OTO/pages/rules/index'); 

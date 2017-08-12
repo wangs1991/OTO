@@ -48,11 +48,10 @@ define(function(require) {
 		};
 	};
 	
-	
-	
 	Model.prototype.modelLoad = function(event){
 		self = this;
-		window.skinFeelStart = true;		
+		window.skinFeelStart = true;
+		window.skinController.startSkinGather();	
 		//初始化图表
 		this.initEchart();
 	};
@@ -69,7 +68,8 @@ define(function(require) {
 			loadControlAniTimer = null;
 		}
 		
-		this.saveSkinData('expose');
+		this.saveSkinData('skin');
+		var that = this;
 		Server.stopCourse({
 				eventKind: 40,
 				lid: courseModel.lid
@@ -81,8 +81,12 @@ define(function(require) {
 						courseModel.result[i] = data[i];
 					}
 				}
+				that.modelUnLoad();
 				justep.Shell.showPage(url, courseModel);
 			});
+		window.skinController.stopSkinGather();
+		window.skinFeelStart = false;
+		window.skinController.stopSkinGather();
 	}
 	
 	//	获取当前页面的皮肤电数据
@@ -106,16 +110,16 @@ define(function(require) {
 		this.button.set(params.button);
 		url = params.next;
 		
-		var duration = params.duration;
+//		var duration = params.duration;
 		
-		durationDelay = durationArray[duration - 1];
-		if (durationDelay > 0 && durationDelay < 15) {
-			durationDelay = durationDelay * 60;
-			
-			setTimeout(function() {
-				self.goToSave();
-			}, durationDelay * 1000);
-		}
+//		durationDelay = durationArray[duration - 1];
+//		if (durationDelay > 0 && durationDelay < 15) {
+//			durationDelay = durationDelay * 60;
+//			
+//			setTimeout(function() {
+//				self.goToSave();
+//			}, durationDelay * 1000);
+//		}
 		
 		//得到直播图片
 		var liveImage = self.getElementByXid("liveImage");
@@ -129,9 +133,9 @@ define(function(require) {
 		liveTimer = setInterval(function() {
 			if (liveImage.complete == true) {
 				console.log("get live image");
-				liveImage.src = "http://" + window.ip + ":8801/live/get?id="+courseModel.lid+"&time=" + (new Date()).getTime();
+				liveImage.src = window.picture + "/live/get?id=" + courseModel.lid + "&time=" + (new Date()).getTime();
 			}
-		}, 120);
+		}, 200);
 		
 		this.getActions();
 	}
@@ -141,12 +145,19 @@ define(function(require) {
 //		动作列表相关的操作
 	Model.prototype.getActions = function(){
 		console.log(courseModel.page);
-		//		除去 面试、汇报、公众演讲 动作列表是死的
+		
+		//除去 面试、汇报、公众演讲 动作列表是死的
 		if( courseModel.page === 'interview' || courseModel.page === 'speech' || courseModel.page === 'public' ){
-//					动作列表相关的操作
+			
+			//动作列表相关的操作
 			$('#asyncActions').show();
 			$('#staticActions').hide();
 			
+			for (var i = 1; i <= 9; i++) {
+				var btn = self.getElementByXid("selectSocialButton" + i);
+				if (btn == null) continue;
+				btn.style.display = "none";
+			}
 			
 			if (loadControlAniTimer != null && loadControlAniTimer != undefined) {
 				clearInterval(loadControlAniTimer);
@@ -181,6 +192,10 @@ define(function(require) {
 						if (i >= 9) {
 							continue;
 						}
+						
+						var btn = self.getElementByXid("selectSocialButton" + (i + 1));
+						if (btn == null) continue;
+						btn.style.display = "";
 						
 						anisJson["c" + (i + 1)].set(anisArray[i]);
 //						self.getElementByXid("c" + (i + 1)).style.display = "";
@@ -297,23 +312,39 @@ define(function(require) {
 	
 	Model.prototype.initEchart = function(){		
 		myChartClock = echarts.init($('#echartExpose')[0]);
+		window.options.series.length = 1;
+		window.options.yAxis[0].max = 10;
+		options.series[0].data = [];
 		myChartClock.setOption(options, true);
 	};
 	
 //	动态更新图表方法
 	updateEchart = (function(){
-		var len = 1,
+		var len = 0,
 			displayData = [];
-		return function(){
-			var nLen = window.skinArraylist.length;
-			for(var i = len-1, l = nLen.length; i < nLen; i++ ){
-				displayData.push([ window.skinTimeList[i], window.skinArraylist[i]]);
+		return function(flag){
+			if(flag){
+				len = 0;
+				displayData = [];
 			}
+			var nLen = window.skinArraylist.length;
+			for(var i = len; i < nLen; i++ ){
+				displayData.push([window.skinTimeList[i]||+new Date(), window.skinArraylist[i]]);
+			}
+			len = nLen;
 //			保留展示的100条数据
 			var show = 100;
 			var resLen = displayData.length;
-			options.series[0].data = displayData.splice(Math.min(show, resLen));
-			myChartClock && myChartClock.setOption(options);
+			if(resLen <= show){
+				options.series[0].data = displayData.slice(0, resLen);
+			}else{
+				options.series[0].data = displayData.slice(resLen-show, resLen);
+			}
+			try{
+				window.myChartClock.setOption(options);
+			}catch(e){
+				console.log(e);
+			}
 		}
 	})();
 	

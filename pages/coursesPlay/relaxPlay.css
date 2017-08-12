@@ -14,7 +14,6 @@
 
 /*顶部titlebar*/
 .x-titlebar{ background-color:#ff4400;}
-.x-titlebar .btn{ padding:0;}
 .x-titlebar .btn-link{ height:auto;}
 
 .tb-top.x-titlebar .x-titlebar-title.tb-searchBox{ text-align:left; padding-top:8px;}

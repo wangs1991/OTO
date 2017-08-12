@@ -13,7 +13,7 @@
       </div>  
       <div class="x-titlebar-title" xid="title1">来访者详情</div>  
       <div class="x-titlebar-right reverse" xid="right1" bind-click="goUserInfo"> 
-        <div>改</div> 
+        <div class="user_menu"></div> 
       </div> 
     </div>  
     <div component="$UI/system/components/justep/contents/contents" class="x-contents x-full"
@@ -28,9 +28,9 @@
               <div class="media-left avator-ctner" xid="mediaLeft1"> 
                 <div class="avator"> 
                   <img class="media-object" bind-attr="{src: user.face}"
-                    alt="" xid="image2"/> 
+                    alt="" xid="image2"/>
                 </div> 
-                <div class="sex" bind-css="{'boy': user.sex == 0, 'girl': user.sex == 1}"></div>
+                <div class="sex" bind-css="{'boy': user.sex == 1, 'girl': user.sex == 0}"></div>
               </div>  
               <div class="media-body" xid="mediaBody1"> 
                 <ul xid="ul1" class="b-relax-oneR" bind-foreach="{ data: user, as: 'user' }"> 

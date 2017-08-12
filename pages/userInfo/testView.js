@@ -77,7 +77,7 @@ define(function(require) {
 	};
 	
 	Model.prototype.modelUnLoad = function(event){
-		window.removeView(this);
+//		window.removeView(this);
 	};
 	
 	Model.prototype.goTestButtonClick = function(event){
@@ -302,6 +302,10 @@ define(function(require) {
 		} else {
 			window.closeAllView();
 		}
+	};
+	
+	Model.prototype.goBack = function(event){
+		this.close();
 	};
 	
 	return Model;

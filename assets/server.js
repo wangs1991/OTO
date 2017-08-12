@@ -1,14 +1,27 @@
-define(['../config/config'], function(module) {
+define([], function(module) {
 	var $ = require("jquery");
-	var baseUrl = 'http://test.adai-tech.com:8801';
 	var justep = require("$UI/system/lib/justep");
 	
+	function getBaseUrl() {
+		return window.api;
+	}
+	
 	function get(url, data) {
+		var t = (new Date()).getTime();
+		if (url.indexOf("?") > 0) {
+			url = url + "&time=" + t;
+		} else {
+			url = url + "?time=" + t;
+		}
+		
 		var dtd = $.Deferred(); // 新建一个deferred对象
-		console.log(url);
+
+		$.ajaxSettings.async = true;
+		
 		$.ajax({
 			type : 'GET',
-			url : baseUrl+url,
+			url : getBaseUrl()+url,
+			async: true,
 			data: data,
 			dataType: 'json',
 			success: function(data){
@@ -21,28 +34,41 @@ define(['../config/config'], function(module) {
 		return dtd;
 	}
 	function fetch(url, data){
+		var t = (new Date()).getTime();
+		if (url.indexOf("?") > 0) {
+			url = url + "&time=" + t;
+		} else {
+			url = url + "?time=" + t;
+		}
+		
 		var dtd = $.Deferred(); // 新建一个deferred对象
 		data = $.extend({
 			action: 'app_order',
 			uid: window.uid,
 			session: window.session
 		}, data);
-		console.log(data);
+
+		$.ajaxSettings.async = true;
+		
 		$.ajax({
 			type : 'POST',
-			url : baseUrl+url,
+			url : getBaseUrl()+url,
+			async: true,
 			data: data,
 			dataType: 'json',
 			success: function(data){
-				console.log(data);
 				var ret = data.ret;
 				if(ret.retCode == 0){
-//					成功
+					//成功
 					dtd.resolve(data);
 				}else{
-					console.log(ret.msg);
-					justep.Util.hint(ret.msg);
 					dtd.reject(data);
+
+					if(ret.msg != null && ret.msg != undefined) {
+						if (ret.msg.indexOf("请打开头盔应用") < 0) {
+							justep.Util.hint(ret.msg, {position: 'bottom'});
+						}
+					}
 				}
 			},
 			error: function(data){
@@ -74,16 +100,33 @@ define(['../config/config'], function(module) {
 			}
 			return dtd;
 		},
+//		获取协议统一状态
+		ruleState: function(data){
+			if(data){
+				window.localStorage.setItem('agreed', data);
+				return data;
+			}else{
+				return window.localStorage.getItem('agreed');
+			}
+		},
 //		皮肤点的读取操作
 		skinData: function(key, data){
-			if(data){
+			if(key && data){
 				window.localStorage.setItem(key, data.join('/'));
 //				清空数据
 				window.skinArraylist = [];
 				return data;
-			}else{
-				return window.localStorage.getItem(key).split('/');
+			}else if(key){
+				if(window.localStorage.getItem(key)){
+					return window.localStorage.getItem(key).split('/');
+				}else{
+					return [];
+				}
 			}
+		},
+//		系统更新
+		checkUpdate: function(data){
+			return fetch('/app/order', data);
 		},
 //		获取验证码
 		getCode: function(data){
@@ -91,7 +134,7 @@ define(['../config/config'], function(module) {
 		},
 //		登录方法
 		login: function(data){
-			return get('/app/order', data);
+			return fetch('/app/order', data);
 		},
 //		获取来访者列列表
 		getVisitors : function(data) {
@@ -138,6 +181,9 @@ define(['../config/config'], function(module) {
 			}
 			return window.localStorage.getItem('devId');
 		},
+		clearData : function(key){
+			window.localStorage.removeItem(key);
+		},
 //		重置密码
 		resetPwd: function(data){
 			return fetch('/app/order', data);
@@ -180,6 +226,10 @@ define(['../config/config'], function(module) {
 //		获取训练详情
 		fetchMod: function(data){
 			return fetch('/app/order', data);
+		},
+//		傳圖
+		transferImg: function(data){
+			return fetch('/upload_image', data);
 		}
 		
 	};

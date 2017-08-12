@@ -121,14 +121,14 @@
               bind-style="{width:  $model.controlData.val(&quot;progress&quot;) /  $model.controlData.val(&quot;total&quot;) * 100 + '%'}"
               xid="progressBar2"/> 
           </div>  
-          <div xid="progressInfoDiv" style="position:relative;height:0px;width:100%;top:-40px;"
+          <div xid="progressInfoDiv" style="position:relative;height:0px;width:100%;top:-50px;"
             class="text-white-shadow"> 
             <span xid="progressSpan" class="pull-left" style="margin-left: 5px;"
               bind-text="$model.controlData.ref(&quot;progress&quot;)"/>  
             <span class="pull-left" xid="span8">/</span>  
             <span xid="span9" class="pull-left" bind-text="$model.controlData.val(&quot;total&quot;)"/> 
           </div>  
-          <div class="content-card question-list" xid="listGroup3"> 
+          <div class="content-card question-list" xid="listGroup" style="display:none;"> 
             <div class="panel panel-default" xid="div12"> 
               <div class="panel-body" xid="titleDiv" style="height:100%;width:100%;"
                 align="left"> 
@@ -165,7 +165,7 @@
               </ul> 
             </div> 
           </div>  
-          <div class="flex-list" xid="div13"> 
+          <div class="flex-list mgt-20" xid="div13"> 
             <div class="flex-item" xid="div14"> 
               <a component="$UI/system/components/justep/button/button" class="btn btn-default b-user-thrButton"
                 label="上一题" xid="preButton" onClick="preButtonClick"> 
@@ -180,7 +180,7 @@
                 <span xid="span16">提交</span> 
               </a> 
             </div>  
-            <div class="flex-item" xid="div15"> 
+            <div class="flex-item" xid="div15" id="lastBtn"> 
               <a component="$UI/system/components/justep/button/button" class="btn btn-default b-user-thrButton"
                 label="下一题" xid="nextButton" onClick="nextButtonClick"> 
                 <i xid="i5"/>  
@@ -191,7 +191,7 @@
         </div> 
       </div>  
       <div component="$UI/system/components/justep/panel/panel" class="x-panel x-full"
-        xid="panel3" style="display: “”"> 
+        xid="panel3" style="display: none;"> 
         <div class="x-panel-top" xid="top3"> 
           <div component="$UI/system/components/justep/titleBar/titleBar" class="x-titlebar app-title-ctner"
             xid="titleBar3"> 
@@ -207,16 +207,16 @@
           </div> 
         </div>  
         <div class="x-panel-content" xid="content6"> 
-          <div class="section-card content-detail" xid="div16"> 
+          <div class="section-card score-card content-detail" xid="div16"> 
             <h1 xid="h11" class="scotxt"><![CDATA[你的演讲得分是]]></h1>  
             <div xid="scoreSpan" class="score-big" bind-text=" $model.controlData.val(&quot;score&quot;)"/>  
             <h1 xid="h12" class="scotxt"><![CDATA[你社交得分是]]></h1>  
             <div xid="div1" class="score-big" bind-text=" $model.controlData.val(&quot;score_f&quot;)"/> 
           </div>  
           <div class="section-card content-detail mgt-10" xid="div17"> 
-            <div class="sub-title" xid="testCompleteInfoDiv1"></div>  
-            <div class="sub-title" xid="testCompleteInfoDiv2" style="display:none"></div>  
-            <a component="$UI/system/components/justep/button/button" class="btn btn-primary button block mgt-20"
+            <div class="sub-title" xid="testCompleteInfoDiv1"/>  
+            <div class="sub-title" xid="testCompleteInfoDiv2" style="display:none"/>  
+            <a component="$UI/system/components/justep/button/button" class="btn btn-default button block mgt-20"
               label="确定" xid="closeButton" onClick="closeButtonClick"> 
               <i xid="i4"/>  
               <span xid="span7">确定</span> 

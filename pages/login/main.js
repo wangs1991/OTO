@@ -20,7 +20,16 @@ define(function(require) {
 	
 	Model.prototype.modelLoad = function(){
 		window.loginView = this;
-//		this.welcome();
+		//判断是否登录
+		//设置显示页面
+		window.isLogin = Server.checkState().then(function(){
+			var url = '$UI/OTO/pages/list/main.w';
+			justep.Shell.showPage(url);	
+		});
+	};
+	
+	Model.prototype.modelUnLoad = function(event){
+//		window.removeView(this);
 	};
 	
 	Model.prototype.getcodeSpanClick = function(event){
@@ -52,18 +61,15 @@ define(function(require) {
 		
 	};
 	
-	Model.prototype.welcome = function(){
-		/*判断是不是第一次进入*/
-		var visited = localStorage.getItem('visited');
-		if(visited == undefined || !visited){
-			var url = "$UI/xlzl/v2/welcome/welcomeView.w";
-			justep.Shell.showPage(url);
-			localStorage.setItem('visited', true);
-		}
-		
-		stopTimer();
-		this.comp("nameInput").val("");
-		this.comp("passwordInput").val("");
+	Model.prototype.refreshPage = function(){
+		//判断是否登录
+		//设置显示页面
+		window.isLogin = Server.checkState().then(function(){
+			justep.Shell.showPage("main");
+		}, function(){
+			console.log(121212);
+			justep.Shell.showPage("login");
+		});
 	}
 	
 	//开始计时器
@@ -115,22 +121,19 @@ define(function(require) {
 			return;
 		}
 		
-		Server.getCode({
+		Server.login({
 			action: 'login',
 			phone: phone,
 			code: code
 		}).then(function(data){
-			if(data.success == 'true'){
-				window.uid = data.uid;
-				window.session = data.session;
-				window.sessionOK = true;
-				//存储个人信息到本地
-				localStorage.setItem("uid",uid);
-				localStorage.setItem("session",session);
-				window.mainView.loginSuccess();
-			}else{				
-				justep.Util.hint("服务错误稍后重试");
-			}
+			stopTimer();
+			window.uid = data.uid;
+			window.session = data.session;
+			window.sessionOK = true;
+//			存储个人信息到本地
+			localStorage.setItem("uid",uid);
+			localStorage.setItem("session",session);
+			window.mainView.loginSuccess();
 		});
 	};
 	

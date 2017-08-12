@@ -3,7 +3,7 @@
 <div xmlns="http://www.w3.org/1999/xhtml" class="main13" component="$UI/system/components/justep/window/window"
   design="device:mobile;" xid="window">  
   <div component="$UI/system/components/justep/model/model" xid="model" onLoad="modelLoad"
-    style="height:auto;top:351px;left:451px;"/>  
+    style="height:auto;top:351px;left:451px;" onActive="refreshPage" onunLoad="modelUnLoad"/>  
   <div component="$UI/system/components/justep/panel/panel" class="x-panel x-full x-card login_panel"
     xid="panel2"> 
     <div class="x-panel-content x-cards container login-bg" xid="content1"> 
@@ -32,7 +32,7 @@
                 <i class="linear linear-dinner" xid="i3"/> 
               </span>  
               <input component="$UI/system/components/justep/input/input" class="form-control x-inputText tb-range-no-line"
-                xid="passwordInput" placeHolder="获得的验证码"/> 
+                xid="passwordInput" maxlength="4" placeHolder="获得的验证码"/> 
             </div> 
           </div> 
         </div>  

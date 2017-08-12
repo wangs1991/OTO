@@ -14,20 +14,19 @@ define(function(require){
 		userData = Server.getCurUser();
 		this.user.pop();
 		this.user.push(userData);
-		console.log(userData);
 	}
 	
 	//	页面激活去读取数据[用户量表分数]
 	Model.prototype.enterPage = function(){
 		try{
-			$('#questType').val(testType);
+			$('#userInfo #questType').val(testType);
 			var questions = window.questions,
 				textScore = [];
 			for(var i=0, len=questions.length; i<len; i++){
 				textScore.push(questions[i].id+':'+questions[i].score);
 			}
 			console.log(textScore.join(','));
-			$('#answer').val(textScore.join(','));
+			$('#userInfo #answer').val(textScore.join(','));
 		}catch(e){}
 	}
 	
@@ -47,11 +46,57 @@ define(function(require){
 		params.vid = Server.getCurUser().id;
 		params.answer = JSON.stringify(window.formSheetRes);
 		Server.createUser(params).then(function(data){
-			console.log(data);
+			params.id = params.vid; 
+			params.face = window.face + decodeURIComponent(params.face);
 			Server.setCurUser(params);
+			window.questions = {};
 			justep.Shell.closePage();
 		});
 	}
+	
+	// 上传头像
+	Model.prototype.uploadImg = function(event) {
+		if (!navigator.camera) {
+			return;
+		}
+		var self = this;
+		navigator.camera.getPicture(onLoadImageSuccess, onLoadImageFail, {
+			destinationType : navigator.camera.DestinationType.DATA_URL,
+			allowEdit : true,
+			quality : 80,
+			targetWidth : 100,
+			targetHeight : 100,
+			saveToPhotoAlbum : true,
+			sourceType: 1   // 1 相机，2 相册
+		});
+
+		// 拍照成功后回调
+		function onLoadImageSuccess(imageData) {
+			localStorage.setItem("imageData", "data:image/jpeg;base64," + imageData);
+			// 显示图像
+			$('#avator_img2').attr({src: "data:image/jpeg;base64," + imageData});
+			// 图片上传
+			self.uploadPic("data:image/jpeg;base64," + imageData);
+		}
+
+		function onLoadImageFail(error) {
+			alert(error);
+		}
+
+	};
+
+	Model.prototype.uploadPic = function(imageData) {
+		var that = this;
+		Server.transferImg({
+			isHead: 1,
+			face: imageData
+		}).then(function(data){
+			$('#userInfo #face_srcM').val(data.face);
+		}, function(){
+			justep.Util.hint('图片上传失败，请稍后重试！');
+		});
+		
+	};
 	
 //	日期选择
 	Model.prototype.selectDate = function(){
@@ -60,6 +105,7 @@ define(function(require){
 		var cur = $('#birthday').val();
 		comp.show();
 		comp.setValue(new Date(cur));
+		return false;
 	}
 	Model.prototype.getDate = function(event){
 		var comp = event.source;
@@ -69,20 +115,26 @@ define(function(require){
 		} else {
 			value = "";
 		}
-		$('#birthday').val(value);
+		$('#userInfo #birthday').val(value);
+		$('#userInfo #birthdayTxt').html(value);
 	}
 	
 //	性别选择
 	Model.prototype.selectSex = function(){
 		var comp = this.comp('sexSelector');
 		comp.show();
+		return false;
 	}
 	Model.prototype.getSex = function(event){
 		var value = this.comp("sexSelector").getInnerPickers()[0].getSelectedItem().val('sex');
 		var text = this.comp("sexSelector").getInnerPickers()[0].getSelectedItem().val('text');
-		$('#sexTxt').val(text);
-		$('#sex').val(value);
+		$('#userInfo #sexTxt').text(text);
+		$('#userInfo #sex').val(value);
 	}
 
+	Model.prototype.goBack = function(event){
+		this.close();
+	};
+	
 	return Model;
 });

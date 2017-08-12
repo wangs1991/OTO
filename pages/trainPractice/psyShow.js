@@ -26,21 +26,10 @@ define(function(require){
 
 	var Model = function(){
 		this.callParent();
-		this.hatState = justep.Bind.observable(false);
 	};
 	
 	Model.prototype.modelLoad = function(){
 		var that = this;
-//		验证头盔绑定状态
-		Server.checkHat({
-			eventKind: 33
-		}).then(function(data){
-			that.hatState.set(true);
-			console.log(data);
-			Server.deviceId(data.deviceId);
-		}, function(data){
-			that.hatState.set(false);
-		});
 	}
 	
 	Model.prototype.enterCources = function(evt){
@@ -58,14 +47,13 @@ define(function(require){
 		justep.Shell.showPage(url, params); 
 	};
 	
-	Model.prototype.goBindVR = function(){
-		var url = "$UI/OTO/pages/setting/bindVRView.w";
-		justep.Shell.showPage(url);
+	Model.prototype.comesoon = function(){
+		justep.Util.hint('即将开放');
 	}
 
 	Model.prototype.goBack = function(event){
 		this.close();
 	};
-
+	
 	return Model;
 });

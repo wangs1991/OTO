@@ -3,7 +3,6 @@ define(function(require) {
 	var $ = require("jquery");
 	var justep = require("$UI/system/lib/justep");
 	var Server = require('../../assets/server');
-	var userData = null;
 	var recordItem;
 	var id = 0; // 分页用
 
@@ -22,25 +21,19 @@ define(function(require) {
 	};
 
 	Model.prototype.modelLoad = function(event) {
-
+		this.enterPage();
 	}
 	// 进入页面刷新数据
 	Model.prototype.enterPage = function() {
-		this.records.splice(0, this.records.length);
+		this.records.splice(0, this.records.latestValue.length);
 		id = 0;
 		this.loadData();
-		
-//		刷新用户数据
-		userData = Server.getCurUser();
-		this.user.pop();
-		this.user.push(userData);
-		console.log(userData);
 	};
 
 	// 加载数据
 	Model.prototype.loadData = function() {
 		var that = this;
-		userData = Server.getCurUser();
+		var userData = Server.getCurUser();
 		this.user.pop();
 		this.user.push(userData);
 		var curUser = Server.getCurUser();
@@ -73,6 +66,11 @@ define(function(require) {
 	Model.prototype.recordDetail = function(evt) {
 		var url = "$UI/OTO/pages/trainPractice/relaxFeedback.w";
 		justep.Shell.showPage(url, recordItem);
+	}
+
+	Model.prototype.goBack = function() {
+		//justep.Shell.closeAll();
+		this.close();
 	}
 	return Model;
 });

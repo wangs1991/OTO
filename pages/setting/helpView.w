@@ -26,7 +26,7 @@
             <div class="sub-title">请描述具体问题，并留下您的联系方式， 便于我们与您联系。</div>  
             <div class="mgt-10"> 
               <textarea component="$UI/system/components/justep/textarea/textarea"
-                class="form-control" xid="description" style="height:122px;" placeholder="请描述具体问题"/> 
+                class="form-control" xid="description" style="height:122px; padding: 10px;" placeholder="请描述具体问题"/> 
             </div>  
             <div class="mgt-10"> 
               <input component="$UI/system/components/justep/input/input" class="form-control"

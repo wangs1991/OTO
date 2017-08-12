@@ -46,7 +46,7 @@
                 </div> 
               </div> 
             </li>  
-            <!-- <li xid="li4" bind-click="selectView" data-type="courseList"> 
+            <li xid="li4" bind-click="selectView" data-type="update"> 
               <div component="$UI/system/components/justep/row/row" class="row"
                 xid="row5"> 
                 <div class="col col-xs-1" xid="col13"> 
@@ -57,7 +57,7 @@
                   <i class="webapp ic-enter f-fr"/> 
                 </div> 
               </div> 
-            </li>   -->
+            </li>
             <li xid="li5" bind-click="selectView" data-type="help"> 
               <div component="$UI/system/components/justep/row/row" class="row"
                 xid="row6"> 

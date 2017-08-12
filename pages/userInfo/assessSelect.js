@@ -76,6 +76,9 @@ define(function(require){
 		}
 	}
 	
+	Model.prototype.backBtnClick = function(event){
+		this.close();
+	};
 	
 	return Model;
 });

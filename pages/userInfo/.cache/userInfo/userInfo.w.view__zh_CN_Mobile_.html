@@ -23,40 +23,43 @@
         <form name="userInfo" id="userInfo" __cid="cnEVj6b" class="cnEVj6b"> 
           <div xid="div13" class="b-user-topBox cnEVj6b" __cid="cnEVj6b"> 
             <div xid="div4" class="clearfix b-user-one cnEVj6b" __cid="cnEVj6b"> 
-              <div xid="div8" class="fl b-user-oneA cnEVj6b" __cid="cnEVj6b"> 
-                <img src="@justepContextPath@/v_94ee33a0da614e1298ed0ae07b31ca28l_zh_CNs_d_m/OTO/assets/img/user_1.png" alt="" xid="image1" __cid="cnEVj6b" class="cnEVj6b"/>  
-                <input name="face" id="face" style="display: none;" __cid="cnEVj6b" class="cnEVj6b"/> 
-              </div>  
-              <div xid="div4" class="fl b-user-two cnEVj6b" __cid="cnEVj6b"> 
-                <div xid="div9" class="clearfix b-user-twoA cnEVj6b" __cid="cnEVj6b"> 
-                  <img src="@justepContextPath@/v_2788366a34d6452d88de716c6d1a313cl_zh_CNs_d_m/OTO/assets/img/user_2.png" alt="" xid="image2" class="fl cnEVj6b" __cid="cnEVj6b"/>  
-                  <span xid="span3" class="fl cnEVj6b" __cid="cnEVj6b">姓名</span>  
-                  <input type="text" name="name" xid="input2" class="fl cnEVj6b" __cid="cnEVj6b" data-bind="value:user.name"/>  
-                  <img src="@justepContextPath@/v_941e0e89a8584afe81b254074aaf3f5bl_zh_CNs_d_m/OTO/assets/img/user_3.png" alt="" xid="image3" class="fl cnEVj6b" __cid="cnEVj6b"/>  
-                  <span xid="span4" class="fl cnEVj6b" __cid="cnEVj6b">性别</span>  
-                  <input type="text" id="sexTxt" xid="input3" class="fl b-user-twoInput cnEVj6b" __cid="cnEVj6b" data-bind="value:user.sexTxt,event:{click:$model._callModelFn.bind($model, 'selectSex')}"/>  
-                  <input type="text" name="sex" id="sex" xid="input3" class="fl b-user-twoInput cnEVj6b" style="display: none;" __cid="cnEVj6b" data-bind="value:user.sex"/> 
+              <div xid="div4" class="clearfix b-user-one cnEVj6b" __cid="cnEVj6b"> 
+                <div xid="div8" class="fl b-user-oneA cnEVj6b" __cid="cnEVj6b" data-bind="event:{click:$model._callModelFn.bind($model, 'uploadImg')}"> 
+                  <img alt="" id="avator_img2" xid="image1" __cid="cnEVj6b" class="cnEVj6b" data-bind="attr:{src: 'http://pic.adai-tech.com/img'+user.face}"/>  
+                  <input name="face" id="face_srcM" style="display: none;" __cid="cnEVj6b" class="cnEVj6b" data-bind="value:user.face"/> 
                 </div>  
-                <div xid="div5" class="clearfix b-user-twoA b-user-twoB cnEVj6b" __cid="cnEVj6b"> 
-                  <img src="@justepContextPath@/v_41220a7184be4c0094e4363ce89e4ae9l_zh_CNs_d_m/OTO/assets/img/user_4.png" alt="" xid="image6" class="fl cnEVj6b" __cid="cnEVj6b"/>  
-                  <span xid="span5" class="fl cnEVj6b" __cid="cnEVj6b">出生年月</span>  
-                  <input type="text" name="birthday" id="birthday" xid="input4" class="fl cnEVj6b" __cid="cnEVj6b" data-bind="value:user.birthday,event:{click:$model._callModelFn.bind($model, 'selectDate')}"/> 
+                <div xid="div4" class="fl b-user-two cnEVj6b" __cid="cnEVj6b"> 
+                  <div xid="div9" class="clearfix b-user-twoA cnEVj6b" __cid="cnEVj6b"> 
+                    <img src="@justepContextPath@/v_2c4805d7da7e4fa39e157c267f2df2c8l_zh_CNs_d_m/OTO/assets/img/user_2.png" alt="" xid="image2" class="fl cnEVj6b" __cid="cnEVj6b"/>  
+                    <span xid="span3" class="fl cnEVj6b" __cid="cnEVj6b">姓名</span>  
+                    <input type="text" name="name" xid="input2" class="fl cnEVj6b" __cid="cnEVj6b" data-bind="value:user.name"/>  
+                    <img src="@justepContextPath@/v_9089c8a985ee4b5cbdbeb298ecd6253dl_zh_CNs_d_m/OTO/assets/img/user_3.png" alt="" xid="image3" class="fl cnEVj6b" __cid="cnEVj6b"/>  
+                    <span xid="span4" class="fl cnEVj6b" __cid="cnEVj6b">性别</span>  
+                    <div class="fl b-user-twoInput cnEVj6b" id="sexTxt" __cid="cnEVj6b" data-bind="text:user.sexTxt,event:{click:$model._callModelFn.bind($model, 'selectSex')}"/>  
+                    <input type="text" name="sex" id="sex" xid="input3" class="fl b-user-twoInput cnEVj6b" style="display: none;" __cid="cnEVj6b" data-bind="value:user.sex"/> 
+                  </div>  
+                  <div xid="div5" class="clearfix b-user-twoA b-user-twoB cnEVj6b" __cid="cnEVj6b"> 
+                    <img src="@justepContextPath@/v_09cf9cbdbe5f427891531277aa35a3bfl_zh_CNs_d_m/OTO/assets/img/user_4.png" alt="" xid="image6" class="fl cnEVj6b" __cid="cnEVj6b"/>  
+                    <span xid="span5" class="fl cnEVj6b" __cid="cnEVj6b">出生年月</span>  
+                    <div id="birthdayTxt" class="fl b-user-twoInput cnEVj6b" style="width: 100px;" __cid="cnEVj6b" data-bind="text:user.birthday,event:{click:$model._callModelFn.bind($model, 'selectDate')}"/>  
+                    <input type="text" name="birthday" id="birthday" xid="input4" class="fl cnEVj6b" style="display: none;" __cid="cnEVj6b" data-bind="value:user.birthday,event:{click:$model._callModelFn.bind($model, 'selectDate')}"/> 
+                  </div> 
                 </div> 
               </div> 
             </div>  
             <div xid="div17" style="margin:10px;" __cid="cnEVj6b" class="cnEVj6b"> 
               <div xid="div10" class="clearfix b-user-twoA b-user-twoC cnEVj6b" __cid="cnEVj6b"> 
-                <img src="@justepContextPath@/v_a707216de5b14d01963c539251036ccal_zh_CNs_d_m/OTO/assets/img/user_5.png" alt="" xid="image8" class="fl cnEVj6b" __cid="cnEVj6b"/>  
+                <img src="@justepContextPath@/v_1542e5a4b5794e92bc2729d7a248304bl_zh_CNs_d_m/OTO/assets/img/user_5.png" alt="" xid="image8" class="fl cnEVj6b" __cid="cnEVj6b"/>  
                 <span xid="span11" class="fl cnEVj6b" __cid="cnEVj6b">手机号</span>  
                 <input type="text" name="phone" xid="input6" class="fl cnEVj6b" __cid="cnEVj6b" data-bind="value:user.phone"/> 
               </div>  
               <div xid="div11" class="clearfix b-user-twoA b-user-twoC cnEVj6b" __cid="cnEVj6b"> 
-                <img src="@justepContextPath@/v_08ff62430d5c489b94b8a18002d09251l_zh_CNs_d_m/OTO/assets/img/user_6.png" alt="" xid="image9" class="fl cnEVj6b" __cid="cnEVj6b"/>  
+                <img src="@justepContextPath@/v_dc90c734bed84916a02926f7fa757079l_zh_CNs_d_m/OTO/assets/img/user_6.png" alt="" xid="image9" class="fl cnEVj6b" __cid="cnEVj6b"/>  
                 <span xid="span13" class="fl cnEVj6b" __cid="cnEVj6b">身份证</span>  
                 <input type="text" name="idCard" xid="input7" class="fl cnEVj6b" __cid="cnEVj6b" data-bind="value:user.idCard"/> 
               </div>  
               <div xid="div12" class="clearfix b-user-twoA b-user-twoC cnEVj6b" __cid="cnEVj6b"> 
-                <img src="@justepContextPath@/v_22ee9cc90eee48f6adc6e4805bc47986l_zh_CNs_d_m/OTO/assets/img/user_7.png" alt="" xid="image10" class="fl cnEVj6b" __cid="cnEVj6b"/>  
+                <img src="@justepContextPath@/v_97c411493c444ce7a0b6407fc5e1e2d8l_zh_CNs_d_m/OTO/assets/img/user_7.png" alt="" xid="image10" class="fl cnEVj6b" __cid="cnEVj6b"/>  
                 <span xid="span14" class="fl cnEVj6b" __cid="cnEVj6b">职业</span>  
                 <input type="text" name="vocation" xid="input8" class="fl cnEVj6b" __cid="cnEVj6b" data-bind="value:user.vocation"/> 
               </div> 

@@ -7,5 +7,9 @@ define(function(require){
 		this.callParent();
 	};
 
+	Model.prototype.backBtnClick = function(event){
+		this.close();
+	};
+
 	return Model;
 });

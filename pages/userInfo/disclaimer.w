@@ -8,10 +8,5 @@
    <a component="$UI/system/components/justep/button/button" class="btn btn-default b-user-thrButton" label="我同意" xid="button1" bind-click="" style="color:#333;">
     <i xid="i2"></i>
     <span xid="span14">我同意</span></a> </div>
-  
-  
-  
-  
-  
   </div>
   </div>

@@ -32,6 +32,10 @@ define(function(require){
 			justep.Util.hint('确认密码和新密码不一致');
 			return false;
 		}
+		if(!Server.deviceId()){
+			justep.Util.hint('请绑定设备后再修改密码');
+			return false;
+		}
 		Server.resetPwd({
 			eventKind: 46,
 			deviceId: Server.deviceId(),

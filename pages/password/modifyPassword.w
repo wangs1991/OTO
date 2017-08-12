@@ -22,15 +22,15 @@
     </div>  
     <div class="x-panel-content" xid="content1"> 
       <div xid="div1" style="text-align:center;padding-top:20px;"> 
-        <div xid="div2" class="clearfix b-modify-one" style="margin-top:20px;display:inline-block;"> 
+        <div xid="div2" class="clearfix b-modify-one"> 
           <input component="$UI/system/components/justep/input/input" class="form-control pull-left" xid="oldPwd" 
           	placeHolder="旧密码" type="password"/>
         </div>  
-        <div xid="div3" class="clearfix b-modify-one" style="margin-top:20px;display:inline-block;"> 
+        <div xid="div3" class="clearfix b-modify-one"> 
           <input component="$UI/system/components/justep/input/input" class="form-control pull-left" xid="newPwd" 
           placeHolder="新密码" type="password"/>
         </div>  
-        <div xid="div5" class="clearfix b-modify-one" style="margin-top:20px;display:inline-block;"> 
+        <div xid="div5" class="clearfix b-modify-one"> 
           <input component="$UI/system/components/justep/input/input" class="form-control pull-left" xid="newPwdRe" 
           placeHolder="确认新密码" type="password"/>
         </div> 

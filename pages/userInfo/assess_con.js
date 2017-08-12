@@ -21,7 +21,9 @@ define(function(require) {
 	var Model = function() {
 		this.callParent();
 	};
+	
 	$(".title_on").html("自我测评")
+	
 	//图片路径转换
 	Model.prototype.getImageUrl = function(url){
 		return require.toUrl(url);
@@ -60,6 +62,9 @@ define(function(require) {
 //		this.getElementByXid('panel2').style.display="none";
 		this.getElementByXid('panel3').style.display="none";
 		
+		//显示考题
+		this.getElementByXid('listGroup').style.display="";
+		
 		var firstTest = localStorage.getItem("firstTest");
 		if (firstTest == null || firstTest == undefined) {
 			localStorage.setItem("firstTest", "1");
@@ -77,6 +82,7 @@ define(function(require) {
 	
 	Model.prototype.modelLoad = function(event){
 		//window.putView(this);
+		
 	};
 	
 	Model.prototype.modelUnLoad = function(event){
@@ -288,7 +294,7 @@ define(function(require) {
 		if (curID >= totalCount) {
 			this.getElementByXid('applyButton').style.display="";
 			this.getElementByXid('preButton').style.display="";
-			this.getElementByXid('nextButton').style.display="none";
+			$('#lastBtn').hide();
 		}
 		//this.getElementByXid('applyButton').style.display="";
 	};

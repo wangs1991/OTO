@@ -3,7 +3,8 @@
 <div xmlns="http://www.w3.org/1999/xhtml" component="$UI/system/components/justep/window/window" design="device:m;"
   xid="window" class="window">  
   <div component="$UI/system/components/justep/model/model" xid="model" style="left:18px;top:83px;height:244px;"
-    onParamsReceive="modelParamsReceive" onLoad="modelLoad"/>  
+    onParamsReceive="modelParamsReceive" onLoad="modelLoad" onActive="enterPage" onunLoad="modelUnLoad"
+    onInactive="modelUnLoad"/>  
   <div component="$UI/system/components/justep/panel/panel" class="x-panel x-full"
     xid="panel1"> 
     <div class="x-panel-top" xid="top1"> 
@@ -31,7 +32,7 @@
             <div class="media" xid="media1"> 
               <div class="media-left avator-ctner" xid="mediaLeft1"> 
                 <div class="avator"> 
-                  <img class="media-object" src="$UI/OTO/assets/img/user_boy.jpg"
+                  <img class="media-object" bind-attr="{src: 'http://pic.adai-tech.com/img'+user.face}"
                     alt="" xid="image2"/> 
                 </div>  
                 <div class="sex" bind-css="{'boy': user.sex == 0, 'girl': user.sex == 1}"/> 
@@ -61,7 +62,7 @@
               <ul xid="ul3" class="b-relax-thr"> 
                 <!-- 皮肤电数据 -->  
                 <div component="$UI/system/components/bootstrap/accordion/accordion"
-                  id="skinData" tabbed="true"> 
+                  id="skinDataRes" tabbed="true" style="display: none;"> 
                   <div component="$UI/system/components/bootstrap/panel/panel"
                     xid="panel2" class="panel panel-default"> 
                     <div xid="heading1" style="background-color:transparent;"
@@ -80,10 +81,10 @@
                           <div xid="div1" style="height:300px; width: 100%;"
                             class="center-block"> 
                             <div xid="skinInfoDiv" align="left" style="position:relative;left:5px;top:-15px;"> 
-                              <span xid="skinInfoSpan" class="text-black"/>
-                              <div xid="wave2" id="echart" style="height:300px;position: static;display: block; width: 80vw"
-                              class="main"/>  
-                            </div>  
+                              <span xid="skinInfoSpan" class="text-black"/>  
+                              <div xid="wave2" id="echartres" style="height:300px;position: static;display: block; width: 80vw"
+                                class="main"/> 
+                            </div> 
                           </div>  
                           <input component="$UI/system/components/justep/input/input"
                             class="form-control" name="baseLine" xid="input1" id="baseLine"
@@ -93,9 +94,77 @@
                     </div> 
                   </div> 
                 </div>  
+                <!-- 考试结果 -->  
+                <div component="$UI/system/components/bootstrap/accordion/accordion"
+                  class="panel-group" id="examRes" style="display: none;"> 
+                  <div class="panel panel-default" component="$UI/system/components/bootstrap/panel/panel"
+                    xid="panel5"> 
+                    <div class="panel-heading" xid="heading4" bind-click="fetchExam"> 
+                      <li xid="li7" class="clearfix"> 
+                        <div xid="div10" class="pull-left b-relax-thrA"> 
+                          <img src="$UI/OTO/assets/img/relax_2.png" alt=""
+                            xid="image2"/>  
+                          <span xid="span4"><![CDATA[考试结果]]></span> 
+                        </div> 
+                      </li> 
+                    </div>  
+                    <div class="panel-collapse collapse" xid="div4"> 
+                      <div class="panel-body" xid="div5"> 
+                        <h5>考试科目：
+                          <span bind-text="subject"/> 
+                        </h5>  
+                        <p>得分：
+                          <span bind-text="score"/>/
+                          <span bind-text="totalScore"/> 
+                        </p>  
+                        <dl class="eaxm_list" bind-foreach="{data: answerList, as: 'item'}"> 
+                          <dt bind-text="($index()+1) + '. ' + item.title"/>  
+                          <dd bind-css="{'selected': item.selected == 1, 'answer': item.answer == 1}"> 
+                            <span class="item-idx">A.</span>  
+                            <span bind-text="item.option1"/> 
+                          </dd>  
+                          <dd bind-css="{'selected': item.selected == 2, 'answer': item.answer == 2}"> 
+                            <span class="item-idx">B.</span>  
+                            <span bind-text="item.option2"/> 
+                          </dd>  
+                          <dd bind-css="{'selected': item.selected == 3, 'answer': item.answer == 3}"> 
+                            <span class="item-idx">C.</span>  
+                            <span bind-text="item.option3"/> 
+                          </dd>  
+                          <dd bind-css="{'selected': item.selected == 4, 'answer': item.answer == 4}"> 
+                            <span class="item-idx">D.</span>  
+                            <span bind-text="item.option4"/> 
+                          </dd> 
+                        </dl> 
+                      </div> 
+                    </div> 
+                  </div> 
+                </div>  
+                <!-- 语音记录 -->  
+                <div component="$UI/system/components/bootstrap/accordion/accordion"
+                  class="panel-group b-relax-border" id="voiceRes" style="display: none;"> 
+                  <div class="panel panel-default" component="$UI/system/components/bootstrap/panel/panel"
+                    xid="panel3"> 
+                    <div class="panel-heading" xid="heading2" bind-click="fetchVoice"> 
+                      <li xid="li7" class="clearfix"> 
+                        <div xid="div10" class="pull-left b-relax-thrA"> 
+                          <img src="$UI/OTO/assets/img/relax_2.png" alt=""
+                            xid="image2"/>  
+                          <span xid="span4"><![CDATA[语音记录]]></span> 
+                        </div> 
+                      </li> 
+                    </div>  
+                    <div class="panel-collapse collapse" xid="div8"> 
+                      <div class="panel-body" xid="div9"> 
+                        <textarea cols="5" name="voice" rows="5" id="voiceTxt" xid="textarea2"
+                          class="b-user-fourB" readonly="readonly"/> 
+                      </div> 
+                    </div> 
+                  </div> 
+                </div>  
                 <!-- 咨询记录 -->  
                 <div component="$UI/system/components/bootstrap/accordion/accordion"
-                  class="panel-group b-relax-border" id="consult"> 
+                  class="panel-group b-relax-border" id="consultRes" style="display: none;"> 
                   <div class="panel panel-default" component="$UI/system/components/bootstrap/panel/panel"
                     xid="panel3"> 
                     <div class="panel-heading" xid="heading2"> 
@@ -109,88 +178,22 @@
                     </div>  
                     <div class="panel-collapse collapse" xid="div8"> 
                       <div class="panel-body" xid="div9"> 
-                        <textarea cols="5" name="diagnose" rows="5" xid="textarea2"
-                          class="b-user-fourB"/> 
-                      </div> 
-                    </div> 
-                  </div> 
-                </div>  
-                <!-- 考试结果 -->  
-                <div component="$UI/system/components/bootstrap/accordion/accordion"
-                  class="panel-group" id="exam"> 
-                  <div class="panel panel-default" component="$UI/system/components/bootstrap/panel/panel"
-                    xid="panel5"> 
-                    <div class="panel-heading" xid="heading4"> 
-                      <li xid="li7" class="clearfix"> 
-                        <div xid="div10" class="pull-left b-relax-thrA"> 
-                          <img src="$UI/OTO/assets/img/relax_2.png" alt=""
-                            xid="image2"/>  
-                          <span xid="span4"><![CDATA[考试结果]]></span> 
-                        </div> 
-                      </li> 
-                    </div>  
-                    <div class="panel-collapse collapse" xid="div4"> 
-                      <div class="panel-body" xid="div5"> 
-                      <h5>考试科目：
-                        <span bind-text="subject"/>
-                      </h5>  
-                      <p>得分：
-                        <span bind-text="score"/>/
-                        <span bind-text="totalScore"/>
-                      </p>  
-                      <dl class="eaxm_list" bind-foreach="{data: answerList, as: 'item'}"> 
-                        <dt bind-text="($index()+1) + '. ' + item.title"/>  
-                        <dd bind-css="{'selected': item.selected == 1, 'answer': item.answer == 1}">
-                          <span class="item-idx">A. </span>
-                          <span bind-text="item.option1"/>
-                        </dd>  
-                        <dd  bind-css="{'selected': item.selected == 2, 'answer': item.answer == 2}">
-                        	<span class="item-idx">B. </span>
-                          	<span bind-text="item.option2"/>
-                        </dd>  
-                        <dd  bind-css="{'selected': item.selected == 3, 'answer': item.answer == 3}">
-                        	<span class="item-idx">C. </span>
-                          	<span bind-text="item.option3"/>
-                        </dd>
-                        <dd  bind-css="{'selected': item.selected == 4, 'answer': item.answer == 4}">
-                        	<span class="item-idx">D. </span>
-                          	<span bind-text="item.option4"/>
-                        </dd>
-                      </dl> 
-                    </div>  
-                    </div> 
-                  </div> 
-                </div>  
-                <!-- 语音记录 -->  
-                <div component="$UI/system/components/bootstrap/accordion/accordion"
-                  class="panel-group b-relax-border" id="voice"> 
-                  <div class="panel panel-default" component="$UI/system/components/bootstrap/panel/panel"
-                    xid="panel3"> 
-                    <div class="panel-heading" xid="heading2"> 
-                      <li xid="li7" class="clearfix"> 
-                        <div xid="div10" class="pull-left b-relax-thrA"> 
-                          <img src="$UI/OTO/assets/img/relax_2.png" alt=""
-                            xid="image2"/>  
-                          <span xid="span4"><![CDATA[语音记录]]></span> 
-                        </div> 
-                      </li> 
-                    </div>  
-                    <div class="panel-collapse collapse" xid="div8"> 
-                      <div class="panel-body" xid="div9"> 
-                        <textarea cols="5" name="voice" rows="5" id="voiceTxt" xid="textarea2"
-                          class="b-user-fourB"/> 
+                        <textarea cols="5" id="consultInpt" name="diagnose" rows="5"
+                          xid="textarea2" class="b-user-fourB"/> 
                       </div> 
                     </div> 
                   </div> 
                 </div>  
                 <!-- 自评量表 -->  
-                <div class="panel-group panel panel-default" id="sheet" bind-click="goTest"> 
+                <div class="panel-group panel panel-default" id="sheetRes"
+                  bind-click="goTest" style="display: none;"> 
                   <div class="panel-heading" xid="heading3"> 
                     <li xid="li9" class="clearfix"> 
                       <div xid="div14" class="pull-left b-relax-thrA"> 
                         <img src="$UI/OTO/assets/img/relax_2.png" alt="" xid="image4"/>  
                         <span xid="span6"><![CDATA[自评量表]]></span> 
-                      </div> 
+                      </div>  
+                      <input type="text" name="answer" id="answer" style="display: none;"/> 
                     </li> 
                   </div> 
                 </div> 

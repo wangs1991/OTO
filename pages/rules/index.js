@@ -1,44 +1,27 @@
 define(function(require) {
 	var $ = require("jquery");
 	var justep = require("$UI/system/lib/justep");
-	var ShellImpl = require('$UI/system/lib/portal/shellImpl');
-//	var Config = require('../config/config.js');
-//	console.log(COnfig);
+	var Server = require('../../assets/server');
 
 	var Model = function() {
 		this.callParent();
-		
-		
-		//创建Shell实例
-		window.shell=new ShellImpl(this, {
-			contentsXid : 'pages', //ShellImpl关联的contents, 即page的显示区域
-			pageMappings: {
-				main: {
-					url: require.toUrl("./main.w")
-				},
-				
-				p2: {
-					url: require.toUrl("./interactive/page2.w")
-				},
-				
-				rules: {
-					url: require.toUrl("./rules/index.w")
-				}
-				
-			}
-		});
 	};
-//	打开：justep.Shell.showPage(“main”);
-//	关闭：this.close();
-//	返回上一页：justep.Shell.closePage();
-	Model.prototype.modelLoad = function(event) {
-//		Config.show();
-//		判断是否登录
-		var login = false;
-		
-//		设置显示页面
-		justep.Shell.showPage("main");
-	};
+	
+	Model.prototype.modelLoad = function(){
+		//		检验是否同意规章制度
+		var isagreed = Server.ruleState();
+		if(isagreed <= 0){
+			justep.Shell.showPage('rules');
+			return false;
+		}else{
+			justep.Shell.showPage('main');
+		}
+	}
+	Model.prototype.agree = function(){
+		Server.ruleState(100);
+		window.mainView.loginSuccess();
+		justep.Shell.closePage();
+	}
 	
 	return Model;
 });

@@ -3,7 +3,7 @@
 <div xmlns="http://www.w3.org/1999/xhtml" class="main13" component="$UI/system/components/justep/window/window"
   design="device:mobile;" xid="window">  
   <div component="$UI/system/components/justep/model/model" xid="model" style="height:auto;top:241px;left:673px;"
-    onLoad="modelLoad" onParamsReceive="modelParamsReceive" onunLoad="modelUnLoad"/>  
+    onLoad="modelLoad" onParamsReceive="modelParamsReceive" onunLoad="modelUnLoad" onActive="modelLoad" onInactive="modelUnLoad"/>  
   <div component="$UI/system/components/justep/panel/panel" class="x-panel x-full"
     xid="panel1"> 
     <div class="x-panel-top" xid="top1"> 
@@ -20,78 +20,79 @@
         <div class="x-titlebar-right reverse"/> 
       </div> 
     </div>  
-    <div class="x-panel-content" xid="content2"> 
-      <div component="$UI/system/components/justep/smartContainer/smartContainer"
-        class="x-smartcontainer" xid="smartContainer1"> 
-        <div class="ratio-section"> 
+    <div class="ratio-section"  style="top: 48px;"> 
           <div class="inner-content"> 
             <img src="$UI/xlzl/img/VR_BG.jpg" alt="" xid="liveImage" bind-click="openPageClick"
               class="tb-img1" pagename="./detail.w" style="background-color:transparent;width:100%;height:200px;"/> 
           </div> 
-        </div>  
+        </div> 
+    <div class="x-panel-content" xid="content2"  style="top: 235px;"> 
+      <div component="$UI/system/components/justep/smartContainer/smartContainer"
+        class="x-smartcontainer" xid="smartContainer1" style="height: 100%;"> 
+         
         <div class="main_padding"> 
           <div class="inner-content main_padding"> 
-            <div xid="div1" style="height:300px;" class="center-block"> 
+            <div xid="div1" style="height:360px;" class="center-block"> 
               <div xid="skinInfoDiv" align="left" style="position:relative;left:5px;top:-5px;height:30px;"> 
                 <span xid="skinInfoSpan" class="text-black" bind-text="skinInfo"/> 
               </div>  
-              <div xid="nullAlertDiv2" style="display:none;position:relative;height:0px;width:100%;top:100px;"
+              <div xid="nullAlertDiv2" style="display:none;position:relative;height:0px;width:100%;"
                 class="text-alert-null">没有数据信息，请正确佩戴皮肤电心率设备</div>  
               <div xid="wave2" id="echartExpose" style="width:100%;height:300px;position: static;"
                 class="main"/> 
-            </div>  
+            </div>
             <div xid="settingListDiv" class="tb-range-no_line list_list_list"
               id="asyncActions"> 
               <a component="$UI/system/components/justep/button/button" class="btn btn-success btn-sm btn-only-label center-block item-btn"
-                bind-attr="{label: data_controller_name1}" xid="selectCourseButton"
+                bind-attr="{label: data_controller_name1}" xid="selectSocialButton1"
                 onClick="controller1Click"> 
                 <i xid="i2"/>  
                 <span xid="span1" bind-text="data_controller_name1">播放动作</span> 
               </a>  
               <a component="$UI/system/components/justep/button/button" class="btn btn-success btn-sm btn-only-label center-block item-btn"
-                bind-attr="{label: data_controller_name2" xid="selectCourseButton"
+                bind-attr="{label: data_controller_name2" xid="selectSocialButton2"
                 onClick="controller2Click"> 
                 <i xid="i2"/>  
                 <span xid="span1" bind-text="data_controller_name2">播放动作</span> 
               </a>  
               <a component="$UI/system/components/justep/button/button" class="btn btn-success btn-sm btn-only-label center-block item-btn"
-                bind-attr="{label: data_controller_name3" data-id="1" xid="selectCourseButton"
+                bind-attr="{label: data_controller_name3" data-id="1" xid="selectSocialButton3"
                 onClick="controller3Click"> 
                 <i xid="i2"/>  
                 <span xid="span1" bind-text="data_controller_name3">播放动作</span> 
               </a>  
               <a component="$UI/system/components/justep/button/button" class="btn btn-success btn-sm btn-only-label center-block item-btn"
-                bind-attr="{label: data_controller_name4" data-id="1" xid="selectCourseButton"
+                bind-attr="{label: data_controller_name4" data-id="1" xid="selectSocialButton4"
                 onClick="controller4Click"> 
                 <i xid="i2"/>  
                 <span xid="span1" bind-text="data_controller_name4">播放动作</span> 
               </a>  
               <a component="$UI/system/components/justep/button/button" class="btn btn-success btn-sm btn-only-label center-block item-btn"
-                bind-attr="{label: data_controller_name5" data-id="1" xid="selectCourseButton"
+                bind-attr="{label: data_controller_name5" data-id="1" xid="selectSocialButton5"
                 onClick="controller5Click"> 
                 <i xid="i2"/>  
                 <span xid="span1" bind-text="data_controller_name5">播放动作</span> 
               </a>  
               <a component="$UI/system/components/justep/button/button" class="btn btn-success btn-sm btn-only-label center-block item-btn"
-                bind-attr="{label: data_controller_name6" data-id="1" xid="selectCourseButton"
+                bind-attr="{label: data_controller_name6" data-id="1" xid="selectSocialButton6"
                 onClick="controller6Click"> 
                 <i xid="i2"/>  
                 <span xid="span1" bind-text="data_controller_name6">播放动作</span> 
               </a>  
               <a component="$UI/system/components/justep/button/button" class="btn btn-success btn-sm btn-only-label center-block item-btn"
-                bind-attr="{label: data_controller_name7" data-id="1" xid="selectCourseButton"
+                bind-attr="{label: data_controller_name7" data-id="1" xid="selectSocialButton7"
                 onClick="controller7Click"> 
                 <i xid="i2"/>  
                 <span xid="span1" bind-text="data_controller_name7">播放动作</span> 
               </a>  
               <a component="$UI/system/components/justep/button/button" class="btn btn-success btn-sm btn-only-label center-block item-btn"
-                bind-attr="{label: data_controller_name8" data-id="1" xid="selectCourseButton"
+                bind-attr="{label: data_controller_name8" data-id="1" xid="selectSocialButton8"
                 onClick="controller8Click"> 
                 <i xid="i2"/>  
                 <span xid="span1" bind-text="data_controller_name8">播放动作</span> 
               </a>  
               <a component="$UI/system/components/justep/button/button" class="btn btn-success btn-sm btn-only-label center-block item-btn"
-                bind-attr="{label: data_controller_name9" data-id="1" xid="selectCourseButton"
+                bind-attr="{label: data_controller_name9" data-id="1" xid="selectSocialButton9"
                 onClick="controller9Click"> 
                 <i xid="i2"/>  
                 <span xid="span1" bind-text="data_controller_name9">播放动作</span> 

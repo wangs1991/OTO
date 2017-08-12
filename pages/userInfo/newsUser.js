@@ -7,8 +7,6 @@ define(function(require) {
 	/* 头像上传依赖 */
 	require("$UI/system/lib/cordova/cordova");
 	require("cordova!cordova-plugin-camera"); // 调用摄像头类
-	require("cordova!cordova-plugin-file"); // 调用本地文件上传类
-	require("cordova!cordova-plugin-file-transfer"); // 调用文件上传转换类
 
 	var Model = function() {
 		this.callParent();
@@ -42,42 +40,46 @@ define(function(require) {
 	};
 
 	// 上传头像
-	Model.prototype.uploadImg = function() {
-		console.log(11111111);
-		var url = require.toUrl("$UI/OTO/pages/test/index.w");
-		justep.Shell.showPage(url);
-		return false;
-		// 拍照
-		var _this = this;
-		document.addEventListener("deviceready", onDeviceReady, false);
-		function onDeviceReady() {
-			console.log('onDeviceReady');
-			navigator.camera.getPicture(onLoadImageSuccess, onLoadImageFail, {
-				destinationType : navigator.camera.DestinationType.DATA_URL,// DATA_URL
-				quality : 100,
-				targetWidth : 200,
-				targetHeight : 200,
-				saveToPhotoAlbum : true,
-				// allowEdit : true,
-				sourceType : 1
-				// 0、2为从相册文件中选择，1为拍照
-			});
-			// 拍照成功后回调
-			function onLoadImageSuccess(imageData) {// imageURI imageData
-				_this.picPath = imageData;
-				var smallImage = document.getElementById(_this.getIDByXID('image3'));
-				smallImage.src = "data:image/jpeg;base64," + imageData;
-
-				var onepicData = _this.comp("onepicData");
-				var bizID = onepicData.getCurrentRowID();
-				_this.picName = bizID + "_" + justep.Date.toString(new Date(), 'yyyyMMdd_hhmmss');
-				onepicData.setValue("fImageUrl", "upload_files/" + _this.picName + ".jpg", onepicData.getCurrentRow());
-			}
-			function onLoadImageFail(error) {
-				alert(error);
-			}
+	Model.prototype.uploadImg = function(event) {
+		if (!navigator.camera) {
+			return;
 		}
-	}
+		var self = this;
+		navigator.camera.getPicture(onLoadImageSuccess, onLoadImageFail, {
+			destinationType : navigator.camera.DestinationType.DATA_URL,
+			allowEdit : true,
+			quality : 80,
+			targetWidth : 100,
+			targetHeight : 100,
+			saveToPhotoAlbum : true,
+			sourceType: 1   // 1 相机，2 相册
+		});
+
+		// 拍照成功后回调
+		function onLoadImageSuccess(imageData) {
+			localStorage.setItem("imageData", "data:image/jpeg;base64," + imageData);
+			// 显示图像
+			$('#avator_img').attr({src: "data:image/jpeg;base64," + imageData});
+			// 图片上传
+			self.uploadPic("data:image/jpeg;base64," + imageData);
+		}
+
+		function onLoadImageFail(error) {
+			alert(error);
+		}
+
+	};
+
+	Model.prototype.uploadPic = function(imageData) {
+		Server.transferImg({
+			isHead: 1,
+			face: imageData
+		}).then(function(data){
+			$('#face_src').val(data.face);
+		}, function(){
+			justep.Util.hint('图片上传失败，请稍后重试！');
+		});
+	};
 
 	// 提交新建用户数据
 	Model.prototype.createUser = function() {
@@ -87,7 +89,7 @@ define(function(require) {
 		params.eventKind = 30;
 		params.answer = JSON.stringify(window.formSheetRes);
 		Server.createUser(params).then(function(data) {
-			console.log(data);
+			window.questions = {};
 			justep.Shell.closePage();
 		});
 	}
@@ -98,6 +100,7 @@ define(function(require) {
 		comp.set('type', 'date');
 		comp.show();
 		comp.setValue(new Date(1990, 1, 1));
+		return false;
 	}
 	Model.prototype.getDate = function(event) {
 		var comp = event.source;
@@ -107,20 +110,25 @@ define(function(require) {
 		} else {
 			value = "";
 		}
-
-		$('#birthday').val(value);
+		$('#newUserSheet #birthdayTxtNew').html(value);
+		$('#newUserSheet #birthdayNew').val(value);
 	}
 	// 性别选择
 	Model.prototype.selectSex = function() {
 		var comp = this.comp('sexSelector');
 		comp.show();
+		return false;
 	}
 	Model.prototype.getSex = function(event) {
 		var value = this.comp("sexSelector").getInnerPickers()[0].getSelectedItem().val('sex');
 		var text = this.comp("sexSelector").getInnerPickers()[0].getSelectedItem().val('text');
-		$('#sexTxt').val(text);
-		$('#sex').val(value);
+		$('#newUserSheet #sexTxtNew').html(text);
+		$('#newUserSheet #sexNew').val(value);
 	}
+
+	Model.prototype.backBtnClick = function(event){
+		this.close();
+	};
 
 	return Model;
 });

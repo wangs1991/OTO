@@ -23,13 +23,6 @@
     <div component="$UI/system/components/justep/smartContainer/smartContainer"
       class="x-smartcontainer" xid="smartContainer2" style="position:absolute;top:48px;width:100%;"> 
       <div xid="div4" class="b-psy-box"> 
-        <div xid="div7" class="b-psy-one" bind-click="goBindVR"> 
-          <div xid="div8" class="b-psy-oneA"> 
-            <img src="$UI/OTO/assets/img/psy_5.png" alt="" xid="image1"/>  
-            <span xid="span3" bind-if="hatState.lastValue">头盔已连接</span>  
-            <span xid="span3" bind-if="!hatState.lastValue">头盔未连接</span> 
-          </div> 
-        </div>  
         <div xid="div10" class="b-psy-two clearfix"> 
           <div xid="div11" class="b-psy-twoA "> 
             <img src="$UI/OTO/assets/img/psy_1.png" alt="" xid="image2"/> 
@@ -45,51 +38,59 @@
           </div> 
         </div>  
         <ul xid="ul2" class="b-psy-thr clearfix"> 
-          <li xid="li5" class="type_relax clearfix" data-type="breathing:1" bind-click="enterCources"> 
+          <li xid="li5" class="type_relax clearfix" data-type="breathing:1"
+            bind-click="enterCources"> 
             <img src="$UI/OTO/assets/img/psy_6.png" alt="" xid="image6"/>  
             <span xid="span11"><![CDATA[肌肉渐进式放松]]></span> 
           </li>  
-          <li xid="li6" class="type_relax clearfix" data-type="breathing:2" bind-click="enterCources"> 
+          <li xid="li6" class="type_relax clearfix" data-type="breathing:2"
+            bind-click="enterCources"> 
             <img src="$UI/OTO/assets/img/psy_7.png" alt="" xid="image7"/>  
             <span xid="span12"><![CDATA[深呼吸放松]]></span> 
           </li> 
         </ul>  
         <ul xid="ul1" class="b-psy-thr clearfix"> 
-          <li xid="li2" class="type_relax clearfix" data-type="breathing:3" bind-click="enterCources"> 
+          <li xid="li2" class="type_relax clearfix" data-type="breathing:3"
+            bind-click="enterCources"> 
             <img src="$UI/OTO/assets/img/psy_8.png" alt="" xid="image8"/>  
             <span xid="span5"><![CDATA[快速放松]]></span> 
           </li>  
-          <li xid="li1" class="type_anxious clearfix" data-type="interview:4" bind-click="enterCources"> 
+          <li xid="li1" class="type_anxious clearfix" data-type="interview:4"
+            bind-click="enterCources"> 
             <img src="$UI/OTO/assets/img/psy_9.png" alt="" xid="image9"/>  
             <span xid="span4"><![CDATA[面试焦虑]]></span> 
           </li> 
         </ul>  
         <ul xid="ul3" class="b-psy-thr clearfix"> 
-          <li xid="li4" class="type_anxious clearfix" data-type="speech:5" bind-click="enterCources"> 
+          <li xid="li4" class="type_anxious clearfix" data-type="speech:5"
+            bind-click="enterCources"> 
             <img src="$UI/OTO/assets/img/psy_10.png" alt="" xid="image10"/>  
             <span xid="span7"><![CDATA[汇报焦虑]]></span> 
           </li>  
-          <li xid="li3" class="type_anxious clearfix" data-type="public:6" bind-click="enterCources"> 
+          <li xid="li3" class="type_anxious clearfix" data-type="public:6"
+            bind-click="enterCources"> 
             <img src="$UI/OTO/assets/img/psy_11.png" alt="" xid="image11"/>  
             <span xid="span6"><![CDATA[公众演讲焦虑]]></span> 
           </li> 
         </ul>  
         <ul xid="ul4" class="b-psy-thr clearfix"> 
-          <li xid="li7" class="type_anxious clearfix" data-type="examTender:7" bind-click="enterCources"> 
+          <li xid="li7" class="type_anxious clearfix" data-type="examTender:7"
+            bind-click="enterCources"> 
             <img src="$UI/OTO/assets/img/psy_12.png" alt="" xid="image13"/>  
-            <span xid="span2"><![CDATA[考试焦虑]]></span>
+            <span xid="span2"><![CDATA[考试焦虑]]></span> 
           </li>  
-          <li xid="li8" class="type_fear clearfix" data-type="acrophobia:8" bind-click="enterCources">  
+          <li xid="li8" class="type_fear clearfix" data-type="acrophobia:8"
+            bind-click="enterCources"> 
             <img src="$UI/OTO/assets/img/psy_13.png" alt="" xid="image12"/>  
-            <span xid="span1"><![CDATA[恐高症]]></span>
+            <span xid="span1"><![CDATA[恐高症]]></span> 
           </li> 
         </ul>  
-        <ul xid="ul5" class="b-psy-thr clearfix"> 
-          <li xid="li9" class="type_trauma clearfix"> 
+        <ul xid="ul5" class="b-psy-thr clearfix" bind-click="comesoon"> 
+          <li xid="li9" class="type_trauma clearfix grayable"> 
             <img src="$UI/OTO/assets/img/psy_14.png" alt="" xid="image15"/>  
-            <span xid="span9"><![CDATA[EMDR]]></span>
+            <span xid="span9">EMDR</span> 
           </li> 
-        </ul>
+        </ul> 
       </div> 
     </div> 
   </div> 

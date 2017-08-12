@@ -42,7 +42,6 @@ define(function(require) {
 	};
 	
 	Model.prototype.modelUnLoad = function(event){
-		window.removeView(this);
 	};
 	
 	Model.prototype.backDivClick = function(event){

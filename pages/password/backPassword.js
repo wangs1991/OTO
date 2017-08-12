@@ -14,11 +14,9 @@ define(function(require){
 			eventKind: 47,
 			deviceId: Server.deviceId()
 		}).then(function(data){
-			console.log(data, 'resolve');
-			$('#msgCtner').html(data.ret.msg);
+			
 		}, function(data){
-			console.log(data, 'reject');
-			$('#msgCtner').html(data.ret.msg);
+			
 		});
 	}
 	

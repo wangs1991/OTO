@@ -2,7 +2,7 @@
 
 <div xmlns="http://www.w3.org/1999/xhtml" xid="window" class="window portal-main" component="$UI/system/components/justep/window/window">  
   <div component="$UI/system/components/justep/model/model" xid="model" style="height:auto;left:350px;top:66px;"
-    onLoad="modelLoad" onActive="enterPage"> 
+    onLoad="modelLoad" onActive="enterPage" onunLoad="modelUnLoad"> 
     <div component="$UI/system/components/justep/data/data" autoLoad="true"
       xid="curUser" idColumn="vid" autoNew="true"> 
       <column name="vid" type="String" xid="xid1"/>  
@@ -39,7 +39,12 @@
       	<input component="$UI/system/components/justep/input/input" class=""
                 xid="userIpt" placeHolder="搜索" bind-keyup="goSearch"/>
         <div class="visitor-add" bind-click="addVisitor" bind-blur="resetData">+</div> 
-      </div>  
+      </div> 
+      <div class="wel-slogan" id="welSlogan">
+     	<h2 class="wel-title">欢迎使用OTO心理干预系统！</h2>
+		<p>您可以通过点击右上角的 “<span class="addBtn">+</span>”</p>	
+		<p>新增来访者，为他定制练习方案</p>
+      </div>	 
       <div class="x-scroll visitors_list" component="$UI/system/components/justep/scrollView/scrollView"
         xid="userList" style="top:120px;width:100%;background-color:transparent;" onPullUp="loadList"> 
         <div class="x-scroll-content" xid="div2"> 

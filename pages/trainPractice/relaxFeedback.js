@@ -6,6 +6,7 @@ define(function(require){
 	var Server = require('../../assets/server');
 	require("../../assets/js/AppUtils");
 	var courseModel;
+	var detailEcharOpt = {};
 
 	var Model = function(){
 		this.callParent();
@@ -26,7 +27,6 @@ define(function(require){
 	};
 	
 	Model.prototype.modelLoad = function(){
-		var that = this;
 		userData = Server.getCurUser();
 		this.user.pop();
 		this.user.push(userData);		
@@ -54,8 +54,14 @@ define(function(require){
 	
 //	下拉选
 	Model.prototype.initSelect = function(data){
-		var str = '';
-		for(var i = 0, len = data.length; i < len; i++){
+		var str = '',
+			len = data.length;
+		if(len < 1){
+			$('#duibi').hide();
+			return false;
+		}
+		str += '<option value="-1" selected>请选择对比数据</option>';
+		for(var i = 0; i < len; i++){
 			str += '<option value="'+data[i].lid+'">'+data[i].time+'</option>';
 		}
 		$('#duibi').append(str);
@@ -73,7 +79,7 @@ define(function(require){
 				for(var i =0, len = skin.length; i < len; i++){
 					displayData.push([time+200*i, skin[i]]);
 				}
-	            options.series[1] = {
+	            detailEcharOpt.series[1] = {
 	                name:'电波',
 	                type:'line',
 	                data: displayData,
@@ -86,8 +92,8 @@ define(function(require){
 	                }
 	            };
 				try{
-					window.myChartClock = echarts.init($('#echart')[0]);
-					window.myChartClock.setOption(options, true);
+					window.myChartClock = echarts.init($('#echartDetail')[0]);
+					window.myChartClock.setOption(detailEcharOpt, true);
 				}catch(e){
 				}
 			});
@@ -104,60 +110,63 @@ define(function(require){
 	
 //	控制界面展示
 	Model.prototype.contentShow = function(){
+		detailEcharOpt = $.extend(window.options, detailEcharOpt);
+		var that = this;
 		/*获取页面的下拉组件*/
-		this.skinData = $("#skinData");
-		this.skinData.hide();
-		this.consult = $("#consult");
-		this.consult.hide();
-		this.exam = $("#exam");
-		this.exam.hide();
-		this.voice = $("#voice");
-		this.voice.hide();
-		this.sheet = $("#sheet");
-		this.sheet.hide();
+		that.skinData = $("#skinData");
+		that.skinData.hide();
+		that.consult = $("#consult");
+		that.consult.hide();
+		that.exam = $("#exam");
+		that.exam.hide();
+		that.voice = $("#voice");
+		that.voice.hide();
+		that.sheet = $("#sheet");
+		that.sheet.hide();
 		
 //		根据课程类型的不同，区别添加不同的展示模块
-		console.log(courseModel );
 		switch (courseModel.loosenType){
 //			放松类
 			case 1:
 			case 2:
 			case 3:
-				this.skinData.show();
-				this.consult.show();
+				that.skinData.show();
+				that.consult.show();
 				break;
 //			case 'interview':
 			case 4:
 			case 5:
 			case 6:
-				this.skinData.show();
-				this.voice.show();
-				this.consult.show();
-				this.sheet.show();
+				that.skinData.show();
+				that.voice.show();
+				that.consult.show();
+				that.sheet.show();
 				break;
 //			case 'examTender': 
 			case 7:
-				this.skinData.show();
-				this.exam.show();
-				this.consult.show();
-				this.sheet.show();
+				that.skinData.show();
+				that.exam.show();
+				that.consult.show();
+				that.sheet.show();
 				break;
 //			case 'acrophobia':
 			case 8:
-				this.skinData.show();
-				this.consult.show();
-				this.sheet.show();
+				that.skinData.show();
+				that.consult.show();
+				that.sheet.show();
 				break;
 		}
+		
+		
 	}
 
 
 //  初始化详细的区块
 	Model.prototype.fetchSkinData = (function(){
-		var load = false,
+		var times = 0,
 			lid = 0;
 		return function(){
-			if(!load && lid != courseModel.lid){
+			if(lid != courseModel.lid || times%2 == 0 ){
 				Server.fetchMod({
 					eventKind: 51,
 					lid: courseModel.lid
@@ -168,38 +177,48 @@ define(function(require){
 					for(var i =0, len = skin.length; i < len; i++){
 						displayData.push([time+200*i, skin[i]]);
 					}
-					options.series[0].data = displayData;
+					detailEcharOpt.series.length = 1;	// 去除旧数据
+					detailEcharOpt.series[0].data = displayData;
 					try{
-						window.myChartClock = echarts.init($('#echart')[0]);
-						window.myChartClock.setOption(options, true);
+						window.myChartClock = echarts.init($('#echartDetail')[0]);
+						if(courseModel.loosenType <= 3){
+							detailEcharOpt.yAxis[0].max = 10;
+						}else{
+							detailEcharOpt.yAxis[0].max = 2;
+						}
+						window.myChartClock.setOption(detailEcharOpt, true);
 					}catch(e){
 					}
-					lid = courseModel.lid;
 				});
 			}
+			lid = courseModel.lid;
+			times++;
 		}
 	})();
+	
 	Model.prototype.fetchConsult = (function(){
-		var load = false,
+		var times = 0,
 			lid = 0;
 		return function(){
-			if(!load && lid != courseModel.lid){
+			console.log(times%2);
+			if(lid != courseModel.lid || times%2 == 0){
 				Server.fetchMod({
 					eventKind: 54,
 					lid: courseModel.lid
 				}).then(function(data){
 					$('#diagnose').val(data.diagnose);
-//					load = true;
-					lid = courseModel.lid;
 				});
 			}
+			lid = courseModel.lid;
+			times++;
 		}
 	})();
+	
 	Model.prototype.fetchExam = (function(){
-		var load = false,
+		var times = 0,
 			lid = 0;
 		return function(){
-			if(!load && lid != courseModel.lid){
+			if(lid != courseModel.lid || times%2 == 0){
 				var subjecDirec = ['语文', '历史', '外语'];
 				var subjectData = ['Chinese', 'History', 'English'];
 				var that = this;
@@ -219,7 +238,6 @@ define(function(require){
 						var answer = rep.answerList;  // 用户作答问题
 						list.forEach(function(n, i){
 							var item = hasIt(n, answer);
-							console.log(item);
 							if(item){
 								var q = item.q,
 									a = item.a;
@@ -236,52 +254,44 @@ define(function(require){
 						});
 						
 					});
-//					load = true;
-					lid = courseModel.lid;
 				});
 			}
+			lid = courseModel.lid;
+			times++;
 		}
 	})();
 	
-	function hasIt(tar, ori){
-//		比对questId 与 id
-		var res;
-		for(var i = 0, len = ori.length; i < len; i++){
-			if(ori[i].questId == tar.id){
-				res = {q: tar,
-				       a: ori[i]};
-				return res;
-			}
-		}
-		return false;
-	}
 	Model.prototype.fetchVoice = (function(){
-		var load = false,
+		var times = 0,
 			lid = 0;
 		return function(){
-			if(!load && lid != courseModel.lid){
+			if(lid != courseModel.lid || times%2 == 0){
 				Server.fetchMod({
 					eventKind: 55,
 					lid: courseModel.lid
 				}).then(function(data){
 					$('#voice').val(data.speech);
-//					load = true;
-					lid = courseModel.lid;
 				});
 			}
+			lid = courseModel.lid;
+			times++;
 		}
 	})();
+	
 	Model.prototype.fetchSheet = (function(){
-		var load = false,
+		var times = 0,
 			lid = 0;
 		return function(){
-			if(!load && lid != courseModel.lid){
+			if(lid != courseModel.lid || times%2 == 0){
 				var that = this; 
 				Server.fetchMod({
 					eventKind: 53,
 					lid: courseModel.lid
 				}).then(function(data){
 					console.log(data);
+					if(!data.answer){
+						return false;
+					}
 					var tar,
 						resStr = '',
 						answer = JSON.parse(data.answer);
@@ -289,22 +299,39 @@ define(function(require){
 						tar = $('.zplb_item .zplb_btn[data-type='+i+']').parents('.zplb_item');
 						tar.addClass('finished');
 						for(var j in answer[i]){
-							resStr += '<p>'+window.sheetTypeDict[i]+'： '+answer[i][j]+'</p>';
+							resStr += '<p>'+window.sheetTypeDict[j]+'： '+answer[i][j]+'</p>';
 						}
 						$('#zplb').html(resStr);
 					}
-//					load = true;
-					lid = courseModel.lid;
 				});
 			}
+			lid = courseModel.lid;
+			times++;
 		}
 	})();
+	
+	function hasIt(tar, ori){
+//		比对questId 与 id
+		try{
+			var res;
+			for(var i = 0, len = ori.length; i < len; i++){
+				if(ori[i].questId == tar.id){
+					res = {q: tar,
+					       a: ori[i]};
+					return res;
+				}
+			}
+			return false;
+		}catch(e){
+			console.log(e, 'jieguowenti');
+			return false;
+		}
+	}
 	
 	
 	Model.prototype.goBack = function(event){
 		this.close();
 	};
-	
 	
 	return Model;
 });

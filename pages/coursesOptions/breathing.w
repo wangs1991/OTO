@@ -3,7 +3,7 @@
 <div xmlns="http://www.w3.org/1999/xhtml" component="$UI/system/components/justep/window/window" design="device:m;"
   xid="window" class="window">  
   <div component="$UI/system/components/justep/model/model" xid="model" onLoad="modelLoad"
-    onParamsReceive="modelParamsReceive" style="top:12px;left:193px;height:auto;"/>  
+    onParamsReceive="modelParamsReceive" style="top:12px;left:193px;height:auto;" onunLoad="unload" onInactive="unload" onActive="modelLoad"/>  
   <div component="$UI/system/components/justep/panel/panel" class="x-panel x-full"
     xid="panel1"> 
     <div class="x-panel-top" xid="top1"> 
@@ -16,23 +16,26 @@
             <span>关闭</span> 
           </a> 
         </div>  
-        <div class="x-titlebar-title" bind-text="title"/>
+        <div class="x-titlebar-title" bind-text="title"/>  
         <div class="x-titlebar-right reverse"/> 
       </div> 
     </div>  
+    <div xid="div7" class="b-psy-one"> 
+      <div xid="div8" class="b-psy-oneA" id="unbindb" style="display: none;">
+        <img src="$UI/OTO/assets/img/no-vr.png" alt="" xid="image1"/>  
+        <span xid="span3">头盔未连接</span> 
+      </div>  
+      <div xid="div8" class="b-psy-oneA" id="bindb" style="display: none;"> 
+        <img src="$UI/OTO/assets/img/vr.png" alt="" xid="image1"/>  
+        <span xid="span3">头盔已连接</span> 
+      </div> 
+    </div>  
     <div class="x-panel-content  x-scroll-view" xid="content1" _xid="C79F18A26610000120B4115050501F1E"
-      style="bottom: 0px;"> 
+      style="bottom: 0px; top: 98px;"> 
       <div class="x-scroll" component="$UI/system/components/justep/scrollView/scrollView"
         xid="scrollView1"> 
         <div class="x-scroll-content" xid="div2"> 
           <form name="courseOpt" id="courseOpt"> 
-            <div xid="div7" class="b-psy-one" bind-click="goBindVR"> 
-              <div xid="div8" class="b-psy-oneA"> 
-                <img src="$UI/OTO/assets/img/psy_5.png" alt="" xid="image1"/>  
-                <span xid="span3" bind-if="hatState.lastValue">头盔已连接</span>  
-                <span xid="span3" bind-if="!hatState.lastValue">头盔未连接</span> 
-              </div> 
-            </div>  
             <div xid="div4" class="b-exam-one"> 
               <img src="$UI/OTO/assets/img/breath_1.jpg" alt="" xid="image2"
                 class="b-exam-oneB"/>  
@@ -71,8 +74,8 @@
                           <label xid="label6" class="fr b-breath-thrB b-demo-label"> 
                             <input type="radio" value="1" name="sceneId" xid="radio6"
                               class="b-demo-radio" checked="checked"/>  
-                            <span xid="span11" class="b-demo-radioInput"/>
-                          </label>
+                            <span xid="span11" class="b-demo-radioInput"/> 
+                          </label> 
                         </li>  
                         <li xid="li5" class="clearfix"> 
                           <div xid="div10" class="fl b-breath-thrA"> 
@@ -81,8 +84,8 @@
                           <label xid="label1" class="fr b-breath-thrB b-demo-label"> 
                             <input type="radio" value="2" name="sceneId" xid="radio4"
                               class="b-demo-radio"/>  
-                            <span xid="span1" class="b-demo-radioInput"/>
-                          </label>
+                            <span xid="span1" class="b-demo-radioInput"/> 
+                          </label> 
                         </li>  
                         <li xid="li7" class="clearfix"> 
                           <div xid="div11" class="fl b-breath-thrA"> 
@@ -91,8 +94,8 @@
                           <label xid="label2" class="fr b-breath-thrB b-demo-label"> 
                             <input type="radio" value="3" name="sceneId" xid="radio5"
                               class="b-demo-radio"/>  
-                            <span xid="span2" class="b-demo-radioInput"/>
-                          </label>
+                            <span xid="span2" class="b-demo-radioInput"/> 
+                          </label> 
                         </li> 
                       </ul> 
                     </div>  
@@ -105,8 +108,8 @@
                           <label xid="label3" class="fr b-breath-thrB b-demo-label"> 
                             <input type="radio" value="1" name="music" xid="radio7"
                               class="b-demo-radio" checked="checked"/>  
-                            <span xid="span12" class="b-demo-radioInput"/>
-                          </label>
+                            <span xid="span12" class="b-demo-radioInput"/> 
+                          </label> 
                         </li>  
                         <li xid="li5" class="clearfix"> 
                           <div xid="div10" class="fl b-breath-thrA"> 
@@ -115,8 +118,8 @@
                           <label xid="label4" class="fr b-breath-thrB b-demo-label"> 
                             <input type="radio" value="2" name="music" xid="radio8"
                               class="b-demo-radio"/>  
-                            <span xid="span15" class="b-demo-radioInput"/>
-                          </label>
+                            <span xid="span15" class="b-demo-radioInput"/> 
+                          </label> 
                         </li>  
                         <li xid="li7" class="clearfix"> 
                           <div xid="div11" class="fl b-breath-thrA"> 
@@ -125,9 +128,9 @@
                           <label xid="label5" class="fr b-breath-thrB b-demo-label"> 
                             <input type="radio" value="3" name="music" xid="radio9"
                               class="b-demo-radio"/>  
-                            <span xid="span16" class="b-demo-radioInput"/>
-                          </label>
-                        </li>
+                            <span xid="span16" class="b-demo-radioInput"/> 
+                          </label> 
+                        </li>  
                         <li xid="li7" class="clearfix"> 
                           <div xid="div11" class="fl b-breath-thrA"> 
                             <span xid="span9"><![CDATA[歌曲四]]></span> 
@@ -135,9 +138,9 @@
                           <label xid="label4" class="fr b-breath-thrB b-demo-label"> 
                             <input type="radio" value="4" name="music" xid="radio8"
                               class="b-demo-radio"/>  
-                            <span xid="span15" class="b-demo-radioInput"/>
-                          </label>
-                        </li>
+                            <span xid="span15" class="b-demo-radioInput"/> 
+                          </label> 
+                        </li>  
                         <li xid="li7" class="clearfix"> 
                           <div xid="div11" class="fl b-breath-thrA"> 
                             <span xid="span9"><![CDATA[歌曲五]]></span> 
@@ -145,9 +148,9 @@
                           <label xid="label4" class="fr b-breath-thrB b-demo-label"> 
                             <input type="radio" value="5" name="music" xid="radio8"
                               class="b-demo-radio"/>  
-                            <span xid="span15" class="b-demo-radioInput"/>
-                          </label>
-                        </li>
+                            <span xid="span15" class="b-demo-radioInput"/> 
+                          </label> 
+                        </li> 
                       </ul> 
                     </div>  
                     <div class="tab-pane" xid="tabContent3"> 
@@ -159,8 +162,8 @@
                           <label xid="label7" class="fr b-breath-thrB b-demo-label"> 
                             <input type="radio" value="1" name="switch" xid="radio10"
                               class="b-demo-radio" checked="checked"/>  
-                            <span xid="span17" class="b-demo-radioInput"/>
-                          </label>
+                            <span xid="span17" class="b-demo-radioInput"/> 
+                          </label> 
                         </li>  
                         <li xid="li5" class="clearfix"> 
                           <div xid="div10" class="fl b-breath-thrA"> 
@@ -169,8 +172,8 @@
                           <label xid="label8" class="fr b-breath-thrB b-demo-label"> 
                             <input type="radio" value="0" name="switch" xid="radio11"
                               class="b-demo-radio"/>  
-                            <span xid="span18" class="b-demo-radioInput"/>
-                          </label>
+                            <span xid="span18" class="b-demo-radioInput"/> 
+                          </label> 
                         </li> 
                       </ul> 
                     </div>  
@@ -183,8 +186,8 @@
                           <label xid="label9" class="fr b-breath-thrB b-demo-label"> 
                             <input type="radio" value="1" name="duration" xid="radio12"
                               class="b-demo-radio" checked="checked"/>  
-                            <span xid="span19" class="b-demo-radioInput"/>
-                          </label>
+                            <span xid="span19" class="b-demo-radioInput"/> 
+                          </label> 
                         </li>  
                         <li xid="li5" class="clearfix"> 
                           <div xid="div10" class="fl b-breath-thrA"> 
@@ -193,8 +196,8 @@
                           <label xid="label10" class="fr b-breath-thrB b-demo-label"> 
                             <input type="radio" value="2" name="duration" xid="radio13"
                               class="b-demo-radio"/>  
-                            <span xid="span20" class="b-demo-radioInput"/>
-                          </label>
+                            <span xid="span20" class="b-demo-radioInput"/> 
+                          </label> 
                         </li>  
                         <li xid="li7" class="clearfix"> 
                           <div xid="div11" class="fl b-breath-thrA"> 
@@ -203,8 +206,8 @@
                           <label xid="label11" class="fr b-breath-thrB b-demo-label"> 
                             <input type="radio" value="3" name="duration" xid="radio14"
                               class="b-demo-radio"/>  
-                            <span xid="span21" class="b-demo-radioInput"/>
-                          </label>
+                            <span xid="span21" class="b-demo-radioInput"/> 
+                          </label> 
                         </li> 
                       </ul> 
                     </div> 

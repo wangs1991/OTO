@@ -3,6 +3,7 @@ define(function(require) {
 	var $ = require("jquery");
 	var justep = require("$UI/system/lib/justep");
 	var Server = require('../../assets/server');
+	
 	var devId;
 	var devPwd;
 	
@@ -21,13 +22,28 @@ define(function(require) {
 			$('#win_unbind').hide();
 			$('#unBindBtn').hide();
 			Server.deviceId(data.deviceId);
-			$("#deviceId").html(data.deviceId);
+			console.log(data);
+			$("#settingBind #deviceId").html(data.deviceId);
 		}, function(data){
-//			绑定失败
-			$('#win_bind').hide();
-			$('#bindButton').hide();
-			$('#win_unbind').show();
-			$('#unBindBtn').show();
+//			0 - 绑定成功
+//			1 - 未连接
+//			2 - 未绑定
+			if(data.ret.retCode == 2){
+//				绑定失败
+				$('#win_bind').hide();
+				$('#bindButton').hide();
+				$('#win_unbind').show();
+				$('#unBindBtn').show();	
+			}else{
+	//			绑定成功
+				$('#win_bind').show();
+				$('#bindButton').show();
+				$('#win_unbind').hide();
+				$('#unBindBtn').hide();
+				Server.deviceId(data.deviceId);
+				console.log(data);
+				$("#settingBind #deviceId").html(data.deviceId);
+			}
 		});
 	};
 	
@@ -40,31 +56,40 @@ define(function(require) {
 				deviceId: devId,
 				pwd: devPwd
 			}).then(function(data){
-				console.log(data);
 				Server.deviceId(devId);
+				$("#settingBind #deviceId").html(devId);
+				$('#win_bind').show();
+				$('#bindButton').show();
+				$('#win_unbind').hide();
+				$('#unBindBtn').hide();
+			}, function(data){
+	//			0 - 绑定成功
+	//			1 - 未连接
+	//			2 - 未绑定
+				if(data.ret.retCode == 2){
+	//				绑定失败
+					$('#win_bind').hide();
+					$('#bindButton').hide();
+					$('#win_unbind').show();
+					$('#unBindBtn').show();	
+				}else{
+		//			绑定成功
+					$('#win_bind').show();
+					$('#bindButton').show();
+					$('#win_unbind').hide();
+					$('#unBindBtn').hide();
+					Server.deviceId(data.deviceId);
+					$("#deviceId").html(data.deviceId);
+				}
 			});
 		}
 	}
 //	解绑设备
 	Model.prototype.unbindVR = function(){
-		var ok = this.bindCheck();
-		if(ok){
-			var res = justep.Util.confirm('是否解除绑定');
-			if(res){
-				this.bindAction(45, function(data){
-					console.log(data);
-				});
-				var t = this;
-				Server.bindVR({
-					eventKind: 45,
-					deviceId: devId,
-					pwd: devPwd
-				}).then(function(data){
-					justep.Util.hint('解除绑定成功');
-				});
-			}
-		}
+		var url = "$UI/OTO/pages/setting/unBindVR.w";
+		justep.Shell.showPage(url);
 	}
+	
 //	绑定 、 解绑 公用方法
 	Model.prototype.bindCheck = function(){
 		devId = this.comp('deviceId').val();
@@ -86,6 +111,10 @@ define(function(require) {
 	Model.prototype.findPwd = function(event){
 		var url = "$UI/OTO/pages/password/backPassword.w";
 		justep.Shell.showPage(url);
+	};
+	
+	Model.prototype.goBack = function(event){
+		this.close();
 	};
 	
 	return Model;

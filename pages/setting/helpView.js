@@ -13,12 +13,13 @@ define(function(require) {
 	var Model = function() {
 		this.callParent();
 	};
+	
 	Model.prototype.headImageClick = function(event){
 		
 	};
 	
 	Model.prototype.modelLoad = function(event){
-		window.putView(this);
+//		window.putView(this);
 	};
 	
 	Model.prototype.modelUnLoad = function(event){
@@ -42,8 +43,13 @@ define(function(require) {
 			content: description
 		}).then(function(){
 			justep.Util.hint("提交成功");
+			justep.Shell.closePage();
 		});
 	}
+	
+	Model.prototype.goBack = function(event){
+		this.close();
+	};
 	
 	return Model;
 });

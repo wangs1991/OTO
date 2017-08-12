@@ -6,6 +6,7 @@ define(function(require){
 	
 	var loosenType = -1;
 	var page;
+	var hatTimer = null;
 
 	var Model = function(){
 		this.callParent();
@@ -13,17 +14,79 @@ define(function(require){
 	};
 	
 	Model.prototype.beginStudy = function(){
+//		判断头盔是否连接 ， 未连接不能开始训练
+//		头盔未连接，无法开始练习
+		if(!this.hatState.latestValue){
+			//justep.Util.hint('头盔未连接，无法开始练习', {position: 'bottom'});
+//			return false;
+		}
+//		判断是否开启场景
+		var isOpen = $('#speechOpt #checkboxTwoInput').is(':checked');
+		var url,
+			isOpenFlag;
+		if (isOpen) {
+			var scene = $('#speechOpt select[name=sceneId]').val();
+			if(scene<0){
+				justep.Util.hint('请选择放松场景', {position: 'bottom'});
+				return false;
+			}
+			isOpenFlag = 1;
+			url = "$UI/OTO/pages/coursesPlay/relaxPlay.w";
+			this.startIt({
+				isOpenFlag: 1,
+				url: url
+			});
+		}else{
+//			提示场景未打开
+//			打开提示框
+			$('#speechModal').modal('show');
+		}
+	}
+//	确认继续前进
+	Model.prototype.userOk = function(){
+		var isOpenFlag = 0;
+			url = '$UI/OTO/pages/coursesPlay/exposePlay.w';
+		$('#speechModal').modal('hide');
+		this.startIt({
+			isOpenFlag: 0,
+			url: url
+		});
+		
+	}
+	Model.prototype.userCancle = function(){
+		$('#speechModal').modal('hide');
+	}
+	Model.prototype.startIt = function(opt){
 		window.skinFeelStart = true;
 //		开始练习请求服务器
-		var data = $('#courseOpt').serialize();
-		data = decodeURI(data);
-		var params = Server.toJson(data);
+//		var data = $('#speechOpt').serialize();
+
+		var inputIsOpen = $('#speechOpt [name=isOpen]:checked').val();
+		if (inputIsOpen == undefined || inputIsOpen == false) {
+			inputIsOpen = false;
+		} else {
+			inputIsOpen = true;
+		}
+		
+		var data = {
+			duration : $('#speechOpt [name=duration]:checked').val(),
+			difficulty : $('#speechOpt [name=difficulty]:checked').val(),
+			'number' : $('#speechOpt [name=number]:checked').val(),
+			sceneId : $('#speechOpt [name=sceneId]').val(),
+			isOpen : (inputIsOpen ? 1:0)
+		};
+		
+		var params = data;
+		
+//		data = decodeURI(data);
+//		var params = Server.toJson(data);
 		var curVisitor = Server.getCurUser();
 		var next;
 		params.eventKind = 37;
 		params.vid = curVisitor.id;
 		params.loosenType = loosenType;
-		params.isOpen = params.isOpen? params.isOpen: 0;
+//		params.isOpen = opt.isOpenFlag;
+//		params.number = parseInt($('#speechOpt input[name=number]').val());
 		
 		//时长
 		var duration = params.duration;
@@ -41,16 +104,8 @@ define(function(require){
 				type: loosenType,
 				duration : duration
 			};
-			
-//			判断是否开启场景
-			var isOpen = $('#checkboxTwoInput').is(':checked');
-			var url;
-			if(isOpen){
-				url = "$UI/OTO/pages/coursesPlay/relaxPlay.w";
-			}else{
-				url = '$UI/OTO/pages/coursesPlay/exposePlay.w';
-			}
-			justep.Shell.showPage(url, params);
+
+			justep.Shell.showPage(opt.url, params);
 		});
 	}	
 	Model.prototype.goBindVR = function(){
@@ -68,27 +123,63 @@ define(function(require){
 
 	Model.prototype.modelLoad = function(){
 		var that = this;
-//		验证头盔绑定状态
 		Server.checkHat({
-			eventKind: 33
-		}).then(function(data){
+			eventKind : 33
+		}).then(function(data) {
 			that.hatState.set(true);
-			console.log(data);
+			$('#binds').show();
+			$('#unbinds').hide();
 			Server.deviceId(data.deviceId);
-		}, function(data){
+		}, function(data) {
 			that.hatState.set(false);
+			$('#unbinds').show();
+			$('#binds').hide();
+			that.checkHat();
 		});
+	}
+	Model.prototype.modelUnLoad = function(event){
+		clearInterval(hatTimer);
+		hatTimer = null;
+		
+		//		场景选择重置
+		$('#speechOpt select[name=sceneId]').val(-1);
+	};
+	// 请求接口
+	Model.prototype.checkHat = function() {
+		var that = this;
+		hatTimer = setInterval(function() {
+			// 验证头盔绑定状态
+			Server.checkHat({
+				eventKind : 33
+			}).then(function(data) {
+				that.hatState.set(true);
+				$('#binds').show();
+				$('#unbinds').hide();
+				Server.deviceId(data.deviceId);
+				clearInterval(hatTimer);
+				hatTimer = null;
+			}, function(data) {
+				that.hatState.set(false);
+				$('#unbinds').show();
+				$('#binds').hide();
+			});
+		}, 2000);
 	}
 	
 //	视图逻辑
 	Model.prototype.switchSence = function(evt){
 //		点击场景选择，检验是否要进入放松练习
-		var isOpen = $('#checkboxTwoInput').is(':checked');
+		var isOpen = $('#speechOpt #checkboxTwoInput').is(':checked');
 		if(!isOpen){
-			$('#senceOption').attr('disabled', 'disabled');
+			$('#senceOptionSpeech').attr('disabled', 'disabled');
 		}else{
-			$('#senceOption').removeAttr('disabled');
+			$('#senceOptionSpeech').removeAttr('disabled');
 		}
 	}
+	
+	Model.prototype.goBack = function(event){
+		this.close();
+	};
+	
 	return Model;
 });

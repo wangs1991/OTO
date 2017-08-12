@@ -1,7 +1,12 @@
 define(function(require) {
 	require("css!../../assets/style/base").load();
+
 	var $ = require("jquery");
 	var justep = require("$UI/system/lib/justep");
+	var Server = require('../../assets/server');
+	
+	require("$UI/system/lib/cordova/cordova");
+	require("cordova!cordova-plugin-inappbrowser");
 
 	var selectID = "0";
 	var jiaolvFileKey = "Jiaolv-Course";
@@ -21,15 +26,26 @@ define(function(require) {
 		if(type === 'loginOut'){
 			//注销用户
 			window.mainView.logout();
+			return false;
 		}
 		
-		if(type === 'courseList'){
-			/*进入课程选购页面*/
-			url = "$UI/xlzl/v2/psychologyListView.w";
-			params = {
-				header: true
-		    };
-		}	
+		if(type === 'update'){
+			var version = window.version;
+			console.log(version);
+			Server.checkUpdate({
+				version: version,
+				eventKind: 56
+			}, function(data){
+				if(data.version && data.version == version){
+					justep.Util.hint('最新版本，不需要更新');
+					return false;
+				}
+				if(data.url && data.url.length>0){
+					cordova.InAppBrowser.open(data.url, '_system');
+				}
+			}); 
+			return false; 
+		}
 		justep.Shell.showPage(url, params);
 	}
 
@@ -43,6 +59,9 @@ define(function(require) {
 
 	Model.prototype.modelUnLoad = function(event) {
 		//window.removeView(this);
+	};
+	Model.prototype.goBack = function(event){
+		this.close();
 	};
 	return Model;
 });

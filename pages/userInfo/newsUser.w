@@ -18,7 +18,7 @@
         <div class="x-titlebar-left"> 
           <a component="$UI/system/components/justep/button/button" label=""
             class="btn btn-link btn-only-icon" icon="icon-chevron-left" onClick="{operation:'window.close'}"
-            xid="backBtn"> 
+            xid="backBtn" bind-click="backBtnClick"> 
             <i class="icon-chevron-left"/>  
             <span/> 
           </a> 
@@ -36,7 +36,8 @@
             <div xid="div13" class="b-user-topBox"> 
               <div xid="div4" class="clearfix b-user-one"> 
                 <div xid="div8" class="fl b-user-oneA" bind-click="uploadImg"> 
-                  <img src="$UI/OTO/assets/img/user_1.png" alt="" xid="image1"/> 
+                  <img src="$UI/OTO/assets/img/default.png" alt="" id="avator_img" xid="image1"/>
+                  <input name="face" id="face_src" style="display: none;" />	
                 </div>  
                 <div xid="div4" class="fl b-user-two"> 
                   <div xid="div9" class="clearfix b-user-twoA"> 
@@ -46,18 +47,20 @@
                     <input type="text" name="name" xid="input2" class="fl"/>  
                     <img src="$UI/OTO/assets/img/user_3.png" alt="" xid="image3"
                       class="fl"/>  
-                    <span xid="span4" class="fl">性别</span>  
-                    <input type="text" id="sexTxt" xid="input3" class="fl b-user-twoInput"
-                      bind-click="selectSex"/>
-                     <input type="text" name="sex" id="sex" xid="input3" class="fl b-user-twoInput"
+                    <span xid="span4" class="fl">性别</span>
+                    <div bind-click="selectSex" class="fl b-user-twoInput" id="sexTxtNew"> </div> 
+                    <!-- <input type="text" id="sexTxt" xid="input3" class="fl b-user-twoInput"
+                      bind-click="selectSex" readonly="readonly"/> -->
+                     <input type="text" name="sex" id="sexNew" xid="input3" class="fl b-user-twoInput"
                        style="display: none;"/>
                   </div>  
                   <div xid="div5" class="clearfix b-user-twoA b-user-twoB"> 
                     <img src="$UI/OTO/assets/img/user_4.png" alt="" xid="image6"
                       class="fl"/>  
                     <span xid="span5" class="fl">出生年月</span>  
-                    <input type="text" name="birthday" id="birthday" xid="birthday"
-                      class="fl" bind-click="selectDate"/> 
+                    <div bind-click="selectDate" id="birthdayTxtNew" class="fl b-user-twoInput" style="width: 100px;"> </div>
+                    <input type="text" name="birthday" id="birthdayNew" xid="birthday"
+                      class="fl" readonly="readonly" style="display: none;"/> 
                   </div> 
                 </div> 
               </div>
