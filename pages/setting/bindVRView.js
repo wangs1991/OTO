@@ -74,12 +74,13 @@ define(function(require) {
 					$('#unBindBtn').show();	
 				}else{
 		//			绑定成功
+		alert('test code == 1');
+					Server.deviceId(data.deviceId);
+					$("#deviceId").html(data.deviceId);
 					$('#win_bind').show();
 					$('#bindButton').show();
 					$('#win_unbind').hide();
 					$('#unBindBtn').hide();
-					Server.deviceId(data.deviceId);
-					$("#deviceId").html(data.deviceId);
 				}
 			});
 		}

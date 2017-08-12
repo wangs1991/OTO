@@ -36,7 +36,9 @@ define(function(require) {
 				version: version,
 				eventKind: 56
 			}, function(data){
+				alert(data.url);
 				if(data.url && data.url.length>0){
+					alert(data.url);
 					cordova.InAppBrowser.open(data.url, '_system');
 				}
 			}); 
